@@ -1,0 +1,112 @@
+/* CSS Document */
+.about-tit {
+	font-size: 22px;
+	line-height: 1em;
+	text-align: center; color: #333;
+}
+.about {
+	.banner{ transition: $tr4;
+		img{ display: block; width: 100%; }
+	}
+	.about-nav{ text-align: center; height: 50px; line-height: 0; font-size: 0; border-bottom: 1px solid #f1f1f1; position: static; background-color: #fff; transition: $tr4;
+		a{ display: inline-block; height: 50px; line-height: 50px; font-size: 16px; width: 130px; color: #333333; transition: $tr4;
+			&:hover{ color: #bfbfbf; transition: $tr4; }
+			&.on{ background-color: #bfbfbf; color: #fff; transition: $tr4;}
+		}
+	}
+
+	.a_pic1{
+		img{ display: block; width: 100%;}
+	}
+	&.on{
+		.about-nav{ position: fixed; top: 0; width: 100%; left: 0; z-index: 99; transition: $tr4;  }
+	}
+	.a_content{
+		.a_l{ width: 673px; font-size: 14px; line-height: 24px;
+			.title{ font-size: 16px; line-height: 24px; color: #040033; font-weight: bold; }
+			strong,a{ color: #b89400;}
+		}
+		.a_r{ width: 420px;
+			img{ display: block; width: 100%; }
+		}
+	}
+	.about-content{
+		.title {
+			color: #36adcf;
+			font-size: 18px; font-weight: bold;line-height: 1em;
+		}
+	}
+	.timer{ background-image: url(../images/kedu.png); background-repeat: no-repeat; background-position: center 41px; background-size: 480px auto;
+		.title{ color: #092469; font-size: 18px; line-height: 1em; font-weight: bold; }
+		.swiper-container{ height: 86px; width: 100%; 
+			.swiper-slide{
+				.text{ width: 55px; font-family: 'HelveticaLT23UltraLightExtendedOblique';font-size: 20px; font-weight: bolder;  text-align: center; margin: 0 auto;  line-height: 42px; cursor: pointer;  }
+				&.text-down{ 
+					.text{ margin-top: 42px; border-top: 4px solid transparent;}
+				}
+				&.text-top{
+					.text{ height: 42px; border-bottom: 4px solid transparent;}
+				}
+				&.on{
+					.text{ color:#082469; }
+					&.text-down{ 
+						.text{ border-top: 4px solid #082469;}
+					}
+					&.text-top{ 
+						.text{ border-bottom: 4px solid #082469; background: #fff;}
+					}
+				}
+			}
+		}
+		.timer-swiper{ position: relative;
+			.swiper-prev{ width: 42px; height: 42px; position: absolute; top: 50%; left: 0; margin-top: -20px; background-image: url(../images/timer_l.png); cursor: pointer;  z-index: 9;
+				&:hover{
+					background-image: url(../images/timer_h_l.png); 
+				}
+			}
+			.swiper-next{ width: 42px; height: 42px; position: absolute; top: 50%; right: 0; margin-top: -20px;  background-image: url(../images/timer_h_r.png);  cursor: pointer; z-index: 9;
+				&:hover{
+					background-image: url(../images/timer_r.png); 
+				}
+			}
+		}
+		.timer-content{ font-size: 14px; line-height: 20px; }
+	}
+
+	.honor-list{
+		.list{ overflow: hidden;
+			.item{ width: 48%; float: left; background-color: #f2f2f2; margin-bottom: 4%;    transition: $tr4;
+				&:nth-child(even){ margin-left: 2%;}
+				&:nth-child(odd){ margin-right: 2%;}
+				a{ display: block; padding: 10px; }
+				span{ display: block; transition: $tr4;}
+				.title{ color: #e60012; font-size: 15px; line-height: 1em; text-align: center; margin-top: 10px; }
+				.des{ color: #999; line-height: 1em;  font-size: 10px; text-align: center; margin-bottom: 5px; }
+				.pic{ position: relative; margin: 20px auto 10px;
+					img{ width: 60%; display: block; margin: 0 auto; }
+					.fd{ position: absolute; width: 100%; height: 100%; background-image: url('../images/fd.png'); background-position: center; background-repeat: no-repeat; top: 0; left: 0; background-size: 30px auto; }
+				}
+			}
+		}
+	}
+	.culture-list{
+		.list{ overflow: hidden;
+			.item{ width: 350px; margin-right: 25px; float: left; background-color: #eeeeee;  margin-bottom: 20px;
+				.title{ color: #fff; padding: 20px; 
+					.en{ font-family: 'HelveticaLT23UltraLightExtended'; font-size: 20px; }
+					.ch{ font-size: 20px; margin-top: 6px; }
+				}
+				.content{ height: 214px; background-repeat: no-repeat; background-position: center; padding: 0 50px; }
+				&.item1{
+					.content{ padding-top: 96px; text-align: center; height: 118px; }
+				}
+				&.item2{
+					.content{ padding-top: 74px;  height: 140px; }
+				}
+				&.item3{
+					.content{ padding-top: 80px;  height: 134px; }
+				}
+			}
+		}
+	}
+}

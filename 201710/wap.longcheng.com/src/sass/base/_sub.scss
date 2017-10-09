@@ -1,0 +1,31 @@
+@charset "utf-8";
+@include max-screen(1024px) {
+  .container_1200 {
+    width: auto;
+    margin: 0 5%;
+    overflow: hidden;
+    position: relative;
+  }
+  .containern_1200 {
+    width: auto;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+@include max-screen(1024px) {}
+
+@include max-screen(980px) {
+  .pc {
+    display: none!important;
+  }
+  .wap {
+    display: block!important;
+  }
+}
+
+@include max-screen(360px) {}
+
+@include max-screen(320px) {}
+
+@media screen and (max-height: 768px) {}
