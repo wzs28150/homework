@@ -1,0 +1,32 @@
+@charset "utf-8";
+@mixin max-screen($res){
+  @media (max-width:$res)
+  {
+    @content;
+  }
+}
+
+
+
+
+@include max-screen(1024px) {
+
+}
+@include max-screen(1024px) {
+
+}
+
+@include max-screen(960px) {
+  .container_1200{ margin:0 10px; width: auto; }
+  .containern_1200{ margin:0 10px; width: auto; }
+}
+@include max-screen(360px) {
+
+}
+@include max-screen(320px) {
+  
+}
+
+@media screen and (max-height: 768px) {
+
+}

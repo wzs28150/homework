@@ -1,0 +1,90 @@
+@charset "utf-8";
+@mixin max-screen($res) {
+	@media (max-width: $res) {
+		@content;
+	}
+}
+
+@include max-screen(1600px) {
+	.left .l_contact {
+		font-size: 14px;
+	}
+	.yuding-bar {
+		.title {
+			color: #333;
+			font-size: 24px;
+			height: 40px;
+			line-height: 40px;
+		}
+		a {
+			background-color: #b89400;
+			color: #fff;
+			width: 100px;
+			text-align: center;
+			display: block;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 5px;
+		}
+	}
+}
+
+@include max-screen(1440px) {
+	.left .l_contact {
+		font-size: 12px;
+	}
+	.left nav a {
+		font-size: 15px;
+	}
+	.left .logo {
+		padding: 36px 0;
+	}
+	.pannel .inner .right .right-bar {
+		height: 80px;
+		line-height: 80px;
+		font-size: 20px;
+	}
+	.pannel .inner .right .right-inner {
+		height: calc(100% - 80px);
+		margin-top: 80px;
+	}
+	.pannel .inner .right .right-bar .er-xiala {
+		top: 80px;
+	}
+	.pannel .inner .right .right-bar .er-xiala ul a {
+		font-size: 16px;
+	}
+	.pannel .inner .right .right-bar label {
+		height: 80px;
+	}
+	.pannel .inner .right .right-bar .menu {
+		margin-top: 30px;
+		cursor: pointer;
+	}
+	.tousu td{ font-size: 14px; }
+	.tousu .th{ width: 80px;}
+}
+
+@include max-screen(1024px) {}
+
+@include max-screen(1024px) {}
+
+@include max-screen(960px) {}
+
+@include max-screen(360px) {}
+
+@include max-screen(320px) {}
+
+@media screen and (max-height: 768px) {
+	.left .logo img{ max-width: 70%; }
+	.left .logo {
+		padding: 20px 0;
+	}
+	.left nav a {
+		display: block;
+		text-align: center;
+		font-size: 14px;
+		line-height: 40px;
+		color: #333;
+	}
+}

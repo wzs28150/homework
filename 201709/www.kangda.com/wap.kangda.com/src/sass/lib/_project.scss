@@ -1,0 +1,26 @@
+/* CSS Document */
+
+.project {
+	.project-list{ overflow: hidden;
+		.item {
+			float: left;
+			width: 48%;
+			margin-bottom: 4%;
+			&:nth-child(even){ margin-left: 2%;}
+			&:nth-child(odd){ margin-right: 2%;}
+			a{ display: block;
+				img{ display: block; width: 100%;}
+				p {
+					height: 37px;
+					line-height: 37px;
+					text-align: center;
+					background-color: #006cc7;
+					font-size: 13px;
+					font-weight: lighter;
+					color: #fff;
+					transition: $tr4;
+				}
+			}
+		}
+	}
+}

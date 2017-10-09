@@ -1,0 +1,223 @@
+/* CSS Document */
+.a-tit {
+	font-size: 25px;
+	line-height: 1em; font-weight: lighter;
+	text-align: center; color: #333;
+}
+.about {
+	.enviro {
+		.big-pic {
+			position: relative;
+			img {
+				display: block;
+				width: 100%;
+			}
+			.small-pic {
+				
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.58);
+				width: 100%;
+				.inner {
+					padding: 9px 32px;
+					position: relative;
+					.swiper-slide {
+						cursor: pointer;
+						
+						position: relative;
+						img {
+							display: block;
+							
+						}
+						&::after {
+							content: "";
+							display: block;
+							position: absolute;
+							width: calc(100% - 4px);
+							height: calc(100% - 4px);
+							border: 2px solid #fff;
+							top: 0;
+							left: 0;
+							visibility: hidden;
+							opacity: 0;
+							transition: $tr4;
+						}
+						&.on {
+							&::after {
+								visibility: visible;
+								opacity: 1;
+								transition: $tr4;
+							}
+						}
+					}
+					.i-pro-l {
+						position: absolute;
+						top: 50%;
+						margin-top: -20px;
+						left: 0;
+						width: 32px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						cursor: pointer;
+						color: #999999;
+						font-size: 16px;
+					}
+					.i-pro-r {
+						position: absolute;
+						top: 50%;
+						margin-top: -20px;
+						right: 0;
+						width: 32px;
+						height: 40px;
+						line-height: 40px;
+						text-align: center;
+						cursor: pointer;
+						color: #999999;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+	.youshi-list {
+		.item {
+			width: calc(100% - 2px);
+			border: 1px solid #eaeaea;
+			position: relative;
+			cursor: pointer;
+			transition: $tr4; margin-top: 50px;
+			.num {
+				width: 62px;
+				height: 62px;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 70px;
+				border: 2px solid #eaeaea;
+				position: absolute;
+				top: -38px;
+				background-color: #fff;
+				left: 50%;
+				margin-left: -33px;
+				color: #ffd400;
+				font-family: 'BrushScriptStd';
+				font-size: 30px;
+				transition: $tr4;
+			}
+			.title {
+				margin-top: 49px;
+				color: #333333;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+			}
+			.content {
+				padding: 36px 36px 49px;
+				font-size: 16px;
+				line-height: 22px;
+				font-weight: lighter;
+			}
+			&:hover {
+				background-color: #f3f5f6;
+				transition: $tr4;
+				.num {
+					background-color: #009944;
+					color: #fff;
+					border: 2px solid #009944;
+					transition: $tr4;
+				}
+			}
+		}
+	}
+
+	.video{ 
+		img{ display: block; width: 100%; }
+	}
+	.tab {
+		.tab-nav {
+			margin-bottom: 20px;
+			border-bottom: 1px solid #d6d6d6; 
+			font-size: 0; line-height: 0;
+			a {
+				width: calc(50% - 2px);
+				line-height: 40px;
+				text-align: center;
+				font-size: 18px;
+				font-weight: lighter;
+				display: inline-block;
+				border: 1px solid transparent;
+				&.on {
+					border: 1px solid #b3b3b3;
+				}
+			}
+		}
+		.tab-inner {
+			position: relative;
+			.swiper-slide {
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+			.i-pro-l {
+				height: 40px;
+				width: 24px;
+				line-height: 40px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.6);
+				position: absolute;
+				left: 0;
+				top: 50%;
+				margin-top: -20px;
+				z-index: 5;
+				color: #b2b3b2;
+				font-size: 16px;
+				cursor: pointer;
+			}
+			.i-pro-r {
+				height: 40px;
+				width: 24px;
+				line-height: 40px;
+				text-align: center;
+				background-color: rgba(0, 0, 0, 0.6);
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -20px;
+				z-index: 5;
+				color: #b2b3b2;
+				font-size: 20px;
+				cursor: pointer;
+			}
+		}
+	}
+	.map{ height: 400px; }
+	
+	.news-list{
+		.item{
+				a { display: block;
+				border-bottom: 1px solid #eeeeee;
+				.pic{
+					img{ display: block; width: 100%; }
+				}
+				.title{ font-size: 22px; font-weight: lighter; } 
+				.time {
+					color: #999;
+					font-size: 25px;
+					font-family: 'Conv_DINOT-CondLight';
+					line-height: 1em;
+				}
+
+				.content {
+					font-weight: lighter;
+				}
+			}
+		}
+	}
+	.news-content{
+		.title{ font-size: 25px; font-weight: lighter; text-align: center; }
+		.time{ color: #999; font-size: 12px; line-height: 30px; text-align: center; border-bottom: 1px solid #eee; }
+	}
+}

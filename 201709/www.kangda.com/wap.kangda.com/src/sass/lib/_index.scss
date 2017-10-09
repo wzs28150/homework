@@ -1,0 +1,135 @@
+/* CSS Document */
+
+.index {
+	background-color: #f2f2f2;
+	.banner {
+		.swiper-slide {
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets,
+		.swiper-pagination-custom,
+		.swiper-pagination-fraction {
+			bottom: 5%;
+		}
+		.swiper-pagination-bullet {
+			opacity: .4;
+			margin: 0 5px;
+		}
+		.swiper-pagination-white .swiper-pagination-bullet-active {
+			opacity: 1;
+		}
+		.swiper-button-prev {
+			left: 10px;
+		}
+		.swiper-button-next {
+			right: 10px;
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			background-size: 27px 30px;
+		}
+	}
+	.i-tit {
+		font-size: 25px;
+		font-weight: lighter;
+		text-align: center;
+		color: #333;
+		&.white {
+			color: #fff;
+		}
+	}
+	.i-about {
+		a {
+			&.more {
+				background-color: #009944;
+				color: #fff;
+				font-size: 15px;
+				margin: 0px auto;
+				display: block;
+				text-align: center;
+				height: 40px;
+				width: 138px;
+				line-height: 40px;
+			}
+		}
+	}
+	.i-pro {
+		background-color: #fff;
+		.swiper-slide {
+			img {
+				display: block;
+				width: 100%;
+			}
+			p {
+				background-color: #f3f5f6;
+				text-align: center;
+				font-weight: lighter;
+				line-height: 32px;
+			}
+		}
+	}
+	.i-youshi {
+		background-image: url(../images/youshi_bg.jpg);
+		background-position: center;
+		background-size: cover;
+		.youshi-content {
+			color: #fff;
+			padding: 0 10px;
+			text-align: center;
+			display: none;
+		}
+		.i-youshi-nav {
+			position: relative;
+			img {
+				display: block;
+				width: 100%;
+			}
+			.inner {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				.container_1200 {
+					height: 100%;
+					a {
+						display: block;
+						float: left;
+						width: 25%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+	.i-news {
+		background-color: #fff;
+		.title {
+			font-size: 22px;
+			font-weight: lighter;
+			color: #333;
+		}
+		.time {
+			color: #999;
+			font-size: 25px;
+			font-family: 'Conv_DINOT-CondLight';
+			border-bottom: 1px solid #eeeeee;
+			line-height: 1em;
+		}
+		.content{ font-weight: lighter; }
+		.swiper-pagination {
+			position: relative;
+			bottom: 0;
+			.swiper-pagination-bullet{
+				background-color: #fff; opacity: 1;
+				border: 1px solid #999;
+				&.swiper-pagination-bullet-active{ 
+					background-color: #999;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,124 @@
+#myInput {
+  display: none;
+}
+
+header {
+  border-bottom: 1px solid #d9d9d9;
+  position: relative;
+  z-index: 100;
+  background: #fff;
+  .logo {
+    width: 210px;
+    height: 34px;
+    padding: 13px 0;
+    img {
+      display: block;
+      height: 34px;
+    }
+  }
+  label.myInput {
+    display: inline-block;
+    width:59px;
+    height: 61px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    margin: 0;
+    z-index: 100;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    transition: $tr4;
+    overflow: hidden;
+    .menu {
+      margin-top: 20px;
+      width: 59px;
+      .bar {
+        height: 3px;
+        width: 25px;
+        border-radius: 5px;
+        margin: 5px 17px;
+        display: block;
+        position: relative;
+        background-color: #1baf00;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        -webkit-transition: 0.4s;
+        transition: 0.4s
+      }
+    }
+  }
+}
+
+#myInput:checked~header {
+  label.myInput {
+    .bar {
+      // &:nth-of-type(1) {
+      //   transform: translateY(8px) rotate(45deg);
+      // }
+      &:nth-of-type(2) {
+        width: 20px;
+        transition: 0.6s;
+      }
+      &:nth-of-type(3) {
+        width: 10px;
+        transition: 0.6s;
+      }
+    }
+  }
+}
+
+nav {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  width: 50%;
+  z-index: 99;
+  background-color: #fff;
+  transition: $tr4;
+  &>ul {
+    margin:15px 18px;
+    &>li {
+      &>a {
+        display: block;
+        height: 33px;
+        line-height: 33px;
+        font-size: 15px;
+        background-image: url(../images/plus.png);
+        background-repeat: no-repeat;
+        background-position: 98% center;
+        background-size: 10px;
+        border-bottom: 1px solid #d9d9d9;
+        padding-left: 5px;
+        &::after {
+          content: ">";  float: right;
+        }
+      }
+      &>ul {
+        display: none;
+        li {
+          a {
+            display: block;
+            height: 33px;
+            line-height: 33px;
+            font-size: 13px;
+            border-bottom: 1px solid #d9d9d9;
+            color:#999;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#myInput:checked~nav {
+  top: 61px;
+  transition: $tr4;
+}
+
+article {
+  margin-top: 0;
+}

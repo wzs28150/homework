@@ -1,0 +1,324 @@
+/* CSS Document */
+
+.yuding {
+	.info {
+		font-size: 14px;
+		background-color: #fcfcfc;
+		border-bottom: 1px solid #f1f1f1;
+		color: #333;
+		.title {
+			font-size: 20px;
+			img {
+				vertical-align: middle;
+				line-height: 0;
+				display: inline-block;
+				margin-right: 20px;
+			}
+		}
+		a {
+			color: #54bb4f;
+		}
+	}
+}
+
+.step1 {
+	.title {
+		font-size: 20px;
+		color: #333;
+	}
+	.content {
+		font-size: 14px;
+		color: #333;
+	}
+	input {
+		&.time {
+			border: 1px solid #e6e6e6;
+			height: 38px;
+			line-height: 38px;
+			text-indent: 18px;
+			margin: 0 20px;
+			background-image: url(../images/date.png);
+			background-position: 94% center;
+			background-repeat: no-repeat;
+		}
+	}
+	select {
+		width: 64px;
+		height: 38px;
+		line-height: 38px;
+		text-align: center;
+	}
+	a {
+		display: block;
+		height: 50px;
+		line-height: 50px;
+		width: 130px;
+		text-align: center;
+		background-color: #4c864c;
+		color: #fff;
+		span {
+			vertical-align: middle;
+			display: inline-block;
+			margin-left: 20px;
+		}
+	}
+}
+
+.step2 {
+	.step2-inner {
+		.title {
+			font-size: 24px;
+			color: #333;
+		}
+		.des {
+			font-size: 14px;
+			font-weight: lighter;
+		}
+		.pic {
+			width: 260px;
+			.pic-inner {
+				font-size: 14px;
+				font-weight: lighter;
+				line-height: 26px;
+				color: #333;
+			}
+		}
+		.list {
+			.item {
+				width: 936px;
+				border: 1px solid #d9d9d9;
+				margin-bottom: -1px;
+				cursor: pointer;
+				table {
+					width: 100%;
+					line-height: 75px;
+					height: 75px;
+					color: #333;
+					td {
+						height: 75px;
+						line-height: 75px;
+						vertical-align: middle;
+					}
+					.first {
+						padding-left: 45px;
+						width: 300px;
+						span {
+							vertical-align: middle;
+							display: inline-block;
+							margin-left: 15px;
+						}
+					}
+					.price {
+						font-size: 28px;
+					}
+					a {
+						width: 120px;
+						display: inline-block;
+						width: 120px;
+						height: 45px;
+						line-height: 45px;
+						background-color: #4c864c;
+						color: #fff;
+						text-align: center;
+						span {
+							vertical-align: middle;
+							margin-left: 20px;
+							display: inline-block;
+						}
+					}
+				}
+				.content {
+					display: none;
+					border-top: 1px solid #d9d9d9;
+					padding: 40px;
+				}
+				&.on {
+					table .first {
+						span {
+							color: #b99503;
+						}
+					}
+					.content {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+.step3 {
+	.title {
+		font-size: 24px;
+		color: #333;
+	}
+	th {
+		text-align: right;
+		width: 96px;
+		padding-right: 20px;
+	}
+	input,
+	#type {
+		height: 38px;
+		line-height: 38px;
+		width: 220px;
+		border: 1px solid #d9d9d9;
+		padding: 0;
+		text-indent: 10px;
+		margin: 9px 0;
+	}
+	p {
+		height: 38px;
+		line-height: 38px;
+		margin: 9px 0;
+	}
+	#sex {
+		height: 40px;
+		border: 1px solid #d9d9d9;
+		margin-left: 16px;
+		width: 95px;
+	}
+	#time {
+		height: 40px;
+		border: 1px solid #d9d9d9;
+		width: 120px;
+		margin: 9px 0;
+	}
+	textarea {
+		border: 1px solid #d9d9d9;
+		width: 620px;
+		height: 200px;
+		resize: none;
+		margin: 9px 0;
+		vertical-align: top;
+	}
+	.tip {
+		color: #999;
+		font-size: 14px;
+		margin-left: 16px;
+	}
+	.step3-inner {
+		a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			width: 130px;
+			text-align: center;
+			background-color: #4c864c;
+			color: #fff;
+			span {
+				vertical-align: middle;
+				display: inline-block;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+.step4 {
+	.step4-inner {
+		.title {
+			font-size: 24px;
+			color: #333;
+		}
+		.ddzf {
+			border-top: 4px solid #c5babe;
+			border-bottom: 4px solid #c5babe;
+			color: #333;
+			padding: 40px 0;
+			span {
+				font-size: 18px;
+				margin-bottom: 20px;
+				display: block;
+			}
+			input {
+				height: 38px;
+				line-height: 38px;
+				margin: 9px 0;
+				width: 240px;
+				background-image: url(../images/card.png);
+				background-position: 94% center;
+				background-repeat: no-repeat;
+				text-indent: 10px;
+				border: 1px solid #d9d9d9;
+			}
+			select {
+				height: 38px;
+				width: 100px;
+				line-height: 38px;
+				margin-right: 10px;
+				margin-top: 9px;
+				margin-bottom: 9px;
+				border: 1px solid #d9d9d9;
+			}
+		}
+		.content {
+			a {
+				color: #160c43;
+				text-decoration: underline;
+			}
+		}
+		&>.container_1200>a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			width: 130px;
+			text-align: center;
+			background-color: #4c864c;
+			color: #fff;
+			span {
+				vertical-align: middle;
+				display: inline-block;
+				margin-left: 20px;
+			}
+		}
+	}
+}
+
+.step5 {
+	.step5-inner {
+		color: #333;
+		.title {
+			font-size: 24px;
+			color: #333;
+		}
+		.step5-info {
+			line-height: 32px;
+		}
+		table {
+			width: calc(100% + 2px);
+			border-top: 4px solid #c5babe;
+			border-bottom: 4px solid #c5babe;
+			margin-left: -1px;
+			td {
+				height: 60px;
+				line-height: 60px;
+				text-align: center;
+				border: 1px solid #d9d9d9;
+			}
+		}
+		a {
+			display: block;
+			height: 50px;
+			line-height: 50px;
+			width: 276px;
+			text-align: center;
+			background-color: #4c864c;
+			margin: 40px auto;
+			color: #fff;
+			span {
+				vertical-align: middle;
+				display: inline-block;
+				margin-left: 20px;
+			}
+		}
+		.tip {
+			text-align: center;
+			font-weight: lighter;
+			span {
+				font-size: 24px;
+				font-weight: normal;
+			}
+		}
+	}
+}

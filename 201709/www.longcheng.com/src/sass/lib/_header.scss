@@ -1,0 +1,85 @@
+header {
+  border-bottom: 1px solid #d9d9d9;
+  .header-bar {
+    line-height: 40px;
+    height: 40px;
+    background-color: #f1f1f1;
+    color: #b89400;
+    font-size: 14px;
+    .ctrl {
+      span {
+        font-family: "BauerBodni BT Italic";
+        font-style: italic;
+        display: inline-block;
+        margin-right: 17px;
+      }
+      a {
+        color: #b89400;
+        display: inline-block;
+        width: 90px;
+        text-align: center;
+      }
+      ul {
+        display: inline-block;
+        height: 40px;
+        width: 60px;
+        li {
+          height: 40px;
+          line-height: 40px;
+          width: 60px;
+          text-align: center;
+          background-image: url(../images/l_ico.png);
+          background-repeat: no-repeat;
+          background-position: center right;
+        }
+      }
+    }
+  }
+  .logo {
+    height: 124px;
+    img {
+      display: block;
+      margin: 34px 0;
+    }
+  }
+  nav {
+    height: 124px;
+    ul {
+      height: 124px;
+      li {
+        float: left;
+        a {
+          height: 124px;
+          line-height: 124px;
+          margin-left: 40px;
+          display: block;
+        }
+        &.on {
+          a {
+            color: #b89400;
+          }
+        }
+      }
+    }
+  }
+  .step {
+    width: 314px;
+    padding: 40px 0;
+    .title {
+      font-size: 14px;
+    }
+    span {
+      display: inline-block;
+      width: 56px;
+      height: 7px;
+      border: 1px solid #d9d9d9;
+      &.on {
+        background-color: #54bb4f;
+      }
+    }
+  }
+}
+
+article {
+  margin-top: 0;
+}
