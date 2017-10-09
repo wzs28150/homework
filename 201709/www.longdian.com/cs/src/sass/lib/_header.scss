@@ -1,0 +1,136 @@
+header {
+  .logo {
+    height: 120px;
+    img {
+      display: block;
+      height: 46px;
+      margin: 37px 0;
+    }
+  }
+  nav {
+    position: relative;
+    z-index: 99;
+    height: 120px;
+    &>ul {
+      height: 120px;
+      &>li {
+        float: left;
+        position: relative;
+        &>a {
+          height: 120px;
+          line-height: 120px;
+          margin-left: 15px;
+          display: block;
+          font-size: 16px;
+          color: #333333;
+          position: relative;
+          overflow: hidden;
+          img {
+            display: block;
+            margin-top: 51px;
+          }
+          &::after {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+          }
+        }
+        &>ul {
+          display: none;
+          position: absolute;
+          top: 120px;
+          left: 0;
+          width: 500px;
+          li {
+            float: left;
+            a {
+              color: #fff;
+              display: inline block;
+              height: 50px;
+              line-height: 50px;
+              margin-left: 15px;
+              margin-right: 5px;
+              font-size: 14px;
+            }
+          }
+        }
+        &:hover {
+          a {
+            &::after {
+              background-color: #36adcf;
+            }
+          }
+        }
+        &.on {
+          a {
+            &::after {
+              background-color: #36adcf;
+            }
+          }
+        }
+      }
+    }
+  }
+  .search {
+    position: absolute;
+    top: 120px;
+    z-index: 999;
+    right: 0;
+    background: url(../images/er_nav_bg.png);
+    input {
+      border: 0px solid #ccc;
+      padding: 0 10px;
+      width: 280px;
+      margin: 10px 0 10px 10px;
+      height: 40px;
+      float: left;
+      outline: none;
+    }
+    &>a {
+      float: left;
+      display: block;
+      background: #fff url(../images/search.png) no-repeat center;
+      height: 40px;
+      width: 40px;
+      margin: 10px 10px 10px 0;
+    }
+    ul {
+      width: 340px;
+      margin:0 10px;
+      max-height: 400px; overflow: hidden;
+      li {
+        a {
+          display: block;
+          color: #fff;
+          width: 340px; line-height: 2em;
+          &:hover{ color: #ccc; }
+        }
+      }
+    }
+    &.on{
+        ul {
+        width: 340px;
+        margin:10px;
+      }
+    }
+  }
+}
+
+.sub-nav {
+  height: 50px;
+  background: url(../images/er_nav_bg.png);
+  position: absolute;
+  z-index: 90;
+  width: 100%;
+  left: 0;
+  display: none;
+}
+
+article {
+  margin-top: 0;
+}

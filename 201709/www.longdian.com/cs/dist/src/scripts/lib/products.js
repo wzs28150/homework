@@ -1,0 +1,1 @@
+define(["domReady","loadmore"],function(o,t){var i,n,u,t=t.initModule;return n=function(){},u=function(){t(8,4,".products .products-list .list .item",".loadmore")},i=function(t){o(function(){t(2)})},{initModule:i,products_show:n,products_list:u}});
