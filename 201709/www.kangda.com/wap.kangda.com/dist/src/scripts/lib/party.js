@@ -1,0 +1,1 @@
+define(["domReady"],function(n){var t,i,o;return i=function(){},o=function(){},t=function(t){n(function(){t(6)})},{initModule:t,party_list:i,party_content:o}});

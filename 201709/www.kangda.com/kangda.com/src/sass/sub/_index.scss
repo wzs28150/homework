@@ -1,0 +1,61 @@
+@charset "utf-8";
+@mixin max-screen($res) {
+    @media (max-width: $res) {
+        @content;
+    }
+}
+
+@include max-screen(1440px) {
+    .index {
+        .banner {
+            .swiper-slide {
+                .text {
+                    margin-top: -150px;
+                    h3 {
+                        font-size: 71px;
+                        line-height: 71px;
+                        &::after {
+                            height: 2px;
+                            margin: 20px 0;
+                        }
+                    }
+                    p {
+                        font-size: 28px;
+                        line-height: 39px;
+                    }
+                }
+            }
+        }
+        .i-tit {
+            color: #333333;
+            font-size: 42px;
+            font-weight: lighter;
+            text-align: center;
+            line-height: 1em;
+        }
+    }
+}
+
+@include max-screen(1366px) {
+    .index {
+        .i-pro {
+            .inner {
+                position: relative;
+                .i-pro-l {
+                    left: -63px;
+                }
+                .i-pro-r {
+                    right: -63px;
+                }
+            }
+        }
+    }
+}
+
+@include max-screen(960px) {}
+
+@include max-screen(360px) {}
+
+@include max-screen(320px) {}
+
+@media screen and (max-height: 768px) {}

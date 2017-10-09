@@ -1,0 +1,72 @@
+header {
+  .logo {
+    height: 116px;
+    img {
+      display: block;
+      height: 66px;
+      margin: 25px 0;
+    }
+  }
+  nav {
+    position: relative;
+    z-index: 99;
+    height: 116px;
+    &>ul {
+      height: 116px;
+      &>li {
+        float: left;
+        position: relative;
+        border-top: 3px solid #fff;
+        transition: $tr4;
+        &>a {
+          height: 113px;
+          line-height: 113px;
+          padding: 0 20px;
+          display: block;
+          font-size: 16px;
+          color: #333333;
+          position: relative;
+          overflow: hidden;
+          transition: $tr4;
+        }
+        &>ul {
+          display: none;
+          position: absolute;
+          top: 116px;
+          left: 0;
+          width: 500px;
+          li {
+            float: left;
+            a {
+              color: #fff;
+              display: inline block;
+              height: 50px;
+              line-height: 50px;
+              margin-left: 15px;
+              margin-right: 5px;
+              font-size: 14px;
+            }
+          }
+        }
+        &:hover { transition: $tr4;
+          border-top: 3px solid #f3f5f6;
+          &>a {
+            background-color: #f3f5f6;
+            transition: $tr4;
+          }
+        }
+        &.on {
+          border-top: 3px solid #009944;
+          &>a {
+            background-color: #f3f5f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+article {
+  margin-top: 0;
+}

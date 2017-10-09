@@ -1,0 +1,28 @@
+/* CSS Document */
+.about {
+	.banner{ transition: $tr4;
+		img{ display: block; width: 100%; }
+	}
+	.about-nav{ text-align: center; height: 50px; line-height: 0; font-size: 0; border-bottom: 1px solid #f1f1f1; position: static; background-color: #fff; transition: $tr4;
+		a{ display: inline-block; height: 50px; line-height: 50px; font-size: 16px; width: 130px; color: #333333; transition: $tr4;
+			&:hover{ color: #bfbfbf; transition: $tr4; }
+			&.on{ background-color: #bfbfbf; color: #fff; transition: $tr4;}
+		}
+	}
+
+	.a_pic1{
+		img{ display: block; width: 100%;}
+	}
+	&.on{
+		.about-nav{ position: fixed; top: 0; width: 100%; left: 0; z-index: 99; transition: $tr4;  }
+	}
+	.a_content{
+		.a_l{ width: 673px; font-size: 14px; line-height: 24px;
+			.title{ font-size: 16px; line-height: 24px; color: #040033; font-weight: bold; }
+			strong,a{ color: #b89400;}
+		}
+		.a_r{ width: 420px;
+			img{ display: block; width: 100%; }
+		}
+	}
+}

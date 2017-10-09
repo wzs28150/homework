@@ -1,0 +1,1 @@
+define(["domReady","loadmore"],function(e,n){var i,n=n.initModule;return tab_show=function(){new Swiper(".tab-inner .swiper-container",{slidesPerView:2,spaceBetween:12,nextButton:".i-pro-r",prevButton:".i-pro-l"})},i=function(n){e(function(){require(["swiper"],function(e){tab_show()})})},{initModule:i}});

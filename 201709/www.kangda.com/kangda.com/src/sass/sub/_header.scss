@@ -1,0 +1,60 @@
+@charset "utf-8";
+@mixin max-screen($res) {
+    @media (max-width: $res) {
+        @content;
+    }
+}
+
+@include max-screen(1440px) {
+    header {
+        .logo {
+            height: 96px;
+            img {
+                height: 56px;
+                margin: 20px 0;
+            }
+        }
+        nav {
+            height: 96px;
+            &>ul {
+                height: 96px;
+                &>li {
+                    &>a {
+                        height: 93px;
+                        line-height: 93px;
+                    }
+                    &>ul {
+                        top: 96px;
+                        left: 0;
+                        width: 500px;
+                        li {
+                            float: left;
+                            a {
+                                color: #fff;
+                                display: inline block;
+                                height: 50px;
+                                line-height: 50px;
+                                margin-left: 15px;
+                                margin-right: 5px;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    article {
+        margin-top: 0;
+    }
+}
+
+@include max-screen(1024px) {}
+
+@include max-screen(960px) {}
+
+@include max-screen(360px) {}
+
+@include max-screen(320px) {}
+
+@media screen and (max-height: 768px) {}

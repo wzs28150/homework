@@ -1,0 +1,63 @@
+/* CSS Document */
+.rooms {
+	.banner{
+		img{ display: block; width: 100%; }
+	}
+	.room_pic_change{
+		.change-nav{ overflow: hidden; margin-bottom: 50px; height: 79px;
+			a{ display: block; width: 20%; float: left; text-align: center; line-height: 70px; height: 70px; border-bottom: 3px solid #dbdbdb; position: relative;
+				&:hover{ color: #af8800; }
+				&.on{ color: #af8800; border-bottom: 3px solid #af8800;
+					&::after{ content: ""; display: block; position: absolute; bottom: -8px; width: 0; height: 0; border-left: 6px solid transparent; border-right: 6px solid transparent; border-top: 6px solid #af8800; left: 50%; margin-left: -6px;
+					}
+				}
+			}
+		}
+		img{ display: block; width: 100%; }
+		.room_pic_content{ position: relative; display: none;
+			.room_pic_list{ position: absolute; z-index: 1; top: 50%; right: 40px; width: 125px; margin-top: -243px;
+				.item{ width: 125px; height: 90px; margin: 7px 0; float: left; overflow: hidden; position: relative;
+					img{ display: block; width: 100%; }
+					&::before{ position: absolute; content: ""; width: 109px; height: 74px; transform: scale(1.5); border: 8px solid #fff; top: 0; left: 0; transition: $tr4; }
+					&.on{
+						&::before{ transform: scale(1); }
+					}
+				}
+			}
+		}
+		.form{ height: 70px; background-color: #1b1146; position: absolute; bottom: 0; width: 100%; left: 0; color: #fff; line-height: 70px; z-index: 1;
+			table{ width: 100%; }
+			input{ width: 80px; color: #666666; font-family: "BauerBodni BT Italic"; font-size: 15px; text-align: center;
+				&.lang{ width: 138px; }
+			}
+			.doyd{ display: block; width: 170px; height: 70px; text-align: center; color: #fff; background-color: #b89400;  }
+		}
+	}
+	.standard{
+		.tit{ color: #1b1146; font-size: 24px; line-height: 2em; }
+		ul{ float: left; width: 252px; margin-right: 64px; border-top: 1px solid #dbdbdb; padding-top: 60px; margin-bottom: 40px;
+			&.first-line{ border-top: 3px solid #1b1146; }
+			&.line{ padding: 0; }
+			li{ line-height: 28px; font-size: 16px;
+				&.title{ color: #b89400; font-size: 18px; }
+			}
+		}
+	}
+	.supplies{
+		.tit{ color: #1b1146; font-size: 24px; line-height: 80px; }
+		.list{ background: #f7f7f7; overflow: hidden; padding: 40px 0 20px;
+			.item{ float: left; width: 14.28571428571429%; text-align: center;
+				.ico{}
+				p{ font-size: 16px; line-height: 22px;
+					i{ display: block; font-size: 12px; line-height: 16px; margin: 0 auto; }
+				}
+			}
+		}
+	}
+	.sub-tel{ background-color: #856f56; color: #fff; line-height: 80px;
+		.fl{ font-size: 18px; padding-left: 40px;
+			i{ font-family: "BauerBodni BT Italic"; }
+		}
+		.fr{ font-size: 12px; padding-right: 40px;}
+	}
+}
