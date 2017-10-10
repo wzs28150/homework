@@ -1,5 +1,5 @@
 define(['domReady', 'loadmore'], function (domReady, loadmore) {
-  var initModule, bigpic, about_index;
+  var initModule, bigpic, about_index, about_zhaopin;
   bigpic = function () {
     var smallswiper = new Swiper('.small-pic', {
       spaceBetween: 2,
@@ -29,7 +29,16 @@ define(['domReady', 'loadmore'], function (domReady, loadmore) {
       bigpic();
     });
   }
-
+  about_zhaopin = function () {
+    $('.zp-tab a').click(function(){
+      if ($(this).hasClass("on"))
+        return false;
+      var index = $(this).index();
+      $(this).addClass("on").siblings().removeClass("on");
+      $(this).parent().parent().find('.zp-content').hide();
+      $(this).parent().parent().find('.zp-content').eq(index).fadeIn();
+    });
+  }
   initModule = function (callbak) {
     domReady(function () {
       callbak(1);
@@ -48,6 +57,7 @@ define(['domReady', 'loadmore'], function (domReady, loadmore) {
   };
   return {
     initModule: initModule,
-    about_index: about_index
+    about_index: about_index,
+    about_zhaopin: about_zhaopin
   };
 })

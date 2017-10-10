@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 哈尔滨电气动力装备有限公司</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+
+  <!--[if IE 8]>
+  <script src="./src/scripts/packag /compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <input id="myInput" type="checkbox">
+  <header>
+    <div class="container_1200">
+      <div class="fl logo">
+        <img src="./src/images/h_logo.jpg" alt="">
+      </div>
+      <label for="myInput" class="myInput wap">
+        <div class="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"> </div>
+        </div>
+      </label>
+    </div>
+  </header>
+  <nav>
+    <ul>
+      <li>
+        <a data-ajax="no" href="javascript:void(0);">酒店信息
+          <span>&gt;</span>
+          <ul>
+            <li>
+              <a href="/about.html">酒店介绍</a>
+            </li>
+            <li>
+              <a href="/about_tese.html">酒店特色</a>
+            </li>
+            <li>
+              <a href="/about_sheshi.html">服务与设施</a>
+            </li>
+            <li>
+              <a href="/about_news.html">酒店动态</a>
+            </li>
+            <li>
+              <a href="/about_zhaopin.html">酒店招聘</a>
+            </li>
+          </ul>
+        </a>
+      </li>
+      <li>
+        <a href="/kefang.html">客房与套房
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="/canyin.html">餐饮服务
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="/huiyi.html">会议宴会
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="/shuiliao.html">水疗康体
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="/mudidi.html">目的地
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a href="">优惠活动
+          <span>&gt;</span>
+        </a>
+      </li>
+      <li>
+        <a data-ajax="no" href="javascript:void(0);">联系我们
+          <span>&gt;</span>
+          <ul>
+            <li>
+              <a href="/contact.html">联系方式</a>
+            </li>
+            <li>
+              <a href="/contact_tousu.html">投诉建议</a>
+            </li>
+          </ul>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <article class="about" data-main="about">
+      <!-- 快速预定 -->
+      <section class="quick-form">
+        <div class="container_1200">
+          <input type="text" class="lang" name="" id="starttime" value="" placeholder="入住日期" lay-key="1">
+          <input type="text" class="lang" name="" id="endtime" value="" placeholder="离店日期" lay-key="2">
+          <a class="submit" href="">立即预定</a>
+        </div>
+      </section>
+      <!-- 快速预定 -->
+
+      <!-- 快速拨号 -->
+      <section class="quick-tel">
+        <div class="container_1200">
+          <div class="tit">龙城花园饭店</div>
+          <div class="tel">0467-2333333</div>
+          <a href="tel:0467-2333333"></a>
+        </div>
+      </section>
+      <!-- 快速拨号 -->
+      <!-- 二级导航 -->
+      <section class="er-bar">
+        <input type="checkbox" name="" id="ermenu">
+        <div class="container_1200">
+          <div class="er-tit">酒店特色</div>
+          <label for="ermenu" class="er-menu">
+            <div class="menu">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"> </div>
+            </div>
+          </label>
+        </div>
+        <div class="er-nav">
+          <ul class="container_1200">
+            <li>
+              <a href="/about.html">酒店介绍</a>
+            </li>
+            <li>
+              <a class="on" href="/about_tese.html">酒店特色</a>
+            </li>
+            <li>
+              <a href="/about_sheshi.html">服务与设施</a>
+            </li>
+            <li>
+              <a href="/about_news.html">酒店动态</a>
+            </li>
+            <li>
+              <a href="/about_zhaopin.html">酒店招聘</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 二级导航 -->
+      <!-- 招聘列表 -->
+      <input type="hidden" class="eraction" data-fun="about_zhaopin">
+      <section class="zhaopin-list">
+        <div class="item">
+          <div class="pic">
+            <img src="./src/images/zhaopin_pic.jpg" alt="">
+          </div>
+          <input type="checkbox"  id="zhaopincheckbox1">
+          <label class="title" for="zhaopincheckbox1">
+            <div class="container_1200">客房服务员</div> 
+          </label>
+          <div class="zp-inner container_1200">
+            <div class="zp-tab">
+              <a href="javascript:void(0);" class="on" data-ajax="no">工作职责</a>
+              <a href="javascript:void(0);" data-ajax="no">任职资格</a>
+            </div>
+            <div class="zp-content text-area" style="display:block;">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+            <div class="zp-content text-area">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic">
+            <img src="./src/images/zhaopin_pic.jpg" alt="">
+          </div>
+          <input type="checkbox" id="zhaopincheckbox2">
+          <label class="title" for="zhaopincheckbox2">
+            <div class="container_1200">客房服务员</div>
+          </label>
+          <div class="zp-inner container_1200">
+            <div class="zp-tab">
+              <a href="javascript:void(0);" class="on" data-ajax="no">工作职责</a>
+              <a href="javascript:void(0);" data-ajax="no">任职资格</a>
+            </div>
+            <div class="zp-content" style="display:block;">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+            <div class="zp-content">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic">
+            <img src="./src/images/zhaopin_pic.jpg" alt="">
+          </div>
+          <input type="checkbox" id="zhaopincheckbox3">
+          <label class="title" for="zhaopincheckbox3">
+            <div class="container_1200">客房服务员</div>
+          </label>
+          <div class="zp-inner container_1200">
+            <div class="zp-tab">
+              <a href="javascript:void(0);" class="on" data-ajax="no">工作职责</a>
+              <a href="javascript:void(0);" data-ajax="no">任职资格</a>
+            </div>
+            <div class="zp-content" style="display:block;">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+            <div class="zp-content">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="pic">
+            <img src="./src/images/zhaopin_pic.jpg" alt="">
+          </div>
+          <input type="checkbox" id="zhaopincheckbox4">
+          <label class="title" for="zhaopincheckbox4">
+            <div class="container_1200">客房服务员</div>
+          </label>
+          <div class="zp-inner container_1200">
+            <div class="zp-tab">
+              <a href="javascript:void(0);" class="on" data-ajax="no">工作职责</a>
+              <a href="javascript:void(0);" data-ajax="no">任职资格</a>
+            </div>
+            <div class="zp-content" style="display:block;">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+            <div class="zp-content">
+              <p>1、按照领班安排认真做好桌椅、餐厅卫生，餐厅铺台，准备好各种用品，确保正常营业使用。</p>
+              <p>2、接待顾客应主动、热情、礼貌、耐心、周到，使顾客有宾至如归之感； </p>
+              <p>3、运用礼貌语言，为客人提供最佳服务 </p>
+              <p>4、善于向顾客介绍和推销本餐厅饮品及特色菜点；</p>
+              <p>5、配合领班工作，服从领班或以上领导指挥，团结及善于帮助同事工作； 6、积极参加培训，不断提高服务技能。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 招聘列表 -->
+      <!-- 快速导航 -->
+      <section class="quick-link">
+        <table>
+          <tr>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico1"></i>
+                <span>首页</span>
+              </a>
+            </td>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico2"></i>
+                <span>酒店信息</span>
+              </a>
+            </td>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico3"></i>
+                <span>客房与套房</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico4"></i>
+                <span>餐饮服务</span>
+              </a>
+            </td>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico5"></i>
+                <span>会议宴会</span>
+              </a>
+            </td>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico6"></i>
+                <span>水疗康体</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico7"></i>
+                <span>目的地</span>
+              </a>
+            </td>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico8"></i>
+                <span>优惠活动</span>
+              </a>
+            </td>
+            <td>
+              <a href="">
+                <i class="ql-qk_ico9"></i>
+                <span>联系我们</span>
+              </a>
+            </td>
+          </tr>
+        </table>
+      </section>
+      <!-- 快速导航 -->
+    </article>
+  </main>
+  <footer>
+    <div class="container_1200">
+      Copyright © 2017 All rights reserved.
+      <br/>龙城花园饭店
+    </div>
+  </footer>
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="./src/scripts/package/scroll/jquery.mousewheel.min.js"></script>
+  <script src="./src/scripts/package/scroll/jquery.easing.min.js"></script>
+  <script src="./src/scripts/package/scroll/jquery.nicescroll.min.js"></script>
+  <script src="./src/scripts/require.js" data-main="./src/scripts/me"></script>
+</body>
+
+</html>

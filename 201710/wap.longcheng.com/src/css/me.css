@@ -3023,4 +3023,76 @@ footer a {
   font-size: 15px;
 }
 
+.zhaopin-list .item input {
+  display: none;
+}
+.zhaopin-list .item .pic img {
+  display: block;
+  width: 100%;
+}
+.zhaopin-list .item .title {
+  width: 100%;
+  display: block;
+  color: #fff;
+  background-color: #271f51;
+  line-height: 3em;
+  background-image: url(../images/plus.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: 1em;
+  -webkit-transition: 0.4s background-color;
+  transition: 0.4s background-color;
+}
+.zhaopin-list .item input:checked ~ .title {
+  background-color: #b4b4b4;
+  background-image: url(../images/mins.png);
+  -webkit-transition: 0.4s background-color;
+  transition: 0.4s background-color;
+}
+.zhaopin-list .item .zp-inner {
+  display: none;
+}
+.zhaopin-list .item .zp-inner .zp-tab {
+  padding: 10% 0;
+  font-size: 0;
+  line-height: 0;
+}
+.zhaopin-list .item .zp-inner .zp-tab a {
+  display: inline-block;
+  background-color: #b4b4b4;
+  color: #fff;
+  line-height: 2.5em;
+  padding: 0 1em;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.zhaopin-list .item .zp-inner .zp-tab a.on {
+  background-color: #271f51;
+}
+.zhaopin-list .item .zp-inner .zp-content {
+  display: none;
+  margin-bottom: 10%;
+}
+.zhaopin-list .item input:checked ~ .zp-inner {
+  display: block;
+}
+
+.canyin-list .item .pic img {
+  display: block;
+  width: 100%;
+}
+.canyin-list .item .title {
+  width: 100%;
+  display: block;
+  color: #fff;
+  background-color: #271f51;
+  line-height: 3em;
+  background-image: url(../images/jiantou.png);
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: .6em;
+  -webkit-transition: 0.4s background-color;
+  transition: 0.4s background-color;
+}
+
 /*# sourceMappingURL=me.css.map */

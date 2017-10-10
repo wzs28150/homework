@@ -52,7 +52,8 @@
 		background-size: auto 100%;
 		padding-left: 1.5em;
 		padding-top: 5px;
-		line-height: 1em; margin-top: 5px;
+		line-height: 1em;
+		margin-top: 5px;
 	}
 	a {
 		position: absolute;
@@ -197,5 +198,86 @@
 		color: #fff;
 		line-height: 3em;
 		font-size: 15px;
+	}
+}
+
+.zhaopin-list {
+	.item {
+		input {
+			display: none;
+		}
+		.pic {
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.title {
+			width: 100%;
+			display: block;
+			color: #fff;
+			background-color: #271f51;
+			line-height: 3em;
+			background-image: url(../images/plus.png);
+			background-repeat: no-repeat;
+			background-position: 95% center;
+			background-size: 1em;
+			@include tr(background-color, 0.4s);
+		}
+		input:checked~.title {
+			background-color: #b4b4b4;
+			background-image: url(../images/mins.png);
+			@include tr(background-color, 0.4s);
+		}
+		.zp-inner {
+			display: none;
+			.zp-tab {
+				padding: 10% 0;
+				font-size: 0;
+				line-height: 0;
+				a {
+					display: inline-block;
+					background-color: #b4b4b4;
+					color: #fff;
+					line-height: 2.5em;
+					padding: 0 1em;
+					font-size: 14px;
+					margin-right: 10px;
+					&.on {
+						background-color: #271f51;
+					}
+				}
+			}
+			.zp-content {
+				display: none;
+				margin-bottom: 10%;
+			}
+		}
+		input:checked~.zp-inner {
+			display: block;
+		}
+	}
+}
+
+.canyin-list {
+	.item {
+		.pic {
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.title {
+			width: 100%;
+			display: block;
+			color: #fff;
+			background-color: #271f51;
+			line-height: 3em;
+			background-image: url(../images/jiantou.png);
+			background-repeat: no-repeat;
+			background-position: 95% center;
+			background-size: .6em;
+			@include tr(background-color, 0.4s);
+		}
 	}
 }
