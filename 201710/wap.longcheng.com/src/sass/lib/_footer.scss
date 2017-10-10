@@ -1,12 +1,11 @@
 @charset "utf-8";
 footer {
-  background-color: #434343;
-  height: 85px;
-  line-height: 85px;
-  color: #999;
-  font-size: 14px;
+  background-color: #f2f2f2;
+  color: #1d1d1d;
+  font-size: 14px; padding: 1em 0;
   position: relative;
   z-index: 99;
+  text-align: center;
   span.pc {
     display: inline!important;
   }

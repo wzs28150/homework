@@ -68,6 +68,7 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
       mh = $(window).height() - fh - hh;
     }
     $('article').css('min-height', mh + 'px');
+    $('.full-screen').height(wh - hh);
   }
 
   msg = function () {

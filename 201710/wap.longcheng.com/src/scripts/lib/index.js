@@ -2,7 +2,7 @@ define(['domReady', 'debouncedresize'], function (domReady, debouncedresize) {
   var initModule, banner, headerh = $('header').height(),
     bannerpic, news;
   banner = function () {
-    var bigswiper = new Swiper('.index .banner .swiper-container', {
+    var bigswiper = new Swiper('.index .banner.swiper-container', {
       autoplay: 3000,
       speed: 1000,
       loop: true,
@@ -13,36 +13,14 @@ define(['domReady', 'debouncedresize'], function (domReady, debouncedresize) {
     });
   };
   bannerpic = function () {
-    $('.index .banner .swiper-slide').each(function (i) {
-      var img;
-      if ($(window).width() > 1000) {
-        img = $(this).attr('data-pc');
-      } else {
-        img = $(this).attr('data-wap');
-      }
+   
+  }
 
-      $(this).css('background-image', 'url(' + img + ')');
-    })
-  }
-  news = function () {
-    var newsswiper = new Swiper('.i-news .swiper-container', {
-      pagination: '.i-news .swiper-pagination',
-      paginationClickable: true
-    });
-    $('.i-news-tab a').click(function () {
-      var i = $(this).index();
-      $('.i-news-tab a').removeClass('on');
-      $(this).addClass('on');
-      $('.i-news-content').removeClass('on');
-      $('.i-news-content').eq(i).addClass('on');
-    });
-  }
   initModule = function (callbak) {
     domReady(function () {
       callbak(0);
       require(["swiper"], function (swiper) {
         banner();
-        news();
       });
       bannerpic();
       $(window).on('debouncedresize', function () {

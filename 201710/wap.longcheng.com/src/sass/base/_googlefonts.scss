@@ -152,39 +152,58 @@
 }
 
 
-$icomoon-font-path: "fonts" !default;
-$hddz-volume: "\e900";
 
 @font-face {
-	font-family: 'hddz';
-	src : url('#{$icomoon-font-path}/hddz.eot?20ull4');
-	src : url('#{$icomoon-font-path}/hddz.eot?20ull4#iefix') format('embedded-opentype'),
-	url('#{$icomoon-font-path}/hddz.ttf?20ull4') format('truetype'),
-	url('#{$icomoon-font-path}/hddz.woff?20ull4') format('woff'),
-	url('#{$icomoon-font-path}/hddz.svg?20ull4#hddz') format('svg');
+	font-family: 'quicklinke';
+	src:  url('fonts/quicklinke.eot?j79vsc');
+	src:  url('fonts/quicklinke.eot?j79vsc#iefix') format('embedded-opentype'),
+	  url('fonts/quicklinke.ttf?j79vsc') format('truetype'),
+	  url('fonts/quicklinke.woff?j79vsc') format('woff'),
+	  url('fonts/quicklinke.svg?j79vsc#quicklinke') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
-
-[class^="hddz-"],
-[class*=" hddz-"] {
+  }
+  
+  [class^="ql-"], [class*=" ql-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family: 'hddz' !important;
+	font-family: 'quicklinke' !important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
 	text-transform: none;
 	line-height: 1;
+  
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.hddz-volume {
-	&:before {
-		content: $hddz-volume;
-	}
-}
-
-
+  }
+  
+  .ql-qk_ico1:before {
+	content: "\e900";
+  }
+  .ql-qk_ico2:before {
+	content: "\e901";
+  }
+  .ql-qk_ico3:before {
+	content: "\e902";
+  }
+  .ql-qk_ico4:before {
+	content: "\e903";
+  }
+  .ql-qk_ico5:before {
+	content: "\e904";
+  }
+  .ql-qk_ico6:before {
+	content: "\e905";
+  }
+  .ql-qk_ico7:before {
+	content: "\e906";
+  }
+  .ql-qk_ico8:before {
+	content: "\e907";
+  }
+  .ql-qk_ico9:before {
+	content: "\e908";
+  }
+  
