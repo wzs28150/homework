@@ -35,12 +35,17 @@ define([], function () {
     $('nav a').eq(i).addClass('on');
     $('body').undelegate('nav > ul > li  a', 'click');
     $('body').delegate('nav > ul > li  a', 'click', function () {
-      $('nav > ul > li >ul').hide();
+      //$('nav > ul > li >ul').hide();
       var ul = $(this).next('ul');
-      if(ul.length>0){
-        ul.fadeToggle();
-      }else{
-        $('#myInput').attr('checked',false)
+      if (ul.length > 0) {
+        if (ul.is(":hidden")) {
+          ul.show(); 
+        } else {
+          ul.hide(); 
+        }
+      } else {
+        $('nav > ul > li >ul').hide();
+        $('#myInput').attr('checked', false)
       }
     });
   };
