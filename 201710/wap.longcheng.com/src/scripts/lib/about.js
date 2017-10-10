@@ -1,25 +1,22 @@
 define(['domReady', 'loadmore'], function (domReady, loadmore) {
-  var initModule,bigpic,about_index;
+  var initModule, bigpic, about_index;
   bigpic = function () {
-    var bigswiper = new Swiper('.big-pic', {
-      lazyLoading: true,
-      preloadImages: false,
-    });
     var smallswiper = new Swiper('.small-pic', {
-      spaceBetween: 1,
+      spaceBetween: 2,
       slidesPerView: 'auto',
       loopedSlides: 17,
-      nextButton: '.small-r',
-      prevButton: '.small-l'
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev'
     });
     $('.small-pic .swiper-slide').click(function () {
       if ($(this).hasClass("on"))
         return false;
       var index = $(this).index();
-      bigswiper.slideTo(index, 1000, false);
       $(this).addClass("on").siblings().removeClass("on");
       var title = $(this).attr('data-title');
-      $('.pannel .inner .middle .middle-bar .title').html(title);
+      var img = $(this).attr('data-img');
+      $('.pic-change .title .container_1200').html(title);
+      $('.pic-change .big-pic').css('background-image', 'url(' + img + ')');
     });
   }
 
@@ -51,6 +48,6 @@ define(['domReady', 'loadmore'], function (domReady, loadmore) {
   };
   return {
     initModule: initModule,
-    about_index:about_index
+    about_index: about_index
   };
 })

@@ -39,7 +39,7 @@
 }
 
 .quick-tel {
-	padding: 5% 0;
+	padding: 3% 0;
 	.tit {
 		font-size: 23px;
 		color: #000000;
@@ -52,7 +52,7 @@
 		background-size: auto 100%;
 		padding-left: 1.5em;
 		padding-top: 5px;
-		line-height: 1em;
+		line-height: 1em; margin-top: 5px;
 	}
 	a {
 		position: absolute;
@@ -156,11 +156,46 @@
 	.big-pic {
 		background-position: center;
 		background-size: cover;
-		.middle-bar-bottom { padding-top: 200px;}
+		.middle-bar-bottom {
+			padding-top: 200px;
+		}
 		.small-pic {
 			.swiper-slide {
-				height: 35px;
+				height: 40px;
+				width: 50px;
+				background-position: center;
+				background-size: cover;
+				@include tr(opacity, 0.6s);
+				&.on {
+					border: 2px solid #fff;
+					height: 36px;
+					width: 46px;
+					@include tr(opacity, 0.6s);
+				}
 			}
 		}
+	}
+	.middle-bar-bottom {
+		.middle-bar-bottom-inner {
+			background-color: rgba( #1b1146, .8);
+			padding: 7px 40px;
+			position: relative;
+			.swiper-button-next,
+			.swiper-button-prev {
+				background-size: 9px 15px;
+			}
+			.swiper-button-next {
+				right: 5px;
+			}
+			.swiper-button-prev {
+				left: 5px;
+			}
+		}
+	}
+	.title {
+		background-color: #1c1247;
+		color: #fff;
+		line-height: 3em;
+		font-size: 15px;
 	}
 }
