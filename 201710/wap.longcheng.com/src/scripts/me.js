@@ -31,6 +31,7 @@ require.config({
     masonry: './package/pubu/masonry.pkgd.min',
     form: './package/form/form',
     imagesloaded: './package/litebox/js/images-loaded.min',
+    laydate: './package/laydate/laydate',
     litebox: './package/litebox/js/litebox.min',
     idcode: './package/idcode/jquery.idcode',
     loadmore: './package/loadmore/loadmore',

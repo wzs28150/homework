@@ -43,15 +43,21 @@
 		}
 	}
 
-	.quick-link{
-		table{ width: 100%;
-			tr{ border: 1px solid #f2f2f2; 
-				td{ border: 1px solid #f2f2f2; }
-			}
+	
+}
+
+.quick-link{
+	table{ width: 100%;
+		tr{ border: 1px solid #f2f2f2; 
+			td{ border: 1px solid #f2f2f2; }
 		}
-		a{ display: block; width: 100%; float: left; text-align: center;  padding: 5% 0;
-			i{ display: block; color: #1c1247; font-size: 18px; height: 18px;	}
-			span{ display: block;	font-size: 14px; color: #333; }
+	}
+	a{ display: block; width: 100%; float: left; text-align: center;  padding: 8% 0;
+		i{ display: block; color: #1c1247; font-size: 18px; height: 18px;	}
+		span{ display: block;	font-size: 14px; color: #333; }
+		&:hover{
+			background-color: #1c1247;
+			i,span{  color: #fff; }
 		}
 	}
 }
