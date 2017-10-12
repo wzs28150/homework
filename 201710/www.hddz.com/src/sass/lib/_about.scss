@@ -9,4 +9,92 @@
 			margin-bottom: 40px;
 		}
 	}
+	.team-list {
+		text-align: center;
+		font-size: 0;
+		line-height: 0;
+		.pic{
+			img{ width: auto; max-width: 100%; }
+		}
+		.item {
+			margin-top: 40px;
+			margin-right: 6%;
+			width: 15.2%;
+			vertical-align: middle;
+			display: inline-block;
+			.name {
+				font-size: 24px;
+				line-height: 1em;
+				margin-top: 20px;
+				margin-bottom: 15px;
+			}
+			.zhiwei {
+				font-size: 16px;
+				line-height: 1.2em;
+				height: 2em;
+			}
+		}
+	}
+	#timeline {
+		width: 760px;
+		height: 300px;
+		overflow: hidden;
+		margin: 100px auto;
+		position: relative;
+		background: url('img/dot.gif') left 45px repeat-x;
+	}
+
+	#dates {
+		width: 760px;
+		height: 60px;
+		overflow: hidden;
+	}
+
+	#dates li {
+		list-style: none;
+		float: left;
+		width: 100px;
+		height: 50px;
+		font-size: 24px;
+		text-align: center;
+		background: url('img/biggerdot.png') center bottom no-repeat;
+	}
+
+	#dates a {
+		line-height: 38px;
+		padding-bottom: 10px;
+	}
+
+	#dates .selected {
+		font-size: 38px;
+	}
+
+	#issues {
+		width: 760px;
+		height: 300px;
+		overflow: hidden;
+	}
+
+	#issues li {
+		width: 760px;
+		height: 300px;
+		list-style: none;
+		float: left;
+	}
+
+	#issues li h1 {
+		color: #ffcc00;
+		font-size: 42px;
+		margin: 20px 0;
+		text-shadow: #000 1px 1px 2px;
+	}
+
+	#issues li p {
+		font-size: 14px;
+		margin-right: 70px;
+		margin: 10px;
+		font-weight: normal;
+		line-height: 22px;
+	}
+
 }

@@ -33,33 +33,42 @@ define(["debouncedresize"], function (debouncedresize) {
   navactive = function (i) {
     $('nav a').removeClass('on');
     $('nav a').eq(i).addClass('on');
-    if($(window).width()<980){
-      $('nav a').click(function(){
-        $('#myInput').attr('checked',false);
+    if ($(window).width() < 980) {
+      $('nav a').click(function () {
+        $('#myInput').attr('checked', false);
       });
     }
     $(window).on('debouncedresize', function () {
-      if($(window).width()<980){
-        $('nav a').click(function(){
-          $('#myInput').attr('checked',false);
+      if ($(window).width() < 980) {
+        $('nav a').click(function () {
+          $('#myInput').attr('checked', false);
         });
       }
     });
-    
+
   };
   /**
    * 二级导航
    * @return {[type]} [description]
    */
   sub_nav = function (i) {
+    $('.er-bar .er-nav a').removeClass('on');
+    $('.er-bar .er-nav a').eq(i).addClass('on');
 
-    $('.er-bar .er-nav a').stop().click(function () {
-      /* Stuff to do when the mouse enters the element */
-      $('.er-bar .er-nav a').removeClass('on')
-      $(this).addClass('on');
-      $('.position a').eq(2).html($(this).html());
+    if ($(window).width() < 980) {
+      $('.er-bar .er-nav a').click(function () {
+        $('#ermenu').attr('checked', false);
+      });
+    }
+    $(window).on('debouncedresize', function () {
+      if ($(window).width() < 980) {
+        $('.er-bar .er-nav a').click(function () {
+          $('#ermenu').attr('checked', false);
+        });
+      }
     });
-    if ($(".er-bar-targat").length > 0) {
+
+    if ($(".er-bar-targat").length > 0 && $(window).width() > 980) {
       $(window).scroll(function () {
         var navH = $(".er-bar-targat").offset().top;
         //获取滚动条的滑动距离
@@ -90,11 +99,9 @@ define(["debouncedresize"], function (debouncedresize) {
         //判断是否无刷新
         if (state && localStorage.mainaction && localStorage.mainaction == action) {
           require(['./lib/' + action], function (action) {
-            var str = "action." + eraction + "(function(a){})"
+            var str = "action." + eraction + "(function(a){sub_nav(a);})"
             eval(str);
             //console.log(str);
-            navactive(a);
-            sub_nav();
           });
         } else {
           localStorage.mainaction = action;
@@ -102,9 +109,8 @@ define(["debouncedresize"], function (debouncedresize) {
             //console.log(action);
             action.initModule(function (a) {
               navactive(a);
-              sub_nav();
             });
-            var str = "action." + eraction + "(function(a){navactive(a);})"
+            var str = "action." + eraction + "(function(a){sub_nav(a);})"
             //console.log(str);
             eval(str);
           });

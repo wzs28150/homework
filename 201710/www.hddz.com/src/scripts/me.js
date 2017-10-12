@@ -9,11 +9,12 @@ require.config({
       exports: 'BMap'
     },
     'idcode': ['css!./package/idcode/jquery.idcode.css'],
-    'litebox': ['css!./package/litebox/css/litebox.css','imagesloaded'],
+    'litebox': ['css!./package/litebox/css/litebox.css', 'imagesloaded'],
   },
   paths: {
     domReady: './domReady',
     main: './lib/main',
+    jquery:'./package/jquery/jquery-1.9.1.min',
     pjax: './package/pajax/jquery.pjax',
     pajax: './package/pajax/pajax',
     router: './package/router/router',
@@ -34,6 +35,7 @@ require.config({
     litebox: './package/litebox/js/litebox.min',
     idcode: './package/idcode/jquery.idcode',
     loadmore: './package/loadmore/loadmore',
+    timeline: './package/timeline/jquery.timelinr-0.9.53',
     'BMap': ['http://api.map.baidu.com/api?key=&v=1.1&services=true'],
   }
 });
