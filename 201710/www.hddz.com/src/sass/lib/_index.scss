@@ -232,15 +232,24 @@
 	}
 	.i-quicklink {
 		padding-top: 30px;
-		background-color: #efefef;
-		.w60{ width: 60%; 
-			.swiper-slide{ 
-				img{ display: block; width: 100%; }
+		background-color: #efefef; padding-bottom: 60px;
+		.w60{ width: 66%; 
+			.swiper-slide{  height: 120px; background-position: center; background-size: cover;
+				img{ display: block; width: 100%; height: 120px;}
 			}
 			.swiper-button-prev,.swiper-button-next{ background-color: rgba(#000,0.35); background-size: 10px;}
 			.swiper-button-prev{ left: 0; }
 			.swiper-button-next{ right: 0; }
 		}
-		.w30{ width: 40%;}
+		.w40{ width: 32%; height: 120px;
+			ul{
+				li{ float: left; width: 33.3333333%; text-align: center;  
+					a{ display: block; width: 100%;background-color: #fff; height: 120px;  font-size: 17px; overflow: hidden;
+						img{ display: block;  margin: 26px auto 10px; }
+					}
+					&.middle{ border-left: 1px solid #efefef; border-right:1px solid #efefef;width: calc(33.3333333% - 2px); }
+				}
+			}
+		}
 	}
 }

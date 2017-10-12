@@ -44,6 +44,13 @@ define(['domReady', 'debouncedresize'], function (domReady, debouncedresize) {
       spaceBetween: 5,
       nextButton: '.i-quicklink .swiper-button-next',
       prevButton: '.i-quicklink .swiper-button-prev',
+      breakpoints: { 
+       //当宽度小于等于480
+        480: { 
+          slidesPerView: 1,
+          spaceBetween: 5
+        }
+      }
   });
   }
   initModule = function (callbak) {
