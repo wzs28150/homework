@@ -1,4 +1,4 @@
-define([], function () {
+define(["debouncedresize"], function (debouncedresize) {
   var initModule, router, navactive, sub_nav, backtotop;
 
   /**
@@ -33,6 +33,19 @@ define([], function () {
   navactive = function (i) {
     $('nav a').removeClass('on');
     $('nav a').eq(i).addClass('on');
+    if($(window).width()<980){
+      $('nav a').click(function(){
+        $('#myInput').attr('checked',false);
+      });
+    }
+    $(window).on('debouncedresize', function () {
+      if($(window).width()<980){
+        $('nav a').click(function(){
+          $('#myInput').attr('checked',false);
+        });
+      }
+    });
+    
   };
   /**
    * 二级导航

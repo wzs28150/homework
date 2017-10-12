@@ -1164,8 +1164,7 @@ article {
 
 .text-area {
   font-size: 16px;
-  line-height: 26px;
-  font-weight: lighter;
+  line-height: 28px;
 }
 
 .loadmore {
@@ -2638,6 +2637,7 @@ button.swiper-pagination-bullet {
     background-color: #efefef;
     visibility: hidden;
     opacity: 0;
+    z-index: 99;
     -webkit-transition: 0.4s width;
     transition: 0.4s width;
   }
@@ -2669,6 +2669,29 @@ button.swiper-pagination-bullet {
     opacity: 1;
     -webkit-transition: 0.4s width;
     transition: 0.4s width;
+  }
+}
+@media (max-width: 640px) {
+  .er-banner {
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+  }
+  .er-banner .er-title {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    padding-top: 70px;
+  }
+  .er-banner .er-title .ch {
+    font-size: 30px;
+    line-height: 1em;
+  }
+  .er-banner .er-title .en {
+    font-family: 'Conv_Roboto-Medium';
+    font-size: 14px;
+    line-height: 1em;
+    margin-top: 10px;
   }
 }
 #myInput {
@@ -3071,6 +3094,16 @@ footer a {
   width: calc(33.3333333% - 2px);
 }
 
+/* CSS Document */
+.about .about-index {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.about .about-index .title {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
 @media (max-width: 1440px) {
   header .header-bar {
     line-height: 28px;
@@ -3357,6 +3390,10 @@ footer a {
     color: #d7121b;
     font-weight: bold;
   }
+  .index .notice .tit span {
+    font-size: 22px;
+    margin-top: 2px;
+  }
   .index .notice .list {
     padding-left: 40px;
   }
@@ -3530,6 +3567,19 @@ footer a {
     line-height: 2.5em;
     font-size: 20px;
     font-weight: lighter;
+  }
+}
+@media (max-width: 640px) {
+  .about .about-index {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .about .about-index .title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .about .about-index img {
+    width: 50%;
   }
 }
 

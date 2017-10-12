@@ -1,12 +1,12 @@
 /* CSS Document */
 
 .about {
-	.a_tit {
-		font-size: 50px;
-		font-weight: lighter;
-		text-align: center;
-	}
-	.culture {
-		img{ display: block; width: 100%; }
+	.about-index {
+		padding-top: 80px;
+		padding-bottom: 100px;
+		.title {
+			font-size: 36px;
+			margin-bottom: 40px;
+		}
 	}
 }
