@@ -123,6 +123,19 @@
     }
 }
 
+@include max-screen(768px) {
+    .index {
+        .i-quicklink {
+            .w60 {
+                width: 100%;
+            }
+            .w30 {
+                width: 40%;
+            }
+        }
+    }
+}
+
 @include max-screen(640px) {
     .index {
         .notice {
@@ -207,6 +220,14 @@
                         }
                     }
                 }
+            }
+        }
+        .i-quicklink {
+            .w60 {
+                width: 100%;
+            }
+            .w30 {
+                width: 40%;
             }
         }
     }
