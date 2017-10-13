@@ -3040,7 +3040,7 @@ nav > ul > li > a.on {
   border: 0;
   height: 40px;
   line-height: 40px;
-  font-size: 12px;
+  font-size: 14px;
   -webkit-transition: 0.6s width;
   transition: 0.6s width;
 }
