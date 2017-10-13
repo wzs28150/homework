@@ -3045,7 +3045,7 @@ nav > ul > li > a.on {
   transition: 0.6s width;
 }
 .search-tan .search-main input[type="radio"]:checked + .item a {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 22px;
   width: 22px;
   display: inline-block;
