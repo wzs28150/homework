@@ -134,6 +134,18 @@ nav {
   visibility: hidden;
   opacity: 0;
   @include tr(all, 0.4s);
+  .search-main {
+    .item {
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      background-color: #d60011;
+      color: #fff;
+      text-align: center;
+      border-radius: 100%;
+    }
+  }
   .close {
     position: absolute;
     top: 50%;
