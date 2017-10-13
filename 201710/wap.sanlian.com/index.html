@@ -32,7 +32,8 @@
   </div>
   <!-- 弹窗 -->
   <input id="myInput" type="checkbox">
-  <input id="searchchange" checked type="checkbox">
+  <input id="searchchange" type="checkbox">
+  <!-- 头部 -->
   <header>
     <div class="container_1200">
       <div class="fl logo">
@@ -49,6 +50,7 @@
       </label>
     </div>
   </header>
+  <!-- 头部 -->
   <nav>
     <ul>
       <li>
@@ -74,13 +76,20 @@
       </li>
     </ul>
   </nav>
+  <!-- 搜索弹出 -->
   <div class="search-tan">
     <div class="search-main">
+      <input type="radio" checked name="s-radio" id="sl-news">
       <div class="item">
-        <span class="ico sl-news"></span>
+        <label for="sl-news" class="ico sl-news"></label>
+        <input type="text" placeholder="输入您要查询的新闻">
+        <a class="jt-arrow_forward" href=""></a>
       </div>
-      <div class="item">
-          <span class="ico sl-pro"></span>
+      <input type="radio" name="s-radio" id="sl-pro">
+      <div class="item mRn">
+        <label for="sl-pro" class="ico sl-pro"></label>
+        <input type="text" placeholder="输入您要查询的产品">
+        <a class="jt-arrow_forward" href=""></a>
       </div>
     </div>
     <label for="searchchange" class="close">
@@ -89,6 +98,7 @@
       <div class="bar"> </div>
     </label>
   </div>
+  <!-- 搜索弹出 -->
   <main>
     <article class="index" data-main="index">
 
