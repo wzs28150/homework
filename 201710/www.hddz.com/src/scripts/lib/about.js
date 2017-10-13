@@ -18,7 +18,7 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
     
     require(["timeline"], function (timelinr) {
       $().timelinr({
-        startAt: 4
+        startAt: 5
       })
 
     });

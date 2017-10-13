@@ -57,6 +57,7 @@ instructions: http://www.csslab.cl/2011/08/18/jquery-timelinr/
 			var heightDates = $(settings.datesDiv).height();
 			var widthDate = $(settings.datesDiv + ' li').width();
 			var heightDate = $(settings.datesDiv + ' li').height();
+			console.log(widthIssues);
 			// set positions!
 			if (settings.orientation == 'horizontal') {
 				$(settings.issuesDiv).width(widthIssue * howManyIssues);

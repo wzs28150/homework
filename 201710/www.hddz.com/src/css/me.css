@@ -162,6 +162,13 @@
 }
 
 @font-face {
+  font-family: 'Conv_BauerBodD-ReguItal';
+  src: url("fonts/BauerBodD-ReguItal.eot");
+  src: local("☺"), url("fonts/BauerBodD-ReguItal.woff") format("woff"), url("fonts/BauerBodD-ReguItal.ttf") format("truetype"), url("fonts/BauerBodD-ReguItal.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: 'jiantou';
   src: url("fonts/jiantou.eot?bfjpr2");
   src: url("fonts/jiantou.eot?bfjpr2#iefix") format("embedded-opentype"), url("fonts/jiantou.ttf?bfjpr2") format("truetype"), url("fonts/jiantou.woff?bfjpr2") format("woff"), url("fonts/jiantou.svg?bfjpr2#jiantou") format("svg");
@@ -3131,42 +3138,85 @@ footer a {
   height: 2em;
 }
 .about #timeline {
-  width: 760px;
-  height: 300px;
+  width: 100%;
   overflow: hidden;
   margin: 100px auto;
   position: relative;
-  background: url("img/dot.gif") left 45px repeat-x;
+}
+.about #timeline .line {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 52px;
+  height: 2px;
+  background: #dfdfdf;
+  z-index: 1;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+}
+.about #timeline .line::before {
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#f8f8f8), to(rgba(248, 248, 248, 0)));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+.about #timeline .line::after {
+  right: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#f8f8f8), to(rgba(248, 248, 248, 0)));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
 }
 .about #dates {
-  width: 760px;
-  height: 60px;
+  width: 100%;
+  height: 70px;
   overflow: hidden;
+  position: relative;
+  z-index: 2;
 }
 .about #dates li {
   list-style: none;
   float: left;
   width: 100px;
-  height: 50px;
-  font-size: 24px;
+  height: 60px;
+  font-size: 22px;
   text-align: center;
-  background: url("img/biggerdot.png") center bottom no-repeat;
+  font-family: 'Conv_BauerBodD-ReguItal';
 }
 .about #dates a {
-  line-height: 38px;
-  padding-bottom: 10px;
+  display: block;
+  line-height: 32px;
+  padding-top: 8px;
+  padding-bottom: 20px;
+  background: url("../images/biggerdot.png") center bottom no-repeat;
 }
 .about #dates .selected {
-  font-size: 38px;
+  font-size: 40px;
+  display: block;
+  line-height: 40px;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  color: #d51126;
+  background: url("../images/biggerdots.png") center bottom no-repeat;
 }
 .about #issues {
-  width: 760px;
-  height: 300px;
+  width: 100%;
   overflow: hidden;
 }
 .about #issues li {
-  width: 760px;
-  height: 300px;
+  width: 1100px;
   list-style: none;
   float: left;
 }
@@ -3175,13 +3225,6 @@ footer a {
   font-size: 42px;
   margin: 20px 0;
   text-shadow: #000 1px 1px 2px;
-}
-.about #issues li p {
-  font-size: 14px;
-  margin-right: 70px;
-  margin: 10px;
-  font-weight: normal;
-  line-height: 22px;
 }
 
 @media (max-width: 1440px) {
