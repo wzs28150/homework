@@ -1,0 +1,12 @@
+@charset "utf-8";
+footer {
+    background: #333333;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    color: #bdc4e5;
+    font-size: 9px;
+    line-height: 1.6em;
+    padding: 3% 0;
+    transition: $tr4;
+}
