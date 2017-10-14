@@ -3124,6 +3124,9 @@ footer a {
 }
 
 /* CSS Document */
+.index .banner {
+  border-bottom: 3px solid #d60011;
+}
 .index .banner .swiper-slide {
   position: relative;
   background-position: center;
@@ -3154,16 +3157,12 @@ footer a {
   bottom: 5%;
 }
 .index .banner .swiper-pagination-bullet {
-  opacity: .4;
   margin: 0 6px;
-  height: 3px;
-  width: 30px;
-  border-radius: 0;
   opacity: 1;
-  background-color: #1f154a;
-}
-.index .banner .swiper-pagination-white .swiper-pagination-bullet-active {
   background-color: #fff;
+}
+.index .banner .swiper-pagination-bullet-active {
+  background-color: #d60011;
 }
 .index .banner .swiper-button-prev {
   left: 5%;
@@ -3202,7 +3201,8 @@ footer a {
 .quick-link a:hover {
   background-color: #1c1247;
 }
-.quick-link a:hover i, .quick-link a:hover span {
+.quick-link a:hover i,
+.quick-link a:hover span {
   color: #fff;
 }
 

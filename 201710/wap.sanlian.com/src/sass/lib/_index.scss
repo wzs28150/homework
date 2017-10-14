@@ -2,6 +2,7 @@
 
 .index {
 	.banner {
+		border-bottom: 3px solid #d60011;
 		.swiper-slide {
 			position: relative;
 			background-position: center;
@@ -14,11 +15,14 @@
 				color: #fff;
 				font-size: 20px;
 				line-height: 1.5em;
-				font-weight: lighter; padding: 2em 0;
+				font-weight: lighter;
+				padding: 2em 0;
 				width: 70%;
 				position: absolute;
 				top: 50%;
-				left: 50%; margin-left: -35%; margin-top: -85px;
+				left: 50%;
+				margin-left: -35%;
+				margin-top: -85px;
 				background-color: rgba(27, 17, 70, 0.6);
 				text-align: center;
 			}
@@ -29,11 +33,12 @@
 			bottom: 5%;
 		}
 		.swiper-pagination-bullet {
-			opacity: .4;
-			margin: 0 6px; height: 3px; width: 30px; border-radius: 0; opacity: 1; background-color: #1f154a;
-		}
-		.swiper-pagination-white .swiper-pagination-bullet-active {
+			margin: 0 6px;
+			opacity: 1;
 			background-color: #fff;
+		}
+		.swiper-pagination-bullet-active {
+			background-color: #d60011;
 		}
 		.swiper-button-prev {
 			left: 5%;
@@ -42,22 +47,41 @@
 			right: 5%;
 		}
 	}
-
-	
 }
 
-.quick-link{
-	table{ width: 100%;
-		tr{ border: 1px solid #f2f2f2; 
-			td{ border: 1px solid #f2f2f2; }
+.quick-link {
+	table {
+		width: 100%;
+		tr {
+			border: 1px solid #f2f2f2;
+			td {
+				border: 1px solid #f2f2f2;
+			}
 		}
 	}
-	a{ display: block; width: 100%; float: left; text-align: center;  padding: 8% 0;
-		i{ display: block; color: #1c1247; font-size: 18px; height: 18px;	}
-		span{ display: block;	font-size: 14px; color: #333; }
-		&:hover{
+	a {
+		display: block;
+		width: 100%;
+		float: left;
+		text-align: center;
+		padding: 8% 0;
+		i {
+			display: block;
+			color: #1c1247;
+			font-size: 18px;
+			height: 18px;
+		}
+		span {
+			display: block;
+			font-size: 14px;
+			color: #333;
+		}
+		&:hover {
 			background-color: #1c1247;
-			i,span{  color: #fff; }
+			i,
+			span {
+				color: #fff;
+			}
 		}
 	}
 }
