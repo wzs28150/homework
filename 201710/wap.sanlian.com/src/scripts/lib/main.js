@@ -55,6 +55,15 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
        }, 1000);
        return false;
      });
+     $(window).scroll(function () {
+       var sc = $(window).scrollTop();
+       var rwidth = $(window).width()
+       if ($(document).height() - $(document).scrollTop() - window.innerHeight < 100) {
+         $("#backtotop").fadeIn();
+       } else {
+         $("#backtotop").fadeOut();
+       }
+     })
   }
   minheight = function () {
     var hh = $('header').height();

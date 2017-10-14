@@ -519,7 +519,9 @@ article {
   font-size: 16px;
   line-height: 26px;
   font-weight: lighter;
-  strong{ font-weight: bold; }
+  strong {
+    font-weight: bold;
+  }
 }
 
 .loadmore {
@@ -540,25 +542,17 @@ article {
   visibility: hidden;
 }
 
-.backtotop{ position: fixed; right: 5px; bottom: 20px; width: 70px; height: 130px;  z-index: 999;
-  a {
-    display: block;
-    height: 64px;
-    width: 100%; border-radius: 5px;
-    background-color: #eaeaea; margin-bottom: 4px; text-align: center; line-height: 28px; overflow: hidden;
-    span {
-      display: block;
-      font-size: 20px;
-    }
-    p{ font-size: 14px; font-weight: lighter; }
-   &.mBn {
-     line-height: 64px;
-     font-size: 30px;
-     span {
-       font-size: 30px;
-       line-height: 64px;
-       display: block;
-     }
-   }
-  }
+.backtotop {
+  position: fixed;
+  right: 5%;
+  bottom: 70px;
+  width: 36px;
+  height: 36px;
+  z-index: 999;
+  background-color: #e50013;
+  color: #fff;
+  border-radius: 100%;
+  line-height: 36px;
+  text-align: center;
+  display: none;
 }

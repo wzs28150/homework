@@ -8,8 +8,8 @@ require.config({
     'BMap': {
       exports: 'BMap'
     },
-    'idcode': ['css!./package/idcode/jquery.idcode.css'],
-    'litebox': ['css!./package/litebox/css/litebox.css','imagesloaded'],
+    'photoswipe': ['css!./package/photoswiper/photoswipe.css', 'css!./package/photoswiper/default-skin/default-skin.css'],
+    'photoswipeui': ['photoswipe'],
   },
   paths: {
     domReady: './domReady',
@@ -28,12 +28,8 @@ require.config({
     swiper: './package/swiper/v3/swiper.min',
     debouncedresize: './package/compat/jquery.debouncedresize',
     //  progress:'./package/swiper/v2/idangerous.swiper.progress',
-    masonry: './package/pubu/masonry.pkgd.min',
-    form: './package/form/form',
-    imagesloaded: './package/litebox/js/images-loaded.min',
-    laydate: './package/laydate/laydate',
-    litebox: './package/litebox/js/litebox.min',
-    idcode: './package/idcode/jquery.idcode',
+    photoswipe: './package/photoswiper/photoswipe.min',
+    photoswipeui: './package/photoswiper/photoswipe-ui-default.min',
     loadmore: './package/loadmore/loadmore',
     'BMap': ['http://api.map.baidu.com/api?key=&v=1.1&services=true'],
   }
