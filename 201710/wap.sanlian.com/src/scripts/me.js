@@ -30,6 +30,7 @@ require.config({
     //  progress:'./package/swiper/v2/idangerous.swiper.progress',
     photoswipe: './package/photoswiper/photoswipe.min',
     photoswipeui: './package/photoswiper/photoswipe-ui-default.min',
+    photo: './package/photoswiper/index',
     loadmore: './package/loadmore/loadmore',
     'BMap': ['http://api.map.baidu.com/api?key=&v=1.1&services=true'],
   }
