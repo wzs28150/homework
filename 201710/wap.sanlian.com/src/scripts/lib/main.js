@@ -1,5 +1,5 @@
-define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], function (pajax, debouncedresize, router, smoothscroll, scroll) {
-  var initModule, animated_contents, minheight, alertinfo, msg, exists,backtotop;
+define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll', 'debug'], function (pajax, debouncedresize, router, smoothscroll, scroll, debug) {
+  var initModule, animated_contents, minheight, alertinfo, msg, exists, backtotop, search, debug = debug.initModule;
   /**
    * 判断dom是否存在
    * @param  {[type]} selector [description]
@@ -49,31 +49,43 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
   };
 
   backtotop = function () {
-     $("#backtotop").on("click", function () {
-       $('body,html').animate({
-         scrollTop: 0
-       }, 1000);
-       return false;
-     });
-     $(window).scroll(function () {
-       var sc = $(window).scrollTop();
-       var rwidth = $(window).width()
-       if ($(document).height() - $(document).scrollTop() - window.innerHeight < 100) {
-         $("#backtotop").fadeIn();
-       } else {
-         $("#backtotop").fadeOut();
-       }
-     })
+    $("#backtotop").on("click", function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 1000);
+      return false;
+    });
+    $(window).scroll(function () {
+      var sc = $(window).scrollTop();
+      var rwidth = $(window).width()
+      if ($(document).height() - $(document).scrollTop() - window.innerHeight < 100) {
+        $("#backtotop").fadeIn();
+      } else {
+        $("#backtotop").fadeOut();
+      }
+    })
   }
+
+  search = function () {
+    $('#searchchange').attr('checked', false);
+    $('.search-tan .search-main .item>input').on('input propertychange', function () {
+      //debug($(this).val() + ' characters');
+      var input = $(this);
+      var a = $(this).next('a');
+      var url = input.attr('data-url');
+      a.attr('href', url + '?keywords=' + $(this).val());
+    });
+  }
+
   minheight = function () {
     var hh = $('header').height();
     var fh = $('footer').height();
     var wh = $(window).height();
     var nh = $('nav').height();
     var mh;
-    if (nh > wh){
+    if (nh > wh) {
       mh = nh - fh - hh;
-    }else{
+    } else {
       mh = $(window).height() - fh - hh;
     }
     $('article').css('min-height', mh + 'px');
@@ -131,6 +143,7 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
     msg();
     minheight();
     backtotop();
+    search();
     //parallaxan();
     require(["viewport"], function (viewport) {
       animated_contents();
@@ -147,8 +160,9 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
     pajax.initModule('main', function () {}, function (targetelement, state) {
       router.initModule('article', state);
       msg();
-      backtotop();
       minheight();
+      backtotop();
+      search();
       //scroll.resetsize('body');
       require(["viewport"], function (viewport) {
         animated_contents();

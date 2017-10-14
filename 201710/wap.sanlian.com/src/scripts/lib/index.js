@@ -25,6 +25,7 @@ define(['domReady', 'debug'], function (domReady, debug) {
   initModule = function (callbak) {
     domReady(function () {
       callbak(0);
+      debug('首页加载完毕');
       require(["swiper"], function (swiper) {
         banner();
         pro();

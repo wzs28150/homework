@@ -5,7 +5,7 @@ define([], function() {
   
     initModule = function($str) {
       if($config.isdebug){
-        console.log($str)
+        console.log($str +' - Created by wzs')
       }
     };
   
