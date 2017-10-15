@@ -73,7 +73,14 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll', 'debug']
       var input = $(this);
       var a = $(this).next('a');
       var url = input.attr('data-url');
-      a.attr('href', url + '?keywords=' + $(this).val());
+      if ($(this).val().length > 0) {
+        a.removeAttr('data-ajax');
+        a.attr('href', url + '?keywords=' + $(this).val());
+      }else{
+        a.attr('data-ajax','no');
+        a.attr('href', 'javascript:void(0);');
+      }
+
     });
   }
 

@@ -9,7 +9,6 @@ require.config({
       exports: 'BMap'
     },
     'photoswipe': ['css!./package/photoswiper/photoswipe.css', 'css!./package/photoswiper/default-skin/default-skin.css'],
-    'photoswipeui': ['photoswipe'],
   },
   paths: {
     domReady: './domReady',

@@ -84,14 +84,14 @@
       <input type="radio" checked name="s-radio" id="sl-news">
       <div class="item">
         <label for="sl-news" class="ico sl-news"></label>
-        <input type="text" placeholder="输入您要查询的新闻">
-        <a class="jt-arrow_forward" href="#."></a>
+        <input type="text" data-url="./search.html" placeholder="输入您要查询的新闻">
+        <a class="jt-arrow_forward" data-ajax="no" href="javascript:void(0);"></a>
       </div>
       <input type="radio" name="s-radio" id="sl-pro">
       <div class="item mRn">
         <label for="sl-pro" class="ico sl-pro"></label>
-        <input type="text" placeholder="输入您要查询的产品">
-        <a class="jt-arrow_forward" href="#."></a>
+        <input type="text" data-url="./search.html" placeholder="输入您要查询的产品">
+        <a class="jt-arrow_forward" data-ajax="no" href="javascript:void(0);"></a>
       </div>
     </div>
     <label for="searchchange" class="close">
@@ -103,7 +103,25 @@
   <!-- 搜索弹出 -->
   <main>
     <article class="search" data-main="search">
-
+      <section class="position">
+        <div class="container_1200">
+          <span class="jt-home"></span>
+          <span class="jt-chevron-right"></span>网站首页
+          <span class="jt-chevron-right"></span>搜索结果
+        </div>
+      </section>
+      <section class="search-info">
+        <div class="container_1200">
+           您输入的“<span>盐水”查询结果如下：</span>
+        </div>
+      </section>
+      <section class="search-list">
+        <div class="container_1200">
+         <div class="item">
+           
+         </div>
+        </div>
+      </section>
     </article>
   </main>
   <footer>
@@ -123,7 +141,7 @@
   <script src="./src/scripts/package/scroll/jquery.easing.min.js"></script>
   <script src="./src/scripts/package/scroll/jquery.nicescroll.min.js"></script>
   <script src="./src/scripts/require.js" data-main="./src/scripts/me"></script>
-  
+
 </body>
 
 </html>

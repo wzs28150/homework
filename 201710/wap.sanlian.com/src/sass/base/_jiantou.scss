@@ -1,35 +1,7 @@
-$icomoon-font-path: "fonts" !default;
-$jt-arrow_forward: "\e5c8";
-$jt-arrow-down: "\e905";
-$jt-arrow-left: "\e906";
-$jt-arrow-right: "\e907";
-$jt-arrow-up: "\e908";
-$jt-chevron-down: "\e900";
-$jt-chevron-left: "\e901";
-$jt-chevron-right: "\e902";
-$jt-chevron-up: "\e903";
-$jt-triangle-down: "\f05b";
-$jt-triangle-left: "\f044";
-$jt-triangle-right: "\f05a";
-$jt-triangle-up: "\f0aa";
-$jt-chevron-thin-down: "\e909";
-$jt-chevron-thin-left: "\e90a";
-$jt-chevron-thin-right: "\e90b";
-$jt-chevron-thin-up: "\e90c";
-$jt-triangle-right2: "\e904";
-$jt-angle-double-left: "\f100";
-$jt-angle-double-right: "\f101";
-$jt-angle-double-up: "\f102";
-$jt-angle-double-down: "\f103";
-
-
 @font-face {
     font-family: 'jiantou';
-    src : url('#{$icomoon-font-path}/jiantou.eot?c8phhi');
-    src : url('#{$icomoon-font-path}/jiantou.eot?c8phhi#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/jiantou.ttf?c8phhi') format('truetype'),
-    url('#{$icomoon-font-path}/jiantou.woff?c8phhi') format('woff'),
-    url('#{$icomoon-font-path}/jiantou.svg?c8phhi#jiantou') format('svg');
+    src: url('fonts/jiantou.eot?7q8ezd');
+    src: url('fonts/jiantou.eot?7q8ezd#iefix') format('embedded-opentype'), url('fonts/jiantou.ttf?7q8ezd') format('truetype'), url('fonts/jiantou.woff?7q8ezd') format('woff'), url('fonts/jiantou.svg?7q8ezd#jiantou') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -49,134 +21,110 @@ $jt-angle-double-down: "\f103";
     -moz-osx-font-smoothing: grayscale;
 }
 
-.jt-arrow_forward {
-    &:before {
-        content: $jt-arrow_forward;
-    }
+.jt-chevron-left:before {
+    content: "\f053";
 }
 
-.jt-arrow-down {
-    &:before {
-        content: $jt-arrow-down;
-    }
+.jt-chevron-right:before {
+    content: "\f054";
 }
 
-.jt-arrow-left {
-    &:before {
-        content: $jt-arrow-left;
-    }
+.jt-chevron-up:before {
+    content: "\f077";
 }
 
-.jt-arrow-right {
-    &:before {
-        content: $jt-arrow-right;
-    }
+.jt-chevron-down:before {
+    content: "\f078";
 }
 
-.jt-arrow-up {
-    &:before {
-        content: $jt-arrow-up;
-    }
+.jt-angle-double-left:before {
+    content: "\f100";
 }
 
-.jt-chevron-down {
-    &:before {
-        content: $jt-chevron-down;
-    }
+.jt-angle-double-right:before {
+    content: "\f101";
 }
 
-.jt-chevron-left {
-    &:before {
-        content: $jt-chevron-left;
-    }
+.jt-angle-double-up:before {
+    content: "\f102";
 }
 
-.jt-chevron-right {
-    &:before {
-        content: $jt-chevron-right;
-    }
+.jt-angle-double-down:before {
+    content: "\f103";
 }
 
-.jt-chevron-up {
-    &:before {
-        content: $jt-chevron-up;
-    }
+.jt-home:before {
+    content: "\f015";
 }
 
-.jt-triangle-down {
-    &:before {
-        content: $jt-triangle-down;
-    }
+.jt-arrow_forward:before {
+    content: "\e5c8";
 }
 
-.jt-triangle-left {
-    &:before {
-        content: $jt-triangle-left;
-    }
+.jt-arrow-down:before {
+    content: "\e905";
 }
 
-.jt-triangle-right {
-    &:before {
-        content: $jt-triangle-right;
-    }
+.jt-arrow-left:before {
+    content: "\e906";
 }
 
-.jt-triangle-up {
-    &:before {
-        content: $jt-triangle-up;
-    }
+.jt-arrow-right:before {
+    content: "\e907";
 }
 
-.jt-chevron-thin-down {
-    &:before {
-        content: $jt-chevron-thin-down;
-    }
+.jt-arrow-up:before {
+    content: "\e908";
 }
 
-.jt-chevron-thin-left {
-    &:before {
-        content: $jt-chevron-thin-left;
-    }
+.jt-chevron-down2:before {
+    content: "\e900";
 }
 
-.jt-chevron-thin-right {
-    &:before {
-        content: $jt-chevron-thin-right;
-    }
+.jt-chevron-left2:before {
+    content: "\e901";
 }
 
-.jt-chevron-thin-up {
-    &:before {
-        content: $jt-chevron-thin-up;
-    }
+.jt-chevron-right2:before {
+    content: "\e902";
 }
 
-.jt-triangle-right2 {
-    &:before {
-        content: $jt-triangle-right2;
-    }
+.jt-chevron-up2:before {
+    content: "\e903";
 }
 
-.jt-angle-double-left {
-    &:before {
-        content: $jt-angle-double-left;
-    }
+.jt-triangle-down:before {
+    content: "\f05b";
 }
 
-.jt-angle-double-right {
-    &:before {
-        content: $jt-angle-double-right;
-    }
+.jt-triangle-left:before {
+    content: "\f044";
 }
 
-.jt-angle-double-up {
-    &:before {
-        content: $jt-angle-double-up;
-    }
+.jt-triangle-right:before {
+    content: "\f05a";
 }
 
-.jt-angle-double-down {
-    &:before {
-        content: $jt-angle-double-down;
-    }
+.jt-triangle-up:before {
+    content: "\f0aa";
+}
+
+.jt-chevron-thin-down:before {
+    content: "\e909";
+}
+
+.jt-chevron-thin-left:before {
+    content: "\e90a";
+}
+
+.jt-chevron-thin-right:before {
+    content: "\e90b";
+}
+
+.jt-chevron-thin-up:before {
+    content: "\e90c";
+}
+
+.jt-triangle-right2:before {
+    content: "\e904";
 }
