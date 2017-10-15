@@ -1,63 +1,44 @@
-define(['domReady', 'loadmore'], function (domReady, loadmore) {
-  var initModule, bigpic, about_index, about_zhaopin;
-  bigpic = function () {
-    var smallswiper = new Swiper('.small-pic', {
-      spaceBetween: 2,
-      slidesPerView: 'auto',
-      loopedSlides: 17,
-      nextButton: '.swiper-button-next',
-      prevButton: '.swiper-button-prev'
-    });
-    $('.small-pic .swiper-slide').click(function () {
-      if ($(this).hasClass("on"))
-        return false;
-      var index = $(this).index();
-      $(this).addClass("on").siblings().removeClass("on");
-      var title = $(this).attr('data-title');
-      var img = $(this).attr('data-img');
-      $('.pic-change .title .container_1200').html(title);
-      $('.pic-change .big-pic').css('background-image', 'url(' + img + ')');
-    });
-  }
+define(['loadmore', 'debug'], function (loadmore, debug) {
+  var initModule, about_index, debug = debug.initModule,
+    about_contact, about_culture, about_honor, about_organization;
 
 
-  about_index = function () {
-    require(["scroll"], function (scroll) {
-      scroll.initModule('.right-inner')
-    });
-    require(["swiper"], function (swiper) {
-      bigpic();
-    });
-  }
-  about_zhaopin = function () {
-    $('.zp-tab a').click(function(){
-      if ($(this).hasClass("on"))
-        return false;
-      var index = $(this).index();
-      $(this).addClass("on").siblings().removeClass("on");
-      $(this).parent().parent().find('.zp-content').hide();
-      $(this).parent().parent().find('.zp-content').eq(index).fadeIn();
-    });
-  }
-  initModule = function (callbak) {
-    domReady(function () {
-      callbak(1);
-      require(["laydate"], function (laydate) {
-        laydate.path = './src/scripts/package/laydate/';
-        laydate.render({
-          elem: '#starttime',
-          format: 'yyyy/MM/dd'
-        });
-        laydate.render({
-          elem: '#endtime',
-          format: 'yyyy/MM/dd'
-        });
-      });
-    });
+  about_index = function (callbak) {
+    callbak(0);
+    debug('公司简介已加载')
   };
+
+  about_organization = function (callbak) {
+    callbak(1);
+    debug('资质荣誉已加载')
+  };
+
+  about_honor = function (callbak) {
+    callbak(2);
+    debug('资质荣誉已加载')
+  };
+
+  about_culture = function (callbak) {
+    callbak(3);
+    debug('企业文化已加载')
+  };
+
+  about_contact = function (callbak) {
+    callbak(4);
+    debug('联系我们已加载')
+  };
+
+  initModule = function (callbak) {
+    callbak(1);
+    debug('关于三联已加载')
+  };
+
   return {
     initModule: initModule,
     about_index: about_index,
-    about_zhaopin: about_zhaopin
+    about_contact: about_contact,
+    about_culture: about_culture,
+    about_honor: about_honor,
+    about_organization: about_organization
   };
 })

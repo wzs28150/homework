@@ -462,20 +462,11 @@ article {
   }
 }
 
-.loadmore {
-  text-align: center;
-  background: #c8a46c;
-  color: #fff;
-  line-height: 3em;
-  span {
-    padding-right: 10px;
-  }
-}
-
 .er-banner {
-  background-position: center;
-  background-size: cover;
-  height: 300px;
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 .position {
@@ -484,33 +475,86 @@ article {
   font-size: 14px;
   color: #333;
   border-top: 3px solid #d60011;
-  border-bottom:1px solid #eeeeee;
-  span{ vertical-align: middle; }
-  .jt-home{ font-size: 16px;}
-  .jt-chevron-right{ font-size: 10px; padding: 0 5px; }
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  span {
+    vertical-align: middle;
+  }
+  .jt-home {
+    font-size: 16px;
+    position: relative;
+    top: -1px;
+  }
+  .jt-chevron-right {
+    font-size: 10px;
+    padding: 0 5px;
+  }
+  input {
+    display: none;
+  }
+  label {
+    float: right;
+    line-height: 45px;
+    color: #d60011;
+    font-size: 16px;
+    @include tr(all, 0.4s);
+  }
+  .er-nav {
+    background-color: #eeeeee;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    border-top: 1px solid #d6d6d6;
+    @include tr(all, 0.4s);
+    a {
+      display: block;
+      border-bottom: 1px solid #d6d6d6;
+      padding: 0 6%;
+      color: #333;
+      i {
+        padding-right: 1em;
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+      }
+      &.on {
+        color: #d60011;
+      }
+    }
+  }
+  input:checked~.container_1200>label {
+    transform: rotate(180deg);
+    @include tr(all, 0.4s);
+  }
+  input:checked~.er-nav {
+    visibility: visible;
+    opacity: 1;
+    @include tr(all, 0.4s);
+  }
 }
 
 .text-area {
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: lighter;
-  strong {
+  font-size: 14px;
+  line-height: 2em;
+  strong,b {
     font-weight: bold;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
 .loadmore {
-  height: 55px;
-  background-color: #aaaaaa;
-  cursor: pointer;
-  background-image: url(../images/loadmore.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: $tr4;
-  &:hover {
-    background-color: #36adcf;
-    transition: $tr4;
-  }
+  font-size: 16px;
+  line-height: 2em;
+  text-align: center;
+  background-color: #cccccc;
+  color: #fff;
 }
 
 .vis {

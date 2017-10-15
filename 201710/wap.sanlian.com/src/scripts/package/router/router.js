@@ -54,27 +54,12 @@ define([], function () {
    * @return {[type]} [description]
    */
   sub_nav = function (i) {
-
-    $('.er-bar .er-nav a').stop().click(function () {
+    $('.position .er-nav a').eq(i).addClass('on');
+    $('.position .er-nav a').stop().click(function () {
       /* Stuff to do when the mouse enters the element */
-      $('.er-bar .er-nav a').removeClass('on')
+      $('.position .er-nav a').removeClass('on')
       $(this).addClass('on');
-      $('.position a').eq(2).html($(this).html());
     });
-    if ($(".er-bar-targat").length > 0) {
-      $(window).scroll(function () {
-        var navH = $(".er-bar-targat").offset().top;
-        //获取滚动条的滑动距离
-        var scroH = $(this).scrollTop();
-        //滚动条的滑动距离大于等于定位元素距离浏览器顶部的距离，就固定，反之就不固定
-        if (scroH >= navH) {
-          $(".er-bar").addClass('on');
-        } else if (scroH < navH) {
-          $(".er-bar").removeClass('on');
-        }
-      })
-    }
-
   }
   /**
    * 路由设置
@@ -92,11 +77,11 @@ define([], function () {
         //判断是否无刷新
         if (state && localStorage.mainaction && localStorage.mainaction == action) {
           require(['./lib/' + action], function (action) {
-            var str = "action." + eraction + "(function(a){})"
+            var str = "action." + eraction + "(function(a){sub_nav(a);})"
             eval(str);
             //console.log(str);
             // navactive(a);
-            sub_nav();
+            
           });
         } else {
           localStorage.mainaction = action;
@@ -104,9 +89,8 @@ define([], function () {
             //console.log(action);
             action.initModule(function (a) {
               navactive(a);
-              sub_nav();
             });
-            var str = "action." + eraction + "(function(a){})"
+            var str = "action." + eraction + "(function(a){sub_nav(a);})"
             //console.log(str);
             eval(str);
           });
