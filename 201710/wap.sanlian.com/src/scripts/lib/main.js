@@ -67,7 +67,6 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll', 'debug']
   }
 
   search = function () {
-    $('#searchchange').attr('checked', false);
     $('.search-tan .search-main .item>input').on('input propertychange', function () {
       //debug($(this).val() + ' characters');
       var input = $(this);

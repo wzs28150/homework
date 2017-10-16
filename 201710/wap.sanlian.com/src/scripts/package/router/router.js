@@ -31,6 +31,8 @@ define([], function () {
    * @return {[type]}   [description]
    */
   navactive = function (i) {
+    $('#myInput').attr('checked',false);
+    $('#searchchange').attr('checked', false);
     $('nav a').removeClass('on');
     $('nav a').eq(i).addClass('on');
     $('body').undelegate('nav > ul > li  a', 'click');

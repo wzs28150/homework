@@ -1536,7 +1536,7 @@ article {
 .position {
   height: 45px;
   line-height: 45px;
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
   border-top: 3px solid #d60011;
   border-bottom: 1px solid #eeeeee;
@@ -1547,13 +1547,15 @@ article {
   vertical-align: middle;
 }
 .position .jt-home {
-  font-size: 16px;
+  font-size: 17px;
   position: relative;
   top: -1px;
 }
 .position .jt-chevron-right {
   font-size: 10px;
   padding: 0 5px;
+  position: relative;
+  top: -1px;
 }
 .position input {
   display: none;
@@ -1607,7 +1609,7 @@ article {
 }
 
 .text-area {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2em;
 }
 .text-area strong,
@@ -3589,7 +3591,7 @@ footer a {
   margin-top: 5%;
 }
 .about .a_map .list .item .title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: bold;
 }
 .about .a_map .list .item .tel {
@@ -3683,7 +3685,7 @@ footer a {
   margin-top: 5px;
   font-family: 'Conv_HelveticaNeueLTStd-ThEx';
   font-size: 10px;
-  padding-left: 14px;
+  padding-left: 15px;
   color: #999;
 }
 .about .culture-linian {
@@ -3779,7 +3781,7 @@ footer a {
   display: block;
   height: 100%;
   position: relative;
-  padding: 3% 5%;
+  padding: 4% 5% 3%;
   -webkit-transition: all 0.4s, -webkit-transform 0.4s;
   transition: all 0.4s, -webkit-transform 0.4s;
   transition: all 0.4s, transform 0.4s;
@@ -3790,7 +3792,7 @@ footer a {
   display: block;
   line-height: 1em;
   font-family: 'HelveticaNeueLTStdLt';
-  margin-bottom: 2%;
+  margin-bottom: 2px;
 }
 .about .culture-qikan .list .item a span.des {
   font-size: 12px;
@@ -3817,7 +3819,7 @@ footer a {
 .about .honor-nav a {
   display: inline-block;
   background: #efefef;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 3.2em;
   width: calc(50% - 2px);
   text-align: center;
@@ -3838,29 +3840,48 @@ footer a {
   transition: all 0.4s, transform 0.4s, -webkit-transform 0.4s;
   width: calc(50% - 2px);
 }
-.about .honor-list table {
-  width: 100%;
+.about .honor-list {
+  padding: 5% 0;
 }
-.about .honor-list table tr {
-  border-bottom: 1px solid #d1d1d1;
-  font-size: 0;
-  line-height: 0;
-  position: relative;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-.about .honor-list table tr td {
+.about .honor-list .tit {
   line-height: 3em;
-  font-size: 14px;
+  font-size: 15px;
+  border-bottom: 1px solid #d1d1d1;
 }
-.about .honor-list table tr td span {
+.about .honor-list .tit span {
   color: #ffba00;
   margin-right: 10px;
   font-size: 18px;
   vertical-align: middle;
   position: relative;
   top: -2px;
+}
+.about .honor-list .list a {
+  display: block;
+  line-height: 3em;
+  font-size: 15px;
+  border-bottom: 1px solid #d1d1d1;
+  position: relative;
+  overflow: hidden;
+}
+.about .honor-list .list a span {
+  color: #ffba00;
+  margin-right: 10px;
+  font-size: 18px;
+  vertical-align: middle;
+  position: relative;
+  top: 0px;
+}
+.about .honor-list .list a img {
+  display: block;
+  height: 3em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  opacity: 0;
+}
+.about .honor-list .loadmore {
+  margin: 10% 0;
 }
 
 /* CSS Document */
@@ -3872,7 +3893,7 @@ footer a {
   background-color: #f6f6f6;
 }
 .search .search-info {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 45px;
   color: #999;
 }
@@ -3908,4 +3929,5 @@ footer a {
   width: 100%;
   display: inline-block;
 }
+
 /*# sourceMappingURL=me.css.map */

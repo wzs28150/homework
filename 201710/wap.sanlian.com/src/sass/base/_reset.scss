@@ -472,7 +472,7 @@ article {
 .position {
   height: 45px;
   line-height: 45px;
-  font-size: 14px;
+  font-size: 15px;
   color: #333;
   border-top: 3px solid #d60011;
   border-bottom: 1px solid #eeeeee;
@@ -482,13 +482,15 @@ article {
     vertical-align: middle;
   }
   .jt-home {
-    font-size: 16px;
+    font-size: 17px;
     position: relative;
     top: -1px;
   }
   .jt-chevron-right {
     font-size: 10px;
     padding: 0 5px;
+    position: relative;
+     top: -1px;
   }
   input {
     display: none;
@@ -538,7 +540,7 @@ article {
 }
 
 .text-area {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 2em;
   strong,
   b {

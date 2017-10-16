@@ -28,7 +28,7 @@
 			.item {
 				margin-top: 5%;
 				.title {
-					font-size: 14px;
+					font-size: 15px;
 					font-weight: bold;
 				}
 				.tel {
@@ -128,7 +128,7 @@
 			margin-top: 5px;
 			font-family: 'Conv_HelveticaNeueLTStd-ThEx';
 			font-size: 10px;
-			padding-left: 14px;
+			padding-left: 15px;
 			color: #999;
 		}
 	}
@@ -224,7 +224,7 @@
 					display: block;
 					height: 100%;
 					position: relative;
-					padding: 3% 5%;
+					padding: 4% 5% 3%;
 					transition: all 0.4s, transform 0.4s;
 					span {
 						&.title {
@@ -232,7 +232,7 @@
 							display: block;
 							line-height: 1em;
 							font-family: 'HelveticaNeueLTStdLt';
-							margin-bottom: 2%;
+							margin-bottom: 2px;
 						}
 						&.des {
 							font-size: 12px;
@@ -260,7 +260,7 @@
 		a {
 			display: inline-block;
 			background: #efefef;
-			font-size: 14px;
+			font-size: 15px;
 			line-height: 3.2em;
 			width: calc(50% - 2px);
 			text-align: center;
@@ -280,22 +280,48 @@
 		}
 	}
 	.honor-list {
-		table {
-			width: 100%;
-			tr {
-				border-bottom: 1px solid #d1d1d1;
-				font-size: 0;
-				line-height: 0;
+		padding: 5% 0;
+		.tit {
+			line-height: 3em;
+			font-size: 15px;
+			border-bottom: 1px solid #d1d1d1;
+			span {
+				color: #ffba00;
+				margin-right: 10px;
+				font-size: 18px;
+				vertical-align: middle;
 				position: relative;
-				top: 0;
-				left: 0;
+				top: -2px;
+			}
+		}
+		.list {
+			a {
+				display: block;
+				line-height: 3em;
+				font-size: 15px;
+				border-bottom: 1px solid #d1d1d1;
+				position: relative;
 				overflow: hidden;
-				td {
-					line-height: 3em;
-					font-size: 14px;
-					span{ color: #ffba00; margin-right: 10px; font-size: 18px; vertical-align: middle; position: relative; top: -2px; }
+				span {
+					color: #ffba00;
+					margin-right: 10px;
+					font-size: 18px;
+					vertical-align: middle;
+					position: relative;
+					top: 0px;
+				}
+				img {
+					display: block;
+					height: 3em;
+					position: absolute;
+					top: 0;
+					left: 50%;
+					opacity: 0;
 				}
 			}
+		}
+		.loadmore{
+			margin: 10% 0;
 		}
 	}
 }

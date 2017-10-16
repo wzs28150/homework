@@ -1,6 +1,6 @@
 define(['loadmore', 'debug'], function (loadmore, debug) {
   var initModule, about_index, debug = debug.initModule,
-    about_contact, about_culture, about_honor, about_organization, a_quick;
+    about_contact, about_culture, about_honor, about_organization, a_quick, loadmore = loadmore.initModule;
 
   a_quick = function () {
     var swiper = new Swiper('.a_quick .swiper-container', {
@@ -30,6 +30,10 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
   about_honor = function (callbak) {
     callbak(2);
     debug('资质荣誉已加载');
+    require(['photo'], function (photo) {
+      photo('.demo-gallery');
+    });
+    loadmore(6, 3, '.honor-list .list a', '.honor-list .loadmore');
   };
 
   about_culture = function (callbak) {
