@@ -477,6 +477,7 @@ article {
   border-top: 3px solid #d60011;
   border-bottom: 1px solid #eeeeee;
   position: relative;
+  z-index: 5;
   span {
     vertical-align: middle;
   }
@@ -539,7 +540,8 @@ article {
 .text-area {
   font-size: 14px;
   line-height: 2em;
-  strong,b {
+  strong,
+  b {
     font-weight: bold;
   }
   img {
@@ -571,7 +573,33 @@ article {
   background-color: #e50013;
   color: #fff;
   border-radius: 100%;
-  line-height: 36px;
+  line-height: 34px;
   text-align: center;
   display: none;
+}
+
+.pagination {
+  text-align: center;
+  overflow: hidden;
+  a,
+  span {
+    font-size: 12px;
+    display: inline-block;
+    padding: 0.4em 0.85em;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
+  a {
+    text-decoration: none;
+    background: #e50014;
+    color: #fff;
+  }
+  .current {
+    background: #ff6a76;
+    color: #fff;
+    &.prev,
+    &.next {
+      display: none;
+    }
+  }
 }
