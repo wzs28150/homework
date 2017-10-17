@@ -1,22 +1,23 @@
-define(['domReady', 'loadmore'], function (domReady, loadmore) {
-  var initModule, products_show, products_list, loadmore = loadmore.initModule;
-  tab_show = function () {
-    var proswiper = new Swiper('.tab-inner .swiper-container', {
-      slidesPerView: 4,
-      spaceBetween: 27,
-      nextButton: '.i-pro-r',
-      prevButton: '.i-pro-l',
+define(['debug', 'loadmore'], function (debug, loadmore) {
+  var initModule, products_show, products_list, products_show, debug = debug.initModule, loadmore = loadmore.initModule,products_list;
+  products_list = function (){
+    debug('产品列表加载完毕');
+    require(['photo'], function (photo) {
+      photo('.demo-gallery');
     });
-  };
+  }
+  products_show = function(){
+    debug('产品内容加载完毕');
+    require(['photo'], function (photo) {
+      photo('.demo-gallery');
+    });
+  }
   initModule = function (callbak) {
-    domReady(function () {
-      callbak(2);
-      require(["swiper"], function (swiper) {
-        tab_show();
-      });
-    });
+    callbak(2);
   };
   return {
-    initModule: initModule
+    initModule: initModule,
+    products_list: products_list,
+    products_show: products_show
   };
 })

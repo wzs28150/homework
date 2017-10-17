@@ -31,9 +31,8 @@ define(['pjax', 'smoothscroll','alertinfo'], function(pjax, smoothscroll,alertin
         }
         $('.pjaxcontainer').removeClass('pjaxcontainer');
         $(container).addClass('pjaxcontainer');
-        $(container).stop().animate({
-          opacity: "1"
-        }, 0);
+        $('.pjaxcontainer').addClass('on');
+        
         setTimeout(function() {
           $.pjax({
             url: url,
@@ -48,7 +47,7 @@ define(['pjax', 'smoothscroll','alertinfo'], function(pjax, smoothscroll,alertin
             if (targetelement && $('article').attr('data-main') == localStorage.mainaction) {
 
             } else {
-              $('html,body').stop().animate({
+              $('html,body').animate({
                 scrollTop: 0,
               }, 400);
             }
@@ -59,6 +58,7 @@ define(['pjax', 'smoothscroll','alertinfo'], function(pjax, smoothscroll,alertin
       });
       $(document).on('pjax:send', function(event) { //pjax链接点击后显示加载动画
         $("#progress").removeClass("done"); //完成，隐藏进度条
+        $('.pjaxcontainer').removeClass('on');
         $({
           property: 0
         }).animate({
@@ -69,7 +69,6 @@ define(['pjax', 'smoothscroll','alertinfo'], function(pjax, smoothscroll,alertin
             var percentage = Math.round(this.property);
 
             $('#progress').css('width', percentage + "%");
-
             if (percentage == 100) {
               $("#progress").addClass("done"); //完成，隐藏进度条
             }
@@ -87,9 +86,7 @@ define(['pjax', 'smoothscroll','alertinfo'], function(pjax, smoothscroll,alertin
       $(document).on('pjax:end', function(data, status, xhr, options) {
         //console.log(data);
         $('title').text(data.currentTarget.title);
-        $('.pjaxcontainer').stop().animate({
-          opacity: "1"
-        }, 300);
+        $('.pjaxcontainer').removeClass('on');
         //console.log(xhr.container);
         if (xhr.container != 'main') {
           callbak(targetelement, true);

@@ -460,6 +460,17 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'BebasNeue';
+  src: url("fonts/BebasNeue.eot");
+  src: url("fonts/BebasNeue.eot") format("embedded-opentype"), url("fonts/BebasNeue.woff2") format("woff2"), url("fonts/BebasNeue.woff") format("woff"), url("fonts/BebasNeue.ttf") format("truetype"), url("fonts/BebasNeue.svg#BebasNeue") format("svg");
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
 [class^="pro-"],
 [class*=" pro-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
@@ -553,6 +564,70 @@
 
 .pro-sjxt:before {
   content: "\e906";
+}
+
+@font-face {
+  font-family: 'pro2';
+  src: url("fonts/pro2.eot?lch93j");
+  src: url("fonts/pro2.eot?lch93j#iefix") format("embedded-opentype"), url("fonts/pro2.ttf?lch93j") format("truetype"), url("fonts/pro2.woff?lch93j") format("woff"), url("fonts/pro2.svg?lch93j#pro2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="pro2-"],
+[class*=" pro2-"] {
+  font-family: 'pro2' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pro2-hxxt:before {
+  content: "";
+}
+
+.pro2-jrxt:before {
+  content: "";
+}
+
+.pro2-kgr:before {
+  content: "";
+}
+
+.pro2-kt:before {
+  content: "";
+}
+
+.pro2-qita:before {
+  content: "";
+}
+
+.pro2-qskbd:before {
+  content: "";
+}
+
+.pro2-sjxt:before {
+  content: "";
+}
+
+.pro2-sy:before {
+  content: "";
+}
+
+.pro2-xhnk:before {
+  content: "";
+}
+
+.pro2-xxgxt:before {
+  content: "";
+}
+
+.pro2-zlxt:before {
+  content: "";
 }
 
 @font-face {
@@ -1318,10 +1393,8 @@ button {
 main {
   position: relative;
   z-index: 0;
-  -webkit-transition: all 0.4s, -webkit-transform 0.4s;
-  transition: all 0.4s, -webkit-transform 0.4s;
-  transition: all 0.4s, transform 0.4s;
-  transition: all 0.4s, transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
   z-index: 1;
 }
 
@@ -1464,7 +1537,7 @@ article {
   position: fixed;
   height: 2px;
   top: 0;
-  background: #36adcf;
+  background: #d60011;
   -webkit-transition: opacity 500ms linear;
   transition: opacity 500ms linear;
   z-index: 99999;
@@ -1475,7 +1548,7 @@ article {
 #progress span {
   position: absolute;
   height: 2px;
-  -webkit-box-shadow: #36adcf 1px 0 6px 1px;
+  -webkit-box-shadow: #d60011 1px 0 6px 1px;
   -webkit-border-radius: 100%;
   opacity: 1;
   width: 150px;
@@ -1555,7 +1628,7 @@ article {
   font-size: 10px;
   padding: 0 5px;
   position: relative;
-  top: -1px;
+  top: 0px;
 }
 .position input {
   display: none;
@@ -3883,6 +3956,58 @@ footer a {
 .about .honor-list .loadmore {
   margin: 10% 0;
 }
+.about .contact-tel {
+  margin-top: 5%;
+}
+.about .contact-tel .item {
+  position: relative;
+  height: 45px;
+  margin: 5% 0;
+}
+.about .contact-tel .item .ico {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 20px;
+  background: #0097e6;
+  color: #fff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.about .contact-tel .item .inner {
+  padding-left: 60px;
+}
+.about .contact-tel .item .inner .title {
+  font-size: 12px;
+  line-height: 1em;
+  margin-top: 5px;
+}
+.about .contact-tel .item .inner .des {
+  font-family: 'BebasNeue';
+  font-size: 24px;
+  line-height: 1em;
+  margin-top: 2px;
+}
+.about .contact-citem {
+  border-top: 1px solid #cecece;
+  margin-top: 5%;
+  margin-bottom: 20%;
+}
+.about .contact-citem .item {
+  border-bottom: 1px solid #cecece;
+  line-height: 3em;
+  font-size: 14px;
+}
+.about .contact-citem .item .ico {
+  color: #333;
+  font-size: 24px;
+  width: 45px;
+  text-align: center;
+  margin-right: 15px;
+}
 
 /* CSS Document */
 .key {
@@ -3928,6 +4053,308 @@ footer a {
   margin: 5% 0;
   width: 100%;
   display: inline-block;
+}
+
+/* CSS Document */
+.products .pro-tit {
+  padding: 8% 0;
+}
+.products .pro-tit .ch {
+  font-weight: bold;
+  border-left: 4px solid #e50014;
+  line-height: 1.5em;
+  padding-left: 10px;
+  color: #333;
+}
+.products .pro-tit .en {
+  margin-top: 5px;
+  font-family: 'Conv_HelveticaNeueLTStd-ThEx';
+  font-size: 10px;
+  padding-left: 15px;
+  color: #999;
+}
+.products .pro-list .item {
+  background-color: #f3f6ff;
+  background-size: cover;
+  padding-top: 150px;
+  padding-bottom: 80px;
+  margin-bottom: 6%;
+}
+.products .pro-list .item .title {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+.products .pro-list .item .title::after {
+  width: 1em;
+  height: 2px;
+  background: #8e8e8e;
+  content: "";
+  display: block;
+  margin: 15px auto 0;
+}
+.products .pro-list .item table {
+  border: 1px solid #e5e6ef;
+  width: 70%;
+  margin: 30px auto 0;
+  font-size: 14px;
+}
+.products .pro-list .item table tr {
+  border: 1px solid #e5e6ef;
+  line-height: 2.5em;
+}
+.products .pro-list .item table th {
+  border: 1px solid #e5e6ef;
+  text-align: left;
+  padding-left: 10px;
+}
+.products .pro-list .item table td {
+  border: 1px solid #e5e6ef;
+  padding-left: 10px;
+  color: #999999;
+}
+.products .pro-list .item .btn {
+  padding-top: 18px;
+  text-align: center;
+  padding-top: 24px;
+  height: 80px;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 0;
+  line-height: 0;
+}
+.products .pro-list .item .btn a.ico {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  -webkit-transition: all 0.4s, -webkit-transform 0.4s;
+  transition: all 0.4s, -webkit-transform 0.4s;
+  transition: all 0.4s, transform 0.4s;
+  transition: all 0.4s, transform 0.4s, -webkit-transform 0.4s;
+  text-align: center;
+  border-radius: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 15px 9px;
+  background-color: #e50014;
+  color: #fff;
+}
+.products .pro-list .item .btn .change-btn {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+.products .pro-list .item .btn .change-btn .bg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 0, 19, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/fd.png);
+  background-size: 18px;
+  -webkit-transition: all 0.4s, -webkit-transform 0.4s;
+  transition: all 0.4s, -webkit-transform 0.4s;
+  transition: all 0.4s, transform 0.4s;
+  transition: all 0.4s, transform 0.4s, -webkit-transform 0.4s;
+  border-radius: 100%;
+}
+.products .pro-list .item .btn .change-btn .bg a {
+  opacity: 0;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.products .pro-list .item .btn .change-btn .bg a img {
+  width: 100%;
+  height: 100%;
+}
+.products .pro-list .item .btn .change-btn .bg a:first-child {
+  z-index: 1;
+}
+.products .pro-title {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 10% 0 5%;
+}
+.products .pro-title::after {
+  width: 1.2em;
+  content: "";
+  display: block;
+  background-color: #8e8e8e;
+  height: 2px;
+  margin: 1em auto 0;
+}
+.products .pro-info-bg {
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.products .pro-info-bg .fangda {
+  padding: 0px;
+  font-size: 0;
+  line-height: 0;
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+.products .pro-info-bg .fangda .bg {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/fd.png);
+  background-size: 20px;
+  -webkit-transition: all 0.4s, -webkit-transform 0.4s;
+  transition: all 0.4s, -webkit-transform 0.4s;
+  transition: all 0.4s, transform 0.4s;
+  transition: all 0.4s, transform 0.4s, -webkit-transform 0.4s;
+}
+.products .pro-info-bg .fangda .bg a {
+  opacity: 0;
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.products .pro-info-bg .fangda .bg a img {
+  width: 100%;
+  height: 100%;
+}
+.products .pro-info-bg .fangda .bg a:first-child {
+  z-index: 1;
+}
+.products .pro-canshu {
+  padding: 6% 0;
+}
+.products .pro-canshu table {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.products .pro-canshu table th {
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  width: 4em;
+  padding: 2px 10px;
+  border: 1px solid #eee;
+}
+.products .pro-canshu table td {
+  padding: 0;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #eee;
+}
+.products .pro-canshu a {
+  color: #d80b1b;
+  font-size: 14px;
+  display: block;
+  padding: 5% 0;
+}
+.products .pro-canshu a span {
+  display: inline-block;
+  margin-right: .5em;
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+.products .pro-content .item {
+  margin-bottom: 40px;
+}
+.products .pro-content .item .title {
+  font-size: 17px;
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+  color: #333;
+  line-height: 50px;
+  overflow: hidden;
+}
+.products .pro-content .item .title span {
+  font-size: 26px;
+  vertical-align: middle;
+  float: left;
+  display: inline-block;
+  line-height: 50px;
+  margin-right: 10px;
+  color: #d60011;
+}
+.products .pro-content .item .content {
+  margin-top: 3%;
+}
+
+/* CSS Document */
+.technology .technology-tit {
+  padding: 8% 0 0;
+}
+.technology .technology-tit .ch {
+  font-weight: bold;
+  border-left: 4px solid #e50014;
+  line-height: 1.5em;
+  padding-left: 10px;
+  color: #333;
+}
+.technology .technology-tit .en {
+  margin-top: 5px;
+  font-family: 'Conv_HelveticaNeueLTStd-ThEx';
+  font-size: 10px;
+  padding-left: 15px;
+  color: #999;
+}
+.technology .technology-list {
+  margin-top: 8%;
+}
+.technology .technology-list .item {
+  margin-bottom: 8%;
+}
+.technology .technology-list .item .pic img {
+  display: block;
+  width: 100%;
+}
+.technology .technology-list .item .text-area {
+  border: 1px solid #999999;
+  padding: 5% 8%;
+}
+.technology .technology-zhuanli {
+  padding-bottom: 20%;
+}
+.technology .technology-zhuanli img {
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=me.css.map */
