@@ -2,86 +2,91 @@
 
 .news {}
 
-.pic-news-list {
+.news-list {
+	padding: 10% 0;
 	.item {
+		border-bottom: 1px solid #d0d0d0;
+		padding-bottom: 5%;
+		margin-bottom: 5%;
 		a {
-			border-bottom: 1px solid #eeeeee;
 			display: block;
-			height: 190px;
 			position: relative;
-			padding-bottom: 40px;
-			margin-bottom: 40px;
-			span {
-				display: block;
-			}
-			.pic {
-				width: 280px;
-				height: 190px;
+			height: 80px;
+			.time {
+				width: 68px;
+				border: 1px solid #d60011;
+				text-align: center;
+				color: #d60011;
+				padding: 3% 0;
 				position: absolute;
 				top: 0;
 				left: 0;
-				img {
-					width: 280px;
-					height: 190px;
-					display: block;
+				.date {
+					font-family: 'Conv_HelveticaNeueLTStd-UltLtEx';
+					font-size: 40px;
+					line-height: 40px;
+					height: 40px;
+				}
+				.ym {
+					font-size: 10px;
 				}
 			}
 			.inner {
-				padding-left: 305px;
-				height: 190px;
-				overflow: hidden;
+				padding-left: 80px;
+				padding-top: 5px;
 				.title {
-					font-size: 16px;
-					line-height: 1em;
 					color: #333;
-					font-weight: bold;
-					margin: 20px 0;
 				}
-				.time {
-					color: #36adcf;
-					font-size: 22px;
-					font-family: "DINOT-CondMedium";
-					line-height: 1em;
-					margin-bottom: 15px;
-				}
-				.content {
-					font-size: 14px;
-					color: #999;
-					line-height: 22px;
-					margin-bottom: 20px;
-					height: 22 * 2px;
+				.des {
+					font-size: 12px;
+					line-height: 1.8em;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
 					overflow: hidden;
-				}
-				.more {
-					font-size: 14px;
-					color: #999;
+					color: #a3a3a3;
+					margin-top: .4em;
 				}
 			}
 		}
 	}
 }
 
-.pic-news-content {
+.news-content {
+	padding: 10% 0;
+	.time {
+		font-family: 'Conv_HelveticaNeueLTStd-ThEx';
+		color: #333;
+		margin-bottom: 2%;
+	}
 	.title {
-		color: #36adcf;
-		font-size: 24px;
-		font-weight: bold;
-		line-height: 32px;
+		font-size: 18px;
+		color: #333;
+		line-height: 1em;
 	}
-	.des {
-		font-size: 14px;
+	.info {
 		color: #999;
-		border-bottom: 1px solid #ccc;
+		font-size: 12px;
+		padding: 4% 0;
+		border-bottom: 1px solid #cccccc;
+		margin-bottom: 4%;
 	}
+	.content {}
 	.shangxia {
-		border-top: 1px solid #ccc;
+		font-size: 0;
+		line-height: 0;
+		overflow: hidden;
 		a {
-			display: block;
-			line-height: 2em;
-			transition: $tr4;
-			&:hover {
-				color: #000;
-				transition: $tr4;
+			display: inline-block;
+			background: #333;
+			color: #fff;
+			font-size: 12px;
+			line-height: 36px;
+			width: 46%;
+			text-align: center;
+			float: right;
+			&:first-child {
+				float: left;
 			}
 		}
 	}

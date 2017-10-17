@@ -1,46 +1,30 @@
 /* CSS Document */
 
 .hr {
-	.hr-list {
-		.list-tit {
-			overflow: hidden;
-			span {
-				display: block;
-				float: left;
-				width: 274px;
-				background-color: #4775ba;
-				height: 60px;
-				line-height: 60px;
-				color: #fff;
-				text-align: center;
-				margin-right: 1px;
-			}
+	.hr_index {
+		padding: 8% 0 0;
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: 8%;
 		}
-		.item {
-			border-bottom: 1px solid #f5f5f5;
-			overflow: hidden;
-			span {
-				display: block;
-				float: left;
-				width: 274px;
-				height: 60px;
-				line-height: 60px;
-				text-align: center;
-				margin-right: 1px;
-				cursor: pointer;
-			}
-			.text-area {
-				padding: 60px;
-				border: 1px solid #f1f1f1;
-				display: none;
-				background-color: #fff;
-			}
-			&.on {
-				background-color: #f1f1f1;
-				.text-area {
-					display: block;
-				}
-			}
+	}
+	.hr_zhaomu {
+		padding: 8% 0;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	.gonggao {
+		.tit {
+			font-size: 20px;
+			color: #d60011;
+		}
+		.des {
+			color: #333;
+			font-size: 14px;
+			margin-top: 3%;
 		}
 	}
 }

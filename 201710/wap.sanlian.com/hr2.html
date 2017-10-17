@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 三联</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+
+  <!--[if IE 8]>
+  <script src="./src/scripts/packag /compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <input id="myInput" type="checkbox">
+  <input id="searchchange" type="checkbox">
+  <!-- 头部 -->
+  <header>
+    <div class="container_1200">
+      <div class="fl logo">
+        <a href="./index.html">
+          <img src="./src/images/h_logo.jpg" alt="">
+        </a>
+      </div>
+      <span class="sl-phone"></span>
+      <label class="sl-search" for="searchchange"></label>
+      <label for="myInput" class="myInput wap">
+        <div class="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"> </div>
+        </div>
+      </label>
+    </div>
+  </header>
+  <!-- 头部 -->
+  <nav>
+    <ul>
+      <li>
+        <a href="./index.html">网站首页</a>
+      </li>
+      <li>
+        <a href="./about.html">关于三联</a>
+      </li>
+      <li>
+        <a href="./products.html">产品中心</a>
+      </li>
+      <li>
+        <a href="./technology.html">科技研发</a>
+      </li>
+      <li>
+        <a href="./responsibility.html">社会责任</a>
+      </li>
+      <li>
+        <a href="./news.html">新闻中心</a>
+      </li>
+      <li>
+        <a href="./hr.html">人力资源</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- 搜索弹出 -->
+  <div class="search-tan">
+    <div class="search-main">
+      <input type="radio" checked name="s-radio" id="sl-news">
+      <div class="item">
+        <label for="sl-news" class="ico sl-news"></label>
+        <input type="text" data-url="./search.html" placeholder="输入您要查询的新闻">
+        <a class="jt-arrow_forward" data-ajax="no" href="javascript:void(0);"></a>
+      </div>
+      <input type="radio" name="s-radio" id="sl-pro">
+      <div class="item mRn">
+        <label for="sl-pro" class="ico sl-pro"></label>
+        <input type="text" data-url="./search.html" placeholder="输入您要查询的产品">
+        <a class="jt-arrow_forward" data-ajax="no" href="javascript:void(0);"></a>
+      </div>
+    </div>
+    <label for="searchchange" class="close">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"> </div>
+    </label>
+  </div>
+  <!-- 搜索弹出 -->
+  <main>
+    <article class="hr" data-main="hr">
+      <input type="hidden" class="eraction" data-fun="hr_zhaomu">
+      <!-- banner -->
+      <section class="er-banner">
+        <img src="./src/images/a_banner.jpg" alt="">
+      </section>
+      <!-- banner -->
+      <!-- 当前位置 二级导航 -->
+      <section class="position">
+        <input type="checkbox" name="" id="er-menu">
+        <div class="container_1200">
+          <span class="jt-home"></span>
+          <span class="jt-chevron-right"></span>人力资源
+          <span class="jt-chevron-right"></span>用人理念
+          <label class="er-menu jt-chevron-down" for="er-menu"></label>
+        </div>
+        <div class="er-nav">
+          <a href="./hr.html">
+            <i class="pro-gs"></i>用人理念</a>
+          <a href="./hr2.html">
+            <i class="pro-zz"></i>人才招募</a>
+        </div>
+      </section>
+      <!-- 当前位置 二级导航 -->
+      <section class="hr_zhaomu">
+        <div class="container_1200">
+          <img src="./src/images/hr_list_pic.jpg" alt="">
+        </div>
+      </section>
+      <section class="gonggao containern_1200">
+        <div class="tit">招聘公告</div>
+        <div class="des text-area">
+          <p>一、各招聘职位的详情请留意招贤纳士中的招聘信息。</p>
+          <p>二、您可以在线投递个人简历。我们会及时处理,简历筛选符合条件者我们会与您联系。</p>
+          <p>三、公司招聘职位发布渠道有：哈尔滨三联药业股份有限公司官网、智联招聘、前程无忧。请求职者注意核对企业信息、职位信息、联系方式等。哈三联药业对非官方公布招聘网站刊登的招聘信息不负法律责任。特此说明。</p>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <div class="container_1200">
+      <a href="/html/webmap.html">
+        <span class="icon-wzdt"></span>&nbsp;网站地图</a>
+      <a href="/html/mianze.html">
+        <span class="icon-mianze"></span>&nbsp;免责声明</a>
+      <br/> 黑icp备05002245号 © 2017. 哈尔滨三联药业股份有限公司. All rights reserved
+    </div>
+  </footer>
+
+  <div class="backtotop jt-chevron-up" id="backtotop"></div>
+
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="./src/scripts/package/scroll/jquery.mousewheel.min.js"></script>
+  <script src="./src/scripts/package/scroll/jquery.easing.min.js"></script>
+  <script src="./src/scripts/package/scroll/jquery.nicescroll.min.js"></script>
+  <script src="./src/scripts/require.js" data-main="./src/scripts/me"></script>
+
+</body>
+
+</html>
