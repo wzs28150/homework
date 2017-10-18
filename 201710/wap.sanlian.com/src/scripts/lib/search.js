@@ -1,8 +1,15 @@
 define(['domReady', 'debug', 'loadmore'], function (domReady, debug, loadmore) {
-  var initModule, debug = debug.initModule, loadmore = loadmore.initModule;
+  var initModule, debug = debug.initModule, loadmore = loadmore.initModule,GetQueryString;
 
+  GetQueryString = function (name)
+  {
+       var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+       var r = window.location.search.substr(1).match(reg);
+       if(r!=null)return  unescape(r[2]); return null;
+  }
 
   initModule = function (callbak) {
+    $('.key').html(GetQueryString('keywords'));
     domReady(function () {
       debug('搜索已加载');
       callbak(99);
