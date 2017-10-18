@@ -199,14 +199,16 @@
 
 @font-face {
   font-family: 'sanlian';
-  src: url('fonts/sanlian.eot?etl5ct');
-  src: url('fonts/sanlian.eot?etl5ct#iefix') format('embedded-opentype'), url('fonts/sanlian.ttf?etl5ct') format('truetype'), url('fonts/sanlian.woff?etl5ct') format('woff'), url('fonts/sanlian.svg?etl5ct#sanlian') format('svg');
+  src:  url('fonts/sanlian.eot?effa6e');
+  src:  url('fonts/sanlian.eot?effa6e#iefix') format('embedded-opentype'),
+    url('fonts/sanlian.ttf?effa6e') format('truetype'),
+    url('fonts/sanlian.woff?effa6e') format('woff'),
+    url('fonts/sanlian.svg?effa6e#sanlian') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="sl-"],
-[class*=" sl-"] {
+[class^="sl-"], [class*=" sl-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'sanlian' !important;
   speak: none;
@@ -215,54 +217,50 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
+
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.sl-back:before {
+  content: "\e90b";
+}
 .sl-keyan:before {
   content: "\e904";
 }
-
 .sl-culture:before {
   content: "\e900";
 }
-
 .sl-gongyi:before {
   content: "\e901";
 }
-
 .sl-honor:before {
   content: "\e902";
 }
-
 .sl-hr:before {
   content: "\e903";
 }
-
 .sl-news:before {
   content: "\e905";
 }
-
 .sl-phone:before {
   content: "\e906";
 }
-
 .sl-pro:before {
   content: "\e907";
 }
-
 .sl-search:before {
   content: "\e908";
 }
-
 .sl-zoom-in:before {
   content: "\e909";
 }
-
 .sl-brand:before {
   content: "\e90a";
+  color: #d24726;
 }
+
 
 @font-face {
   font-family: 'icomoon';

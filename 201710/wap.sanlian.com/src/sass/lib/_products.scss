@@ -225,11 +225,12 @@
 			span {
 				display: inline-block;
 				margin-right: .5em;
-				font-size: 16px; position: relative;  top:2px;
+				font-size: 16px;
+				position: relative;
+				top: 2px;
 			}
 		}
 	}
-
 	.pro-content {
 		.item {
 			margin-bottom: 40px;
@@ -250,9 +251,40 @@
 					color: #d60011;
 				}
 			}
-			.content{
+			.content {
 				margin-top: 3%;
 			}
 		}
+	}
+	.pro-bar {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		overflow: hidden;
+		background-color: #d60011;
+		color: #fff;
+		padding: 8px 0;
+		z-index: 1;
+		a {
+			color: #fff;
+			display: inline-block;
+			&.tel {
+				font-family: 'BebasNeue';
+				font-size: 24px;
+				line-height: 36px; position: relative; top: 2px;
+			}
+			&.ico {
+				span{
+					border: 1px solid #fff;
+					border-radius: 100%;
+					font-size: 14px;
+					padding: 10px;
+					display: inline-block;
+		
+				}
+			}
+		}
+		
 	}
 }
