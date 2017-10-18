@@ -5,18 +5,15 @@
   modules: [{
     name: 'me'
   }],
-  fileExclusionRegExp: /^(r|buildconfig)\.js|.*\.scss|.*\.bat|.*\.svg$/,
+  fileExclusionRegExp: /^(r|buildconfig)\.js|.*\.scss|.*\.bat$/,
   optimizeCss: 'standard',
   removeCombined: true,
   shim: {
     'pajax': ['pjax'],
     //'laydate': ['laydate'],
     //'progress': ['swiper'],
-    'BMap': {
-      exports: 'BMap'
-    },
-    'idcode': ['css!./package/idcode/jquery.idcode.css'],
-    'litebox': ['css!./package/litebox/css/litebox.css', 'imagesloaded'],
+    'photoswipe': ['css!./package/photoswiper/photoswipe.css', 'css!./package/photoswiper/default-skin/default-skin.css'],
+    'slide':['css!./package/slide/less/index.css', 'css!./package/slide/less/slide.css'],
   },
   paths: {
     domReady: './domReady',
@@ -35,11 +32,10 @@
     swiper: './package/swiper/v3/swiper.min',
     debouncedresize: './package/compat/jquery.debouncedresize',
     //  progress:'./package/swiper/v2/idangerous.swiper.progress',
-    masonry: './package/pubu/masonry.pkgd.min',
-    form: './package/form/form',
-    imagesloaded: './package/litebox/js/images-loaded.min',
-    litebox: './package/litebox/js/litebox.min',
-    idcode: './package/idcode/jquery.idcode',
-    loadmore: './package/loadmore/loadmore'
+    photoswipe: './package/photoswiper/photoswipe.min',
+    photoswipeui: './package/photoswiper/photoswipe-ui-default.min',
+    photo: './package/photoswiper/index',
+    loadmore: './package/loadmore/loadmore',
+    slide:'./package/slide/js/slide.min'
   }
 })

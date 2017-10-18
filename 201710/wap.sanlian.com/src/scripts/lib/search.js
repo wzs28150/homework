@@ -1,15 +1,11 @@
 define(['domReady', 'debug', 'loadmore'], function (domReady, debug, loadmore) {
-  var initModule, debug = debug.initModule, loadmore = loadmore.initModule,GetQueryString;
+  var initModule, debug = debug.initModule, loadmore = loadmore.initModule;
 
-  GetQueryString = function (name)
-  {
-       var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-       var r = window.location.search.substr(1).match(reg);
-       if(r!=null)return  unescape(r[2]); return null;
-  }
 
   initModule = function (callbak) {
-    $('.key').html(GetQueryString('keywords'));
+    var urlinfo = window.location.href;
+    var keywords = urlinfo.split('?')[1].split('=')[1];//拆分url得到”=”后面的参数 
+    $('.key').html(decodeURI(keywords));
     domReady(function () {
       debug('搜索已加载');
       callbak(99);

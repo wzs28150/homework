@@ -5,9 +5,6 @@ require.config({
     'pajax': ['pjax'],
     //'laydate': ['laydate'],
     //'progress': ['swiper'],
-    'BMap': {
-      exports: 'BMap'
-    },
     'photoswipe': ['css!./package/photoswiper/photoswipe.css', 'css!./package/photoswiper/default-skin/default-skin.css'],
     'slide':['css!./package/slide/less/index.css', 'css!./package/slide/less/slide.css'],
   },
@@ -32,8 +29,7 @@ require.config({
     photoswipeui: './package/photoswiper/photoswipe-ui-default.min',
     photo: './package/photoswiper/index',
     loadmore: './package/loadmore/loadmore',
-    slide:'./package/slide/js/slide.min',
-    'BMap': ['http://api.map.baidu.com/api?key=&v=1.1&services=true'],
+    slide:'./package/slide/js/slide.min'
   }
 });
 require(["domReady", 'main', './lib/index'], function (domReady, main) {
