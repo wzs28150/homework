@@ -40,7 +40,15 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
     callbak(3);
     debug('企业文化已加载');
     require(['slide'], function (slideCarsousel) {
-      $('#slide3d').slideCarsousel({slideType:'3d',indicatorEvent:'click',isAutoChange :false });
+      $('#slide3d').slideCarsousel({
+        slideType: '3d',
+        indicatorEvent: 'click',
+        isAutoChange: false
+      });
+    });
+    require(['page'], function (page) {
+      var a_activity_num = $(".about .culture-wenhua .list .item").length;
+      page.initModule(a_activity_num, ".about .culture-wenhua .list .item", "#a_activity_pagination", ".about .culture-wenhua .list ", 4);
     });
   };
 

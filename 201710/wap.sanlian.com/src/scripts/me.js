@@ -7,6 +7,7 @@ require.config({
     //'progress': ['swiper'],
     'photoswipe': ['css!./package/photoswiper/photoswipe.css', 'css!./package/photoswiper/default-skin/default-skin.css'],
     'slide':['css!./package/slide/less/index.css', 'css!./package/slide/less/slide.css'],
+    'page': ['pagination'],
   },
   paths: {
     domReady: './domReady',
@@ -14,6 +15,8 @@ require.config({
     pjax: './package/pajax/jquery.pjax',
     pajax: './package/pajax/pajax',
     router: './package/router/router',
+    page: './package/pagination/page',
+    pagination: './package/pagination/pagination.min',
     viewport: './package/viewport/jquery.viewport',
     alertinfo: './package/alertinfo/alertinfo',
     css: './package/css/css',
