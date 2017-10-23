@@ -118,7 +118,7 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
     router.initModule('article', false);
     var $ww = $(window).width();
     //scroll.initModule('body');
-    scroll.initModule('.scroller');
+    // scroll.initModule('.scroller');
 
     msg();
     minheight();

@@ -817,10 +817,8 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   min-height: 100%;
-  height: 100%;
   -webkit-tap-highlight-color: transparent;
   font-family: 'Microsoft YaHei', 'Open Sans';
-  overflow: hidden;
 }
 
 body {
@@ -830,7 +828,6 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Microsoft YaHei', 'Open Sans';
   min-height: 100%;
-  height: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -1236,125 +1233,6 @@ article {
   font-size: 30px;
   line-height: 64px;
   display: block;
-}
-
-body[onselectstart] {
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
-}
-
-.scroller {
-  height: 100%;
-  overflow: hidden;
-}
-.scroller .scroller-inner {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  width: 100%;
-  height: 100%;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-}
-.scroller .scroller-inner.on {
-  overflow-y: scroll;
-}
-.scroller .scrollbar {
-  position: absolute;
-  opacity: 0;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-      user-select: none;
-  cursor: pointer;
-  z-index: 99;
-}
-.scroller .scrollbar.active {
-  opacity: 1;
-}
-.scroller .scrollbar.off {
-  opacity: 0;
-}
-.scroller .scrollbar div {
-  position: relative;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-}
-.scroller .scrollbar i {
-  position: absolute;
-  background: #0f88eb;
-  border-radius: 2px;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
-}
-.scroller .scrollbar:active {
-  padding: 0;
-}
-.scroller .scrollbar:active div {
-  background: rgba(15, 136, 235, 0.07);
-}
-.scroller .scrollbar:active i {
-  border-radius: 0;
-}
-.scroller .scrollbar.scrollbar-y {
-  top: 0;
-  right: 0;
-  width: 5px;
-  height: 100%;
-  background-color: #ccc;
-}
-.scroller .scrollbar.scrollbar-y div {
-  height: 100%;
-}
-.scroller .scrollbar.scrollbar-y i {
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 100%;
-}
-.scroller .scrollbar.scrollbar-y:active i {
-  left: 0;
-  width: 10px;
-}
-.scroller .scrollbar.scrollbar-x {
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 10px;
-  padding-right: 10px;
-}
-.scroller .scrollbar.scrollbar-x div {
-  width: 100%;
-  height: 100%;
-}
-.scroller .scrollbar.scrollbar-x i {
-  bottom: 0;
-  top: 4px;
-  height: 3px;
-  width: 100%;
-}
-.scroller .scrollbar.scrollbar-x:active i {
-  top: 0;
-  height: 10px;
-}
-.scroller:hover .scrollbar {
-  opacity: 1;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-}
-.scroller[data-x-rolling="true"] .scroller-inner.on {
-  overflow-x: scroll;
-}
-.scroller[data-x-rolling="true"] .scroller-content {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 10px;
-  white-space: nowrap;
-  min-width: 250px;
 }
 
 .animate-element {
@@ -3267,9 +3145,9 @@ footer a {
 }
 .about #timeline .line {
   position: absolute;
-  width: 100%;
+  width: 86%;
   z-index: 1;
-  left: 0;
+  left: 7%;
   top: 50px;
   height: 3px;
   background: #dfdfdf;
@@ -3301,6 +3179,32 @@ footer a {
   height: 100%;
   width: 20px;
 }
+.about .top {
+  height: 70px;
+  width: 80%;
+  margin: 0 10%;
+  overflow: hidden;
+}
+.about #prev {
+  font-size: 44px;
+  color: #ccc;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  cursor: pointer;
+}
+.about #next {
+  font-size: 44px;
+  color: #ccc;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  cursor: pointer;
+}
 .about #dates {
   width: 100%;
   height: 70px;
@@ -3321,14 +3225,14 @@ footer a {
   display: block;
   line-height: 32px;
   padding-top: 8px;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   background: url("../images/biggerdot.png") center bottom no-repeat;
 }
-.about #dates .selected {
+.about #dates a.selected {
   font-size: 40px;
   display: block;
   line-height: 40px;
-  padding-top: 0px;
+  padding-top: 0;
   padding-bottom: 20px;
   color: #d51126;
   background: url("../images/biggerdots.png") center bottom no-repeat;
@@ -3336,17 +3240,12 @@ footer a {
 .about #issues {
   width: 100%;
   overflow: hidden;
+  padding-top: 5%;
 }
 .about #issues li {
   width: 1100px;
   list-style: none;
   float: left;
-}
-.about #issues li h1 {
-  color: #ffcc00;
-  font-size: 42px;
-  margin: 20px 0;
-  text-shadow: #000 1px 1px 2px;
 }
 
 @media (max-width: 1440px) {
