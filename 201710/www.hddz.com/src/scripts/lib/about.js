@@ -15,7 +15,7 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
   about_timer = function(callbak){
     callbak(3);
     debug('大事记已加载');
-    
+
     require(["timeline"], function (timelinr) {
       $().timelinr({
         startAt: 5
