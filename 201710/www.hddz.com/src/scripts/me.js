@@ -8,6 +8,7 @@ require.config({
     'BMap': {
       exports: 'BMap'
     },
+    'scroll': ['scrollbar'],
     'idcode': ['css!./package/idcode/jquery.idcode.css'],
     'litebox': ['css!./package/litebox/css/litebox.css', 'imagesloaded'],
   },
@@ -24,6 +25,7 @@ require.config({
     async: './package/async/async',
     debug: './package/debug/debug',
     smoothscroll: './package/scroll/jquery.smooth-scroll.min',
+    scrollbar: './package/scroll/scrollbar',
     scroll: './package/scroll/scroll',
     aspectratio_responsive: './package/media/aspectratio_responsive',
     swiper: './package/swiper/v3/swiper.min',
