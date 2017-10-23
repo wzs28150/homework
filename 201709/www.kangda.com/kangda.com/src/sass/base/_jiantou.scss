@@ -21,16 +21,15 @@ $jt-angle-double-right: "\f101";
 $jt-angle-double-up: "\f102";
 $jt-angle-double-down: "\f103";
 $jt-home: "\f015";
-$jt-qq: "\f1d6";
 
 
 @font-face {
     font-family: 'jiantou';
-    src : url('#{$icomoon-font-path}/jiantou.eot?bfjpr2');
-    src : url('#{$icomoon-font-path}/jiantou.eot?bfjpr2#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/jiantou.ttf?bfjpr2') format('truetype'),
-    url('#{$icomoon-font-path}/jiantou.woff?bfjpr2') format('woff'),
-    url('#{$icomoon-font-path}/jiantou.svg?bfjpr2#jiantou') format('svg');
+    src : url('#{$icomoon-font-path}/jiantou.eot?e5siwo');
+    src : url('#{$icomoon-font-path}/jiantou.eot?e5siwo#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/jiantou.ttf?e5siwo') format('truetype'),
+    url('#{$icomoon-font-path}/jiantou.woff?e5siwo') format('woff'),
+    url('#{$icomoon-font-path}/jiantou.svg?e5siwo#jiantou') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -179,11 +178,5 @@ $jt-qq: "\f1d6";
 .jt-home {
     &:before {
         content: $jt-home;
-    }
-}
-
-.jt-qq {
-    &:before {
-        content: $jt-qq;
     }
 }

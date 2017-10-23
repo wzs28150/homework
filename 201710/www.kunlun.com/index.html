@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>昆仑银行-代缴费</title>
+  <link rel="stylesheet" href="./weixin/lib/weui.min.css">
+  <link rel="stylesheet" href="./weixin/css/jquery-weui.css">
+  <link rel="stylesheet" href="./weixin/css/demos.css">
+  <style>
+    
+  </style>
+</head>
+
+<body ontouchstart>
+
+  <header class='demos-header'>
+    <h1 class="demos-title">
+      <img src="./weixin/images/raw_1508384875.jpeg" alt="">
+    </h1>
+  </header>
+
+  <div class="weui-cells">
+    <div class="weui-cell  weui-cell-after">
+      <div class="weui-cell__hd">
+        <label for="" class="weui-label">代缴费业务：</label>
+      </div>
+      <div class="weui-cell__bd">
+        <!-- <select class="weui-select gray" name="yewu" id="yewu">
+          <option value="1">大庆龙凤第二幼儿园</option>
+          <option value="2">大庆龙凤第一幼儿园</option>
+        </select> -->
+        <input class="weui-input gray" id="yewu" type="text" value="" placeholder="请选择代缴费业务">
+      </div>
+    </div>
+
+    <div class="weui-cell">
+      <div class="weui-cell__hd">
+        <label class="weui-label">代缴费金额：</label>
+      </div>
+      <div class="weui-cell__bd">
+        <input class="weui-input gray" type="number" pattern="[0-9]*" name="jine" placeholder="300.60元" id="jine">
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd">
+        <label class="weui-label">用户姓名：</label>
+      </div>
+      <div class="weui-cell__bd">
+        <input class="weui-input gray" type="text" name="name" placeholder="请输入储户姓名" id="name">
+      </div>
+    </div>
+    <div class="weui-cell">
+      <div class="weui-cell__hd">
+        <label class="weui-label">手机号码：</label>
+      </div>
+      <div class="weui-cell__bd">
+        <input class="weui-input gray" type="tel" name="tel" placeholder="请输入储户手机号" id="tel">
+      </div>
+    </div>
+  </div>
+
+  <!-- <label for="weuiAgree" class="weui-agree">
+    <input id="weuiAgree" type="checkbox" class="weui-agree__checkbox">
+    <span class="weui-agree__text">
+      阅读并同意
+      <a href="javascript:void(0);">《相关条款》</a>
+    </span>
+  </label> -->
+
+  <div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary" style="background-color:#ffbe00" href="javascript:" id="submit">确定</a>
+  </div>
+  <div class="erw">
+    <div class="weui-cells__title">支付二维码</div>
+    <div class=" weui-cell">
+      <img src="./weixin/images/erw.png" alt="">
+    </div>
+  </div>
+  <div class="weui-footer weui-footer_fixed-bottom">
+    <p class="weui-footer__links">
+      <a href="#." class="weui-footer__link">昆仑银行</a>
+    </p>
+    <p class="weui-footer__text">Copyright © 2017 昆仑银行</p>
+  </div>
+  <div id="picker-container"></div>
+  <style>
+    .weui-footer {
+      margin: 25px 0 10px 0;
+    }
+  </style>
+
+
+  <script src="./weixin/lib/jquery-2.1.4.js"></script>
+  <script src="./weixin/lib/fastclick.js"></script>
+  <script>
+    $(function () {
+      FastClick.attach(document.body);
+      var send;
+      $('input').focus(function () {
+        $('.weui-footer').hide();
+      });
+      //输入框失去焦点事件
+      $('input').blur(function () {
+        $('.weui-footer').show();
+      });
+
+      $("#yewu").picker({
+        title: "请选择代缴费业务",
+        cols: [{
+          textAlign: 'center',
+          values: ['大庆龙凤第一幼儿园', '大庆龙凤第二幼儿园']
+        }],
+        onChange: function (p, v, dv) {
+          console.log(p, v, dv);
+        },
+        onClose: function (p, v, d) {
+          console.log("close");
+        }
+      });
+      
+
+      send = function () {
+        var yewu = $('#yewu').val();
+        var jine = $('#jine').val();
+        var name = $('#name').val();
+        var tel = $('#tel').val();
+        if (!yewu) {
+          $.toast("请选择业务", "cancel", function (toast) {
+            console.log(toast);
+          });
+          return false;
+        }
+        if (!jine) {
+          $.toast("请输入金额", "cancel", function (toast) {
+            console.log(toast);
+            $('#jine').focus()
+          });
+          return false;
+        }
+        if (!name) {
+          $.toast("请输入用户姓名", "cancel", function (toast) {
+            console.log(toast);
+            $('#name').focus()
+          });
+          return false;
+        }
+        if (!tel) {
+          $.toast("请输入手机号码", "cancel", function (toast) {
+            console.log(toast);
+            $('#tel').focus()
+          });
+          return false;
+        }
+
+        arrData = {
+          'yewu': yewu,
+          'jine': jine,
+          'name': name,
+          'tel': tel
+        };
+        $.showLoading();
+        setTimeout(function () {
+          $.hideLoading();
+          $('.weui-btn-area').hide();
+          $('.erw').show();
+          $('.weui-footer').removeClass('weui-footer_fixed-bottom');
+        }, 3000)
+        // $.post("/weidianji_dourl", arrData,
+        //   function (data) {
+        //     if ('118' == data.err_code) {
+        //       location.href = "/weidianjishow_" + data.err_info;
+        //     } else {
+        //       alertinfo(data.err_info);
+
+        //     }
+        //   }, "json"
+        // );
+      };
+
+      $('#submit').click(function () {
+        send();
+      });
+
+      $(document).keypress(function (event) {
+        var keynum = (event.keyCode ? event.keyCode : event.which);
+        if (keynum == '13') {
+          send();
+        }
+      });
+    });
+  </script>
+  <script src="./weixin/js/jquery-weui.js"></script>
+</body>
+
+</html>

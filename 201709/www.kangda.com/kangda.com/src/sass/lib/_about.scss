@@ -7,6 +7,153 @@
 		text-align: center;
 	}
 	.culture {
-		img{ display: block; width: 100%; }
+		img {
+			display: block;
+			width: 100%;
+		}
 	}
+	.youshi-list {
+		.item {
+			width: 277px;
+			margin-right: 28px;
+			border: 1px solid #eaeaea;
+			position: relative;
+			cursor: pointer;
+			transition: $tr4;
+			.num {
+				width: 62px;
+				height: 62px;
+				border-radius: 100%;
+				text-align: center;
+				line-height: 62px;
+				border: 2px solid #eaeaea;
+				position: absolute;
+				top: -38px;
+				background-color: #fff;
+				left: 50%;
+				margin-left: -33px;
+				color: #ffd400;
+				font-family: 'BrushScriptStd';
+				font-size: 30px;
+				transition: $tr4;
+			}
+			.title {
+				margin-top: 49px;
+				color: #333333;
+				font-size: 18px;
+				font-weight: bold;
+				text-align: center;
+			}
+			.content {
+				padding: 36px 36px 49px;
+				font-size: 16px;
+				line-height: 22px;
+				font-weight: lighter;
+			}
+			&:hover {
+				background-color: #f3f5f6;
+				transition: $tr4;
+				.num {
+					background-color: #009944;
+					color: #fff;
+					border: 2px solid #009944;
+					transition: $tr4;
+				}
+			}
+		}
+	}
+	.enviro {
+		.big-pic {
+			position: relative;
+			height: 800px;
+			img {
+				display: block;
+				width: 100%;
+			}
+			.small-pic {
+				height: 130px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(0, 0, 0, 0.58);
+				width: 100%;
+				.inner {
+					padding: 19px 66px;
+					position: relative;
+					.swiper-slide {
+						cursor: pointer;
+						height: 93px;
+						width: 142px;
+						position: relative;
+						img {
+							display: block;
+							height: 93px;
+							width: 142px;
+						}
+						&::after {
+							content: "";
+							display: block;
+							position: absolute;
+							height: 83px;
+							width: 132px;
+							border: 5px solid #fff;
+							top: 0;
+							left: 0;
+							visibility: hidden;
+							opacity: 0;
+							transition: $tr4;
+						}
+						&.on {
+							&::after {
+								visibility: visible;
+								opacity: 1;
+								transition: $tr4;
+							}
+						}
+					}
+					.i-pro-l {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 66px;
+						height: 130px;
+						line-height: 130px;
+						text-align: center;
+						cursor: pointer;
+						color: #999999;
+						font-size: 40px;
+					}
+					.i-pro-r {
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 66px;
+						height: 130px;
+						line-height: 130px;
+						text-align: center;
+						cursor: pointer;
+						color: #999999;
+						font-size: 40px;
+					}
+				}
+			}
+		}
+	}
+	.news-list{ overflow: hidden;
+		.item{ width: 590px; margin-right: 20px; background-color: #f1f1f1; margin-bottom: 20px; height: 164px; 
+			a{ display: block;  height: 136px; position: relative; padding-left: 270px; padding-right: 25px; padding-top: 28px; transition: $tr4;
+				.pic{ width: 246px; height: 164px; position: absolute; left: 0; top: 0; }
+				.time{ font-family: 'Conv_League_Gothic'; font-size: 30px; line-height: 1em; margin-bottom: 12px; }
+				.title{ line-height: 1em; margin-bottom: 12px; }
+				.content{ font-size: 12px; line-height: 21px; color: #a9a9a9; width: 100%; }
+				&:hover{ background-color: #009944; color: #fff; transition: $tr4; }
+			}
+		}
+	}
+	.news-content{
+		.title{ font-size: 50px; font-weight: lighter; text-align: center; line-height: 1em; }
+		.time{ font-size: 14px; color: #999999; text-align: center; border-bottom: 1px solid #d6d6d6; padding: 20px 0; }
+		.content{ color: #333333; padding: 40px 0; }
+	}
+	.map{ height: 450px; }
 }

@@ -1,5 +1,5 @@
 define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], function (pajax, debouncedresize, router, smoothscroll, scroll) {
-  var initModule, animated_contents, minheight, alertinfo, msg, exists,backtotop;
+  var initModule, animated_contents, minheight, alertinfo, msg, exists;
   /**
    * 判断dom是否存在
    * @param  {[type]} selector [description]
@@ -48,14 +48,7 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
 
   };
 
-  backtotop = function () {
-     $("#backtotop").on("click", function () {
-       $('body,html').animate({
-         scrollTop: 0
-       }, 1000);
-       return false;
-     });
-  }
+
   minheight = function () {
     var hh = $('header').height();
     var fh = $('footer').height();
@@ -112,7 +105,6 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
     var $ww = $(window).width();
     //scroll.initModule('body');
     msg();
-    backtotop();
     //parallaxan();
     require(["viewport"], function (viewport) {
       animated_contents();
@@ -129,7 +121,6 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
     pajax.initModule('main', function () {}, function (targetelement, state) {
       router.initModule('article', state);
       msg();
-      backtotop();
       //scroll.resetsize('body');
       require(["viewport"], function (viewport) {
         animated_contents();

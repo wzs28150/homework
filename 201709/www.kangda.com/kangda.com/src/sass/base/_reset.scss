@@ -167,7 +167,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Microsoft YaHei', 'Open Sans';
   min-height: 100%;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent; overflow-x: hidden;
 }
 
 a {
@@ -485,7 +485,6 @@ article {
     display: inline-block;
     padding: 0 8px;
     line-height: 70px;
-    background-image: url(../images/dbx.png);
     background-position: right center;
     background-repeat: no-repeat;
     transition: $tr4;
@@ -539,25 +538,46 @@ article {
   visibility: hidden;
 }
 
-.backtotop{ position: fixed; right: 5px; bottom: 20px; width: 70px; height: 130px;  z-index: 999;
+.page {
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
   a {
-    display: block;
-    height: 64px;
-    width: 100%; border-radius: 5px;
-    background-color: #eaeaea; margin-bottom: 4px; text-align: center; line-height: 28px; overflow: hidden;
-    span {
-      display: block;
-      font-size: 20px;
-    }
-    p{ font-size: 14px; font-weight: lighter; }
-   &.mBn {
-     line-height: 64px;
-     font-size: 30px;
-     span {
-       font-size: 30px;
-       line-height: 64px;
-       display: block;
-     }
-   }
+    display: inline-block;
+    height: 40px;
+    background-color: #009944;
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 12px;
+    padding: 0 15px;
+    text-align: center;
+  }
+  span {
+    display: inline-block;
+    height: 40px;
+    background-color: #009944;
+    font-size: 14px;
+    line-height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    margin: 0 12px;
+    padding: 0 15px;
+    text-align: center;
+  }
+}
+
+.shangxia {
+  overflow: hidden;
+  border-top: 1px solid #eaeaea;
+  font-size: 0;
+  line-height: 0;
+  a {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 100px;
+    font-weight: lighter;
+    &:hover{ color: #009944; }
   }
 }
