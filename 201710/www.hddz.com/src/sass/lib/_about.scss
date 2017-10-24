@@ -1,5 +1,4 @@
 /* CSS Document */
-
 .about {
 	.about-index {
 		padding-top   : 80px;
@@ -164,6 +163,173 @@
 			width     : 1100px;
 			list-style: none;
 			float     : left;
+		}
+	}
+
+	.honor-list {
+		.item {
+			float        : left;
+			text-align   : center;
+			width        : 32%;
+			margin-right : 2%;
+			margin-bottom: 4%;
+
+			img {
+				width  : 100%;
+				display: block;
+				@include tr(box-shadow, 0.4s);
+			}
+
+			p {
+				color        : #333;
+				font-size    : 20px;
+				line-height  : 55px;
+				border-bottom: 1px solid #d2d2d2;
+				@include tr(color, 0.4s);
+			}
+
+			&:hover {
+				img {
+					box-shadow: 0 0 20px #777;
+					@include tr(box-shadow, 0.4s);
+				}
+
+				p {
+					color: #d51126;
+					@include tr(color, 0.4s);
+				}
+			}
+		}
+	}
+
+	.linian-qiehuan {
+		padding-top: 50px;
+
+		.linian-top {
+			position: relative;
+			padding : 0 20px;
+
+			.linian-l {
+				width           : 10px;
+				position        : absolute;
+				left            : 0;
+				top             : 0;
+				height          : 50px;
+				line-height     : 50px;
+				text-align      : center;
+				background-color: #e6e6e6;
+				font-size       : 12px;
+				cursor          : pointer;
+			}
+
+			.linian-r {
+				width           : 10px;
+				position        : absolute;
+				right           : 0;
+				top             : 0;
+				height          : 50px;
+				line-height     : 50px;
+				text-align      : center;
+				background-color: #e6e6e6;
+				font-size       : 12px;
+				cursor          : pointer;
+			}
+		}
+
+		#swiper-container2 {
+			.swiper-slide {
+				background-color: #e6e6e6;
+				text-align      : center;
+				color           : #333;
+				line-height     : 50px;
+				width           : 124px;
+				cursor          : pointer;
+				font-size       : 18px;
+				transition      : 0.4s background-color,0.4s color;
+
+				&.active-nav,
+				&:hover {
+					background-color: #d1111c;
+					color           : #fff;
+					transition      : 0.4s background-color,0.4s color;
+				}
+			}
+		}
+
+		#swiper-container3 {
+			padding-top: 30px;
+			margin     : 20px;
+
+			.swiper-slide {
+				.swiper-title {
+					color        : #333;
+					font-size    : 22px;
+					font-weight  : bold;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+
+	.xingzheng-item {
+		.xingzheng-title {
+			color    : #d1111c;
+			font-size: 22px;
+			padding  : 45px 0;
+		}
+
+		.xingzheng-content {
+			overflow: hidden;
+
+			.left {
+				width: 240px;
+				float: left;
+
+				a {
+					display         : block;
+					background-color: #efefef;
+					margin-bottom   : 7px;
+					width           : 232px;
+					text-align      : center;
+					line-height     : 40px;
+					height          : 40px;
+					position        : relative;
+					@include tr(all, 0.4s);
+
+					&::after {
+						content      : "";
+						display      : block;
+						width        : 0;
+						height       : 0;
+						position     : absolute;
+						right        : -8px;
+						top          : 50%;
+						margin-top   : -6px;
+						border-top   : 6px solid transparent;
+						border-left  : 8px solid #efefef;
+						border-bottom: 6px solid transparent;
+						@include tr(all, 0.4s);
+					}
+
+					&.on {
+						background-color: #d1111c;
+						color           : #fff;
+						@include tr(all, 0.4s);
+
+						&::after {
+							border-left: 8px solid #d1111c;
+							@include tr(all, 0.4s);
+						}
+					}
+				}
+			}
+
+			.right {
+				width        : 770px;
+				padding-right: 60px;
+				float        : right;
+				display      : none;
+			}
 		}
 	}
 }

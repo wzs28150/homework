@@ -1,15 +1,13 @@
-define(['domReady', 'loadmore'], function (domReady, loadmore) {
-  var initModule, news_list, news_content, loadmore = loadmore.initModule;
+define(['debug', 'loadmore'], function (debug, loadmore) {
+  var initModule, news_list, news_content, debug = debug.initModule;
   news_list = function () {
-    loadmore(5, 1, '.pic-news-list .item', '.loadmore');
+    debug('新闻列表已加载')
   };
   news_content = function () {
 
   };
   initModule = function (callbak) {
-    domReady(function () {
-      callbak(1);
-    });
+    callbak(3);
   };
   return {
     initModule: initModule,
