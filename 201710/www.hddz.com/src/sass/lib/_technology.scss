@@ -1,0 +1,81 @@
+.technology {
+	.technology-inner {
+		padding-top   : 80px;
+		padding-bottom: 100px;
+
+		.technology-tit {
+			font-size    : 36px;
+			margin-bottom: 40px;
+		}
+
+		.sheji-list {
+			.item {
+				float        : left;
+				margin-right : 2%;
+				width        : 48%;
+				margin-bottom: 4%;
+
+				a {
+					display   : block;
+					text-align: center;
+
+					img {
+						display: block;
+						width  : 100%;
+					}
+
+					p {
+						color        : #333;
+						line-height  : 59px;
+						border-bottom: 1px solid #d2d2d2;
+					}
+				}
+
+				&.mRn {
+					margin-left: 2%;
+				}
+			}
+		}
+
+		.zhuangbei-nav {
+			font-size  : 0;
+			line-height: 0;
+			text-align : center;
+
+			a {
+				display    : inline-block;
+				font-size  : 18px;
+				line-height: 32px;
+				border     : 3px solid #fff;
+				width      : 120px;
+
+				&.on {
+					border: 3px solid #b3b3b3;
+				}
+			}
+		}
+
+		.zhuangbei-content {
+			img {
+				display  : block;
+				margin   : 0 auto;
+				max-width: 100%;
+			}
+		}
+
+		.keyan-list {
+			.item {
+				float        : left;
+				margin-right : 2%;
+				width        : 48%;
+				border-bottom: 1px solid #efefef;
+				line-height  : 76px;
+				font-size    : 18px;
+
+				&.mRn {
+					margin-left: 2%;
+				}
+			}
+		}
+	}
+}

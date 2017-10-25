@@ -4,7 +4,7 @@ define([], function() {
     isdebugauth: 0
   };
 
-  
+
 
   initModule = function($str, $auth) {
     if (!$auth) {
@@ -13,7 +13,6 @@ define([], function() {
     if ($config.isdebug || $auth == 1) {
       if ($config.isdebugauth == 0) {
         //全部显示
-        console.info();
         console.log($str + ' - Created by wzs')
       } else if ($config.isdebugauth == 1) {
         //显示权限1

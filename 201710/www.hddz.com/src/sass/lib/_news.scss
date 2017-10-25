@@ -1,5 +1,4 @@
 /* CSS Document */
-
 .news {
 	.news-inner {
 		padding-top   : 80px;
@@ -13,25 +12,80 @@
 		.news-list {
 			.item {
 				a {
-					display : block;
-					position: relative;
-					height  : 108px;
+					display       : block;
+					position      : relative;
+					height        : 108px;
+					border-bottom : 1px solid #efefef;
+					padding-bottom: 34px;
+					margin-bottom : 34px;
 
 					span {
 						display: block;
 
 						&.time {
-							height  : 108px;
-							position: absolute;
-							top     : 0;
-							left    : 0;
+							height     : 58px;
+							width      : 100px;
+							padding    : 24px 0;
+							font-family: "BauerBodni BT Italic";
+							position   : absolute;
+							font-size  : 23px;
+							top        : 0;
+							left       : 0;
+							color      : #999;
+							text-align : center;
+							border     : 1px solid #efefef;
+							@include tr(all, 0.4s);
 						}
 
 						&.inner {
 							padding-left: 140px;
+
+							.title {
+								font-size  : 24px;
+								color      : #333;
+								line-height: 1em;
+								padding    : 10px 0;
+							}
+
+							.content {
+								color      : #999;
+								line-height: 27px;
+								padding-top: 5px;
+							}
+						}
+					}
+
+					&:hover {
+						span {
+							&.time {
+								background-color: #d1111c;
+								color           : #fff;
+								@include tr(all, 0.4s);
+							}
 						}
 					}
 				}
+			}
+		}
+
+		.news-content {
+			.title {
+				font-size     : 36px;
+				text-align    : center;
+				line-height   : 1em;
+				border-bottom : 1px solid #efefef;
+				padding-bottom: 30px;
+			}
+
+			.time {
+				text-align: center;
+				color     : #999;
+				font-size : 14px;
+				padding   : 16px 0;
+			}
+
+			.text-area {
+				padding-top: 40px;
 			}
 		}
 	}
