@@ -81,6 +81,9 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll', 'debug']
       }
 
     });
+    $('.searh-bg').click(function(){
+      $('#searchchange').attr('checked',false)
+    });
   }
 
   minheight = function () {

@@ -72,6 +72,31 @@
 				line-height  : 76px;
 				font-size    : 18px;
 
+				a {
+					display: block;
+				}
+
+				&.mRn {
+					margin-left: 2%;
+				}
+			}
+		}
+
+		.zhuanli-list {
+			.item {
+				float        : left;
+				margin-right : 2%;
+				width        : 48%;
+				border-bottom: 1px solid #efefef;
+				line-height  : 76px;
+				font-size    : 18px;
+
+				a {
+					display     : block;
+					background  : url("../images/zhuanli_bg.png") no-repeat left 15px center;
+					padding-left: 70px;
+				}
+
 				&.mRn {
 					margin-left: 2%;
 				}

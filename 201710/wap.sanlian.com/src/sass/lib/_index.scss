@@ -64,6 +64,7 @@
 				padding: 0 100% 100% 0;
 				position: relative;
 				border-radius: 10px;
+				@include tr(all, 0.4s);
 				i {
 					font-size: 30px;
 					position: absolute;
@@ -78,6 +79,10 @@
 				color: #333;
 				line-height: 1em;
 				margin-top: .8em;
+			}
+			&:hover span {
+				transform: scale(1.15);
+				@include tr(all, 0.4s);
 			}
 		}
 	}

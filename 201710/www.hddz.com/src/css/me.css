@@ -3528,7 +3528,26 @@ footer a {
   line-height: 76px;
   font-size: 18px;
 }
+.technology .technology-inner .keyan-list .item a {
+  display: block;
+}
 .technology .technology-inner .keyan-list .item.mRn {
+  margin-left: 2%;
+}
+.technology .technology-inner .zhuanli-list .item {
+  float: left;
+  margin-right: 2%;
+  width: 48%;
+  border-bottom: 1px solid #efefef;
+  line-height: 76px;
+  font-size: 18px;
+}
+.technology .technology-inner .zhuanli-list .item a {
+  display: block;
+  background: url("../images/zhuanli_bg.png") no-repeat left 15px center;
+  padding-left: 70px;
+}
+.technology .technology-inner .zhuanli-list .item.mRn {
   margin-left: 2%;
 }
 
@@ -4094,4 +4113,5 @@ footer a {
     margin-right: 4%;
   }
 }
+
 /*# sourceMappingURL=me.css.map */

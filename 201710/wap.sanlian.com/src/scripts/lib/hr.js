@@ -17,7 +17,7 @@ define(['debug'], function (debug) {
     });
   };
   initModule = function (callbak) {
-    callbak(7);
+    callbak(6);
   };
   return {
     initModule: initModule,

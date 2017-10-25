@@ -134,9 +134,12 @@ nav {
   visibility: hidden;
   opacity: 0;
   @include tr(all, 0.4s);
+  .searh-bg{ position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; }
   .search-main {
     text-align: center;
     padding-top: 20%;
+    position: relative;
+    z-index: 2;
     input[type="radio"] {
       display: none;
     }
@@ -218,6 +221,7 @@ nav {
     width: 26px;
     height: 26px;
     display: block;
+    z-index: 2;
     .bar {
       height: 3px;
       width: 26px;

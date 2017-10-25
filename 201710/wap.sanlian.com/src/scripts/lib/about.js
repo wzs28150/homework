@@ -1,6 +1,15 @@
 define(['loadmore', 'debug'], function (loadmore, debug) {
   var initModule, about_index, debug = debug.initModule,
-    about_contact, about_culture, about_honor, about_organization, a_quick, loadmore = loadmore.initModule;
+    about_contact, about_culture, about_honor, about_organization, a_quick, loadmore = loadmore.initModule,
+    banner;
+  banner = function () {
+    var bigswiper = new Swiper('.about .er-banner.swiper-container', {
+      autoplay: 1500,
+      speed: 1000,
+      loop: true,
+      effect : 'fade'
+    });
+  };
 
   a_quick = function () {
     var swiper = new Swiper('.a_quick .swiper-container', {
@@ -60,6 +69,9 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
   initModule = function (callbak) {
     callbak(1);
     debug('关于三联已加载');
+    require(["swiper"], function (swiper) {
+      banner();
+    });
   };
 
   return {
