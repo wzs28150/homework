@@ -189,7 +189,7 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll', 'debug']
           //console.log($('#' + targetelement).offset().top);
           $.smoothScroll({
             offset: -($('header').height()),
-            speed: 500,
+            speed: 0,
             scrollTarget: '#' + targetelement
           });
         }, 500);

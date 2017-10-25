@@ -1,1 +1,0 @@
-define(["domReady","loadmore"],function(o,t){var n,e,i,t=t.initModule;return e=function(){t(6,2,".project .project-list .item",".loadmore")},i=function(){},n=function(t){o(function(){t(3)})},{initModule:n,project_list:e,project_content:i}});

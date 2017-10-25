@@ -1,1 +1,0 @@
-define(["domReady","loadmore"],function(n,i){var e,o,t,i=i.initModule;return o=function(){i(5,1,".pic-news-list .item",".loadmore")},t=function(){},e=function(i){n(function(){i(1)})},{initModule:e,news_list:o,news_content:t}});

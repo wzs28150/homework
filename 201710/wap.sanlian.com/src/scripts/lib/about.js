@@ -1,4 +1,4 @@
-define(['loadmore', 'debug'], function (loadmore, debug) {
+define(['loadmore', 'debug','loadmore'], function (loadmore, debug,loadmore) {
   var initModule, about_index, debug = debug.initModule,
     about_contact, about_culture, about_honor, about_organization, a_quick, loadmore = loadmore.initModule,
     banner;
@@ -59,6 +59,7 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
       var a_activity_num = $(".about .culture-wenhua .list .item").length;
       page.initModule(a_activity_num, ".about .culture-wenhua .list .item", "#a_activity_pagination", ".about .culture-wenhua .list ", 4);
     });
+    loadmore(4, 2, '.about .culture-qikan .list .item', '.about .culture-qikan .loadmore');
   };
 
   about_contact = function (callbak) {
