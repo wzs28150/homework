@@ -684,86 +684,86 @@ th {
  *    v2.0 | 20110126
  *       License: none (public domain)
  *       */
-html,
-body,
-div,
-span,
+a,
+abbr,
+acronym,
+address,
 applet,
-object,
-iframe,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
+header,
+hgroup,
+html,
+i,
+iframe,
 img,
 ins,
 kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
 q,
+ruby,
 s,
 samp,
+section,
 small,
+span,
 strike,
 strong,
 sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
 summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
 time,
-mark,
-audio,
+tr,
+tt,
+u,
+ul,
+var,
 video {
   margin: 0;
   padding: 0;
@@ -798,10 +798,10 @@ q {
   quotes: none;
 }
 
-blockquote:before,
 blockquote:after,
-q:before,
-q:after {
+blockquote:before,
+q:after,
+q:before {
   content: '';
   content: none;
 }
@@ -837,8 +837,8 @@ a {
   background-color: transparent;
 }
 
-p,
-a {
+a,
+p {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
 }
@@ -887,19 +887,19 @@ button {
 }
 
 .container {
-  margin: 0px 16px;
+  margin: 0 16px;
   overflow: hidden;
   position: relative;
 }
 
 .containern {
-  margin: 0px 16px;
+  margin: 0 16px;
   position: relative;
 }
 
 .container88 {
   width: 88%;
-  margin: 0px auto;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
 }
@@ -1052,7 +1052,7 @@ article {
   background: #36adcf;
   display: inline-block;
   padding: 14px 60px;
-  margin: 10px 0 0 0;
+  margin: 10px 0 0;
   color: #fff;
   border-radius: 10px;
 }
@@ -1122,6 +1122,9 @@ article {
   line-height: 1em;
   margin-top: 20px;
 }
+.er-banner .er-title.blue {
+  color: #1b337b;
+}
 
 .er-bar {
   height: 60px;
@@ -1131,7 +1134,7 @@ article {
   display: none;
 }
 .er-bar .position {
-  line-height: 0px;
+  line-height: 0;
   font-size: 0;
 }
 .er-bar .position a {
@@ -1178,7 +1181,7 @@ article {
   height: 55px;
   background-color: #aaaaaa;
   cursor: pointer;
-  background-image: url(../images/loadmore.png);
+  background-image: url("../images/loadmore.png");
   background-repeat: no-repeat;
   background-position: center;
   -webkit-transition: all 0.4s, -webkit-transform 0.4s;
@@ -3549,6 +3552,16 @@ footer a {
 }
 .technology .technology-inner .zhuanli-list .item.mRn {
   margin-left: 2%;
+}
+
+/* CSS Document */
+.strategy .strategy-index {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.strategy .strategy-index .strategy-title {
+  font-size: 36px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 1440px) {
