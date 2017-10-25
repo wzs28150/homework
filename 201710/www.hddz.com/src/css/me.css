@@ -1125,6 +1125,9 @@ article {
 .er-banner .er-title.blue {
   color: #1b337b;
 }
+.er-banner .er-title.gray {
+  color: #3a3d46;
+}
 
 .er-bar {
   height: 60px;
@@ -1175,6 +1178,10 @@ article {
 .text-area {
   font-size: 16px;
   line-height: 28px;
+}
+.text-area b,
+.text-area strong {
+  font-weight: bold;
 }
 
 .loadmore {
@@ -3473,6 +3480,78 @@ footer a {
   padding-top: 40px;
 }
 
+/* CSS Document */
+.service .service-index {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.service .service-index .service-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.service .service-list .item {
+  float: left;
+  text-align: center;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 4%;
+  -webkit-transition: 0.4s -webkit-box-shadow;
+  transition: 0.4s -webkit-box-shadow;
+  transition: 0.4s box-shadow;
+  transition: 0.4s box-shadow, 0.4s -webkit-box-shadow;
+}
+.service .service-list .item img {
+  width: 100%;
+  display: block;
+}
+.service .service-list .item p {
+  color: #333;
+  font-size: 20px;
+  line-height: 55px;
+  background-color: #7f7f7f;
+  color: #fff;
+}
+.service .service-list .item:hover {
+  -webkit-box-shadow: 0 0 20px #777;
+          box-shadow: 0 0 20px #777;
+  -webkit-transition: 0.4s -webkit-box-shadow;
+  transition: 0.4s -webkit-box-shadow;
+  transition: 0.4s box-shadow;
+  transition: 0.4s box-shadow, 0.4s -webkit-box-shadow;
+}
+.service .licheng-list .item a {
+  display: block;
+  line-height: 60px;
+  background: url("../images/jiangbei.png") no-repeat left center;
+  padding-left: 50px;
+}
+
+.resource .resource-index {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.resource .resource-index .resource-title {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.resource .resource-list .item {
+  float: left;
+  margin-right: 2%;
+  width: 48%;
+  border-bottom: 1px solid #efefef;
+  line-height: 76px;
+  font-size: 18px;
+}
+.resource .resource-list .item a {
+  display: block;
+}
+.resource .resource-list .item a:hover {
+  color: #d1111c;
+}
+.resource .resource-list .item.mRn {
+  margin-left: 2%;
+}
+
 .technology .technology-inner {
   padding-top: 80px;
   padding-bottom: 100px;
@@ -3562,6 +3641,40 @@ footer a {
 .strategy .strategy-index .strategy-title {
   font-size: 36px;
   margin-bottom: 40px;
+}
+.strategy .strategy-index .strategy-content h1 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 2em;
+}
+.strategy .strategy-index .strategy-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* CSS Document */
+.personnel .personnel-index {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+.personnel .personnel-index .title {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+.personnel .personnel-index .personnel-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+.personnel .personnel-index .zhaopin-content h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.personnel .personnel-index .zhaopin-content img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 @media (max-width: 1440px) {
@@ -4126,5 +4239,4 @@ footer a {
     margin-right: 4%;
   }
 }
-
 /*# sourceMappingURL=me.css.map */

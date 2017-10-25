@@ -1,20 +1,26 @@
 /* CSS Document */
-
-.strategy {
-	.strategy-index {
+.personnel {
+	.personnel-index {
 		padding-top   : 80px;
 		padding-bottom: 100px;
 
-		.strategy-title {
+		.title {
 			font-size    : 36px;
 			margin-bottom: 40px;
 		}
 
-		.strategy-content {
+		.personnel-content {
+			img {
+				display  : block;
+				margin   : 0 auto;
+				max-width: 100%;
+			}
+		}
+
+		.zhaopin-content {
 			h1 {
 				font-size  : 22px;
 				font-weight: bold;
-				line-height: 2em;
 			}
 
 			img {
