@@ -3636,6 +3636,10 @@ footer a {
   margin: 10px 0;
   width: 60%;
 }
+.customer .customer-index table td a:hover {
+  -webkit-box-shadow: 0 0 5px #d1111c;
+          box-shadow: 0 0 5px #d1111c;
+}
 .customer .customer-index .contact {
   padding-top: 80px;
 }
@@ -4344,4 +4348,5 @@ footer a {
     margin-right: 4%;
   }
 }
+
 /*# sourceMappingURL=me.css.map */
