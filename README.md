@@ -39,7 +39,7 @@
 
 >预览地址：<a href="https://wzs28150.github.io/homework/201710/www.hddz.com/">PC</a>
 
->下载地址：<a href="https://wzs28150.github.io/homework/201710/www.hddz.com/">PC</a>
+>下载地址：<a href="https://wzs28150.github.io/homework/201710/www.hddz.com/www.hddz.com.rar">PC</a>
 
 #### 昆仑银行
 
