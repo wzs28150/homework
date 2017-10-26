@@ -1,0 +1,1 @@
+define(["debug"],function(n){var e,i,o,u,n=n.initModule;return i=function(e){n("人才队伍已加载"),e(0)},o=function(e){n("教育培训已加载"),e(1)},u=function(e){n("人才招聘已加载"),e(2)},e=function(n){n(6)},{initModule:e,personnel_index:i,personnel_jiaoyu:o,personnel_zhaopin:u}});

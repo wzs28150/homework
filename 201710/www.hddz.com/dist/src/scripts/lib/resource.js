@@ -1,0 +1,1 @@
+define(["debug"],function(n){var e,i,n=n.initModule;return i=function(n){n(0)},e=function(e){e(8),n("下载中心已加载")},{initModule:e,resource_index:i}});

@@ -9,7 +9,6 @@ require.config({
       exports: 'BMap'
     },
     'scroll': ['scrollbar'],
-    'idcode': ['css!./package/idcode/jquery.idcode.css'],
     'litebox': ['css!./package/litebox/css/litebox.css', 'imagesloaded'],
   },
   paths: {
@@ -30,12 +29,7 @@ require.config({
     aspectratio_responsive: './package/media/aspectratio_responsive',
     swiper: './package/swiper/v3/swiper.min',
     debouncedresize: './package/compat/jquery.debouncedresize',
-    //  progress:'./package/swiper/v2/idangerous.swiper.progress',
-    masonry: './package/pubu/masonry.pkgd.min',
-    form: './package/form/form',
-    imagesloaded: './package/litebox/js/images-loaded.min',
     litebox: './package/litebox/js/litebox.min',
-    idcode: './package/idcode/jquery.idcode',
     loadmore: './package/loadmore/loadmore',
     timeline: './package/timeline/jquery.timelinr-0.9.53',
     'BMap': ['http://api.map.baidu.com/api?key=&v=1.1&services=true'],

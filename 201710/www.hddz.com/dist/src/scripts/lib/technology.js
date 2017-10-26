@@ -1,0 +1,1 @@
+define(["debug"],function(n){var o,i,e,t,u,n=n.initModule;return i=function(o){n("设计与制造已加载"),o(0)},e=function(o){n("装备与制造能力已加载"),o(1)},t=function(o){n("科研成果已加载"),o(2)},u=function(o){n("专利成果已加载"),o(3)},o=function(n){n(4)},{initModule:o,technology_index:i,technology_zhuangbei:e,technology_keyan:t,technology_zhuanli:u}});

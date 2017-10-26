@@ -1,0 +1,1 @@
+define(["debug"],function(n){var t,i,e,n=n.initModule;return i=function(t){n("质量保证已加载"),t(0)},e=function(t){n("安全与环保已加载"),t(1)},t=function(n){n(5)},{initModule:t,strategy_index:i,strategy_anquan:e}});
