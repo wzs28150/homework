@@ -1,0 +1,33 @@
+/* CSS Document */
+.personnel {
+	.personnel-index {
+		padding-top   : 80px;
+		padding-bottom: 100px;
+
+		.title {
+			font-size    : 36px;
+			margin-bottom: 40px;
+		}
+
+		.personnel-content {
+			img {
+				display  : block;
+				margin   : 0 auto;
+				max-width: 100%;
+			}
+		}
+
+		.zhaopin-content {
+			h1 {
+				font-size  : 22px;
+				font-weight: bold;
+			}
+
+			img {
+				display  : block;
+				margin   : 0 auto;
+				max-width: 100%;
+			}
+		}
+	}
+}
