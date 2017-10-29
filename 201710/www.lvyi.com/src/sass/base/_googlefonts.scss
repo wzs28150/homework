@@ -17,6 +17,11 @@
 	src        : local('Open Sans Bold'), local('OpenSans-Bold'), url("fonts/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff") format('woff');
 }
 @font-face {
+	font-family: 'UniversLT57Condensed';
+	src        : url('fonts/UniversLT57Condensed.eot');
+	src        : url('fonts/UniversLT57Condensed.eot') format('embedded-opentype'), url('fonts/UniversLT57Condensed.woff2') format('woff2'), url('fonts/UniversLT57Condensed.woff') format('woff'), url('fonts/UniversLT57Condensed.ttf') format('truetype'), url('fonts/UniversLT57Condensed.svg#UniversLT57Condensed') format('svg');
+}
+@font-face {
 	font-family: "MyriadPro-SemiboldIt";
 	src        : url("fonts/MyriadPro-SemiboldIt.woff2") format("woff2"), url("fonts/MyriadPro-SemiboldIt.woff") format("woff"), url("fonts/MyriadPro-SemiboldIt.ttf") format("truetype"), url("fonts/MyriadPro-SemiboldIt.eot") format("embedded-opentype"), url("fonts/MyriadPro-SemiboldIt.svg") format("svg");
 }

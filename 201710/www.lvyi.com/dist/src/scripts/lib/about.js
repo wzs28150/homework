@@ -1,0 +1,1 @@
+define(["loadmore","debug"],function(n,e){var i,e=e.initModule;return i=function(n){n(2),e("公司介绍已加载")},{initModule:i}});

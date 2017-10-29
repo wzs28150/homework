@@ -18,6 +18,11 @@
   src: local("Open Sans Bold"), local("OpenSans-Bold"), url("fonts/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff") format("woff");
 }
 @font-face {
+  font-family: 'UniversLT57Condensed';
+  src: url("fonts/UniversLT57Condensed.eot");
+  src: url("fonts/UniversLT57Condensed.eot") format("embedded-opentype"), url("fonts/UniversLT57Condensed.woff2") format("woff2"), url("fonts/UniversLT57Condensed.woff") format("woff"), url("fonts/UniversLT57Condensed.ttf") format("truetype"), url("fonts/UniversLT57Condensed.svg#UniversLT57Condensed") format("svg");
+}
+@font-face {
   font-family: "MyriadPro-SemiboldIt";
   src: url("fonts/MyriadPro-SemiboldIt.woff2") format("woff2"), url("fonts/MyriadPro-SemiboldIt.woff") format("woff"), url("fonts/MyriadPro-SemiboldIt.ttf") format("truetype"), url("fonts/MyriadPro-SemiboldIt.eot") format("embedded-opentype"), url("fonts/MyriadPro-SemiboldIt.svg") format("svg");
 }
@@ -3302,6 +3307,60 @@ footer .f-bar {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
+.about .contact .tel {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d9d9d9;
+  overflow: hidden;
+}
+.about .contact .tel .item {
+  float: left;
+  width: 50%;
+  height: 53px;
+  background: url("../images/c_tel.png") no-repeat left center;
+  font-size: 18px;
+  color: #000;
+}
+.about .contact .tel .item span {
+  font-family: 'UniversLT57Condensed';
+  font-size: 40px;
+  padding-left: 74px;
+}
+.about .contact .address {
+  background: url("../images/address.png") no-repeat 20px center;
+  line-height: 30px;
+  padding-left: 70px;
+  color: #000;
+  margin-top: 40px;
+  font-size: 20px;
+}
+.about .contact .fax {
+  background: url("../images/fax.png") no-repeat 20px center;
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  color: #000;
+  margin-top: 40px;
+  font-size: 20px;
+}
+.about .contact .fax span {
+  padding-left: 70px;
+}
+.about .contact .email {
+  background: url("../images/email.png") no-repeat 20px center;
+  float: left;
+  width: 50%;
+  line-height: 30px;
+  color: #000;
+  margin-top: 40px;
+  font-size: 20px;
+}
+.about .contact .email span {
+  padding-left: 70px;
+}
+.about .contact .map {
+  height: 440px;
+  margin-top: 40px;
+}
 
 /* CSS Document */
 .news .news-list {
@@ -3324,6 +3383,26 @@ footer .f-bar {
 }
 .news .news-list .list li a span {
   color: #24805e;
+}
+.news .news-content {
+  padding: 100px;
+}
+.news .news-content .title {
+  font-size: 50px;
+  line-height: 1em;
+  text-align: center;
+  font-weight: lighter;
+  color: #000000;
+}
+.news .news-content .info {
+  text-align: center;
+  font-size: 16px;
+  line-height: 67px;
+  border-bottom: 1px solid #d4d8d9;
+}
+.news .news-content .content {
+  padding-top: 70px;
+  color: #000;
 }
 
 @media (max-width: 1440px) {
@@ -3767,5 +3846,4 @@ footer .f-bar {
     font-weight: lighter;
   }
 }
-
 /*# sourceMappingURL=me.css.map */

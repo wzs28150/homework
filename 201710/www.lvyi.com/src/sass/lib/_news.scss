@@ -1,4 +1,5 @@
 /* CSS Document */
+
 .news {
 	.news-list {
 		padding-bottom: 100px;
@@ -26,5 +27,29 @@
 		}
 
 		.pagination {}
+	}
+
+	.news-content {
+		padding: 100px;
+
+		.title {
+			font-size  : 50px;
+			line-height: 1em;
+			text-align : center;
+			font-weight: lighter;
+			color      : #000000;
+		}
+
+		.info {
+			text-align   : center;
+			font-size    : 16px;
+			line-height  : 67px;
+			border-bottom: 1px solid #d4d8d9;
+		}
+
+		.content {
+			padding-top: 70px;
+			color      : #000;
+		}
 	}
 }
