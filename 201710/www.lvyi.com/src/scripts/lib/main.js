@@ -1,5 +1,5 @@
 define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], function(pajax, debouncedresize, router, smoothscroll, scroll) {
-  var initModule, animated_contents, minheight, alertinfo, msg, exists, backtotop;
+  var initModule, animated_contents, minheight, alertinfo, exists, backtotop;
   /**
    * 判断dom是否存在
    * @param  {[type]} selector [description]
@@ -70,57 +70,14 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
     $('article').css('min-height', mh + 'px');
   }
 
-  msg = function() {
-    $('body').undelegate('.msg a', 'click');
-    $('body').delegate('.msg a', 'click', function(event) {
-      var name = $('#name').val();
-      var tel = $('#tel').val();
-      var email = $('#email').val();
-      var msg = $('#msg').val();
-      var url = $('.msg').attr('data-url');
-      if (!name) {
-        //用户名不能为空
-        alertinfo('Имя пользователя  не может быть пустым！');
-      }
-      if (!tel) {
-        //电话号码不能为空
-        alertinfo('номер телефона  не может быть пустым ！');
-      }
-      if (!email) {
-        //邮箱不能为空
-        alertinfo('почтовый ящик  не может быть пустым！');
-      }
-      if (!msg) {
-        //内容不能为空
-        alertinfo('содержание  не может быть пустым ！');
-      }
-      arrData = {
-        'name': name,
-        'tel': tel,
-        'email': email,
-        'msg': msg
-      };
-      $.post(url, arrData,
-        function(data) {
-          if ('118' == data.err_code) {
-            alertinfo(data.err_info);
-          } else {
-            alertinfo(data.err_info);
-          }
-        }, "json"
-      );
-
-    });
-  }
 
   initModule = function() {
     //必须加载模块
     router.initModule('article', false);
     var $ww = $(window).width();
     //scroll.initModule('body');
-    // scroll.initModule('.scroller');
+    scroll.initModule('.scroller');
 
-    msg();
     minheight();
     backtotop();
     //parallaxan();
@@ -138,9 +95,9 @@ define(['pajax', 'debouncedresize', 'router', 'smoothscroll', 'scroll'], functio
 
     pajax.initModule('main', function() {}, function(targetelement, state) {
       router.initModule('article', state);
-      msg();
       backtotop();
       minheight();
+      scroll.initModule('.scroller');
       //scroll.resetsize('body');
       require(["viewport"], function(viewport) {
         animated_contents();
