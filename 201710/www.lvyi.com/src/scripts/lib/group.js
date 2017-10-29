@@ -3,6 +3,7 @@ define(['loadmore', 'debug'], function (loadmore, debug) {
 
   initModule = function (callbak) {
     callbak(1);
+    debug('集团介绍已加载'); 
   };
   return {
     initModule: initModule
