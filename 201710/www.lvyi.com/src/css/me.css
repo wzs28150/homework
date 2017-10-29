@@ -1154,10 +1154,10 @@ article {
   font-weight: lighter;
 }
 .er-title .en {
-  font-family: 'Conv_Roboto-Medium';
+  font-family: "Times New Roman";
   font-size: 20px;
   line-height: 1em;
-  margin-top: 20px;
+  margin-top: 10px;
   color: #999;
 }
 .er-title.blue {
@@ -1238,28 +1238,47 @@ article {
 }
 
 .pagination {
-  text-align: center;
+  overflow: hidden;
+  height: 58px;
+  font-size: 0;
+  line-height: 0;
+  border: 1px solid #d2d2d2;
   overflow: hidden;
 }
 .pagination a,
 .pagination span {
-  font-size: 12px;
+  font-size: 18px;
   display: inline-block;
-  padding: 0.4em 0.85em;
-  margin-right: 5px;
-  border-radius: 5px;
+  height: 58px;
+  width: 60px;
+  line-height: 58px;
   text-align: center;
+  border: 1px solid #d2d2d2;
+  margin-top: -1px;
+  margin-left: -1px;
 }
 .pagination a {
   text-decoration: none;
-  background: #e50014;
+  background: #fff;
+  color: #999;
+}
+.pagination a.next, .pagination a.prev {
+  width: 148px;
+}
+.pagination a.prev {
+  background: url("../images/p_l.png") no-repeat center;
+}
+.pagination a.next {
+  float: right;
+  margin-right: -1px;
+  background: url("../images/p_r.png") no-repeat center;
+}
+.pagination .on {
+  background: #24805e;
   color: #fff;
 }
-.pagination .current {
-  background: #ff6a76;
-  color: #fff;
-}
-.pagination .current.next, .pagination .current.prev {
+.pagination .on.next, .pagination .on.prev {
+  width: 148px;
   display: none;
 }
 
@@ -3063,9 +3082,10 @@ footer .f-bar {
 .about .group-content {
   padding-bottom: 130px;
 }
-.about .group-content .content {
+.about .group-content .text-area {
   font-size: 18px;
   line-height: 36px;
+  color: #333;
 }
 .about .about-content .a-c-list {
   padding-bottom: 50px;
@@ -3090,14 +3110,220 @@ footer .f-bar {
   padding-left: 50%;
 }
 .about .about-content .a-c-list .item.left .pic {
-  left: 0px;
+  left: 0;
 }
 .about .about-content .a-c-list .item.right {
   margin-bottom: 40px;
   padding-right: 50%;
 }
 .about .about-content .a-c-list .item.right .pic {
-  right: 0px;
+  right: 0;
+}
+.about .ceping {
+  background-color: #0059a9;
+  color: #fff;
+}
+.about .ceping .er-title {
+  padding-top: 60px;
+}
+.about .ceping .er-title .ch {
+  color: #fff;
+}
+.about .ceping .er-title .en {
+  color: #fff;
+}
+.about .ceping .ceping-des {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about .ceping .ceping-list {
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+.about .ceping .ceping-list .item {
+  border: 1px solid #fff;
+  width: 262px;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  padding: 30px 14px;
+}
+.about .ceping .ceping-list .item .title {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: bold;
+  height: 56px;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.about .ceping .ceping-list .item .title::after {
+  content: "";
+  display: block;
+  background-color: #fff;
+  width: 70px;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+}
+.about .ceping .ceping-list .item .des {
+  font-size: 14px;
+  line-height: 36px;
+}
+.about .huoban .huoban-list {
+  padding-bottom: 160px;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+}
+.about .huoban .huoban-list .er-title {
+  padding-top: 70px;
+  padding-bottom: 40px;
+}
+.about .huoban .huoban-list a {
+  border: 1px solid #d9d9d9;
+  display: inline-block;
+  margin: 0 10px;
+}
+.about .bumen-nav {
+  background-color: #f5f5f5;
+  border: 1px solid #d8d8d8;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  height: 77px;
+}
+.about .bumen-nav a {
+  display: inline-block;
+  height: 77px;
+  font-size: 18px;
+  line-height: 77px;
+  border: 1px solid #d8d8d8;
+  color: #000;
+  width: 12.5%;
+  margin-left: -2px;
+  margin-top: -1px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+.about .bumen-nav a:last-child {
+  border-right: 0;
+}
+.about .bumen-nav a.on, .about .bumen-nav a:hover {
+  color: #24805e;
+}
+.about .bumen-content {
+  padding-top: 25px;
+}
+.about .bumen-content .left {
+  width: 284px;
+  float: left;
+}
+.about .bumen-content .left .bumen-l-tit {
+  font-size: 18px;
+  line-height: 53px;
+  text-align: center;
+  color: #fff;
+  background-color: #24805e;
+}
+.about .bumen-content .left .bumen-l-nav a {
+  display: block;
+  line-height: 53px;
+  font-size: 16px;
+  border: 1px solid #d4d8d9;
+  padding-left: 18px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  margin-top: 3px;
+  color: #333;
+}
+.about .bumen-content .left .bumen-l-nav a.on, .about .bumen-content .left .bumen-l-nav a:hover {
+  border: 1px solid #24805e;
+  color: #24805e;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.about .bumen-content .left .bumen-l-contact {
+  border: 1px solid #d4d8d9;
+  padding: 40px 16px;
+  margin-top: 55px;
+}
+.about .bumen-content .left .bumen-l-contact .tit {
+  color: #24805e;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.about .bumen-content .left .bumen-l-contact .content {
+  font-size: 16px;
+  line-height: 30px;
+  color: #000;
+}
+.about .bumen-content .right {
+  border: 1px solid #d4d8d9;
+  width: 800px;
+  float: right;
+  padding: 40px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #000;
+}
+.about .bumen-content .right h1 {
+  font-size: 30px;
+  font-weight: lighter;
+  line-height: 1em;
+  padding-bottom: 24px;
+  color: #000;
+  border-bottom: 1px solid #d4d8d9;
+}
+.about .bumen-content .right strong {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+}
+.about .bumen-content .right .gaoshi {
+  margin-bottom: 40px;
+}
+.about .bumen-content .right .gaoshi li a {
+  display: block;
+  line-height: 90px;
+  border-bottom: 1px dashed #d4d8d9;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  color: #000;
+  padding: 0 26px;
+}
+.about .bumen-content .right .gaoshi li a span {
+  float: right;
+}
+.about .bumen-content .right .gaoshi li a:hover {
+  background-color: #fbfbfa;
+  color: #24805e;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+/* CSS Document */
+.news .news-list {
+  padding-bottom: 100px;
+}
+.news .news-list .list {
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.news .news-list .list li {
+  float: left;
+  width: 45%;
+  padding-right: 5%;
+}
+.news .news-list .list li a {
+  display: block;
+  border-bottom: 1px solid #efefef;
+  line-height: 76px;
+  color: #000;
+}
+.news .news-list .list li a span {
+  color: #24805e;
 }
 
 @media (max-width: 1440px) {
@@ -3541,4 +3767,5 @@ footer .f-bar {
     font-weight: lighter;
   }
 }
+
 /*# sourceMappingURL=me.css.map */
