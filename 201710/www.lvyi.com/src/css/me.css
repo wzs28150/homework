@@ -2874,11 +2874,6 @@ button.swiper-pagination-bullet {
 }
 header {
   height: 110px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 5;
   -webkit-box-shadow: 0 0 5px #ccc;
           box-shadow: 0 0 5px #ccc;
   background-color: #fff;
@@ -2910,10 +2905,6 @@ header nav a {
 header nav a.on {
   background-color: #24805e;
   color: #fff;
-}
-
-article {
-  padding-top: 110px;
 }
 
 footer {
@@ -3846,4 +3837,5 @@ footer .f-bar {
     font-weight: lighter;
   }
 }
+
 /*# sourceMappingURL=me.css.map */
