@@ -141,8 +141,8 @@
 }
 @font-face {
 	font-family: "dazhong";
-	src        : url("fonts/dazhong.eot?ecofvv");
-	src        : url("fonts/dazhong.eot?ecofvv#iefix") format('embedded-opentype'), url("fonts/dazhong.ttf?ecofvv") format('truetype'), url("fonts/dazhong.woff?ecofvv") format('woff'), url("fonts/dazhong.svg?ecofvv#dazhong") format('svg');
+	src        : url("fonts/dazhong.eot?ux60dj");
+	src        : url("fonts/dazhong.eot?ux60dj#iefix") format('embedded-opentype'), url("fonts/dazhong.ttf?ux60dj") format('truetype'), url("fonts/dazhong.woff?ux60dj") format('woff'), url("fonts/dazhong.svg?ux60dj#dazhong") format('svg');
 	font-weight: normal;
 	font-style : normal;
 }
@@ -160,6 +160,22 @@
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing : antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.dz-fl1:before {
+	content: "\e902";
+}
+
+.dz-fl2:before {
+	content: "\e903";
+}
+
+.dz-fl3:before {
+	content: "\e904";
+}
+
+.dz-fl4:before {
+	content: "\e905";
 }
 
 .dz-car1:before {
