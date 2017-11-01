@@ -1,0 +1,1 @@
+define(["debug"],function(n){var i,n=n.initModule;return i=function(i){i(4),n("社会责任已加载")},{initModule:i}});

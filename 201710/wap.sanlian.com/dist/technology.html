@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>科技研发 - 三联</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+
+  <!--[if IE 8]>
+  <script src="./src/scripts/packag /compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <input id="myInput" type="checkbox">
+  <input id="searchchange" type="checkbox">
+  <!-- 头部 -->
+  <header>
+    <div class="container_1200">
+      <div class="fl logo">
+        <a href="./index.html">
+          <img src="./src/images/h_logo.jpg" alt="">
+        </a>
+      </div>
+      <span class="sl-phone"></span>
+      <label class="sl-search" for="searchchange"></label>
+      <label for="myInput" class="myInput wap">
+        <div class="menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"> </div>
+        </div>
+      </label>
+    </div>
+  </header>
+  <!-- 头部 -->
+  <nav>
+    <ul>
+      <li>
+        <a href="./index.html">网站首页</a>
+      </li>
+      <li>
+        <a href="./about.html">关于三联</a>
+      </li>
+      <li>
+        <a href="./products.html">产品中心</a>
+      </li>
+      <li>
+        <a href="./technology.html">科技研发</a>
+      </li>
+      <li>
+        <a href="./responsibility.html">社会责任</a>
+      </li>
+      <li>
+        <a href="./news.html">新闻中心</a>
+      </li>
+      <li>
+        <a href="./hr.html">人力资源</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- 搜索弹出 -->
+  <div class="search-tan">
+    <div class="search-main">
+      <input type="radio" checked name="s-radio" id="sl-news">
+      <div class="item">
+        <label for="sl-news" class="ico sl-news"></label>
+        <input type="text" data-url="./search.html" placeholder="输入您要查询的新闻">
+        <a class="jt-arrow_forward" data-ajax="no" href="javascript:void(0);"></a>
+      </div>
+      <input type="radio" name="s-radio" id="sl-pro">
+      <div class="item mRn">
+        <label for="sl-pro" class="ico sl-pro"></label>
+        <input type="text" data-url="./search.html" placeholder="输入您要查询的产品">
+        <a class="jt-arrow_forward" data-ajax="no" href="javascript:void(0);"></a>
+      </div>
+    </div>
+    <label for="searchchange" class="close">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"> </div>
+    </label>
+  </div>
+  <!-- 搜索弹出 -->
+  <main>
+    <article class="technology" data-main="technology">
+      <input type="hidden" class="eraction" data-fun="technology_index">
+      <!-- banner -->
+      <section class="er-banner swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./src/images/r_banner1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/r_banner2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./src/images/r_banner3.jpg" alt="">
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </section>
+      <!-- banner -->
+      <!-- 当前位置 二级导航 -->
+      <section class="position">
+        <input type="checkbox" name="" id="er-menu">
+        <div class="container_1200">
+          <span class="jt-home"></span>
+          <span class="jt-chevron-right"></span>科技研发
+          <span class="jt-chevron-right"></span>研发中心
+          <label class="er-menu jt-chevron-down" for="er-menu"></label>
+        </div>
+        <div class="er-nav">
+          <a href="./technology.html">
+            <i class="icon-63794"></i>研发中心</a>
+          <a href="./technology_zhuanli.html">
+            <i class="icon-ry"></i>专利及成果</a>
+        </div>
+      </section>
+      <!-- 当前位置 二级导航 -->
+      <section class="technology-tit ">
+        <div class="container_1200">
+          <div class="ch">研发中心</div>
+          <div class="en">RESEARCH & DEVELOPMENT CENTER</div>
+        </div>
+      </section>
+      <section class="technology-list ">
+        <div class="container_1200">
+          <div class="item">
+            <div class="pic">
+              <img src="./src/images/technology_pic1.jpg" alt="">
+            </div>
+            <div class="text-area">
+              公司的研发资源分布在三联药业工程技术研究中心、三联科技、循道科技。为充分利用公司内部的研发资源，公司成立了三联药物研究院，通过垂直行政管理和横向业务指导相结合的方式，使公司内部的研发资源有机结合，提高了创新效率。 公司的研发工作由三联药物研究院组织、各研发平台分工协作进行。研究院下设项目管理部、药品注册部、信息研究部、院长办公室，对各研发平台的业务实行横向管理。
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic">
+              <img src="./src/images/technology_pic2.jpg" alt="">
+            </div>
+            <div class="text-area">
+              公司建立了一套较为完善的创新机制，形成了不断创新的企业文化。公司具备较强的创新能力，通过自主创新、合作创新以及引入创新相结合的方式，企业的创新能力不断加强，并形成了多项创新转化成果。目前公司被授予哈尔滨市专利优势示范企业、黑龙江省专利优势示范企业称号、被认定为哈尔滨市企业技术中心、省级企业技术中心、科技成果转化及产业化先进单位以及产学研合作先进集体，被认定为“国家博士后科研工作站”。同时，公司采取多项措施保证创新能力的可持续发展。
+            </div>
+          </div>
+          <div class="item">
+            <div class="pic">
+              <img src="./src/images/technology_pic3.jpg" alt="">
+            </div>
+            <div class="text-area">
+              为促进企业创新发展，充分利用医药工业资源以及大专院校先进的研发能力，公司与其他医药工业企业以及多所大专院校加强合作和交流，建立了产学研合作的创新体系，形成以学研研发带动医药工业发展，以产业资本促进学研研发的良性循环。
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <footer>
+    <div class="container_1200">
+      <a href="/html/webmap.html">
+        <span class="icon-wzdt"></span>&nbsp;网站地图</a>
+      <a href="/html/mianze.html">
+        <span class="icon-mianze"></span>&nbsp;免责声明</a>
+      <br/> 黑icp备05002245号 © 2017. 哈尔滨三联药业股份有限公司. All rights reserved
+    </div>
+  </footer>
+
+  <div class="backtotop jt-chevron-up" id="backtotop"></div>
+
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="./src/scripts/package/scroll/jquery.mousewheel.min.js"></script>
+  <script src="./src/scripts/package/scroll/jquery.easing.min.js"></script>
+  <script src="./src/scripts/package/scroll/jquery.nicescroll.min.js"></script>
+  <script src="./src/scripts/require.js" data-main="./src/scripts/me"></script>
+
+</body>
+
+</html>

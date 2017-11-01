@@ -1,0 +1,1 @@
+define(["debug"],function(i){var n,h,i=i.initModule;return h=function(n){i("用人理念已加载"),n(0)},hr_zhaomu=function(n){i("人才招募已加载"),n(1),$(".hr .hr-list .item").click(function(){var i=$(this).find(".des");i.is(":hidden")?i.show():i.hide()})},n=function(i){i(6)},{initModule:n,hr_index:h,hr_zhaomu:hr_zhaomu}});

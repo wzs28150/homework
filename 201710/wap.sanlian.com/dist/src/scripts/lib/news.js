@@ -1,0 +1,1 @@
+define(["debug","loadmore"],function(n,e){var i,t,o,e=e.initModule,n=n.initModule;return t=function(){n("新闻列表已加载"),e(5,2,".news-list .item",".loadmore")},o=function(){n("新闻内容已加载")},i=function(n){n(5)},{initModule:i,news_list:t,news_content:o}});

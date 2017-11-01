@@ -35,8 +35,8 @@ require.config({
     slide:'./package/slide/js/slide.min'
   }
 });
-require(["domReady", 'main', './lib/index'], function (domReady, main) {
-  domReady(function () {
+require(['main', './lib/index'], function (main) {
+  $('document').ready(function(){
     main.initModule();
   });
 });

@@ -1,0 +1,1 @@
+define(["debug"],function(n){var e,o,i,t,n=n.initModule;return t=function(){new Swiper(".technology .er-banner.swiper-container",{autoplay:1500,speed:1e3,loop:!0,effect:"fade"})},o=function(e){n("研发中心已加载"),e(0)},i=function(e){n("专利及成果已加载"),e(1)},e=function(n){n(3),require(["swiper"],function(n){t()})},{initModule:e,technology_index:o,technology_rongyu:i}});
