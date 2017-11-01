@@ -1,0 +1,17 @@
+@charset "utf-8";
+footer {
+  background-color: #282828;
+  font-size: 16px;
+  line-height: 30px;
+  position: relative;
+  z-index: 5;
+  .f-contact {
+    padding: 50px 0;
+  }
+  .f-bar {
+    font-size: 14px;
+    line-height: 80px;
+    height: 80px;
+    border-top: 1px solid #333333;
+  }
+}

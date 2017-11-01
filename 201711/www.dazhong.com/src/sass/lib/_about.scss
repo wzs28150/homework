@@ -1,0 +1,338 @@
+/* CSS Document */
+.about {
+  .group-content {
+    padding-bottom: 130px;
+
+    .text-area {
+      font-size  : 18px;
+      line-height: 36px;
+      color      : #333;
+    }
+  }
+
+  .about-content {
+    .a-c-list {
+      padding-bottom: 50px;
+
+      .item {
+        position: relative;
+        width   : 50%;
+        color   : #000;
+
+        .pic {
+          position           : absolute;
+          top                : 0;
+          width              : 50%;
+          height             : 100%;
+          background-position: center;
+          background-size    : cover;
+        }
+
+        .content {
+          padding: 40px 30px;
+        }
+
+        &.left {
+          padding-left: 50%;
+
+          .pic {
+            left: 0;
+          }
+        }
+
+        &.right {
+          margin-bottom: 40px;
+          padding-right: 50%;
+
+          .pic {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .ceping {
+    background-color: #0059a9;
+    color           : #fff;
+
+    .er-title {
+      padding-top: 60px;
+
+      .ch {
+        color: #fff;
+      }
+
+      .en {
+        color: #fff;
+      }
+    }
+
+    .ceping-des {
+      text-align   : center;
+      margin-bottom: 20px;
+    }
+
+    .ceping-list {
+      padding-bottom: 40px;
+      overflow      : hidden;
+
+      .item {
+        border       : 1px solid #fff;
+        width        : 262px;
+        float        : left;
+        margin-right : 10px;
+        margin-bottom: 20px;
+        padding      : 30px 14px;
+
+        .title {
+          font-size     : 18px;
+          line-height   : 28px;
+          font-weight   : bold;
+          height        : 2*28px;
+          position      : relative;
+          padding-bottom: 20px;
+          margin-bottom : 20px;
+
+          &::after {
+            content         : "";
+            display         : block;
+            background-color: #fff;
+            width           : 70px;
+            height          : 1px;
+            position        : absolute;
+            bottom          : 0;
+          }
+        }
+
+        .des {
+          font-size  : 14px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+
+  .huoban {
+    .huoban-list {
+      padding-bottom: 160px;
+      text-align    : center;
+      font-size     : 0;
+      line-height   : 0;
+
+      .er-title {
+        padding-top   : 70px;
+        padding-bottom: 40px;
+      }
+
+      a {
+        border : 1px solid #d9d9d9;
+        display: inline-block;
+        margin : 0 10px;
+      }
+    }
+  }
+
+  .bumen-nav {
+    background-color: #f5f5f5;
+    border          : 1px solid #d8d8d8;
+    font-size       : 0;
+    line-height     : 0;
+    overflow        : hidden;
+    height          : 77px;
+
+    a {
+      display         : inline-block;
+      height          : 77px;
+      font-size       : 18px;
+      line-height     : 77px;
+      border          : 1px solid #d8d8d8;
+      color           : #000;
+      width           : 12.5%;
+      margin-left     : -2px;
+      margin-top      : -1px;
+      text-align      : center;
+      background-color: #f5f5f5;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.on,
+      &:hover {
+        color: #24805e;
+      }
+    }
+  }
+
+  .bumen-content {
+    padding-top: 25px;
+
+    .left {
+      width: 284px;
+      float: left;
+
+      .bumen-l-tit {
+        font-size       : 18px;
+        line-height     : 53px;
+        text-align      : center;
+        color           : #fff;
+        background-color: #24805e;
+      }
+
+      .bumen-l-nav {
+        a {
+          display     : block;
+          line-height : 53px;
+          font-size   : 16px;
+          border      : 1px solid #d4d8d9;
+          padding-left: 18px;
+          @include tr(0.4s,all);
+          margin-top  : 3px;
+          color       : #333;
+
+          &.on,
+          &:hover {
+            border: 1px solid #24805e;
+            color : #24805e;
+            @include tr(0.4s,all);
+          }
+        }
+      }
+
+      .bumen-l-contact {
+        border    : 1px solid #d4d8d9;
+        padding   : 40px 16px;
+        margin-top: 55px;
+
+        .tit {
+          color        : #24805e;
+          font-size    : 20px;
+          font-weight  : bold;
+          margin-bottom: 30px;
+        }
+
+        .content {
+          font-size  : 16px;
+          line-height: 30px;
+          color      : #000;
+        }
+      }
+    }
+
+    .right {
+      border     : 1px solid #d4d8d9;
+      width      : 800px;
+      float      : right;
+      padding    : 40px;
+      font-size  : 16px;
+      line-height: 32px;
+      color      : #000;
+
+      h1 {
+        font-size     : 30px;
+        font-weight   : lighter;
+        line-height   : 1em;
+        padding-bottom: 24px;
+        color         : #000;
+        border-bottom : 1px solid #d4d8d9;
+      }
+
+      strong {
+        font-weight: bold;
+        font-size  : 16px;
+        line-height: 32px;
+      }
+
+      .gaoshi {
+        margin-bottom: 40px;
+
+        li {
+          a {
+            display      : block;
+            line-height  : 90px;
+            border-bottom: 1px dashed #d4d8d9;
+            @include tr(0.4s,all);
+            color        : #000;
+            padding      : 0 26px;
+
+            span {
+              float: right;
+            }
+
+            &:hover {
+              background-color: #fbfbfa;
+              color           : #24805e;
+              @include tr(0.4s,all);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact {
+    .tel {
+      padding-bottom: 40px;
+      border-bottom : 1px solid #d9d9d9;
+      overflow      : hidden;
+
+      .item {
+        float     : left;
+        width     : 50%;
+        height    : 53px;
+        background: url("../images/c_tel.png") no-repeat left center;
+        font-size : 18px;
+        color     : #000;
+
+        span {
+          font-family : 'UniversLT57Condensed';
+          font-size   : 40px;
+          padding-left: 74px;
+        }
+      }
+    }
+
+    .address {
+      background  : url("../images/address.png") no-repeat 20px center;
+      line-height : 30px;
+      padding-left: 70px;
+      color       : #000;
+      margin-top  : 40px;
+      font-size   : 20px;
+    }
+
+    .fax {
+      background : url("../images/fax.png") no-repeat 20px center;
+      float      : left;
+      width      : 50%;
+      line-height: 30px;
+      color      : #000;
+      margin-top : 40px;
+      font-size  : 20px;
+
+      span {
+        padding-left: 70px;
+      }
+    }
+
+    .email {
+      background : url("../images/email.png") no-repeat 20px center;
+      float      : left;
+      width      : 50%;
+      line-height: 30px;
+      color      : #000;
+      margin-top : 40px;
+      font-size  : 20px;
+
+      span {
+        padding-left: 70px;
+      }
+    }
+
+    .map {
+      height    : 440px;
+      margin-top: 40px;
+    }
+  }
+}
