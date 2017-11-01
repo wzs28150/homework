@@ -8,9 +8,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>首页 - 哈尔滨电气动力装备有限公司</title>
+  <title>首页 - 大众商城</title>
   <link rel="stylesheet" href="./src/css/me.css">
-  <!-- <script src="./src/scripts/package/scroll/SmoothScroll.js"></script> -->
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
   <!--[if IE 8]>
   <script src="./src/scripts/package/compat/html5shiv.js"></script>
   <script src="./src/scripts/package/compat/respond.js"></script>
@@ -36,8 +36,39 @@
   <div class="scroller-inner">
     <div class="scroller-content">
       <header>
-        <div class="container_1200">
-
+        <div class="header-bar ">
+          <div class="container_1200">
+            <div class="fl">hi，欢迎来到健康商城！ 请<a href="">登录</a> 免费注册</div>
+            <div class="fr">我的订单<span class="jt-chevron-down"></span><a href=""><span class="dz-car1" ></span>购物车<i>0</i>件</a></div>
+          </div>
+        </div>
+        <div class="header-middle">
+          <div class="container_1200">
+            <div class="logo">
+              <a href="./index.html">
+                <img src="./src/images/h_logo.jpg" alt="">
+              </a>
+            </div>
+            <div class="h-search">
+              <div class="h-search-top">
+                <div class="fl">
+                  <input type="text" placeholder="中秋进口礼物">
+                  <a href="">搜索</a>
+                </div>
+                <div class="fr">
+                  <a href="">高级搜索</a>
+                </div>
+              </div>
+              <div class="h-search-bot">
+                <a href="">大豆</a><a href="">苹果</a><a href="">玉米</a>
+              </div>
+            </div>
+            <div class="car head">
+              <a href="">
+              购物车&nbsp;0
+              </a>
+            </div>
+          </div>
         </div>
       </header>
       <main>
@@ -48,13 +79,18 @@
 
       <footer class="clearfix">
         <div class="container_1200">
-          
+
         </div>
       </footer>
     </div>
   </div>
-  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
-  <script src="./src/scripts/require.js" data-main="./src/scripts/me"></script>
+
+  <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+  <script type="text/javascript">
+    $('.scroller').scrollbar();
+  </script>
+
+
 </body>
 
 </html>

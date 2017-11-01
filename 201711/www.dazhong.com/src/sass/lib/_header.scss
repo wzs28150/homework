@@ -1,42 +1,158 @@
 header {
-  height          : 110px;
-  // position        : fixed;
-  // width           : 100%;
-  // top             : 0;
-  // left            : 0;
-  // z-index         : 5;
-  box-shadow      : 0 0 5px #ccc;
-  background-color: #fff;
+  .header-bar {
+    background-color: #f5f5f5;
+    font-size       : 12px;
+    height          : 38px;
+    line-height     : 38px;
 
-  .logo {
-    height : 66px;
-    width  : 261px;
-    float  : left;
-    padding: 22px 0;
+    .dz-car1 {
+      font-size     : 16px;
+      vertical-align: middle;
+      position      : relative;
+      top           : -2px;
+      margin        : 0 10px;
+    }
 
-    img {
-      display: block;
-      height : 66px;
+    .fl {
+      a {
+        color: #c30000;
+      }
+    }
+
+    .fr {
+      i {
+        color: #c30000;
+      }
     }
   }
 
-  nav {
-    float      : right;
-    font-size  : 0;
-    line-height: 0;
-    text-align : right;
+  .header-middle {
+    height: 188px;
 
-    a {
-      display    : inline-block;
-      line-height: 110px;
-      font-size  : 16px;
-      width      : 110px;
-      text-align : center;
-      color      : #000;
+    .logo {
+      float      : left;
+      padding-top: 42px;
 
-      &.on {
-        background-color: #24805e;
-        color           : #fff;
+      img {
+        display: block;
+        width  : 262px;
+        height : 86px;
+      }
+    }
+
+    .h-search {
+      float       : left;
+      padding-left: 140px;
+      padding-top : 53px;
+      width       : 600px;
+      overflow    : hidden;
+
+      .h-search-top {
+        overflow: hidden;
+
+        .fl {
+          width : 548px;
+          height: 40px;
+          border: 2px solid #c30000;
+
+          input {
+            float      : left;
+            width      : 382px;
+            padding    : 0 0 0 50px;
+            border     : none;
+            height     : 40px;
+            line-height: 40px;
+            outline    : none;
+            background : url("../images/search_btn.png") no-repeat 15px center;
+
+            &::-webkit-input-placeholder {
+              color: #999;
+            }
+
+            &:-moz-placeholder {
+              color: #999;
+            }
+
+            &::-moz-placeholder {
+              color: #999;
+            }
+
+            &::-ms-input-placeholder {
+              color: #999;
+            }
+          }
+
+          a {
+            float           : right;
+            display         : block;
+            width           : 116px;
+            text-align      : center;
+            background-color: #c30000;
+            color           : #fff;
+            height          : 40px;
+            line-height     : 40px;
+            @include tr(0.4s,all);
+
+            &:hover {
+              text-shadow: 0 0 5px #ddd;
+              @include tr(0.4s,all);
+            }
+          }
+        }
+
+        .fr {
+          width : 48px;
+          height: 44px;
+
+          a {
+            display  : block;
+            width    : 2em;
+            margin   : 3px auto;
+            font-size: 14px;
+            @include tr(0.4s,all);
+
+            &:hover {
+              color: #000;
+              @include tr(0.4s,all);
+            }
+          }
+        }
+      }
+
+      .h-search-bot {
+        padding-top: 10px;
+        font-size  : 0;
+        line-height: 0;
+
+        a {
+          margin-right: 10px;
+          display     : inline-block;
+          font-size   : 12px;
+          line-height : 1em;
+          @include tr(0.4s,all);
+
+          &:hover {
+            color: #000;
+            @include tr(0.4s,all);
+          }
+        }
+      }
+    }
+
+    .car {
+      &.head {
+        float      : right;
+        color      : #fff;
+        line-height: 44px;
+        height     : 44px;
+        margin-top : 53px;
+        background : url("../images/cart.png") #c30000 no-repeat 16px center;
+
+        a {
+          display: block;
+          color  : #fff;
+          padding: 0 16px 0 57px;
+        }
       }
     }
   }
