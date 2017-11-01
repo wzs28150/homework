@@ -1,1 +1,0 @@
-define(["loadmore","debug"],function(n,e){var i,e=e.initModule;return i=function(n){n(4),e("项目资讯已加载")},{initModule:i}});

@@ -1,1 +1,0 @@
-define(["loadmore","debug"],function(n,e){var i,e=e.initModule;return i=function(n){n(5),e("人才招聘已加载")},{initModule:i}});
