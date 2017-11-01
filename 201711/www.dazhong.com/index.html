@@ -35,42 +35,15 @@
 
   <div class="scroller-inner">
     <div class="scroller-content">
-      <header>
-        <div class="header-bar ">
-          <div class="container_1200">
-            <div class="fl">hi，欢迎来到健康商城！ 请<a href="">登录</a> 免费注册</div>
-            <div class="fr">我的订单<span class="jt-chevron-down"></span><a href=""><span class="dz-car1" ></span>购物车<i>0</i>件</a></div>
-          </div>
-        </div>
-        <div class="header-middle">
-          <div class="container_1200">
-            <div class="logo">
-              <a href="./index.html">
-                <img src="./src/images/h_logo.jpg" alt="">
-              </a>
-            </div>
-            <div class="h-search">
-              <div class="h-search-top">
-                <div class="fl">
-                  <input type="text" placeholder="中秋进口礼物">
-                  <a href="">搜索</a>
-                </div>
-                <div class="fr">
-                  <a href="">高级搜索</a>
-                </div>
-              </div>
-              <div class="h-search-bot">
-                <a href="">大豆</a><a href="">苹果</a><a href="">玉米</a>
-              </div>
-            </div>
-            <div class="car head">
-              <a href="">
-              购物车&nbsp;0
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <div id="header"></div>
+      <script type="text/javascript">
+        $.get("/header.html",
+          function(tempdata) {
+            $('#header').html(tempdata);
+          });
+      </script>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
       <main>
         <article class="index" data-main="index">
 
