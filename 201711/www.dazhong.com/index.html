@@ -36,42 +36,28 @@
   <div class="scroller-inner">
     <div class="scroller-content">
       <!-- 此处调用公共头部header 做程序时可换对应代码 -->
-      <div id="header"></div>
-      <script type="text/javascript">
-        $.get("/header.html",
-          function(tempdata) {
-            $('#header').html(tempdata);
-            fenleishow();
-          });
-      </script>
+      <div id="header" class="jiazai" data-callback="fenleishow"></div>
       <!-- 此处调用公共头部header 做程序时可换对应代码 -->
       <main>
         <article class="index" data-main="index">
 
         </article>
       </main>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+      <div id="footer_quick" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+
       <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
-      <div id="footer"></div>
-      <script type="text/javascript">
-        $.get("/footer.html",
-          function(tempdata) {
-            $('#footer').html(tempdata);
-            fenleishow();
-          });
-      </script>
+      <div id="footer" class="jiazai" data-callback="minheight"></div>
       <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
     </div>
   </div>
-
+<!-- 滚动条插件 -->
   <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+<!-- 滚动条插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <script src="./src/scripts/lib/main.js"></script>
   <script type="text/javascript">
-    $('.scroller').scrollbar();
-
-    function fenleishow() {
-      $('.fenlei>ul').css({
-        "display": "block"
-      })
-    }
     $(document).ready(function() {
       fenleishow();
     });

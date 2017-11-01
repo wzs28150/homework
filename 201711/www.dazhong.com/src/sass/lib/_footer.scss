@@ -1,17 +1,18 @@
 @charset "utf-8";
+
+.footer-quick {
+  padding         : 51px 0;
+  border-top      : 1px solid #dcdcdc;
+  background-color: #fafafa;
+
+  img {
+    display: block;
+    width  : 100%;
+  }
+}
+
 footer {
-  background-color: #282828;
-  font-size: 16px;
-  line-height: 30px;
-  position: relative;
-  z-index: 5;
-  .f-contact {
-    padding: 50px 0;
-  }
-  .f-bar {
-    font-size: 14px;
-    line-height: 80px;
-    height: 80px;
-    border-top: 1px solid #333333;
-  }
+  height          : 332px;
+  border-top      : 1px solid #dcdcdc;
+  background-color: #fafafa;
 }
