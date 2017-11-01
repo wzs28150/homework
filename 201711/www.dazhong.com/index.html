@@ -41,6 +41,7 @@
         $.get("/header.html",
           function(tempdata) {
             $('#header').html(tempdata);
+            fenleishow();
           });
       </script>
       <!-- 此处调用公共头部header 做程序时可换对应代码 -->
@@ -49,18 +50,31 @@
 
         </article>
       </main>
-
-      <footer class="clearfix">
-        <div class="container_1200">
-
-        </div>
-      </footer>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+      <div id="footer"></div>
+      <script type="text/javascript">
+        $.get("/footer.html",
+          function(tempdata) {
+            $('#footer').html(tempdata);
+            fenleishow();
+          });
+      </script>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
     </div>
   </div>
 
   <script src="./src/scripts/package/scroll/scrollbar.js"></script>
   <script type="text/javascript">
     $('.scroller').scrollbar();
+
+    function fenleishow() {
+      $('.fenlei>ul').css({
+        "display": "block"
+      })
+    }
+    $(document).ready(function() {
+      fenleishow();
+    });
   </script>
 
 

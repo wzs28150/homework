@@ -175,14 +175,15 @@ header {
       }
 
       & > ul {
-        width           : 100%;
         background-color: #3ea600;
         position        : absolute;
         top             : 43px;
         left            : 0;
+        display         : none;
 
         & > li {
           border-bottom: 1px solid #359700;
+          position     : relative;
 
           & > a {
             line-height: 38px;
@@ -194,7 +195,83 @@ header {
             span {
               padding-right: 10px;
             }
+
+            i {
+              float      : right;
+              line-height: 38px;
+            }
           }
+
+          .list {
+            padding : 0 17px 10px;
+            overflow: hidden;
+
+            a {
+              color      : #fff;
+              line-height: 26px;
+              display    : block;
+              float      : left;
+              padding    : 0 10px;
+            }
+          }
+
+          .tab {
+            position        : absolute;
+            left            : 240px;
+            top             : 0;
+            width           : 454px;
+            height          : 460px;
+            padding         : 16px 34px;
+            z-index         : 1;
+            background-color: #fff;
+            visibility      : hidden;
+            opacity         : 0;
+            @include tr(0.4s,all);
+
+            .tab-tit {
+              font-size   : 18px;
+              font-weight : bold;
+              line-height : 62px;
+              padding-left: 12px;
+            }
+
+            ul {
+              overflow: hidden;
+
+              a {
+                padding    : 0 12px;
+                line-height: 27px;
+                display    : block;
+                float      : left;
+              }
+            }
+          }
+
+          &:hover {
+            background-color: #fff;
+
+            & > a {
+              color: #3ea600;
+            }
+
+            .list {
+              a {
+                color: #3ea600;
+              }
+            }
+
+            .tab {
+              visibility: visible;
+              opacity   : 1;
+              @include tr(0.4s,all);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        & > ul {
+          display: block;
         }
       }
     }
