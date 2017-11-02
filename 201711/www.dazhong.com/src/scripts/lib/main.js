@@ -63,8 +63,8 @@ minheight = function() {
   var nh = $('nav').height();
   var mh;
   mh = $(window).height() - fh - hh - fqh;
-  if (mh < 460) {
-    mh = 460;
+  if (mh < 458) {
+    mh = 458;
   }
   $('article').css('min-height', mh + 'px');
 }
