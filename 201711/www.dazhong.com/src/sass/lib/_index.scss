@@ -1,4 +1,5 @@
 /* CSS Document */
+
 .index {
   .banner {
     .swiper-container {
@@ -421,6 +422,121 @@
         right           : 0;
         text-align      : center;
         cursor          : pointer;
+      }
+    }
+  }
+
+  .yangsheng_pro {
+    .list {
+      height: 240px;
+
+      .item {
+        float              : left;
+        background-position: center;
+        background-size    : cover;
+        @include tr(0.4s,opacity);
+
+        &:hover {
+          opacity: 0.8;
+          @include tr(0.4s,opacity);
+        }
+
+        a {
+          color     : #fff;
+          text-align: center;
+
+          span {
+            display: block;
+          }
+        }
+
+        &.item_215 {
+          width : 215px;
+          height: 240px;
+
+          .title {
+            font-size  : 70px;
+            font-weight: bold;
+            line-height: 70px;
+            padding-top: 60px;
+          }
+
+          .des {
+            padding-top: 40px;
+            font-size  : 18px;
+          }
+        }
+
+        &.item_240 {
+          width : 240px;
+          height: 100%;
+
+          a {
+            color: #df9d02;
+          }
+
+          .title {
+            font-size  : 70px;
+            font-weight: bold;
+            line-height: 70px;
+            padding-top: 60px;
+          }
+
+          .des {
+            padding-top: 20px;
+            font-size  : 18px;
+          }
+        }
+      }
+
+      .item-group {
+        float: left;
+        width: 530px;
+
+        .item-group-t {
+          height: 120px;
+
+          .item {
+            &.item_240 {
+              a {
+                color: #fff;
+              }
+
+              .title {
+                font-size  : 54px;
+                font-weight: normal;
+                line-height: 54px;
+                padding-top: 20px;
+              }
+
+              .des {
+                padding-top: 14px;
+                font-size  : 14px;
+              }
+            }
+
+            &.item_145 {
+              width : 145px;
+              height: 100%;
+
+              a {
+                color: #fff;
+              }
+
+              .title {
+                font-size  : 43px;
+                font-weight: normal;
+                line-height: 43px;
+                padding-top: 30px;
+              }
+
+              .des {
+                padding-top: 10px;
+                font-size  : 14px;
+              }
+            }
+          }
+        }
       }
     }
   }
