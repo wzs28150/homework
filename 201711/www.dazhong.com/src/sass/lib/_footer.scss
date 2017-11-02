@@ -15,4 +15,9 @@ footer {
   height          : 332px;
   border-top      : 1px solid #dcdcdc;
   background-color: #fafafa;
+
+  .item {
+    float: left;
+    width: 16.66666666666667%;
+  }
 }
