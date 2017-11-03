@@ -17,8 +17,19 @@
     font-size   : 26px;
     height      : 30px;
     line-height : 30px;
-    border-left : 4px solid #f8ba81;
     padding-left: 20px;
+    position    : relative;
+
+    &::before {
+      content         : "";
+      display         : block;
+      width           : 4px;
+      height          : 30px;
+      background-color: #f8ba81;
+      position        : absolute;
+      left            : 0;
+      top             : 0;
+    }
 
     a {
       float    : right;
@@ -144,12 +155,12 @@
 
     &.lvse {
       .brand-tit {
-        color      : #33a589;
-        border-left: 4px solid #33a589;
+        color         : #33a589;
+        border-bottom : 1px solid #33a589;
+        padding-bottom: 20px;
 
-        &::after {
-          width  : 100%;
-          content: "";
+        &::before {
+          background-color: #33a589;
         }
       }
     }
