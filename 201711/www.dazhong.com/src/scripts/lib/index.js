@@ -1,4 +1,4 @@
-var indexModule, banner, new_pro,hot_pro;
+var indexModule, banner, new_pro,hot_pro,floorqiehuan;
 //首页banner
 banner = function() {
   var bigswiper = new Swiper('.index .banner .swiper-container', {
@@ -28,10 +28,24 @@ hot_pro = function() {
   });
 }
 
+floorqiehuan = function() {
+  $('.floor').each(function(index, el) {
+    var i = index+1;
+    var floorswiper = new Swiper('.floor_'+i+' .swiper-container', {
+      autoplay: 3000,
+      speed: 1000,
+      loop: true,
+      pagination: '.floor_'+i+' .swiper-pagination',
+      paginationClickable: true,
+    });
+  });
+}
+
 indexModule = function() {
   banner();
   new_pro();
   hot_pro();
+  floorqiehuan();
 };
 
 indexModule();
