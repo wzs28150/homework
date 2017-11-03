@@ -49,7 +49,7 @@ var $win = $(window),
       sliderY: null, //垂直滑块
       barX: null, //水平滚动条外层
       boxX: null, //水平滚动条
-      sliderX: null //水平滑块
+      sliderX: null, //水平滑块
     };
     this._data = {
       xRolling: this.$e.container.attr('data-x-rolling') == 'true',
@@ -108,7 +108,6 @@ var $win = $(window),
     this.checkHeightWidth();
     this._bindAction();
   };
-
   /**
    * 滑块操作
    * @private

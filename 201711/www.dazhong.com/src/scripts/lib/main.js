@@ -91,12 +91,14 @@ loadtemp = function() {
 }
 initModule = function() {
   var $ww = $(window).width();
-  $('.scroller').scrollbar();
+  $('.scroller').scrollbar({
+    '_callback':function(){ console.log(2);}
+  });
   minheight();
   backtotop();
   loadtemp();
   animated_contents();
-  $(window).scroll(function(event) {
+  $('.scroller-inner').scroll(function(event) {
     animated_contents();
   });
   $(window).on('debouncedresize', function() {
