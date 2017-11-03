@@ -1,6 +1,7 @@
 /* CSS Document */
-
 .index {
+  padding-bottom: 80px;
+
   .banner {
     .swiper-container {
       width      : 716px;
@@ -535,6 +536,307 @@
                 font-size  : 14px;
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .floor {
+    margin-top: 36px;
+
+    .floor-tit {
+      border-bottom : 1px solid #666;
+      font-size     : 26px;
+      padding-left  : 20px;
+      line-height   : 34px;
+      padding-bottom: 9px;
+      position      : relative;
+
+      &::before {
+        content         : "";
+        display         : block;
+        position        : absolute;
+        left            : 0;
+        top             : 0;
+        height          : 34px;
+        width           : 5px;
+        background-color: #666;
+      }
+    }
+
+    .inner {
+      height: 496px;
+
+      .type {
+        height             : 496px;
+        width              : 240px;
+        position           : relative;
+        background-position: center;
+        background-size    : cover;
+
+        ul {
+          overflow: hidden;
+          padding : 33px 14px 0;
+
+          a {
+            width        : 99px;
+            display      : block;
+            float        : left;
+            height       : 30px;
+            line-height  : 30px;
+            border       : 1px solid #ffffff;
+            color        : #fff;
+            text-align   : center;
+            margin-right : 10px;
+            margin-bottom: 10px;
+            @include tr(0.4s,background-color);
+
+            &:hover {
+              @include tr(0.4s,background-color);
+            }
+          }
+        }
+
+        .title {
+          position    : absolute;
+          bottom      : 0;
+          left        : 0;
+          width       : 220px;
+          padding-left: 20px;
+          color       : #fff;
+          height      : 70px;
+          line-height : 70px;
+
+          a {
+            color  : #fff;
+            display: block;
+            width  : 100%;
+            height : 100%;
+          }
+        }
+      }
+
+      .list {
+        width : 960px;
+        height: 496px;
+
+        .item {
+          width   : 240px;
+          height  : 248px;
+          overflow: hidden;
+          float   : left;
+
+          &.ad {
+            width: 480px;
+
+            img {
+              display: block;
+              width  : 100%;
+            }
+          }
+
+          a {
+            display: block;
+            border : 1px solid #f1f1f1;
+            height : 246px;
+            @include tr(0.4s,border);
+
+            &:hover {
+              border: 1px solid #3ea600;
+              @include tr(0.4s,border);
+            }
+
+            .pic {
+              width              : 198px;
+              height             : 160px;
+              margin             : 16px 20px 0;
+              background-size    : cover;
+              background-position: center;
+            }
+
+            .content {
+              height    : 48px;
+              padding   : 15px 15px 10px;
+              margin-top: -2px;
+              position  : relative;
+
+              .title {
+                font-size    : 18px;
+                line-height  : 18px;
+                margin-bottom: 6px;
+              }
+
+              .price {
+                color    : #c30000;
+                font-size: 14px;
+
+                span {
+                  font-size  : 24px;
+                  line-height: 24px;
+                  display    : inline-block;
+                }
+              }
+
+              .more {
+                position        : absolute;
+                bottom          : 15px;
+                right           : 15px;
+                width           : 70px;
+                line-height     : 26px;
+                color           : #fff;
+                border-radius   : 5px;
+                font-size       : 14px;
+                background-color: #ff870f;
+                text-align      : center;
+              }
+            }
+          }
+        }
+
+        .qiehuan {
+          width : 480px;
+          float : left;
+          height: 248px;
+
+          .swiper-slide {
+            width : 480px;
+            height: 248px;
+          }
+
+          .swiper-pagination-bullet {
+            background-color: #746f69;
+            opacity         : 1;
+            @include tr(0.4s,background-color);
+
+            &.swiper-pagination-bullet-active {
+              background-color: #fff;
+              @include tr(0.4s,background-color);
+            }
+          }
+        }
+      }
+    }
+    // floor_1
+    &.floor_1 {
+      .floor-tit {
+        color        : #9fe7d7;
+        border-bottom: 1px solid #9fe7d7;
+
+        &::before {
+          background-color: #9fe7d7;
+        }
+      }
+
+      .inner {
+        .type {
+          background-color: #4db9a1;
+
+          ul {
+            a {
+              background-color: #71c7b4;
+
+              &:hover {
+                background-color: #2ba388;
+              }
+            }
+          }
+
+          .title {
+            background-color: #2ba388;
+          }
+        }
+      }
+    }
+    // floor_2
+    &.floor_2 {
+      .floor-tit {
+        color        : #99ddf6;
+        border-bottom: 1px solid #99ddf6;
+
+        &::before {
+          background-color: #99ddf6;
+        }
+      }
+
+      .inner {
+        .type {
+          background-color: #4bbedb;
+
+          ul {
+            a {
+              background-color: #6fcbe2;
+
+              &:hover {
+                background-color: #16a4d0;
+              }
+            }
+          }
+
+          .title {
+            background-color: #16a4d0;
+          }
+        }
+      }
+    }
+    // floor_3
+    &.floor_3 {
+      .floor-tit {
+        color        : #86a8e2;
+        border-bottom: 1px solid #86a8e2;
+
+        &::before {
+          background-color: #86a8e2;
+        }
+      }
+
+      .inner {
+        .type {
+          background-color: #858dcc;
+
+          ul {
+            a {
+              background-color: #9da4d6;
+
+              &:hover {
+                background-color: #5d60b8;
+              }
+            }
+          }
+
+          .title {
+            background-color: #5d60b8;
+          }
+        }
+      }
+    }
+    // floor_4
+    &.floor_4 {
+      .floor-tit {
+        color        : #f6d7a1;
+        border-bottom: 1px solid #f6d7a1;
+
+        &::before {
+          background-color: #f6d7a1;
+        }
+      }
+
+      .inner {
+        .type {
+          background-color: #ffaa5d;
+
+          ul {
+            a {
+              background-color: #ffbb7d;
+
+              &:hover {
+                background-color: #d39338;
+              }
+            }
+          }
+
+          .title {
+            background-color: #d39338;
           }
         }
       }
