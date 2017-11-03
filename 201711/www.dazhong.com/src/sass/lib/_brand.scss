@@ -1,0 +1,157 @@
+.brand {
+  .banner {
+    height          : 458px;
+    background-color: #fff4ea;
+
+    .pic {
+      background-position: center;
+      background-size    : cover;
+      width              : 960px;
+      margin-left        : 240px;
+      height             : 458px;
+    }
+  }
+
+  .brand-tit {
+    color       : #f8ba81;
+    font-size   : 26px;
+    height      : 30px;
+    line-height : 30px;
+    border-left : 4px solid #f8ba81;
+    padding-left: 20px;
+
+    a {
+      float    : right;
+      font-size: 18px;
+    }
+  }
+
+  .feichang {
+    .inner {
+      overflow: hidden;
+    }
+
+    .list {
+      width   : 480px;
+      height  : 318px;
+      overflow: hidden;
+      float   : left;
+
+      a {
+        display: block;
+        float  : left;
+        border : 1px solid #d2d2d2;
+        width  : 238px;
+        height : 104px;
+      }
+    }
+
+    .qiehuan {
+      width : 238px;
+      height: 316px;
+      float : left;
+      border: 1px solid #d2d2d2;
+
+      .swiper-slide {
+        width              : 240px;
+        height             : 318px;
+        background-position: center;
+        background-size    : cover;
+      }
+
+      .swiper-pagination-bullet {
+        width     : 12px;
+        height    : 12px;
+        box-shadow: 0 0 5px #ccc;
+        opacity   : 0.5;
+
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .brand-list {
+    .list {
+      .item {
+        width        : 220px;
+        float        : left;
+        margin-right : 22.5px;
+        margin-bottom: 22.5px;
+        border       : 1px solid #d2d2d2;
+
+        &.ad {
+          width : 222px;
+          border: 0;
+
+          img {
+            display: block;
+            width  : 100%;
+          }
+        }
+
+        a {
+          display: block;
+
+          .pic {
+            width              : 180px;
+            height             : 190px;
+            margin             : 20px;
+            background-size    : cover;
+            background-position: center;
+          }
+
+          .content {
+            height    : 48px;
+            padding   : 15px;
+            margin-top: -2px;
+            position  : relative;
+
+            .title {
+              font-size    : 18px;
+              line-height  : 18px;
+              margin-bottom: 10px;
+            }
+
+            .price {
+              color    : #c30000;
+              font-size: 14px;
+
+              span {
+                font-size  : 24px;
+                line-height: 24px;
+                display    : inline-block;
+              }
+            }
+
+            .more {
+              position        : absolute;
+              bottom          : 15px;
+              right           : 15px;
+              width           : 70px;
+              line-height     : 26px;
+              color           : #fff;
+              border-radius   : 5px;
+              font-size       : 14px;
+              background-color: #ff870f;
+              text-align      : center;
+            }
+          }
+        }
+      }
+    }
+
+    &.lvse {
+      .brand-tit {
+        color      : #33a589;
+        border-left: 4px solid #33a589;
+
+        &::after {
+          width  : 100%;
+          content: "";
+        }
+      }
+    }
+  }
+}

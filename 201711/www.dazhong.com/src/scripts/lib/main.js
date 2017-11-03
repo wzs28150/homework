@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -28,6 +28,16 @@ animated_contents = function() {
     });
   }
 }
+
+/**
+ * 导航选中状态
+ * @param  {[type]} i [description]
+ * @return {[type]}   [description]
+ */
+navactive = function(i) {
+  $('header .header-nav nav a').removeClass('on');
+  $('header .header-nav nav a').eq(i).addClass('on');
+};
 
 
 /**
@@ -79,11 +89,22 @@ loadtemp = function() {
     $('.jiazai').each(function(index, el) {
       var a = $(this).attr('id');
       var callback = $(this).attr('data-callback');
+      var result = callback.split(",");
+
       $.get("./" + a + ".html",
         function(tempdata) {
           $('#' + a).html(tempdata);
           var myeval = eval;
-          myeval(callback + '();');
+          for (var i = 0; i < result.length; i++) {
+            var r = result[i].split(":");
+            if (r[1]) {
+              myeval(r[0] + '(' + r[1] + ');');
+            } else {
+              myeval(r[0] + '();');
+            }
+
+          }
+
         });
     });
 
@@ -92,7 +113,9 @@ loadtemp = function() {
 initModule = function() {
   var $ww = $(window).width();
   $('.scroller').scrollbar({
-    '_callback':function(){ console.log(2);}
+    '_callback': function() {
+      console.log(2);
+    }
   });
   minheight();
   backtotop();
