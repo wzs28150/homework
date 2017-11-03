@@ -79,7 +79,7 @@ loadtemp = function() {
     $('.jiazai').each(function(index, el) {
       var a = $(this).attr('id');
       var callback = $(this).attr('data-callback');
-      $.get("/" + a + ".html",
+      $.get("./" + a + ".html",
         function(tempdata) {
           $('#' + a).html(tempdata);
           var myeval = eval;
