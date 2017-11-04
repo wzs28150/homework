@@ -4476,11 +4476,13 @@ footer .footer-bar {
   height: 80px;
   line-height: 80px;
   font-size: 18px;
+  position: relative;
+  z-index: 5;
 }
 .sort .fl {
   margin-left: 30px;
 }
-.sort .fl a {
+.sort .fl > a {
   display: inline-block;
   width: 90px;
   height: 40px;
@@ -4492,11 +4494,65 @@ footer .footer-bar {
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
 }
-.sort .fl a.on, .sort .fl a:hover {
+.sort .fl > a.on, .sort .fl > a:hover {
   background-color: #2d8800;
   color: #fff;
   -webkit-transition: background-color 0.4s;
   transition: background-color 0.4s;
+}
+.sort .fl label {
+  display: inline-block;
+  width: 85px;
+  padding-right: 5px;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #dcdcdc;
+  text-align: center;
+  background-color: #fff;
+  margin-right: 5px;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url("../images/jg_jt.png");
+  background-repeat: no-repeat;
+  background-position: 68px center;
+}
+.sort .fl label.on, .sort .fl label:hover {
+  background-color: #2d8800;
+  color: #fff;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.sort .fl label #jiageorder {
+  display: none;
+}
+.sort .fl label ul {
+  position: absolute;
+  z-index: 5;
+  background-color: #fff;
+  width: 90px;
+  left: -1px;
+  border: 1px solid #dcdcdc;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.sort .fl label ul a {
+  font-size: 14px;
+  line-height: 30px;
+}
+.sort .fl label ul a.on {
+  color: #c30000;
+}
+.sort .fl label #jiageorder:checked ~ ul {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 .sort .fr {
   font-size: 18px;
@@ -4559,7 +4615,7 @@ footer .footer-bar {
 .brand-main-list .item .btn a.brand-sc {
   padding-left: 15px;
   width: 90px;
-  background-image: url(../images/shoucang.png);
+  background-image: url("../images/shoucang.png");
   background-position: 25px center;
   background-repeat: no-repeat;
 }
@@ -4567,7 +4623,7 @@ footer .footer-bar {
   margin-left: -1px;
   padding-left: 20px;
   width: 85px;
-  background-image: url(../images/gwck.png);
+  background-image: url("../images/gwck.png");
   background-position: 7px center;
   background-repeat: no-repeat;
 }
@@ -4694,4 +4750,15 @@ footer .footer-bar {
   cursor: pointer;
 }
 
+.huodong .banner {
+  height: 458px;
+  background-color: #ecded3;
+}
+.huodong .banner .pic {
+  background-position: center;
+  background-size: cover;
+  width: 960px;
+  margin-left: 240px;
+  height: 458px;
+}
 /*# sourceMappingURL=me.css.map */
