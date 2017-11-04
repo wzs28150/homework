@@ -2,7 +2,6 @@
  *    v2.0 | 20110126
  *       License: none (public domain)
  *       */
-
 a,
 abbr,
 acronym,
@@ -92,7 +91,6 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -281,7 +279,6 @@ article {
   text-overflow: ellipsis;
 }
 /*水平垂直居中*/
-
 .wh-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -296,7 +293,6 @@ article {
   align-items        : center;
 }
 /*垂直居中*/
-
 .h-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -308,7 +304,6 @@ article {
   align-items        : center;
 }
 /*分组父级*/
-
 .felx-box {
   display              : -webkit-box;
   -webkit-box-orient   : horizontal;
@@ -320,7 +315,6 @@ article {
   align-items          : left;
 }
 /*分组子级*/
-
 .felx-item {
   -webkit-box-flex: 1;
   flex-basis      : 1;
@@ -329,7 +323,6 @@ article {
   flex            : 1 1 1;
 }
 /* alert_player */
-
 .alert_player {
   position: fixed;
   top     : 0;
@@ -726,8 +719,30 @@ body[onselectstart] {
   }
 }
 
-.page{
-  ul{ text-align: right; 
-    li{ display: inline-block;}
+.page {
+  ul {
+    text-align: right;
+
+    li {
+      display: inline-block;
+
+      a {
+        display    : inline-block;
+        line-height: 40px;
+        padding    : 0 15px;
+        border     : 1px solid #d9d6d6;
+
+        span {
+          display    : inline-block;
+          line-height: 40px;
+        }
+
+        &.on,
+        &:hover {
+          background-color: #2d8800;
+          color           : #fff;
+        }
+      }
+    }
   }
 }

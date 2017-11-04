@@ -36,33 +36,95 @@
   <div class="scroller-inner">
     <div class="scroller-content">
       <!-- 此处调用公共头部header 做程序时可换对应代码 -->
-      <div id="header" class="jiazai" data-callback="navactive:0"></div>
+      <div id="header" class="jiazai" data-callback="fenleishow,navactive:1"></div>
       <!-- 此处调用公共头部header 做程序时可换对应代码 -->
       <main>
-        <article class="brand p_B60">
-          <!-- top-ad -->
-          <section class="top-ad">
+        <article class="jingxuan p_B60">
+          <!-- banner -->
+          <section class="banner">
             <div class="container_1200">
-              <img src="./src/images/brand_content_ad.jpg" alt="">
+              <div class="pic" style="background-image:url(./src/images/jingxuan_banner.jpg);"></div>
             </div>
           </section>
-          <!-- top-ad -->
-          <section class="brand-main m_T50">
+          <!-- banner -->
+          <!-- 名品精选 -->
+          <section class="jingxuan-main m_T40 animate-element  bottom-to-top">
             <div class="container_1200">
-              <div class="brand-des">
-                <div class="brand-logo fl" style="background-image:url(./src/images/brand_pic.jpg)"></div>
-                <div class="brand-content fl">
-                  鱼跃医疗，中国A股上市公司。自1998年创立以来，鱼跃矢志于投身生命健康事业，将专业的健康管理理念与先进的产品方案带入万千家庭，打造了由家庭医疗、临床医疗、互联网医疗组成的大健康生态圈，组建一个全面覆盖医疗器械的专业化服务平台。
-                </div>
-                <div class="brand-type-tit fl"> 类别 </div>
-                <div class="brand-type fl">
-                  <a href="">呼吸系统</a> <a href="">心血管系统</a> <a href="">内分泌系统</a> <a href="">家庭护理产品</a> <a href="">医院设备</a> <a href="">其他</a>
+              <div class="jingxuan-tit">热销产品<a class="fr" href="">更多</a></div>
+              <div class="inner">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide ad">
+                      <a href="">
+                        <img src="./src/images/hot_pro_ad.jpg" alt="">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <div class="pic" style="background-image:url(./src/images/pro_pic1.jpg)"></div>
+                        <div class="content">
+                          <div class="title">地道龙江饺子粉</div>
+                          <div class="price">￥<span>13.50</span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <div class="pic" style="background-image:url(./src/images/pro_pic1.jpg)"></div>
+                        <div class="content">
+                          <div class="title">地道龙江饺子粉</div>
+                          <div class="price">￥<span>13.50</span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <div class="pic" style="background-image:url(./src/images/pro_pic1.jpg)"></div>
+                        <div class="content">
+                          <div class="title">地道龙江饺子粉</div>
+                          <div class="price">￥<span>13.50</span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <div class="pic" style="background-image:url(./src/images/pro_pic1.jpg)"></div>
+                        <div class="content">
+                          <div class="title">地道龙江饺子粉</div>
+                          <div class="price">￥<span>13.50</span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <div class="pic" style="background-image:url(./src/images/pro_pic1.jpg)"></div>
+                        <div class="content">
+                          <div class="title">地道龙江饺子粉</div>
+                          <div class="price">￥<span>13.50</span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="">
+                        <div class="pic" style="background-image:url(./src/images/pro_pic1.jpg)"></div>
+                        <div class="content">
+                          <div class="title">地道龙江饺子粉</div>
+                          <div class="price">￥<span>13.50</span></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <div class="button-next jt-chevron-right"></div>
+                  <div class="button-prev jt-chevron-left"></div>
                 </div>
               </div>
             </div>
           </section>
+          <!-- 名品精选 -->
           <!-- 排序筛选 -->
-          <section class="sort container_1200 m_T30">
+          <section class="sort container_1200 m_T40">
             <div class="fl">商品列表： <a class="on" href="">综合</a> <a href="">销量</a> <a href="">价格</a> <a href="">时间</a></div>
             <div class="totle fr">共1106个商品</div>
           </section>
@@ -409,7 +471,7 @@
   <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
   <!-- banner滚动插件 -->
   <!-- index  -->
-  <script src="./src/scripts/lib/brand_content.js"></script>
+  <script src="./src/scripts/lib/jingxuan.js"></script>
   <!-- index  -->
   <!-- banner滚动插件 -->
   <script type="text/javascript">
