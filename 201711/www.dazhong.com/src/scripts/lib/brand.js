@@ -1,14 +1,13 @@
-var brandModule, banner, new_pro,hot_pro,feichangqiehuan;
-
+var brandModule, banner, new_pro, hot_pro, feichangqiehuan;
 
 feichangqiehuan = function() {
   $('.feichang .qiehuan').each(function(index, el) {
-    var i = index+1;
-    var feichangswiper = new Swiper('.qiehuan_'+i, {
+    var i = index + 1;
+    var feichangswiper = new Swiper('.qiehuan_' + i, {
       autoplay: 3000,
       speed: 1000,
       loop: true,
-      pagination: '.qiehuan_'+i+' .swiper-pagination',
+      pagination: '.qiehuan_' + i + ' .swiper-pagination',
       paginationClickable: true,
     });
   });

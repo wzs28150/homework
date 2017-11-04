@@ -1,3 +1,10 @@
+.top-ad {
+  img {
+    display: block;
+    width  : 100%;
+  }
+}
+
 .brand {
   .banner {
     height          : 458px;
@@ -199,6 +206,110 @@
           background-color: #d39338;
         }
       }
+    }
+  }
+
+  .brand-main {
+    .brand-des {
+      .brand-logo {
+        background-position: center;
+        background-size    : cover;
+        height             : 146px;
+        width              : 267px;
+        border             : 1px solid #ccc;
+      }
+
+      .brand-content {
+        font-size  : 16px;
+        line-height: 26px;
+        color      : #333;
+        border     : 1px solid #ccc;
+        width      : 880px;
+        padding    : 34px 25px;
+        margin-left: -1px;
+      }
+
+      .brand-type-tit {
+        height          : 70px;
+        line-height     : 70px;
+        width           : 267px;
+        border          : 1px solid #ccc;
+        margin-top      : -1px;
+        text-align      : center;
+        background-color: #f7f7f7;
+      }
+
+      .brand-type {
+        width      : 880px;
+        height     : 70px;
+        line-height: 0;
+        border     : 1px solid #ccc;
+        margin-top : -1px;
+        margin-left: -1px;
+        padding    : 0 25px;
+        font-size  : 0;
+
+        a {
+          height      : 70px;
+          line-height : 70px;
+          display     : inline-block;
+          font-size   : 18px;
+          margin-right: 36px;
+          @include tr(0.4s,color);
+
+          &:hover {
+            color: #000;
+            @include tr(0.4s,color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.sort {
+  background-color: #f7f7f7;
+  height          : 80px;
+  line-height     : 80px;
+  font-size       : 18px;
+
+  .fl {
+    margin-left: 30px;
+
+    a {
+      display         : inline-block;
+      width           : 90px;
+      height          : 40px;
+      line-height     : 40px;
+      border          : 1px solid #dcdcdc;
+      text-align      : center;
+      background-color: #fff;
+      margin-right    : 5px;
+      @include tr(0.4s,background-color);
+
+      &.on,
+      &:hover {
+        background-color: #2d8800;
+        color           : #fff;
+        @include tr(0.4s,background-color);
+      }
+    }
+  }
+
+  .fr {
+    font-size   : 18px;
+    margin-right: 20px;
+    color       : #333;
+  }
+}
+
+.brand-main-list {
+  .item {
+    width : 234px;
+    border: 3px solid #2d8800;
+
+    a {
+      display: block;
     }
   }
 }
