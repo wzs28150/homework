@@ -725,3 +725,9 @@ body[onselectstart] {
     }
   }
 }
+
+.page{
+  ul{ text-align: right; 
+    li{ display: inline-block;}
+  }
+}
