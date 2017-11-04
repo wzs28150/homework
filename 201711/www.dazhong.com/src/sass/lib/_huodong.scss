@@ -1,14 +1,39 @@
 .huodong {
   .banner {
-    height          : 458px;
+    height: 458px;
     background-color: #ecded3;
-
     .pic {
       background-position: center;
-      background-size    : cover;
-      width              : 960px;
-      margin-left        : 240px;
-      height             : 458px;
+      background-size: cover;
+      width: 960px;
+      margin-left: 240px;
+      height: 458px;
+    }
+  }
+  .hdtm {
+    .tit {
+      font-size: 26px;
+      color: #333333;
+      line-height: 1em;
+      padding-bottom: 30px;
+      a {
+        font-size: 18px;
+      }
+    }
+    .list {
+      .item {
+        width: 300px;
+        a {
+          display: block;
+        }
+        &.big {
+          width: 600px;
+          height: 267px;
+          a {
+            .pic {}
+          }
+        }
+      }
     }
   }
 }
