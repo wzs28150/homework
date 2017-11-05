@@ -8,7 +8,7 @@ multiple = function() {
     var $this = $(this);
     var $checkbox = $(this).parent('li').parent('ul').parent('.sl-list').parent('.inner').prev('input');
     var $isChecked = $checkbox.is(":checked");
-    var url = '/products.html',
+    var url = window.location.protocol + '//' + window.location.host + window.location.pathname + '?1=1',
       container = '.brand-main-list',
       fragment = '.brand-main-list';
 
@@ -19,11 +19,18 @@ multiple = function() {
       duoxuan();
     } else {
       //非多选状态
+      var type = $(this).attr('data-type');
+      var value = $(this).attr('data-value');
+      if (getUrlParam(type)) {
+
+      } else {
+        url = url + '&' + type + '=' + value;
+      }
       if ($.support.pjax) {
         $.pjax({
           url: url,
-          container: 'main',
-          fragment: 'main',
+          container: container,
+          fragment: container,
           timeout: 8000,
           scrollTo: false
         });
@@ -72,7 +79,9 @@ pajax = function(url, container, fragment) {
   $(document).on('pjax:end', function(data, status, xhr, options) {
     //console.log(data);
     $('.pjaxcontainer').removeClass('on');
+    history.pushState({}, "", url);
     animated_contents();
+
     //$('title').text(data.relatedTarget.innerText + ' - 润泰');
   });
 }
