@@ -5,13 +5,13 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>非常品牌 - 大众商城</title>
-    <link rel="stylesheet" href="./src/css/me.css">
-    <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
-    <!--[if IE 8]>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>非常品牌 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
   <script src="./src/scripts/package/compat/html5shiv.js"></script>
   <script src="./src/scripts/package/compat/respond.js"></script>
 <![endif]-->
@@ -19,483 +19,486 @@
 
 <body class="scroller">
 
-    <div id="progress">
-        <span></span>
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
     </div>
-    <!-- 弹窗 -->
-    <div class="alert_player" style="display:none;">
-        <div class="bg"></div>
-        <div class="layer">
-            <div class="info"></div>
-            <a class="queren_btn" data-ajax="no">确认</a>
-        </div>
+  </div>
+  <!-- 弹窗 -->
+
+
+  <div class="scroller-inner">
+    <div class="scroller-content">
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <div id="header" class="jiazai" data-callback="navactive:0"></div>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <main>
+        <article class="jingxuan p_B60">
+          <!-- top-ad -->
+          <section class="top-ad">
+            <div class="container_1200">
+              <img src="./src/images/brand_content_ad.jpg" alt="">
+            </div>
+          </section>
+          <!-- top-ad -->
+          <!-- 面包屑 -->
+          <section class="position p_T40 p_B20">
+            <div class="container_1200"><a href="">保健品</a> &gt; <a href="">保健食品</a></div>
+          </section>
+          <!-- 面包屑 -->
+          <!-- 条件筛选 -->
+          <section class="tiaojiao-sort container_1200">
+            <div class="sl">
+              <!-- 此处注意id变化 -->
+              <input type="checkbox" name="change_duoxuan" id="sl1" checked class="change_duoxuan">
+              <!-- 此处注意id变化 -->
+              <div class="inner">
+                <div class="sl-tit">品牌</div>
+                <div class="sl-list">
+                  <ul>
+                    <!-- data-value 数据库要存的值 -->
+                    <li><a href="javascript:void(0);" data-type="pinpai" data-value="地道龙江"><i></i>地道龙江</a></li>
+                    <li><a href="javascript:void(0);" data-type="pinpai" data-value="鱼跃"><i></i>鱼跃</a></li>
+                    <li><a href="javascript:void(0);" data-type="pinpai" data-value="康美健康"><i></i>康美健康</a></li>
+                    <li><a href="javascript:void(0);" data-type="pinpai" data-value="亿阳集团"><i></i>亿阳集团</a></li>
+                    <li><a href="javascript:void(0);" data-type="pinpai" data-value="理想"><i></i>理想</a></li>
+                  </ul>
+                  <div class="ctrl">
+                    <!-- 此处注意id变化 -->
+                    <label class="morecheck" for="sl1">+多选</label>
+                    <!-- 此处注意id变化 -->
+                    <a href="javascript:void(0);">更多<span class="jt-chevron-thin-down"></span></a>
+                  </div>
+                  <div class="dx-ctrl">
+                    <a class="disable" href="javascript:void(0);">确定</a>
+                    <label class="cannel" for="sl1">取消</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sl">
+              <!-- 此处注意id变化 -->
+              <input type="checkbox" name="change_duoxuan" id="sl2" class="change_duoxuan">
+              <!-- 此处注意id变化 -->
+              <div class="inner">
+                <div class="sl-tit">类别</div>
+                <div class="sl-list">
+                  <ul>
+                    <!-- data-value 数据库要存的值 -->
+                    <li><a href="javascript:void(0);" data-type="leibie" data-value="美体塑身"><i></i>美体塑身</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie" data-value="美容养颜"><i></i>美容养颜</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie" data-value="茶饮产品"><i></i>茶饮产品</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie" data-value="药食同源"><i></i>药食同源</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie" data-value="膳食纤维"><i></i>膳食纤维</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie" data-value="其他"><i></i>其他</a></li>
+                  </ul>
+                  <div class="ctrl">
+                    <label class="morecheck" for="sl2">+多选</label>
+                    <a href="javascript:void(0);">更多<span class="jt-chevron-thin-down"></span></a>
+                  </div>
+                  <div class="dx-ctrl">
+                    <a href="">确定</a>
+                    <a href="">取消</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sl">
+              <!-- 此处注意id变化 -->
+              <input type="checkbox" name="change_duoxuan" id="sl3" class="change_duoxuan">
+              <!-- 此处注意id变化 -->
+              <div class="inner">
+                <div class="sl-tit">包装</div>
+                <div class="sl-list">
+                  <ul>
+                    <li><a href="javascript:void(0);" data-type="leibie"><i></i>箱装</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie"><i></i>袋装</a></li>
+                    <li><a href="javascript:void(0);" data-type="leibie"><i></i>盒装</a></li>
+                  </ul>
+                  <div class="ctrl">
+                    <label class="morecheck" for="sl3">+多选</label>
+                    <a href="javascript:void(0);">更多<span class="jt-chevron-thin-down"></span></a>
+                  </div>
+                  <div class="dx-ctrl">
+                    <a href="">确定</a>
+                    <a href="">取消</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sl">
+              <div class="inner">
+                <div class="sl-tit">其他</div>
+              </div>
+            </div>
+          </section>
+          <!-- 条件筛选 -->
+          <!-- 排序筛选 -->
+          <section class="sort containern_1200 m_T40 animate-element  bottom-to-top">
+            <div class="fl">商品列表： <a class="on" href="">综合</a> <a href="">销量</a> <label for="jiageorder">价格<input type="checkbox" id="jiageorder"><ul><a class="on" href="">价格由高到低</a><a href="">价格由低到高</a></ul></label> <a href="">时间</a></div>
+            <div class="totle fr">共1106个商品</div>
+            <div class="clearfix"></div>
+          </section>
+          <!-- 排序筛选 -->
+          <!-- 列表 -->
+          <section class="brand-main-list animate-element  bottom-to-top">
+            <div class="container_1200">
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)"><a href=""></a></div>
+                <div class="price">￥<span>238.00</span></div>
+                <div class="title"><a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a></div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a><a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+              <div class="item animate-element  bottom-to-top fl">
+                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
+                  <a href=""></a>
+                </div>
+                <div class="price">￥
+                  <span>238.00</span>
+                </div>
+                <div class="title">
+                  <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
+                </div>
+                <div class="btn">
+                  <a class="brand-sc" href="">收藏</a>
+                  <a class="brand-car" href="">加入购物车</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 列表 -->
+          <!-- 分页 -->
+          <section class="page container_1200 m_T40">
+            <ul>
+              <li><a href=""><span class="jt-triangle-left fl m_R5"></span>上一页</a></li>
+              <li><a class="on" href="">1</a></li>
+              <li><a href="">2</a></li>
+              <li><a href="">3</a></li>
+              <li><a href="">4</a></li>
+              <li>...</li>
+              <li><a href="">36</a></li>
+              <li>
+                <a href="">下一页<span class="jt-triangle-right fr m_L5"></span></a>
+              </li>
+            </ul>
+          </section>
+          <!-- 分页 -->
+        </article>
+      </main>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+      <div id="footer_quick" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+      <div id="footer" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
     </div>
-    <!-- 弹窗 -->
+  </div>
+  <!-- 滚动条插件 -->
+  <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+  <!-- 滚动条插件 -->
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 无刷新插件 -->
+  <script src="./src/scripts/package/core/pajax/jquery.pjax.js"></script>
+  <!-- 无刷新插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <!-- index  -->
+  <script src="./src/scripts/lib/products.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
 
-
-    <div class="scroller-inner">
-        <div class="scroller-content">
-            <!-- 此处调用公共头部header 做程序时可换对应代码 -->
-            <div id="header" class="jiazai" data-callback="navactive:0"></div>
-            <!-- 此处调用公共头部header 做程序时可换对应代码 -->
-            <main>
-                <article class="jingxuan p_B60">
-                    <!-- top-ad -->
-                    <section class="top-ad">
-                        <div class="container_1200">
-                            <img src="./src/images/brand_content_ad.jpg" alt="">
-                        </div>
-                    </section>
-                    <!-- top-ad -->
-                    <!-- 面包屑 -->
-                    <section class="position p_T40 p_B20">
-                        <div class="container_1200"><a href="">保健品</a> &gt; <a href="">保健食品</a></div>
-                    </section>
-                    <!-- 面包屑 -->
-                    <!-- 条件筛选 -->
-                    <section class="tiaojiao-sort container_1200">
-                        <div class="sl">
-                            <!-- 此处注意id变化 -->
-                            <input type="checkbox" name="change_duoxuan" id="sl1" checked class="change_duoxuan">
-                            <!-- 此处注意id变化 -->
-                            <div class="inner">
-                                <div class="sl-tit">品牌</div>
-                                <div class="sl-list">
-                                    <ul>
-                                        <!-- data-value 数据库要存的值 -->
-                                        <li><a href="" data-value="地道龙江"><i></i>地道龙江</a></li>
-                                        <li><a href="" data-value="鱼跃"><i></i>鱼跃</a></li>
-                                        <li><a href="" data-value="康美健康"><i></i>康美健康</a></li>
-                                        <li><a href="" data-value="亿阳集团"><i></i>亿阳集团</a></li>
-                                        <li><a href="" data-value="理想"><i></i>理想</a></li>
-                                    </ul>
-                                    <div class="ctrl">
-                                      <!-- 此处注意id变化 -->
-                                        <label class="morecheck" for="sl1">+多选</label>
-                                      <!-- 此处注意id变化 -->
-                                        <a href="javascript:void(0);">更多<span class="jt-chevron-thin-down"></span></a>
-                                    </div>
-                                    <div class="dx-ctrl">
-                                        <a class="disable" href="">确定</a>
-                                        <label class="cannel" for="sl1">取消</label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sl">
-                            <!-- 此处注意id变化 -->
-                            <input type="checkbox" name="change_duoxuan" id="sl2" class="change_duoxuan">
-                            <!-- 此处注意id变化 -->
-                            <div class="inner">
-                                <div class="sl-tit">类别</div>
-                                <div class="sl-list">
-                                    <ul>
-                                      <!-- data-value 数据库要存的值 -->
-                                        <li><a href="" data-value="美体塑身"><i></i>美体塑身</a></li>
-                                        <li><a href="" data-value="美容养颜"><i></i>美容养颜</a></li>
-                                        <li><a href="" data-value="茶饮产品"><i></i>茶饮产品</a></li>
-                                        <li><a href="" data-value="药食同源"><i></i>药食同源</a></li>
-                                        <li><a href="" data-value="膳食纤维"><i></i>膳食纤维</a></li>
-                                        <li><a href="" data-value="其他"><i></i>其他</a></li>
-                                    </ul>
-                                    <div class="ctrl">
-                                        <label class="morecheck" for="sl2">+多选</label>
-                                        <a href="javascript:void(0);">更多<span class="jt-chevron-thin-down"></span></a>
-                                    </div>
-                                    <div class="dx-ctrl">
-                                        <a href="">确定</a>
-                                        <a href="">取消</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sl">
-                            <!-- 此处注意id变化 -->
-                            <input type="checkbox" name="change_duoxuan" id="sl3" class="change_duoxuan">
-                            <!-- 此处注意id变化 -->
-                            <div class="inner">
-                                <div class="sl-tit">包装</div>
-                                <div class="sl-list">
-                                    <ul>
-                                        <li><a href=""><i></i>箱装</a></li>
-                                        <li><a href=""><i></i>袋装</a></li>
-                                        <li><a href=""><i></i>盒装</a></li>
-                                    </ul>
-                                    <div class="ctrl">
-                                        <label class="morecheck" for="sl3">+多选</label>
-                                        <a href="javascript:void(0);">更多<span class="jt-chevron-thin-down"></span></a>
-                                    </div>
-                                    <div class="dx-ctrl">
-                                        <a href="">确定</a>
-                                        <a href="">取消</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sl">
-                            <div class="inner">
-                                <div class="sl-tit">其他</div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- 条件筛选 -->
-                    <!-- 排序筛选 -->
-                    <section class="sort containern_1200 m_T40 animate-element  bottom-to-top">
-                        <div class="fl">商品列表： <a class="on" href="">综合</a> <a href="">销量</a> <label for="jiageorder">价格<input type="checkbox" id="jiageorder"><ul><a class="on" href="">价格由高到低</a><a href="">价格由低到高</a></ul></label> <a href="">时间</a></div>
-                        <div class="totle fr">共1106个商品</div>
-                        <div class="clearfix"></div>
-                    </section>
-                    <!-- 排序筛选 -->
-                    <!-- 列表 -->
-                    <section class="brand-main-list animate-element  bottom-to-top">
-                        <div class="container_1200">
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)"><a href=""></a></div>
-                                <div class="price">￥<span>238.00</span></div>
-                                <div class="title"><a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a></div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a><a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                            <div class="item animate-element  bottom-to-top fl">
-                                <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)">
-                                    <a href=""></a>
-                                </div>
-                                <div class="price">￥
-                                    <span>238.00</span>
-                                </div>
-                                <div class="title">
-                                    <a href="">理想境界普洱茶萃（产品规 格: 0.5克X30）</a>
-                                </div>
-                                <div class="btn">
-                                    <a class="brand-sc" href="">收藏</a>
-                                    <a class="brand-car" href="">加入购物车</a>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- 列表 -->
-                    <!-- 分页 -->
-                    <section class="page container_1200 m_T40">
-                        <ul>
-                            <li><a href=""><span class="jt-triangle-left fl m_R5"></span>上一页</a></li>
-                            <li><a class="on" href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li><a href="">4</a></li>
-                            <li>...</li>
-                            <li><a href="">36</a></li>
-                            <li>
-                                <a href="">下一页<span class="jt-triangle-right fr m_L5"></span></a>
-                            </li>
-                        </ul>
-                    </section>
-                    <!-- 分页 -->
-                </article>
-            </main>
-            <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
-            <div id="footer_quick" class="jiazai" data-callback="minheight"></div>
-            <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
-
-            <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
-            <div id="footer" class="jiazai" data-callback="minheight"></div>
-            <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
-        </div>
-    </div>
-    <!-- 滚动条插件 -->
-    <script src="./src/scripts/package/scroll/scrollbar.js"></script>
-    <!-- 滚动条插件 -->
-    <!-- 动画插件 -->
-    <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
-    <!-- 动画插件 -->
-    <!-- 一些主要的公共方法  -->
-    <script src="./src/scripts/lib/main.js"></script>
-    <!-- 一些主要的公共方法  -->
-    <!-- banner滚动插件 -->
-    <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
-    <!-- banner滚动插件 -->
-    <!-- index  -->
-    <script src="./src/scripts/lib/products.js"></script>
-    <!-- index  -->
-    <!-- banner滚动插件 -->
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-        });
-    </script>
+    });
+  </script>
 
 
 </body>
