@@ -103,7 +103,10 @@ pajax = function(url, container, fragment, callback) {
     $('.pjaxcontainer').removeClass('on');
     //history.pushState({}, "", url);
     animated_contents();
-    callback();
+    if (callback) {
+      callback();
+    }
+
     //$('title').text(data.relatedTarget.innerText + ' - 润泰');
   });
 }
@@ -136,6 +139,7 @@ changeURLArg = function(url, arg, arg_val) {
 
 //多选选中状态判断
 duoxuan = function() {
+  $('.change_duoxuan').attr('checked', false);
   var $totlecheckbox = $('.tiaojiao-sort .sl input');
   var $istotleChecked = $totlecheckbox.is(":checked");
   var $inner = $totlecheckbox.next('.inner');
@@ -172,13 +176,10 @@ addmore = function() {
   });
 }
 
-tiaojiao = function() {
-
-}
 indexModule = function() {
   //设置导航选中
   navactive(0);
-  $('.change_duoxuan').attr('checked', false);
+
   duoxuan();
   multiple();
   addmore();
