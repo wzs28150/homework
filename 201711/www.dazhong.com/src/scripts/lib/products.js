@@ -1,8 +1,8 @@
-var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam;
+var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, urlreset, changeURLArg;
 
 //筛选选项
 multiple = function() {
-  $(document).off('click', 'a[data-ajax!=no]').on('click', '.tiaojiao-sort .sl .inner .sl-list ul li a', function(event) {
+  $(document).off('click', '.tiaojiao-sort .sl .inner .sl-list ul li a').on('click', '.tiaojiao-sort .sl .inner .sl-list ul li a', function(event) {
     event.preventDefault();
     /* Act on the event */
     var $this = $(this);
@@ -16,23 +16,43 @@ multiple = function() {
       //多选状态
 
       $this.parent('li').toggleClass('selected');
+      $(document).off('click', '.tiaojiao-sort .sl .sl-list .dx-ctrl a').on('click', '.tiaojiao-sort .sl .sl-list .dx-ctrl a', function(event) {
+        var $li = $(this).parent('.dx-ctrl').parent('.sl-list').find('ul li.selected');
+        if ($li.length > 0) {
+          var type = $li.eq(0).find('a').attr('data-type'),
+            value = '';
+          $li.each(function(index, el) {
+            value = value + ',' + $li.eq(index).find('a').attr('data-value');
+          });
+          url = changeURLArg(window.location.href, type, value.substring(1));
+          if ($.support.pjax) {
+            $.pjax({
+              url: url,
+              container: container,
+              fragment: container,
+              timeout: 8000,
+              scrollTo: false,
+              replace: true
+            });
+            $.pjax.click(event, container);
+            pajax(url, container, fragment);
+          }
+        }
+      });
       duoxuan();
     } else {
       //非多选状态
       var type = $(this).attr('data-type');
       var value = $(this).attr('data-value');
-      if (getUrlParam(type)) {
-
-      } else {
-        url = url + '&' + type + '=' + value;
-      }
+      url = changeURLArg(window.location.href, type, value);
       if ($.support.pjax) {
         $.pjax({
           url: url,
           container: container,
           fragment: container,
           timeout: 8000,
-          scrollTo: false
+          scrollTo: false,
+          replace: true
         });
         $.pjax.click(event, container);
         pajax(url, container, fragment);
@@ -45,12 +65,22 @@ multiple = function() {
 
 
 }
+
+urlreset = function(type, value) {
+  var url = window.location.href;
+  if (getUrlParam(type)) {
+
+  } else {
+    url = url + '&' + type + '=' + value;
+  }
+  return url;
+}
+
 //无刷新加载
 pajax = function(url, container, fragment) {
   $(document).on('pjax:send', function(event) { //pjax链接点击后显示加载动画
     $("#progress").removeClass("done"); //完成，隐藏进度条
     $('.pjaxcontainer').removeClass('on');
-    start();
     $({
       property: 0
     }).animate({
@@ -68,9 +98,7 @@ pajax = function(url, container, fragment) {
     });
   });
 
-  $(document).on('pjax:success', function(data, status, xhr, options) {
-    $(window).unbind('scroll');
-  });
+  $(document).on('pjax:success', function(data, status, xhr, options) {});
 
   $(document).on('pjax:complete', function() {
     $("#progress").addClass("done"); //完成，隐藏进度条
@@ -79,7 +107,7 @@ pajax = function(url, container, fragment) {
   $(document).on('pjax:end', function(data, status, xhr, options) {
     //console.log(data);
     $('.pjaxcontainer').removeClass('on');
-    history.pushState({}, "", url);
+    //history.pushState({}, "", url);
     animated_contents();
 
     //$('title').text(data.relatedTarget.innerText + ' - 润泰');
@@ -91,6 +119,23 @@ getUrlParam = function(name) {
   var r = window.location.search.substr(1).match(reg); //匹配目标参数
   if (r != null) return unescape(r[2]);
   return null; //返回参数值
+}
+//修改url参数
+changeURLArg = function(url, arg, arg_val) {
+  var pattern = arg + '=([^&]*)';
+  var replaceText = arg + '=' + arg_val;
+  if (url.match(pattern)) {
+    var tmp = '/(' + arg + '=)([^&]*)/gi';
+    tmp = url.replace(eval(tmp), replaceText);
+    return tmp;
+  } else {
+    if (url.match('[\?]')) {
+      return url + '&' + replaceText;
+    } else {
+      return url + '?' + replaceText;
+    }
+  }
+  return url + '\n' + arg + '\n' + arg_val;
 }
 //多选选中状态判断
 duoxuan = function() {
