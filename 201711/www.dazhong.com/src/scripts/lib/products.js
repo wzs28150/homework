@@ -14,8 +14,10 @@ multiple = function() {
 
     if ($isChecked) {
       //多选状态
-
       $this.parent('li').toggleClass('selected');
+      //判断按钮是否可点击
+      duoxuan();
+      //点击确定
       $(document).off('click', '.tiaojiao-sort .sl .sl-list .dx-ctrl a').on('click', '.tiaojiao-sort .sl .sl-list .dx-ctrl a', function(event) {
         var $li = $(this).parent('.dx-ctrl').parent('.sl-list').find('ul li.selected');
         if ($li.length > 0) {
@@ -35,11 +37,13 @@ multiple = function() {
               replace: true
             });
             $.pjax.click(event, container);
-            pajax(url, container, fragment);
+            pajax(url, container, fragment, function() {
+              $checkbox.attr('checked', false);
+            });
           }
         }
       });
-      duoxuan();
+
     } else {
       //非多选状态
       var type = $(this).attr('data-type');
@@ -77,7 +81,7 @@ urlreset = function(type, value) {
 }
 
 //无刷新加载
-pajax = function(url, container, fragment) {
+pajax = function(url, container, fragment, callback) {
   $(document).on('pjax:send', function(event) { //pjax链接点击后显示加载动画
     $("#progress").removeClass("done"); //完成，隐藏进度条
     $('.pjaxcontainer').removeClass('on');
@@ -109,7 +113,7 @@ pajax = function(url, container, fragment) {
     $('.pjaxcontainer').removeClass('on');
     //history.pushState({}, "", url);
     animated_contents();
-
+    callback();
     //$('title').text(data.relatedTarget.innerText + ' - 润泰');
   });
 }
