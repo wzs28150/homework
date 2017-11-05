@@ -4916,6 +4916,9 @@ footer .footer-bar {
   line-height: 64px;
   overflow: hidden;
 }
+.tiaojiao-sort .sl .inner.on {
+  height: auto;
+}
 .tiaojiao-sort .sl:last-child {
   border-bottom: none;
 }
@@ -4944,6 +4947,10 @@ footer .footer-bar {
 }
 .tiaojiao-sort .sl .sl-list ul li a {
   font-size: 18px;
+}
+.tiaojiao-sort .sl .sl-list ul li a i {
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .tiaojiao-sort .sl .sl-list .ctrl {
   position: absolute;
@@ -4975,6 +4982,9 @@ footer .footer-bar {
   margin: 14px 0;
   background-color: #f7f7f7;
   cursor: pointer;
+}
+.tiaojiao-sort .sl .sl-list .dx-ctrl {
+  display: none;
 }
 .tiaojiao-sort .sl .sl-list .dx-ctrl a {
   border: 1px solid #d2d2d2;
@@ -5021,9 +5031,15 @@ footer .footer-bar {
   border: 1px solid #ccc;
   font-size: 0;
   margin-right: 5px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 .tiaojiao-sort .sl .change_duoxuan:checked ~ .inner .sl-list ul li.selected a i {
   border-color: #e4393c;
   background-position: -1px -107px;
 }
+.tiaojiao-sort .sl .change_duoxuan:checked ~ .inner .sl-list .dx-ctrl {
+  display: block;
+}
+
 /*# sourceMappingURL=me.css.map */

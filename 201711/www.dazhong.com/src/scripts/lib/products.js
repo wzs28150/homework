@@ -1,4 +1,4 @@
-var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, urlreset, changeURLArg;
+var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore;
 
 //筛选选项
 multiple = function() {
@@ -70,16 +70,6 @@ multiple = function() {
 
 }
 
-urlreset = function(type, value) {
-  var url = window.location.href;
-  if (getUrlParam(type)) {
-
-  } else {
-    url = url + '&' + type + '=' + value;
-  }
-  return url;
-}
-
 //无刷新加载
 pajax = function(url, container, fragment, callback) {
   $(document).on('pjax:send', function(event) { //pjax链接点击后显示加载动画
@@ -117,6 +107,7 @@ pajax = function(url, container, fragment, callback) {
     //$('title').text(data.relatedTarget.innerText + ' - 润泰');
   });
 }
+
 //获取url参数
 getUrlParam = function(name) {
   var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
@@ -124,6 +115,7 @@ getUrlParam = function(name) {
   if (r != null) return unescape(r[2]);
   return null; //返回参数值
 }
+
 //修改url参数
 changeURLArg = function(url, arg, arg_val) {
   var pattern = arg + '=([^&]*)';
@@ -141,6 +133,7 @@ changeURLArg = function(url, arg, arg_val) {
   }
   return url + '\n' + arg + '\n' + arg_val;
 }
+
 //多选选中状态判断
 duoxuan = function() {
   var $totlecheckbox = $('.tiaojiao-sort .sl input');
@@ -154,17 +147,41 @@ duoxuan = function() {
     a.addClass('disable');
   }
 }
-tiaojiao = function() {
+//设置更多
+addmore = function() {
+  //总宽度809
   $('.tiaojiao-sort .sl').each(function(i) {
-    console.log(i)
+    var $this = $(this);
+    var li = $this.find('.sl-list ul li');
+    var w = 0;
+    li.each(function(index, el) {
+      console.log(index);
+      w = w + $(this).outerWidth() + 35;
+    });
+    console.log(w);
+    if (w < 809) {
+      $this.find('.inner .sl-list .ctrl a').hide();
+      $this.find('.inner .sl-list .ctrl label').css('margin-right', '20px');
+
+    }
   })
+  $('.tiaojiao-sort .sl .inner .sl-list .ctrl a').click(function(event) {
+    /* Act on the event */
+    var inner = $(this).parent().parent().parent();
+    inner.toggleClass('on');
+  });
+}
+
+tiaojiao = function() {
+
 }
 indexModule = function() {
   //设置导航选中
   navactive(0);
-  //  $('.change_duoxuan').attr('checked', false);
+  $('.change_duoxuan').attr('checked', false);
   duoxuan();
   multiple();
+  addmore();
 };
 
 indexModule();
