@@ -1,0 +1,71 @@
+.tiaojiao-sort {
+  border: 1px solid #d2d2d2;
+  .sl {
+    border-bottom: 1px dashed #d2d2d2;
+    overflow: hidden;
+    height: 64px;
+    line-height: 64px;
+    &:last-child {
+      border-bottom: none;
+    }
+    .sl-tit {
+      border-right: 1px solid #d2d2d2;
+      width: 146px;
+      padding-left: 24px;
+      float: left;
+      background-color: #f7f7f7;
+    }
+    .sl-list {
+      float: left;
+      padding-left: 30px;
+      padding-right: 190px;
+      position: relative;
+      ul {
+        overflow: hidden;
+        width: 809px;
+        li {
+          float: left;
+          margin-right: 35px;
+          a {
+            font-size: 18px;
+            i {}
+          }
+        }
+      }
+      .ctrl {
+        width: 190px;
+        position: absolute;
+        top: 0px;
+        right: 0;
+        font-size: 0;
+        line-height: 0px;
+        a {
+          display: inline-block;
+          width: 50%;
+          font-size: 18px;
+          color: #333;
+          line-height: 36px;
+          text-align: center;
+          margin: 14px 0;
+          &.morecheck {
+            background-color: #f7f7f7;
+          }
+          span {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &.multiple {
+      .sl-list {
+        ul {
+          li {
+            a {
+              i {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
