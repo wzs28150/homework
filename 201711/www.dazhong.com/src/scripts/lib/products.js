@@ -14,8 +14,8 @@ tiaojiao = function() {
 indexModule = function() {
     //设置导航选中
     navactive(0);
-    tiaojiao();
-    multiple();
+    //tiaojiao();
+    //multiple();
 };
 
 indexModule();

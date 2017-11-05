@@ -3,8 +3,14 @@
   .sl {
     border-bottom: 1px dashed #d2d2d2;
     overflow: hidden;
-    height: 64px;
-    line-height: 64px;
+    .change_duoxuan {
+      display: none;
+    }
+    .inner {
+      height: 64px;
+      line-height: 64px;
+      overflow: hidden;
+    }
     &:last-child {
       border-bottom: none;
     }
@@ -12,6 +18,8 @@
       border-right: 1px solid #d2d2d2;
       width: 146px;
       padding-left: 24px;
+      margin-bottom: -1000px;
+      padding-bottom: 1000px;
       float: left;
       background-color: #f7f7f7;
     }
@@ -46,16 +54,25 @@
           line-height: 36px;
           text-align: center;
           margin: 14px 0;
-          &.morecheck {
-            background-color: #f7f7f7;
-          }
           span {
             font-size: 12px;
           }
         }
+        label {
+          display: inline-block;
+          width: 95px;
+          font-size: 18px;
+          color: #333;
+          line-height: 36px;
+          text-align: center;
+          margin: 14px 0;
+          background-color: #f7f7f7;
+          cursor: pointer;
+        }
       }
     }
-    &.multiple {
+    .change_duoxuan:checked~.inner {
+      height: auto;
       .sl-list {
         ul {
           li {
