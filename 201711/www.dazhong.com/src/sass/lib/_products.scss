@@ -3,7 +3,6 @@
 
   .sl {
     border-bottom: 1px dashed #d2d2d2;
-    overflow     : hidden;
 
     .change_duoxuan {
       display: none;
@@ -38,10 +37,10 @@
       padding-left : 30px;
       padding-right: 190px;
       position     : relative;
+      overflow     : hidden;
 
       ul {
-        overflow: hidden;
-        width   : 809px;
+        width: 809px;
 
         li {
           float       : left;
@@ -129,6 +128,53 @@
           cursor     : pointer;
         }
       }
+
+      .select {
+        display     : inline-block;
+        line-height : 36px;
+        cursor      : pointer;
+        position    : relative;
+        z-index     : 5;
+        margin-top  : 13px;
+        margin-right: 35px;
+        float       : left;
+        overflow    : hidden;
+
+        .select-tit {
+          display       : inline-block;
+          border        : 1px solid #d2d2d2;
+          padding       : 0 24px;
+          vertical-align: top;
+
+          span {
+            font-size  : 12px;
+            margin-left: 5px;
+          }
+        }
+
+        ul {
+          width     : auto;
+          border    : 1px solid #d2d2d2;
+          margin-top: -1px;
+          overflow  : hidden;
+          display   : none;
+
+          li {
+            float        : none;
+            margin-right : 0;
+            border-bottom: 1px solid #d2d2d2;
+
+            &:last-child {
+              margin-bottom: -1px;
+            }
+
+            a {
+              font-size: 16px;
+              padding  : 0 24px;
+            }
+          }
+        }
+      }
     }
 
     .change_duoxuan:checked~.inner {
@@ -164,6 +210,135 @@
 
         .dx-ctrl {
           display: block;
+        }
+      }
+    }
+  }
+}
+
+.pro_main_top {
+  .left {
+    position: relative;
+
+    #swiper-container3 {
+      width: 418px;
+
+      .swiper-slide {
+        img {
+          display: block;
+          width  : 100%;
+        }
+      }
+    }
+
+    #swiper-container2 {
+      width     : 360px;
+      margin-top: 25px;
+
+      .swiper-slide {
+        img {
+          display: block;
+          width  : 52px;
+          border : 2px solid #fff;
+        }
+
+        &.active-nav {
+          img {
+            border: 2px solid #008c00;
+          }
+        }
+      }
+    }
+
+    .swiper-left {
+      background-color: #008c00;
+      width           : 10px;
+      height          : 56px;
+      position        : absolute;
+      left            : 0;
+      bottom          : 0;
+      cursor          : pointer;
+      color           : #fff;
+      text-align      : center;
+      line-height     : 56px;
+      font-size       : 12px;
+    }
+
+    .swiper-right {
+      background-color: #008c00;
+      width           : 10px;
+      height          : 56px;
+      position        : absolute;
+      right           : 0;
+      bottom          : 0;
+      cursor          : pointer;
+      color           : #fff;
+      text-align      : center;
+      line-height     : 56px;
+      font-size       : 12px;
+    }
+  }
+
+  .right {
+    width      : 530px;
+    margin-left: 30px;
+
+    .title {
+      font-size  : 24px;
+      font-weight: bold;
+      color      : #333;
+    }
+
+    .info {
+      padding         : 30px 26px;
+      background-color: #f5f5f5;
+
+      .price {
+        border-bottom : 1px dashed #d2d2d2;
+        line-height   : 26px;
+        padding-bottom: 20px;
+
+        i {
+          font-size  : 26px;
+          line-height: 26px;
+          font-weight: bold;
+          color      : #e60b16;
+        }
+      }
+
+      .address {
+        padding-top: 13px;
+        height     : 32px;
+      }
+
+      .address-info {
+        padding-left: 60px;
+        line-height : 36px;
+      }
+    }
+
+    .tip {
+      color      : #c30000;
+      line-height: 40px;
+    }
+
+    .num {
+      height: 43px;
+    }
+
+    .btn {
+      a {
+        width       : 220px;
+        display     : inline-block;
+        border      : 1px solid #c30000;
+        text-align  : center;
+        line-height : 48px;
+        font-size   : 18px;
+        margin-right: 20px;
+
+        &.addcar {
+          background-color: #c30000;
+          color           : #fff;
         }
       }
     }

@@ -1,4 +1,4 @@
-var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore;
+var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore, select, pro_main_top;
 
 //筛选选项
 multiple = function() {
@@ -13,7 +13,6 @@ multiple = function() {
       fragment = '.brand-main-list';
 
     if ($isChecked) {
-      //多选状态
       $this.parent('li').toggleClass('selected');
       //判断按钮是否可点击
       duoxuan();
@@ -139,7 +138,7 @@ changeURLArg = function(url, arg, arg_val) {
 
 //多选选中状态判断
 duoxuan = function() {
-  $('.change_duoxuan').attr('checked', false);
+
   var $totlecheckbox = $('.tiaojiao-sort .sl input');
   var $istotleChecked = $totlecheckbox.is(":checked");
   var $inner = $totlecheckbox.next('.inner');
@@ -159,10 +158,8 @@ addmore = function() {
     var li = $this.find('.sl-list ul li');
     var w = 0;
     li.each(function(index, el) {
-      console.log(index);
       w = w + $(this).outerWidth() + 35;
     });
-    console.log(w);
     if (w < 809) {
       $this.find('.inner .sl-list .ctrl a').hide();
       $this.find('.inner .sl-list .ctrl label').css('margin-right', '20px');
@@ -176,13 +173,64 @@ addmore = function() {
   });
 }
 
+select = function() {
+  $(document).off('click', '.select-tit').on('click', '.select-tit', function(event) {
+    $(this).parent().parent().parent().addClass('on');
+    $(this).next().fadeToggle();
+  });
+  $(document).off('click', '.tiaojiao-sort .sl .sl-list .select ul li a').on('click', '.tiaojiao-sort .sl .sl-list .select ul li a', function(event) {
+    $(this).parent().parent().hide();
+    var str = $(this).html() + '<span class="jt-chevron-thin-down"></span>';
+    $(this).parent().parent().prev().html(str);
+  });
+
+}
+
+pro_main_top = function() {
+  var mySwiper2 = new Swiper('#swiper-container2', {
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    slidesPerView: 5,
+    spaceBetween: 20,
+    onTap: function() {
+      mySwiper3.slideTo(mySwiper2.clickedIndex)
+    }
+  })
+  var mySwiper3 = new Swiper('#swiper-container3', {
+    nextButton: '.swiper-right',
+    prevButton: '.swiper-left',
+    onSlideChangeStart: function() {
+      updateNavPosition()
+    }
+
+  })
+  updateNavPosition = function() {
+    $('#swiper-container2 .active-nav').removeClass('active-nav')
+    var activeNav = $('#swiper-container2 .swiper-slide').eq(mySwiper3.activeIndex).addClass('active-nav');
+
+
+    if (!activeNav.hasClass('swiper-slide-visible')) {
+      if (activeNav.index() > mySwiper2.activeIndex) {
+        var thumbsPerNav = Math.floor(mySwiper2.width / activeNav.width()) - 1
+        mySwiper2.slideTo(activeNav.index() - thumbsPerNav)
+      } else {
+        mySwiper2.slideTo(activeNav.index())
+      }
+    }
+  }
+
+
+}
+
 indexModule = function() {
   //设置导航选中
   navactive(0);
-
+  $('.change_duoxuan').attr('checked', false);
   duoxuan();
   multiple();
   addmore();
+  select();
+  pro_main_top();
 };
 
 indexModule();
