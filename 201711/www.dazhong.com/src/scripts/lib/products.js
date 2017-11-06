@@ -1,4 +1,4 @@
-var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore, select, pro_main_top;
+var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore, select, pro_main_top, shoucang;
 
 //筛选选项
 multiple = function() {
@@ -172,7 +172,7 @@ addmore = function() {
     inner.toggleClass('on');
   });
 }
-
+//其他 下拉选择
 select = function() {
   $(document).off('click', '.select-tit').on('click', '.select-tit', function(event) {
     $(this).parent().parent().parent().addClass('on');
@@ -221,16 +221,30 @@ pro_main_top = function() {
 
 
 }
+//收藏
+shoucang = function() {
+  $('.pro_main_top .shoucang a').click(function(event) {
+    event.preventDefault();
+    $(this).find('span').toggleClass('sc-star-outlined').toggleClass('sc-star');
+  });
+}
 
 indexModule = function() {
   //设置导航选中
   navactive(0);
   $('.change_duoxuan').attr('checked', false);
+  //多选选中状态判断
   duoxuan();
+  //筛选选项
   multiple();
+  //设置更多
   addmore();
+  //其他 下拉选择
   select();
+  //产品内容页切换
   pro_main_top();
+  //收藏
+  shoucang();
 };
 
 indexModule();

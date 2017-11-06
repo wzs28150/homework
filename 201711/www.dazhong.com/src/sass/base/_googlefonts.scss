@@ -186,3 +186,33 @@
 .dz-cart:before {
 	content: "\e901";
 }
+@font-face {
+	font-family: 'shangcheng';
+	src        : url("fonts/shangcheng.eot?dyl22");
+	src        : url("fonts/shangcheng.eot?dyl22#iefix") format('embedded-opentype'), url("fonts/shangcheng.ttf?dyl22") format('truetype'), url("fonts/shangcheng.woff?dyl22") format('woff'), url("fonts/shangcheng.svg?dyl22#shangcheng") format('svg');
+	font-weight: normal;
+	font-style : normal;
+}
+
+[class^="sc-"],
+[class*=" sc-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family            : 'shangcheng' !important;
+	speak                  : none;
+	font-style             : normal;
+	font-weight            : normal;
+	font-variant           : normal;
+	text-transform         : none;
+	line-height            : 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.sc-star-outlined:before {
+	content: "\e900";
+}
+
+.sc-star:before {
+	content: "\e901";
+}

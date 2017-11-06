@@ -1,7 +1,7 @@
 @charset "utf-8";
 @for $i from 1 through 10 {
   .m_#{$i}0 {
-    margin: #{$i}0px!important !important;
+    margin: #{$i}0px !important;
   }
 
   .m_T#{$i}0 {
@@ -21,7 +21,7 @@
   }
 
   .p_#{$i}0 {
-    padding: #{$i}0px!important !important;
+    padding: #{$i}0px !important;
   }
 
   .p_T#{$i}0 {
@@ -42,7 +42,7 @@
 }
 @for $i from 1 through 10 {
   .m_#{$i} {
-    margin: #{$i}px!important !important;
+    margin: #{$i}px !important;
   }
 
   .m_T#{$i} {
@@ -62,7 +62,7 @@
   }
 
   .p_#{$i} {
-    padding: #{$i}px!important !important;
+    padding: #{$i}px !important;
   }
 
   .p_T#{$i} {
