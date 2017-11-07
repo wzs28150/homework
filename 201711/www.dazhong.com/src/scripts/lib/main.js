@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -110,6 +110,18 @@ loadtemp = function() {
 
   }
 }
+//滚动到指定位置
+scrollto = function() {
+  $('.scrollto').click(function(event) {
+    /* Act on the event */
+    event.preventDefault();
+    var id = $(this).attr('href');
+    $('.scroller-inner').animate({
+      scrollTop: $(id).offset().top
+    }, 800);
+  });
+
+}
 initModule = function() {
   var $ww = $(window).width();
   $('.scroller').scrollbar({
@@ -120,6 +132,7 @@ initModule = function() {
   minheight();
   backtotop();
   loadtemp();
+  scrollto();
   animated_contents();
   $('.scroller-inner').scroll(function(event) {
     animated_contents();

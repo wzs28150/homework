@@ -5336,16 +5336,22 @@ footer .footer-bar {
 .pro_main_bottom .right .pro_main_tab {
   border: 1px solid #a0a0a0;
   overflow: hidden;
+  height: 52px;
 }
 .pro_main_bottom .right .pro_main_tab a {
-  line-height: 48px;
+  line-height: 49px;
+  height: 49px;
   display: inline-block;
   border-left: 1px solid #a0a0a0;
+  border-top: 1px solid #a0a0a0;
   padding: 0 24px;
   margin-left: -1px;
   font-size: 18px;
   float: left;
   background-color: #fff;
+  position: relative;
+  z-index: 1;
+  top: -1px;
 }
 .pro_main_bottom .right .pro_main_tab a i {
   color: #10bb55;
@@ -5354,11 +5360,97 @@ footer .footer-bar {
   border-right: 1px solid #a0a0a0;
   border-bottom: 3px solid #008c00;
 }
+.pro_main_bottom .right .pro_main_tab.pl {
+  border: 1px solid #f3f3f3;
+}
+.pro_main_bottom .right .pro_main_tab.pl a {
+  border-left: 1px solid #f3f3f3;
+  border-top: 1px solid #f3f3f3;
+}
+.pro_main_bottom .right .pro_main_tab.pl a.on {
+  border-right: 1px solid #f3f3f3;
+}
 .pro_main_bottom .right .info {
   border: 1px solid #a0a0a0;
+  padding: 20px 30px 30px;
+}
+.pro_main_bottom .right .info table {
+  width: 100%;
+}
+.pro_main_bottom .right .info table tr td {
+  width: 33.333333%;
+  font-size: 18px;
+  line-height: 36px;
 }
 .pro_main_bottom .right .info .info-content {
   border-top: 1px solid #f5f5f5;
+  padding: 30px 0 0;
+  margin-top: 20px;
+  color: #999;
+  font-size: 16px;
+  line-height: 24px;
+}
+.pro_main_bottom .right .content img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  height: auto !important;
+}
+.pro_main_bottom .right .pro_main_pl {
+  margin-top: -1px;
+}
+.pro_main_bottom .right .pro_main_pl .pl-sort {
+  background-color: #f5f5f5;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 10px;
+}
+.pro_main_bottom .right .pro_main_pl .pl-sort input {
+  display: inline-block;
+  margin: 18px 10px 18px 0;
+  float: left;
+  width: 14px;
+  height: 14px;
+}
+.pro_main_bottom .right .pro_main_pl .pl-sort label {
+  display: inline-block;
+  margin-right: 15px;
+  float: left;
+  cursor: pointer;
+}
+.pro_main_bottom .right .pro_main_pl .pl-sort a {
+  display: inline-block;
+  float: right;
+  padding-right: 22px;
+  background: url("../images/pj_more.png") no-repeat right center;
+}
+.pro_main_bottom .right .pro_main_pl .pl-list .item {
+  padding: 40px 0;
+  min-height: 54px;
+  position: relative;
+  border-bottom: 1px solid #d2d2d2;
+}
+.pro_main_bottom .right .pro_main_pl .pl-list .item .photo {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 54px;
+  height: 54px;
+  border-radius: 100%;
+}
+.pro_main_bottom .right .pro_main_pl .pl-list .item .inner {
+  padding-left: 70px;
+  font-size: 14px;
+  line-height: 26px;
+}
+.pro_main_bottom .right .pro_main_pl .pl-list .item .inner .thumb-list {
+  margin-top: 15px;
+}
+.pro_main_bottom .right .pro_main_pl .pl-list .item .inner .thumb-list ul li {
+  width: 72px;
+  height: 72px;
+  background-position: center;
+  background-size: cover;
 }
 
 .tab a,
