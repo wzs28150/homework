@@ -5764,20 +5764,19 @@ footer .footer-bar {
   background-size: cover;
   background-image: url("../images/login_bg.jpg");
 }
-.login .login-bg .logo-inner {
+.login .login-bg .login-inner {
   background-color: #fff;
   width: 316px;
   padding: 30px;
   float: right;
   margin-top: 125px;
 }
-.login .login-bg .logo-inner .tit {
+.login .login-bg .login-inner .tit {
   color: #333;
   font-size: 18px;
   line-height: 24px;
-  margin-bottom: 20px;
 }
-.login .login-bg .logo-inner input[type="text"] {
+.login .login-bg .login-inner input[type="text"] {
   width: 310px;
   height: 42px;
   line-height: 42px;
@@ -5787,28 +5786,51 @@ footer .footer-bar {
   margin: 10px 0;
   background-position: left center;
   background-repeat: no-repeat;
+  font-size: 14px;
   -webkit-transition: border 0.4s;
   transition: border 0.4s;
 }
-.login .login-bg .logo-inner input[type="text"].user {
+.login .login-bg .login-inner input[type="text"].user {
   width: 260px;
   padding: 0 0 0 50px;
   background-image: url("../images/user.jpg");
 }
-.login .login-bg .logo-inner input[type="text"].pwd {
+.login .login-bg .login-inner input[type="text"].pwd {
   width: 260px;
   padding: 0 0 0 50px;
   background-image: url("../images/pwd.jpg");
 }
-.login .login-bg .logo-inner input[type="text"]:focus {
+.login .login-bg .login-inner input[type="text"].text {
+  margin: 7px 0;
+  padding: 0 14px;
+  width: 284px;
+}
+.login .login-bg .login-inner input[type="text"].mintext {
+  margin: 7px 0;
+  padding: 0 14px;
+  width: 119px;
+}
+.login .login-bg .login-inner input[type="text"]:focus {
   border: 2px solid #99befb;
   -webkit-box-shadow: 0 0 5px #99befb;
           box-shadow: 0 0 5px #99befb;
   -webkit-transition: border 0.4s;
   transition: border 0.4s;
 }
-.login .login-bg .logo-inner input[type="submit"] {
-  width: 314px;
+.login .login-bg .login-inner input[type="text"]::-webkit-input-placeholder {
+  color: #ccc;
+}
+.login .login-bg .login-inner input[type="text"]:-moz-placeholder {
+  color: #ccc;
+}
+.login .login-bg .login-inner input[type="text"]::-moz-placeholder {
+  color: #ccc;
+}
+.login .login-bg .login-inner input[type="text"]:-ms-input-placeholder {
+  color: #ccc;
+}
+.login .login-bg .login-inner input[type="submit"] {
+  width: 316px;
   background-color: #ff4400;
   border: none;
   color: #fff;
@@ -5822,7 +5844,7 @@ footer .footer-bar {
   transition: box-shadow 0.4s;
   transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
 }
-.login .login-bg .logo-inner input[type="submit"]:hover {
+.login .login-bg .login-inner input[type="submit"]:hover {
   -webkit-box-shadow: 0 0 10px #ff4400;
           box-shadow: 0 0 10px #ff4400;
   -webkit-transition: -webkit-box-shadow 0.4s;
@@ -5830,13 +5852,49 @@ footer .footer-bar {
   transition: box-shadow 0.4s;
   transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
 }
-.login .login-bg .logo-inner a {
+.login .login-bg .login-inner input[type="submit"].reg-submit {
+  background-color: #0b77ff;
+}
+.login .login-bg .login-inner input[type="submit"].reg-submit:hover {
+  -webkit-box-shadow: 0 0 10px #0b77ff;
+          box-shadow: 0 0 10px #0b77ff;
+}
+.login .login-bg .login-inner span {
+  width: 150px;
+  height: 46px;
+  line-height: 46px;
+  text-align: center;
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 5px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.login .login-bg .login-inner p {
+  font-size: 14px;
+  line-height: 14px;
+  color: #999;
+  padding-left: 22px;
+  position: relative;
+  margin: 10px 0;
+}
+.login .login-bg .login-inner p input {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+}
+.login .login-bg .login-inner a {
   font-size: 14px;
   line-height: 24px;
-  margin: 20px 0;
 }
-.login .login-bg .logo-inner.reg {
-  margin-top: 37px;
+.login .login-bg .login-inner a i {
+  color: #e60b16;
+}
+.login .login-bg .login-inner.reg {
+  margin-top: 34px;
 }
 
 /*# sourceMappingURL=me.css.map */
