@@ -1,0 +1,84 @@
+.login {
+  .login-bg {
+    height             : 594px;
+    background-position: center;
+    background-size    : cover;
+    background-image   : url("../images/login_bg.jpg");
+
+    .logo-inner {
+      background-color: #fff;
+      width           : 316px;
+      padding         : 30px;
+      float           : right;
+      margin-top      : 125px;
+
+      .tit {
+        color        : #333;
+        font-size    : 18px;
+        line-height  : 24px;
+        margin-bottom: 20px;
+      }
+
+      input {
+        &[type="text"] {
+          width              : 310px;
+          height             : 42px;
+          line-height        : 42px;
+          border             : 2px solid #ccc;
+          border-radius      : 5px;
+          outline            : none;
+          margin             : 10px 0;
+          background-position: left center;
+          background-repeat  : no-repeat;
+          @include tr(0.4s,border);
+
+          &.user {
+            width           : 260px;
+            padding         : 0 0 0 50px;
+            background-image: url("../images/user.jpg");
+          }
+
+          &.pwd {
+            width           : 260px;
+            padding         : 0 0 0 50px;
+            background-image: url("../images/pwd.jpg");
+          }
+
+          &:focus {
+            border    : 2px solid #99befb;
+            box-shadow: 0 0 5px #99befb;
+            @include tr(0.4s,border);
+          }
+        }
+
+        &[type="submit"] {
+          width           : 314px;
+          background-color: #ff4400;
+          border          : none;
+          color           : #fff;
+          height          : 46px;
+          line-height     : 46px;
+          border-radius   : 5px;
+          margin-top      : 8px;
+          padding         : 0;
+          @include tr(0.4s,box-shadow);
+
+          &:hover {
+            box-shadow: 0 0 10px #ff4400;
+            @include tr(0.4s,box-shadow);
+          }
+        }
+      }
+
+      a {
+        font-size  : 14px;
+        line-height: 24px;
+        margin     : 20px 0;
+      }
+
+      &.reg {
+        margin-top: 37px;
+      }
+    }
+  }
+}
