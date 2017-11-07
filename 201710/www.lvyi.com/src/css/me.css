@@ -3379,7 +3379,7 @@ footer .f-bar {
   padding: 100px;
 }
 .news .news-content .title {
-  font-size: 50px;
+  font-size: 40px;
   line-height: 1em;
   text-align: center;
   font-weight: lighter;
@@ -3394,6 +3394,16 @@ footer .f-bar {
 .news .news-content .content {
   padding-top: 70px;
   color: #000;
+}
+.news .news-content .content table {
+  border: 1px solid #ccc;
+}
+.news .news-content .content table tr {
+  border: 1px solid #ccc;
+}
+.news .news-content .content table td {
+  padding: 5px 20px;
+  border: 1px solid #ccc;
 }
 
 @media (max-width: 1440px) {

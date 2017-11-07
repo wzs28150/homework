@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -65,6 +65,22 @@ backtotop = function() {
     return false;
   });
 }
+
+numselect = function() {
+
+  $('.num-select .jia').click(function(event) {
+    /* Act on the event */
+    var val = Number($(this).prev('.number').val());
+    $(this).prev('.number').val(val + 1);
+  });
+  $('.num-select .jian').click(function(event) {
+    /* Act on the event */
+    var val = Number($(this).next('.number').val());
+    if (val > 1) {
+      $(this).next('.number').val(val - 1);
+    }
+  });
+}
 minheight = function() {
   var hh = $('header').height();
   var fh = $('footer').height();
@@ -89,22 +105,26 @@ loadtemp = function() {
     $('.jiazai').each(function(index, el) {
       var a = $(this).attr('id');
       var callback = $(this).attr('data-callback');
-      var result = callback.split(",");
+      if (callback) {
+        var result = callback.split(",");
+      }
+
 
       $.get("./" + a + ".html",
         function(tempdata) {
           $('#' + a).html(tempdata);
-          var myeval = eval;
-          for (var i = 0; i < result.length; i++) {
-            var r = result[i].split(":");
-            if (r[1]) {
-              myeval(r[0] + '(' + r[1] + ');');
-            } else {
-              myeval(r[0] + '();');
+          if (callback) {
+            var myeval = eval;
+            for (var i = 0; i < result.length; i++) {
+              var r = result[i].split(":");
+              if (r[1]) {
+                myeval(r[0] + '(' + r[1] + ');');
+              } else {
+                myeval(r[0] + '();');
+              }
+
             }
-
           }
-
         });
     });
 
@@ -133,6 +153,7 @@ initModule = function() {
   backtotop();
   loadtemp();
   scrollto();
+  numselect();
   animated_contents();
   $('.scroller-inner').scroll(function(event) {
     animated_contents();

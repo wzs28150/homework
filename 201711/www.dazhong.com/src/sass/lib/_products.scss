@@ -368,8 +368,25 @@
 }
 
 .num-select {
-  width  : 130px;
-  display: inline-block;
+  width              : 130px;
+  display            : inline-block;
+  -webkit-user-select: none;
+  -moz-user-select   : none;
+  -ms-user-select    : none;
+  user-select        : none;
+
+  input {
+    &.number {
+      display    : inline-block;
+      line-height: 40px;
+      text-align : center;
+      border     : 1px solid #a0a0a0;
+      width      : 78px;
+      padding    : 0;
+      margin-left: -1px;
+      outline    : none;
+    }
+  }
 
   span {
     display    : inline-block;
@@ -380,11 +397,6 @@
     &.jian {
       width : 24px;
       cursor: pointer;
-    }
-
-    &.number {
-      width      : 78px;
-      margin-left: -1px;
     }
 
     &.jia {
@@ -616,6 +628,10 @@
             width        : 54px;
             height       : 54px;
             border-radius: 100%;
+          }
+
+          .star {
+            display: inline-block;
           }
 
           .inner {

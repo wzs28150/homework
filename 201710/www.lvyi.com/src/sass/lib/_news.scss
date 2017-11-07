@@ -1,5 +1,4 @@
 /* CSS Document */
-
 .news {
 	.news-list {
 		padding-bottom: 100px;
@@ -33,7 +32,7 @@
 		padding: 100px;
 
 		.title {
-			font-size  : 50px;
+			font-size  : 40px;
 			line-height: 1em;
 			text-align : center;
 			font-weight: lighter;
@@ -50,6 +49,19 @@
 		.content {
 			padding-top: 70px;
 			color      : #000;
+
+			table {
+				border: 1px solid #ccc;
+
+				tr {
+					border: 1px solid #ccc;
+				}
+
+				td {
+					padding: 5px 20px;
+					border : 1px solid #ccc;
+				}
+			}
 		}
 	}
 }

@@ -3342,17 +3342,17 @@ header .header-bar .fl a {
 header .header-bar .fr i {
   color: #c30000;
 }
-header .header-middle {
-  height: 146px;
-}
-header .header-middle .logo {
+header .logo {
   float: left;
   padding-top: 42px;
 }
-header .header-middle .logo img {
+header .logo img {
   display: block;
   width: 262px;
   height: 86px;
+}
+header .header-middle {
+  height: 146px;
 }
 header .header-middle .h-search {
   float: left;
@@ -5233,6 +5233,20 @@ footer .footer-bar {
 .num-select {
   width: 130px;
   display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.num-select input.number {
+  display: inline-block;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #a0a0a0;
+  width: 78px;
+  padding: 0;
+  margin-left: -1px;
+  outline: none;
 }
 .num-select span {
   display: inline-block;
@@ -5243,10 +5257,6 @@ footer .footer-bar {
 .num-select span.jian {
   width: 24px;
   cursor: pointer;
-}
-.num-select span.number {
-  width: 78px;
-  margin-left: -1px;
 }
 .num-select span.jia {
   width: 24px;
@@ -5437,6 +5447,9 @@ footer .footer-bar {
   width: 54px;
   height: 54px;
   border-radius: 100%;
+}
+.pro_main_bottom .right .pro_main_pl .pl-list .item .star {
+  display: inline-block;
 }
 .pro_main_bottom .right .pro_main_pl .pl-list .item .inner {
   padding-left: 70px;
@@ -5744,5 +5757,4 @@ footer .footer-bar {
 #JD-stock .area-list .long-area {
   width: 170px;
 }
-
 /*# sourceMappingURL=me.css.map */

@@ -30,19 +30,19 @@ header {
     }
   }
 
+  .logo {
+    float      : left;
+    padding-top: 42px;
+
+    img {
+      display: block;
+      width  : 262px;
+      height : 86px;
+    }
+  }
+
   .header-middle {
     height: 146px;
-
-    .logo {
-      float      : left;
-      padding-top: 42px;
-
-      img {
-        display: block;
-        width  : 262px;
-        height : 86px;
-      }
-    }
 
     .h-search {
       float       : left;
