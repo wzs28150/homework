@@ -1,4 +1,4 @@
-var brandModule, banner, new_pro, jingxuan;
+var jingxuanModule, banner, new_pro, jingxuan;
 
 jingxuan = function() {
   var new_proswiper = new Swiper('.jingxuan-main .swiper-container', {
@@ -7,7 +7,7 @@ jingxuan = function() {
     prevButton: '.jingxuan-main .button-prev',
   });
 }
-indexModule = function() {
+jingxuanModule = function() {
   //设置导航选中
   navactive(1);
   //设置分类默认打开
@@ -17,4 +17,4 @@ indexModule = function() {
 
 };
 
-indexModule();
+jingxuanModule();

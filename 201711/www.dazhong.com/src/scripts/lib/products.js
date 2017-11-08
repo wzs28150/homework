@@ -1,4 +1,4 @@
-var brandModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore, select, pro_main_top, shoucang;
+var proModule, banner, multiple, tiaojiao, duoxuan, pajax, getUrlParam, changeURLArg, addmore, select, pro_main_top, shoucang;
 
 //筛选选项
 multiple = function() {
@@ -229,7 +229,7 @@ shoucang = function() {
   });
 }
 
-indexModule = function() {
+proModule = function() {
   //设置导航选中
   navactive(0);
   $('.change_duoxuan').attr('checked', false);
@@ -247,4 +247,4 @@ indexModule = function() {
   shoucang();
 };
 
-indexModule();
+proModule();

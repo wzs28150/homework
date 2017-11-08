@@ -1,10 +1,10 @@
-var brandModule, banner, new_pro, hot_pro;
+var huodongModule, banner, new_pro, hot_pro;
 
 
-indexModule = function() {
+huodongModule = function() {
   //设置导航选中
   navactive(2);
 
 };
 
-indexModule();
+huodongModule();

@@ -13,10 +13,8 @@ feichangqiehuan = function() {
   });
 }
 brandModule = function() {
-  //设置分类默认打开
-  fenleishow();
   //设置导航选中
-  navactive(0);
+  navactive(6);
   //非常品牌切换
   feichangqiehuan();
 };
