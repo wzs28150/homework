@@ -8,6 +8,11 @@
   cursor: pointer;
   overflow: hidden; margin-bottom: 20px;
 }
+.modal-body a,.modal-body button{
+  -webkit-box-sizing         : border-box;
+  -moz-box-sizing            : border-box;
+  box-sizing                 : border-box;
+}
 
 .avatar-view img {
   width: 100%;
