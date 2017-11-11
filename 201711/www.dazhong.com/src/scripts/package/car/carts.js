@@ -228,24 +228,48 @@ $(function() {
     $sonCheckBox = $('.son_check');
     totalMoney();
   })
+  //======================================积分==========================================
+  $('.dojifen').click(function(event) {
+    /* Act on the event */
+    if ($('.son_check:checked').length > 0) {
+      setTimeout(function() {
+        totalMoney();
+      }, 10);
+    }
 
+
+  });
   //======================================总计==========================================
 
-  function totalMoney() {
+  function totalMoney(total_jifen) {
     var total_money = 0;
     var total_count = 0;
+    var total_jifen = 0;
+    var total_youhui = 0;
+    var total_yunfei = 0;
     var calBtn = $('.calBtn a');
     $sonCheckBox.each(function() {
       if ($(this).is(':checked')) {
-        var goods = parseInt($(this).parents('.order_lists').find('.sum_price').html().substring(1));
-        var num = parseInt($(this).parents('.order_lists').find('.sum').val());
+        var goods = parseFloat($(this).parents('.order_lists').find('.sum_price').html().substring(1));
+        var num = parseFloat($(this).parents('.order_lists').find('.sum').val());
         total_money += goods;
         total_count += num;
       }
     });
-    $('.total_text').html('￥' + total_money);
-    $('.piece_num').html(total_count);
+    total_jifen = Math.floor(parseInt($('#totaljf').html()) / 100) * 0.5;
+    $('#syjf').html('￥' + total_jifen);
+    if ($('#jifen').is(':checked')) {
+      total_jifen = parseFloat($('#syjf').html().substring(1));
+    } else {
+      total_jifen = 0;
+    }
 
+    $('#cpje').html('￥' + total_money);
+    $('.piece_num').html(total_count);
+    total_youhui = parseFloat($('#cxyh').html().substring(1));
+    total_yunfei = parseFloat($('#ygyf').html().substring(1));
+    var real_money = total_money - total_jifen - total_youhui + total_yunfei;
+    $('.total_text').html('￥' + real_money);
     // console.log(total_money,total_count);
 
     if (total_money != 0 && total_count != 0) {
