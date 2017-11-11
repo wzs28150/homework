@@ -18,9 +18,11 @@ header {
     }
 
     .fl {
-      a {
+      .red {
         color: #c30000;
       }
+
+      a {}
     }
 
     .fr {
@@ -38,6 +40,34 @@ header {
       display: block;
       width  : 262px;
       height : 86px;
+    }
+  }
+
+  .car-jindu {
+    ul {
+      li {
+        width      : 150px;
+        text-align : center;
+        font-size  : 16px;
+        margin-left: 1px;
+
+        span {
+          display         : block;
+          width           : 150px;
+          height          : 6px;
+          border-radius   : 6px;
+          background-color: #bfbfbf;
+          margin-bottom   : 15px;
+        }
+
+        &.on {
+          color: #3ea600;
+
+          span {
+            background-color: #3ea600;
+          }
+        }
+      }
     }
   }
 
@@ -297,6 +327,8 @@ header {
       }
     }
   }
+
+  &.car-header {}
 }
 
 article {

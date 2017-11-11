@@ -1,0 +1,19 @@
+.car {
+  .car-tit {
+    border-bottom: 1px solid #dcdcdc;
+
+    .tit {
+      font-size   : 24px;
+      margin-right: 30px;
+    }
+
+    #list1 {
+      font-size: 16px;
+
+      .dt {
+        margin-right: 30px;
+        font-size   : 16px;
+      }
+    }
+  }
+}
