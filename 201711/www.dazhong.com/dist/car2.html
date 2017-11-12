@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link rel="stylesheet" href="./src/css/carts.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="scroller">
+
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+
+
+  <div class="scroller-inner">
+    <div class="scroller-content">
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <div id="car_header" class="jiazai" data-callback=""></div>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <main>
+        <article class="car">
+          <section class="car-tit p_B30 p_T30 containern_1200">
+            <div class="tit fl">填写核对订单信息</div>
+            <ul class="fl" id="list1" style="width:620px;">
+              <li id="summary-stock">
+                <div class="dt">送至：</div>
+                <div class="dd">
+                  <div id="store-selector">
+                    <div class="text">
+                      <div></div><b></b></div>
+                  </div>
+                  <!--store-selector end-->
+                  <div id="store-prompt"><strong></strong></div>
+                  <!--store-prompt end--->
+                </div>
+              </li>
+            </ul>
+            <a class="fr jx" href="#">继续购物></a>
+            <div class="clearfix"></div>
+          </section>
+          <section class="shouhuo-info containern_1200 m_T50">
+            <div class="tit">收货信息</div>
+            <div class="inner m_T20">
+              <div class="tit">新增收货地址</div>
+              <div class="add p_T30">
+                <form class="" action="index.html" method="post">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <th width="80">收货人：</th>
+                        <td><input type="text"></td>
+                      </tr>
+                      <tr>
+                        <th>所在地区：</th>
+                        <td><select name="" id=""><option value="">黑龙江</option></select><input type="text" placeholder="请选择省市区"></td>
+                      </tr>
+                      <tr>
+                        <th>详细地址：</th>
+                        <td><textarea name="" id=""></textarea></td>
+                      </tr>
+                      <tr>
+                        <th>邮政编码：</th>
+                        <td><input type="text" placeholder="如果您不清楚区号，请填写000000"></td>
+                      </tr>
+                      <tr>
+                        <th>手机号码：</th>
+                        <td><input type="text"></td>
+                      </tr>
+                      <tr>
+                        <th>座机号码：</th>
+                        <td><input type="text" style="width:120px;" placeholder="区号"> - <input type="text" style="width:120px;" placeholder="电话号码"> - <input type="text" style="width:120px;" placeholder="分机"></td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <p>&nbsp;</p><input id="moren" type="checkbox"><label for="moren" style="margin:0;"></label> &nbsp;设置为默认地址</td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <input type="submit" name="" value="保存">
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+              </div>
+              <div class="list m_T40">
+                <table>
+                  <tr>
+                    <th width="50">收货人</th>
+                    <th width="150">所在地区</th>
+                    <th width="210">详细地址</th>
+                    <th width="50">邮编</th>
+                    <th width="70">电话/手机</th>
+                    <th width="70">操作</th>
+                    <th width="100"></th>
+                  </tr>
+                  <tr>
+                    <td>王佳欣</td>
+                    <td>黑龙江省 哈尔滨市 南岗 区 先锋路街道</td>
+                    <td>先锋路街道 湘江路14号星河国际 巴黎座401</td>
+                    <td>151100</td>
+                    <td>15******43</td>
+                    <td><a class="set" href="">修改</a> | <a class="set" href="">删除</a></td>
+                    <td><a class="setmr" href="">设为默认</a></td>
+                  </tr>
+                  <tr>
+                    <td>王佳欣</td>
+                    <td>黑龙江省 哈尔滨市 南岗 区 先锋路街道</td>
+                    <td>先锋路街道 湘江路14号星河国际 巴黎座401</td>
+                    <td>151100</td>
+                    <td>15******43</td>
+                    <td><a class="set" href="">修改</a> | <a class="set" href="">删除</a></td>
+                    <td><a class="setmr on" href="">默认地址</a></td>
+                  </tr>
+                  <tr>
+                    <td>王佳欣</td>
+                    <td>黑龙江省 哈尔滨市 南岗 区 先锋路街道</td>
+                    <td>先锋路街道 湘江路14号星河国际 巴黎座401</td>
+                    <td>151100</td>
+                    <td>15******43</td>
+                    <td><a class="set" href="">修改</a> | <a class="set" href="">删除</a></td>
+                    <td><a class="setmr" href="">设为默认</a></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section class="cartMain m_T30">
+            <div class="tit">商品清单<a class="fr" href="">返回修改购物车</a></div>
+            <div class="cartMain_hd clearfix" >
+              <ul class="order_lists cartTop" style="background:#eeeeee;">
+                <li class="list_con">商品</li>
+                <li class="list_price" style="width:120px;">单价</li>
+                <li class="list_amount" style="width:200px;"><i>数量</i></li>
+                <li class="list_zhongliang">重量</li>
+                <li class="list_sum">小计</li>
+
+              </ul>
+            </div>
+            <div class="cartBox">
+              <div class="order_content">
+                <ul class="order_lists">
+                  <li class="list_chk" style="width:30px;">
+
+                  </li>
+                  <li class="list_con" style="width:570px;">
+                    <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                    <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                  </li>
+                  <li class="list_price" style="width:120px;">
+                    <p class="price">￥980</p>
+                  </li>
+                  <li class="list_amount" style="width:200px;">
+                    <div class="tt" >
+                      1
+                    </div>
+                  </li>
+                  <li class="list_zhongliang">
+                    <p class="sum_zl">1.92</p>
+                  </li>
+                  <li class="list_sum">
+                    <p class="sum_price">￥980</p>
+                  </li>
+
+                </ul>
+                <ul class="order_lists">
+                  <li class="list_chk" style="width:30px;">
+
+                  </li>
+                  <li class="list_con" style="width:570px;">
+                    <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                    <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                  </li>
+                  <li class="list_price" style="width:120px;">
+                    <p class="price">￥780</p>
+                  </li>
+                  <li class="list_amount"  style="width:200px;">
+                    <div class="tt">
+                      1
+                    </div>
+                  </li>
+                  <li class="list_zhongliang">
+                    <p class="sum_zl">1.92</p>
+                  </li>
+                  <li class="list_sum">
+                    <p class="sum_price">￥780</p>
+                  </li>
+                </ul>
+                <ul class="order_lists">
+                  <li class="list_chk" style="width:30px;">
+
+                  </li>
+                  <li class="list_con" style="width:570px;">
+                    <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                    <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                  </li>
+                  <li class="list_price" style="width:120px;">
+                    <p class="price">￥180</p>
+                  </li>
+                  <li class="list_amount"  style="width:200px;">
+                    <div class="tt">
+                      1
+                    </div>
+                  </li>
+                  <li class="list_zhongliang">
+                    <p class="sum_zl">1.92</p>
+                  </li>
+                  <li class="list_sum">
+                    <p class="sum_price">￥180</p>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <!--底部-->
+            <div class="bar-wrapper">
+              <div class="bar-left">
+                <input type="checkbox" id="all" class="whole_check">
+                <label style="margin-top: 1px; display:block; position:relative; " for="all"></label> <label class="type" for="all">全选</label>
+                <a href="">收藏</a> <a class="delallBtn" href="javascript:void(0)">删除</a>
+              </div>
+              <div class="bar-right">
+                <table>
+                  <tr>
+                    <td width="126">总重量：<i style="color:#999;">2kg</i></td>
+                    <td width="120"><label class="vis" for=""> </label>预估运费：</td>
+                    <td class="text-right"><i id="ygyf">¥0.00</i></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><label class="vis" for=""> </label>商品金额：</td>
+                    <td class="text-right"><i id="cpje">¥116.30</i></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><label class="vis" for=""> </label>促销优惠：</td>
+                    <td class="text-right">-<i id="cxyh">¥0.00</i></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><input type="checkbox">
+                      <label for="jifen" class="vis"> </label>积分抵扣：</td>
+                    <td class="text-right">-<i id="syjf">¥0.00</i></td>
+                  </tr>
+                </table>
+
+                <div class="clearfix total p_T10 m_T30">
+                  <div class="piece">支付金额：</div>
+                  <div class="totalMoney"><strong class="total_text">¥116.30</strong></div>
+                </div>
+                <a class="m_T20 backcar" href="">返回修改购物车</a><div class="goBtn m_T20"><a href="car3.html">提交订单</a></div>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+      <div id="footer_quick" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+      <div id="footer" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+    </div>
+  </div>
+  <!-- 滚动条插件 -->
+  <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+  <!-- 滚动条插件 -->
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/location/location.js"></script>
+  <!-- index  -->
+  <script src="./src/scripts/package/car/carts.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      fenleishow();
+    });
+  </script>
+
+
+</body>
+
+</html>

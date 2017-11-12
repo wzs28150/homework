@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link rel="stylesheet" href="./src/css/carts.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="scroller">
+
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+
+
+  <div class="scroller-inner">
+    <div class="scroller-content">
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <div id="car_header" class="jiazai" data-callback=""></div>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <main>
+        <article class="car">
+          <section class="car-tit p_B30 p_T30 containern_1200">
+            <div class="tit fl">我的购物车</div>
+            <ul class="fl" id="list1" style="width:620px;">
+              <li id="summary-stock">
+                <div class="dt">送至：</div>
+                <div class="dd">
+                  <div id="store-selector">
+                    <div class="text">
+                      <div></div><b></b></div>
+                  </div>
+                  <!--store-selector end-->
+                  <div id="store-prompt"><strong></strong></div>
+                  <!--store-prompt end--->
+                </div>
+              </li>
+            </ul>
+            <a class="fr jx" href="#">继续购物></a>
+            <div class="clearfix"></div>
+          </section>
+          <section class="cartMain">
+            <div class="cartMain_hd clearfix">
+              <ul class="order_lists cartTop">
+                <li class="list_con">商品</li>
+                <li class="list_price">单价</li>
+                <li class="list_amount"><i>数量</i></li>
+                <li class="list_zhongliang">重量</li>
+                <li class="list_sum">小计</li>
+                <li class="list_op">操作</li>
+              </ul>
+            </div>
+            <form class="form1" action="car2.html" method="get">
+              <div class="cartBox">
+                <div class="shop_info">
+                  <div class="all_check">
+                    <input type="checkbox" id="shop_a" class="shopChoice">
+                    <label for="shop_a" class="shop"></label>
+                  </div>
+                  <div class="shop_name">
+                    <label for="shop_a" class="type">生鲜品</label>
+                  </div>
+                </div>
+                <div class="order_content">
+                  <ul class="order_lists">
+                    <li class="list_chk">
+                      <input type="checkbox" id="checkbox_1" class="son_check">
+                      <label for="checkbox_1"></label>
+                    </li>
+                    <li class="list_con">
+                      <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                      <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                    </li>
+                    <li class="list_price">
+                      <p class="price">￥980</p>
+                    </li>
+                    <li class="list_amount">
+                      <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="1" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                      </div>
+                    </li>
+                    <li class="list_zhongliang">
+                      <p class="sum_zl">1.92</p>
+                    </li>
+                    <li class="list_sum">
+                      <p class="sum_price">￥980</p>
+                    </li>
+                    <li class="list_op">
+                      <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                  </ul>
+                  <ul class="order_lists">
+                    <li class="list_chk">
+                      <input type="checkbox" id="checkbox_2" class="son_check">
+                      <label for="checkbox_2"></label>
+                    </li>
+                    <li class="list_con">
+                      <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                      <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                    </li>
+                    <li class="list_price">
+                      <p class="price">￥780</p>
+                    </li>
+                    <li class="list_amount">
+                      <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="1" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                      </div>
+                    </li>
+                    <li class="list_zhongliang">
+                      <p class="sum_zl">1.92</p>
+                    </li>
+                    <li class="list_sum">
+                      <p class="sum_price">￥780</p>
+                    </li>
+                    <li class="list_op">
+                      <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                  </ul>
+                  <ul class="order_lists">
+                    <li class="list_chk">
+                      <input type="checkbox" id="checkbox_3" class="son_check">
+                      <label for="checkbox_3"></label>
+                    </li>
+                    <li class="list_con">
+                      <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                      <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                    </li>
+                    <li class="list_price">
+                      <p class="price">￥180</p>
+                    </li>
+                    <li class="list_amount">
+                      <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="1" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                      </div>
+                    </li>
+                    <li class="list_zhongliang">
+                      <p class="sum_zl">1.92</p>
+                    </li>
+                    <li class="list_sum">
+                      <p class="sum_price">￥180</p>
+                    </li>
+                    <li class="list_op">
+                      <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="cartBox">
+                <div class="shop_info">
+                  <div class="all_check">
+
+                    <input type="checkbox" id="shop_b" class="shopChoice">
+                    <label for="shop_b" class="shop"></label>
+                  </div>
+                  <div class="shop_name">
+                    <label for="shop_b" class="type">生鲜品</label>
+                  </div>
+                </div>
+                <div class="order_content">
+                  <ul class="order_lists">
+                    <li class="list_chk">
+                      <input type="checkbox" id="checkbox_4" class="son_check">
+                      <label for="checkbox_4"></label>
+                    </li>
+                    <li class="list_con">
+                      <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                      <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                    </li>
+                    <li class="list_price">
+                      <p class="price">￥980</p>
+                    </li>
+                    <li class="list_amount">
+                      <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="1" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                      </div>
+                    </li>
+                    <li class="list_zhongliang">
+                      <p class="sum_zl">1.92</p>
+                    </li>
+                    <li class="list_sum">
+                      <p class="sum_price">￥980</p>
+                    </li>
+                    <li class="list_op">
+                      <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                  </ul>
+                  <ul class="order_lists">
+                    <li class="list_chk">
+                      <input type="checkbox" id="checkbox_5" class="son_check">
+                      <label for="checkbox_5"></label>
+                    </li>
+                    <li class="list_con">
+                      <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                      <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                    </li>
+                    <li class="list_price">
+                      <p class="price">￥780</p>
+                    </li>
+                    <li class="list_amount">
+                      <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="1" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                      </div>
+                    </li>
+                    <li class="list_zhongliang">
+                      <p class="sum_zl">1.92</p>
+                    </li>
+                    <li class="list_sum">
+                      <p class="sum_price">￥780</p>
+                    </li>
+                    <li class="list_op">
+                      <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                  </ul>
+                  <ul class="order_lists">
+                    <li class="list_chk">
+                      <input type="checkbox" id="checkbox_6" class="son_check">
+                      <label for="checkbox_6"></label>
+                    </li>
+                    <li class="list_con">
+                      <div class="list_img"><a href="javascript:;"><img src="./src/images/pro_pic1.jpg" alt=""></a></div>
+                      <div class="list_text"><a href="javascript:;">【东北自营】 进口柠檬(6枚家庭装) <i>(预售商品)</i></a></div>
+                    </li>
+                    <li class="list_price">
+                      <p class="price">￥180</p>
+                    </li>
+                    <li class="list_amount">
+                      <div class="amount_box">
+                        <a href="javascript:;" class="reduce reSty">-</a>
+                        <input type="text" value="1" class="sum">
+                        <a href="javascript:;" class="plus">+</a>
+                      </div>
+                    </li>
+                    <li class="list_zhongliang">
+                      <p class="sum_zl">1.92</p>
+                    </li>
+                    <li class="list_sum">
+                      <p class="sum_price">￥180</p>
+                    </li>
+                    <li class="list_op">
+                      <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+
+            <!--底部-->
+            <div class="bar-wrapper">
+              <div class="bar-left">
+                <input type="checkbox" id="all" class="whole_check">
+                <label style="margin-top: 1px; display:block; position:relative; " for="all"></label> <label class="type" for="all">全选</label>
+                <a href="">收藏</a> <a class="delallBtn" href="javascript:void(0)">删除</a>
+              </div>
+              <div class="bar-right">
+                <table>
+                  <tr>
+                    <td width="126">总重量：<i style="color:#999;">2kg</i></td>
+                    <td width="120"><label class="vis" for=""> </label>预估运费：</td>
+                    <td class="text-right"><i id="ygyf">¥0.00</i></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><label class="vis" for=""> </label>商品金额：</td>
+                    <td class="text-right"><i id="cpje">¥0.00</i></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><label class="vis" for=""> </label>促销优惠：</td>
+                    <td class="text-right">-<i id="cxyh">¥0.00</i></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td><input type="checkbox" id="jifen" >
+                    <label for="jifen" class="dojifen"> </label>使用积分：</td>
+                    <td class="text-right">-<i id="syjf">¥0.00</i></td>
+                  </tr>
+                </table>
+                <div class="totaljf">(现有积分<i id="totaljf">150</i>，满100可抵0.50元)</div>
+                <div class="clearfix total p_T10 m_T30">
+                  <div class="piece">已选<strong class="piece_num">0</strong><strong class="piece_num_dw">件</strong></div>
+                  <div class="totalMoney"><strong class="total_text">￥0.00</strong></div>
+                </div>
+                <div class="calBtn m_T20"><a href="javascript:;">去结算</a></div>
+              </div>
+            </div>
+          </section>
+          <section class="model_bg"></section>
+          <section class="my_model">
+            <p class="title">删除宝贝<span class="closeModel">X</span></p>
+            <p>您确认要删除该宝贝吗？</p>
+            <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;" class="dialog-close">关闭</a></div>
+          </section>
+        </article>
+      </main>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+      <div id="footer_quick" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+      <div id="footer" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+    </div>
+  </div>
+  <!-- 滚动条插件 -->
+  <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+  <!-- 滚动条插件 -->
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/location/location.js"></script>
+  <!-- index  -->
+  <script src="./src/scripts/package/car/carts.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      fenleishow();
+    });
+  </script>
+
+
+</body>
+
+</html>
