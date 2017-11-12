@@ -3,6 +3,10 @@ header {
   position     : relative;
   z-index      : 99;
 
+  &.on {
+    z-index: 1;
+  }
+
   .header-bar {
     background-color: #f5f5f5;
     font-size       : 12px;

@@ -182,12 +182,13 @@ $(function() {
   $('.delBtn').click(function() {
     $order_lists = $(this).parents('.order_lists');
     $order_content = $order_lists.parents('.order_content');
+    $('header').addClass('on');
     $('.model_bg').fadeIn(300);
     $('.my_model').fadeIn(300);
   });
   $('.delallBtn').click(function() {
-
     $('.dialog-sure').addClass('all');
+    $('header').addClass('on');
     $('.model_bg').fadeIn(300);
     $('.my_model').fadeIn(300);
   });
@@ -202,6 +203,7 @@ $(function() {
   function closeM() {
     $('.model_bg').fadeOut(300);
     $('.my_model').fadeOut(300);
+    $('header').removeClass('on');
   }
   //确定按钮，移除商品
   $('.dialog-sure').click(function() {

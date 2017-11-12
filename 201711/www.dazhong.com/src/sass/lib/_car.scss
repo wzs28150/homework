@@ -15,6 +15,10 @@
         font-size   : 16px;
       }
     }
+
+    .jx {
+      line-height: 30px;
+    }
   }
 
   .shouhuo-info {
@@ -221,6 +225,170 @@
       line-height    : 50px;
       text-align     : center;
       border-radius  : 5px;
+    }
+  }
+
+  .zffs {
+    .tit {
+      color      : #3ea600;
+      font-size  : 18px;
+      line-height: 1em;
+    }
+
+    .inner {
+      border          : 1px solid #dcdcdc;
+      background-color: #fcfcfc;
+      padding         : 50px;
+      margin-top      : 25px;
+      margin-bottom   : 138px;
+
+      input[type=radio] {
+        display: none;
+      }
+
+      label {
+        width              : 172px;
+        height             : 54px;
+        border             : 1px solid #d9d9d9;
+        display            : inline-block;
+        background-position: center;
+        background-repeat  : no-repeat;
+        cursor             : pointer;
+        margin-right       : 40px;
+        position           : relative;
+
+        i {
+          position       : absolute;
+          top            : 0;
+          left           : 0;
+          width          : 100%;
+          height         : 100%;
+          display        : block;
+          background     : url("../images/zffsxz.png") center;
+          background-size: cover;
+          visibility     : hidden;
+          opacity        : 0;
+        }
+
+        &[for=wxzf] {
+          background-image: url("../images/wxzf.png");
+        }
+
+        &[for=zfb] {
+          background-image: url("../images/zfb.png");
+        }
+      }
+
+      input[type=radio]:checked + label {
+        border: 1px solid #00a8f2;
+
+        i {
+          visibility: visible;
+          opacity   : 1;
+          @include tr(0.4s,opacity);
+        }
+      }
+
+      .zfje {
+        margin-top    : 47px;
+        color         : #333;
+        border-bottom : 1px solid #dcdcdc;
+        padding-bottom: 60px;
+
+        i {
+          color       : #eb3c40;
+          font-size   : 23px;
+          padding-left: 25px;
+        }
+      }
+
+      .ljzf {
+        display         : block;
+        width           : 210px;
+        background-color: #3ea600;
+        color           : #fff;
+        line-height     : 40px;
+        text-align      : center;
+        margin-top      : 30px;
+        border-radius   : 6px;
+        @include tr(0.4s,box-shadow);
+
+        &:hover {
+          box-shadow: 0 0 10px #3ea600;
+          @include tr(0.4s,box-shadow);
+        }
+      }
+    }
+  }
+
+  .ddzt {
+    .tit {
+      color      : #3ea600;
+      font-size  : 18px;
+      line-height: 1em;
+    }
+
+    .inner {
+      border          : 1px solid #dcdcdc;
+      background-color: #fcfcfc;
+      padding         : 50px;
+      margin-top      : 25px;
+      margin-bottom   : 138px;
+
+      .gx {
+        font-size          : 18px;
+        color              : #3ea600;
+        height             : 43px;
+        line-height        : 43px;
+        padding-left       : 60px;
+        background-image   : url("../images/gx.png");
+        background-position: left center;
+        background-repeat  : no-repeat;
+      }
+
+      .ddh {
+        margin-top    : 47px;
+        color         : #333;
+        border-bottom : 1px solid #dcdcdc;
+        padding-bottom: 60px;
+        font-size     : 18px;
+        padding-left  : 60px;
+      }
+
+      .jxgw {
+        display         : inline-block;
+        width           : 210px;
+        background-color: #3ea600;
+        color           : #fff;
+        line-height     : 40px;
+        text-align      : center;
+        margin-top      : 30px;
+        margin-right    : 30px;
+        border-radius   : 6px;
+        @include tr(0.4s,box-shadow);
+
+        &:hover {
+          box-shadow: 0 0 10px #3ea600;
+          @include tr(0.4s,box-shadow);
+        }
+      }
+
+      .ckdd {
+        display         : inline-block;
+        width           : 210px;
+        background-color: #999;
+        color           : #fff;
+        line-height     : 40px;
+        text-align      : center;
+        margin-top      : 30px;
+        border-radius   : 6px;
+        @include tr(0.4s,box-shadow);
+
+        &:hover {
+          box-shadow: 0 0 10px #999;
+          @include tr(0.4s,box-shadow);
+        }
+      }
     }
   }
 }

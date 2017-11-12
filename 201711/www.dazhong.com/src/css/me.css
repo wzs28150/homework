@@ -977,7 +977,7 @@ main {
   transition: all 0.4s, -webkit-transform 0.4s;
   transition: all 0.4s, transform 0.4s;
   transition: all 0.4s, transform 0.4s, -webkit-transform 0.4s;
-  z-index: 99;
+  z-index: 1;
 }
 
 body.on main {
@@ -3327,6 +3327,9 @@ header {
   border-bottom: 2px solid #2d8800;
   position: relative;
   z-index: 99;
+}
+header.on {
+  z-index: 1;
 }
 header .header-bar {
   background-color: #f5f5f5;
@@ -6790,6 +6793,9 @@ footer .footer-bar {
   margin-right: 30px;
   font-size: 16px;
 }
+.car .car-tit .jx {
+  line-height: 30px;
+}
 .car .shouhuo-info > .tit {
   font-size: 18px;
   line-height: 1em;
@@ -6957,5 +6963,166 @@ footer .footer-bar {
   line-height: 50px;
   text-align: center;
   border-radius: 5px;
+}
+.car .zffs .tit {
+  color: #3ea600;
+  font-size: 18px;
+  line-height: 1em;
+}
+.car .zffs .inner {
+  border: 1px solid #dcdcdc;
+  background-color: #fcfcfc;
+  padding: 50px;
+  margin-top: 25px;
+  margin-bottom: 138px;
+}
+.car .zffs .inner input[type=radio] {
+  display: none;
+}
+.car .zffs .inner label {
+  width: 172px;
+  height: 54px;
+  border: 1px solid #d9d9d9;
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin-right: 40px;
+  position: relative;
+}
+.car .zffs .inner label i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: url("../images/zffsxz.png") center;
+  background-size: cover;
+  visibility: hidden;
+  opacity: 0;
+}
+.car .zffs .inner label[for=wxzf] {
+  background-image: url("../images/wxzf.png");
+}
+.car .zffs .inner label[for=zfb] {
+  background-image: url("../images/zfb.png");
+}
+.car .zffs .inner input[type=radio]:checked + label {
+  border: 1px solid #00a8f2;
+}
+.car .zffs .inner input[type=radio]:checked + label i {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+.car .zffs .inner .zfje {
+  margin-top: 47px;
+  color: #333;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 60px;
+}
+.car .zffs .inner .zfje i {
+  color: #eb3c40;
+  font-size: 23px;
+  padding-left: 25px;
+}
+.car .zffs .inner .ljzf {
+  display: block;
+  width: 210px;
+  background-color: #3ea600;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 6px;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+}
+.car .zffs .inner .ljzf:hover {
+  -webkit-box-shadow: 0 0 10px #3ea600;
+          box-shadow: 0 0 10px #3ea600;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+}
+.car .ddzt .tit {
+  color: #3ea600;
+  font-size: 18px;
+  line-height: 1em;
+}
+.car .ddzt .inner {
+  border: 1px solid #dcdcdc;
+  background-color: #fcfcfc;
+  padding: 50px;
+  margin-top: 25px;
+  margin-bottom: 138px;
+}
+.car .ddzt .inner .gx {
+  font-size: 18px;
+  color: #3ea600;
+  height: 43px;
+  line-height: 43px;
+  padding-left: 60px;
+  background-image: url("../images/gx.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.car .ddzt .inner .ddh {
+  margin-top: 47px;
+  color: #333;
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 60px;
+  font-size: 18px;
+  padding-left: 60px;
+}
+.car .ddzt .inner .jxgw {
+  display: inline-block;
+  width: 210px;
+  background-color: #3ea600;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 30px;
+  margin-right: 30px;
+  border-radius: 6px;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+}
+.car .ddzt .inner .jxgw:hover {
+  -webkit-box-shadow: 0 0 10px #3ea600;
+          box-shadow: 0 0 10px #3ea600;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+}
+.car .ddzt .inner .ckdd {
+  display: inline-block;
+  width: 210px;
+  background-color: #999;
+  color: #fff;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 6px;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
+}
+.car .ddzt .inner .ckdd:hover {
+  -webkit-box-shadow: 0 0 10px #999;
+          box-shadow: 0 0 10px #999;
+  -webkit-transition: -webkit-box-shadow 0.4s;
+  transition: -webkit-box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s, -webkit-box-shadow 0.4s;
 }
 /*# sourceMappingURL=me.css.map */
