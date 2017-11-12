@@ -236,8 +236,6 @@ $(function() {
         totalMoney();
       }, 10);
     }
-
-
   });
   //======================================总计==========================================
 
@@ -275,6 +273,10 @@ $(function() {
     if (total_money != 0 && total_count != 0) {
       if (!calBtn.hasClass('btn_sty')) {
         calBtn.addClass('btn_sty');
+        calBtn.click(function(event) {
+          /* Act on the event */
+          $('.form1').submit();
+        });
       }
     } else {
       if (calBtn.hasClass('btn_sty')) {
