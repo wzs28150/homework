@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+
+
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="scroller">
+
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+
+
+  <div class="scroller-inner">
+    <div class="scroller-content">
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <div id="header" class="jiazai" data-callback=""></div>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <main>
+        <article class="user">
+          <section class="position container_1200 p_T20 p_B20">
+            <a href="">用户中心</a> &gt; <a href="">订单中心</a> &gt; <a href="">我的订单</a>
+          </section>
+          <section class="user-inner container_1200">
+            <div id="user_nav" class="jiazai" data-callback=""></div>
+            <div class="user-main">
+              <div class="user-address">
+                <div class="tit">快递地址</div>
+                <div class="inner">
+                  <a href="javascript:void(0);" class="add-address">新增收货地址</a>
+                  <table>
+                    <tr>
+                      <th width="50">收货人</th>
+                      <th width="150">所在地区</th>
+                      <th width="210">详细地址</th>
+                      <th width="50">邮编</th>
+                      <th width="70">电话/手机</th>
+                      <th width="70">操作</th>
+                      <th width="100"></th>
+                    </tr>
+                    <tr>
+                      <td>王佳欣</td>
+                      <td>黑龙江省 哈尔滨市 南岗 区   先锋路街道</td>
+                      <td>先锋路街道 湘江路14号星河国际 巴黎座401</td>
+                      <td>151100</td>
+                      <td>15******43</td>
+                      <td><a class="set" href="">修改</a> | <a class="set" href="">删除</a></td>
+                      <td><a class="setmr" href="">设为默认</a></td>
+                    </tr>
+                    <tr>
+                      <td>王佳欣</td>
+                      <td>黑龙江省 哈尔滨市 南岗 区   先锋路街道</td>
+                      <td>先锋路街道 湘江路14号星河国际 巴黎座401</td>
+                      <td>151100</td>
+                      <td>15******43</td>
+                      <td><a class="set" href="">修改</a> | <a class="set" href="">删除</a></td>
+                      <td><a class="setmr on" href="">默认地址</a></td>
+                    </tr>
+                    <tr>
+                      <td>王佳欣</td>
+                      <td>黑龙江省 哈尔滨市 南岗 区   先锋路街道</td>
+                      <td>先锋路街道 湘江路14号星河国际 巴黎座401</td>
+                      <td>151100</td>
+                      <td>15******43</td>
+                      <td><a class="set" href="">修改</a> | <a class="set" href="">删除</a></td>
+                      <td><a class="setmr" href="">设为默认</a></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </article>
+      </main>
+      <div class="address-tan-bg"></div>
+      <div class="address-tan">
+        <a href="javascript:void(0);" class="close"></a>
+        <form class="" action="index.html" method="post">
+          <table>
+            <tr>
+              <th width="80">收货人：</th>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <th>所在地区：</th>
+              <td><select name="" id=""><option value="">黑龙江</option></select><input type="text" placeholder="请选择省市区"></td>
+            </tr>
+            <tr>
+              <th>详细地址：</th>
+              <td><textarea name="" id="" ></textarea></td>
+            </tr>
+            <tr>
+              <th>邮政编码：</th>
+              <td><input type="text" placeholder="如果您不清楚区号，请填写000000"></td>
+            </tr>
+            <tr>
+              <th>手机号码：</th>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <th>座机号码：</th>
+              <td><input type="text" style="width:120px;" placeholder="区号"> - <input type="text" style="width:120px;" placeholder="电话号码"> - <input type="text" style="width:120px;" placeholder="分机"></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td><input type="checkbox">设置为默认地址</td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <input type="submit" name="" value="保存">
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+      <div id="footer_quick" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer_quick 做程序时可换对应代码 -->
+
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+      <div id="footer" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+    </div>
+  </div>
+  <!-- 滚动条插件 -->
+  <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+  <!-- 滚动条插件 -->
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+
+  <!-- index  -->
+  <script src="./src/scripts/lib/index.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.add-address').click(function(event) {
+        /* Act on the event */
+        $('.address-tan-bg').fadeIn();
+        $('.address-tan').fadeIn();
+      });
+      $('.address-tan .close').click(function(event) {
+        /* Act on the event */
+        $('.address-tan-bg').fadeOut();
+        $('.address-tan').fadeOut();
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

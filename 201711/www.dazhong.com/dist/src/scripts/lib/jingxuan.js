@@ -1,0 +1,1 @@
+var jingxuanModule,banner,new_pro,jingxuan;jingxuan=function(){new Swiper(".jingxuan-main .swiper-container",{slidesPerView:"auto",nextButton:".jingxuan-main .button-next",prevButton:".jingxuan-main .button-prev"})},(jingxuanModule=function(){navactive(1),fenleishow(),jingxuan()})();
