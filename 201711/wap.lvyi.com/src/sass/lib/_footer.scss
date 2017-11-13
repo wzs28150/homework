@@ -1,14 +1,17 @@
 @charset "utf-8";
+
 footer {
-  background-color: #333333;
-  color: #fff;
-  font-size: 9px;
-  padding: 1em 0;
-  position: relative;
-  z-index: 99;
-  line-height: 2em;
-  text-align: center;
+  background-color: #282828;
+  color           : #666;
+  font-size       : 15px;
+  padding         : 1em 0;
+  position        : relative;
+  z-index         : 99;
+  line-height     : 1.2em;
+  text-align      : center;
+  font-weight     : lighter;
+
   a {
-    color: #fff;
+    color: #666;
   }
 }
