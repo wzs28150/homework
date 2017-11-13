@@ -1,0 +1,82 @@
+/* CSS Document */
+
+.hr {
+	.hr_index {
+		padding: 8% 0 0;
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: 8%;
+		}
+	}
+	.hr_zhaomu {
+		padding: 8% 0;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	.gonggao {
+		.tit {
+			font-size: 20px;
+			color: #d60011;
+		}
+		.des {
+			color: #333;
+			font-size: 14px;
+			margin-top: 3%;
+		}
+	}
+	.hr-list {
+		padding-bottom: 5%;
+		.item {
+			border: 1px solid #cccccc;
+			border-radius: 5px;
+			overflow: hidden;
+			line-height: 3em;
+			font-size: 14px;
+			margin-bottom: 5%;
+			&.item-tit {
+				border: 1px solid #fff;
+				font-size: 16px;
+				color: #333;
+				margin-bottom: 0%;
+			}
+			&>table {
+				width: 100%;
+				td {
+					width: 30.3333%;
+					padding-left: 3%;
+					&.text-right {
+						text-align: right;
+						padding-left: 0%;
+						padding-right: 3%;
+					}
+				}
+			}
+			.des {
+				display: none;
+				&>table {
+					width: calc(100% + 2px);
+					margin-left: -1px;
+					margin-bottom: -1px;
+					th {
+						background: #eee;
+						border: 1px solid #cccccc; 
+						width: 1em;
+					}
+					td {
+						width: 64%;
+						padding:0 3%;
+						border: 1px solid #cccccc;
+						&.text-right {
+							text-align: right;
+							padding-left: 0%;
+							padding-right: 3%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

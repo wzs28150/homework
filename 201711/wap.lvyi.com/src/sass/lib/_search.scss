@@ -1,0 +1,45 @@
+/* CSS Document */
+
+.key {
+	color: #d60011;
+}
+
+.search {
+	background-color: #f6f6f6;
+	.search-info {
+		font-size: 15px;
+		line-height: 45px;
+		color: #999;
+	}
+	.search-list {
+		padding-bottom: 5%;
+		.item {
+			background-color: #fff;
+			box-shadow: 0 0 5px #ededed;
+			margin-bottom: 5%;
+			a {
+				padding: 4%;
+				display: block;
+				.title {
+					color: #333;
+					line-height: 1.5em;
+					margin-bottom: .2em;
+				}
+				.content {
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					overflow: hidden;
+					color: #999;
+					font-size: 14px;
+					line-height: 1.5em;
+				}
+			}
+		}
+		.loadmore {
+			margin: 5% 0;
+			width: 100%;
+			display: inline-block;
+		}
+	}
+}

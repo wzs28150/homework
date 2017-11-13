@@ -1,0 +1,93 @@
+/* CSS Document */
+
+.news {}
+
+.news-list {
+	padding: 10% 0;
+	.item {
+		border-bottom: 1px solid #d0d0d0;
+		padding-bottom: 5%;
+		margin-bottom: 5%;
+		a {
+			display: block;
+			position: relative;
+			height: 80px;
+			.time {
+				width: 68px;
+				border: 1px solid #d60011;
+				text-align: center;
+				color: #d60011;
+				padding: 3% 0;
+				position: absolute;
+				top: 0;
+				left: 0;
+				.date {
+					font-family: 'Conv_HelveticaNeueLTStd-UltLtEx';
+					font-size: 40px;
+					line-height: 40px;
+					height: 40px;
+				}
+				.ym {
+					font-size: 10px;
+				}
+			}
+			.inner {
+				padding-left: 80px;
+				padding-top: 5px;
+				.title {
+					color: #333;
+				}
+				.des {
+					font-size: 12px;
+					line-height: 1.8em;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 2;
+					overflow: hidden;
+					color: #a3a3a3;
+					margin-top: .4em;
+				}
+			}
+		}
+	}
+}
+
+.news-content {
+	padding: 10% 0;
+	.time {
+		font-family: 'Conv_HelveticaNeueLTStd-ThEx';
+		color: #333;
+		margin-bottom: 2%;
+	}
+	.title {
+		font-size: 18px;
+		color: #333;
+		line-height: 1em;
+	}
+	.info {
+		color: #999;
+		font-size: 12px;
+		padding: 4% 0;
+		border-bottom: 1px solid #cccccc;
+		margin-bottom: 4%;
+	}
+	.content {}
+	.shangxia {
+		font-size: 0;
+		line-height: 0;
+		overflow: hidden;
+		a {
+			display: inline-block;
+			background: #333;
+			color: #fff;
+			font-size: 12px;
+			line-height: 36px;
+			width: 46%;
+			text-align: center;
+			float: right;
+			&:first-child {
+				float: left;
+			}
+		}
+	}
+}

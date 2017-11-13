@@ -1,0 +1,44 @@
+/* CSS Document */
+
+.technology {
+	.technology-tit {
+		padding: 8% 0 0;
+		.ch {
+			font-weight: bold;
+			border-left: 4px solid #e50014;
+			line-height: 1.5em;
+			padding-left: 10px;
+			color: #333;
+		}
+		.en {
+			margin-top: 5px;
+			font-family: 'Conv_HelveticaNeueLTStd-ThEx';
+			font-size: 10px;
+			padding-left: 15px;
+			color: #999;
+		}
+	}
+	.technology-list {
+		margin-top: 8%;
+		.item {
+			margin-bottom: 8%;
+			.pic {
+				img {
+					display: block;
+					width: 100%;
+				}
+			}
+			.text-area {
+				border: 1px solid #999999;
+				padding: 5% 8%;
+			}
+		}
+	}
+	.technology-zhuanli {
+		padding-bottom: 20%;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+}
