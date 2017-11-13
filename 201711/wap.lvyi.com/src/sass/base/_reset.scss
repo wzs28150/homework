@@ -607,30 +607,54 @@ article {
 }
 
 .pagination {
-  text-align: center;
-  overflow  : hidden;
+  overflow   : hidden;
+  height     : 38px;
+  font-size  : 0;
+  line-height: 0;
+  border     : 1px solid #d2d2d2;
+  overflow   : hidden;
 
   a,
   span {
-    font-size    : 12px;
-    display      : inline-block;
-    padding      : 0.4em 0.85em;
-    margin-right : 5px;
-    border-radius: 5px;
+    font-size  : 15px;
+    display    : inline-block;
+    height     : 38px;
+    width      : 40px;
+    line-height: 38px;
+    text-align : center;
+    border     : 1px solid #d2d2d2;
+    margin-top : -1px;
+    margin-left: -1px;
   }
 
   a {
     text-decoration: none;
-    background     : #e50014;
-    color          : #fff;
+    background     : #fff;
+    color          : #000;
+
+    &.next,
+    &.prev {
+      width: 95px;
+    }
+
+    &.prev {
+      background: url("../images/p_l.png") no-repeat center;
+    }
+
+    &.next {
+      float       : right;
+      margin-right: -1px;
+      background  : url("../images/p_r.png") no-repeat center;
+    }
   }
 
-  .current {
-    background: #ff6a76;
+  .on {
+    background: #24805e;
     color     : #fff;
 
     &.next,
     &.prev {
+      width  : 148px;
       display: none;
     }
   }
