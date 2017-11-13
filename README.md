@@ -51,7 +51,7 @@
 
 >预览地址：<a href="https://wzs28150.github.io/homework/201710/www.lvyi.com/">PC</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wzs28150.github.io/homework/201711/wap.lvyi.com">WAP</a>
 
->下载地址：<a href="https://wzs28150.github.io/homework/201710/www.lvyi.com/www.lvyi.com.rar">PC</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wzs28150.github.io/homework/201711/wap.lvyi.com">WAP</a>
+>下载地址：<a href="https://wzs28150.github.io/homework/201710/www.lvyi.com/www.lvyi.com.rar">PC</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wzs28150.github.io/homework/201711/wap.lvyi.com/wap.lvyi.com.rar">WAP</a>
 
 #### 健康商城
 
