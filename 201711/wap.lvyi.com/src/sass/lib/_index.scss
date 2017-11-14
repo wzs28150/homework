@@ -1,5 +1,4 @@
 /* CSS Document */
-
 .index {
 	background-color: #eeeeee;
 
@@ -290,5 +289,112 @@
 		.pagination {
 			margin-top: 8%;
 		}
+	}
+
+	.news-content {
+		padding: 10% 0;
+
+		.title {
+			font-size  : 26px;
+			line-height: 1em;
+			text-align : center;
+			font-weight: lighter;
+			color      : #000000;
+		}
+
+		.info {
+			text-align    : center;
+			font-size     : 12px;
+			line-height   : 30px;
+			border-bottom : 1px solid #d4d8d9;
+			padding-bottom: 8px;
+		}
+
+		.content {
+			padding-top: 10%;
+
+			table {
+				border: 1px solid #ccc;
+
+				tr {
+					border: 1px solid #ccc;
+				}
+
+				td {
+					padding: 5px 20px;
+					border : 1px solid #ccc;
+				}
+			}
+		}
+	}
+}
+
+.contact {
+	padding-bottom: 10%;
+
+	.tel {
+		padding-bottom: 20px;
+		border-bottom : 1px solid #d9d9d9;
+		overflow      : hidden;
+
+		.item {
+			height         : 24px;
+			background     : url("../images/c_tel.png") no-repeat left center;
+			background-size: 24px;
+			font-size      : 12px;
+			color          : #000;
+			line-height    : 24px;
+			margin         : 2% 0;
+
+			span {
+				display     : inline-block;
+				float       : left;
+				height      : 24px;
+				font-family : "UniversLT57Condensed";
+				font-size   : 24px;
+				padding-left: 40px;
+			}
+		}
+	}
+
+	.address {
+		background     : url("../images/address.png") no-repeat 5px center;
+		background-size: 20px;
+		line-height    : 30px;
+		padding-left   : 35px;
+		color          : #000;
+		margin-top     : 20px;
+		font-size      : 16px;
+	}
+
+	.fax {
+		background     : url("../images/fax.png") no-repeat 5px center;
+		background-size: 20px;
+		line-height    : 30px;
+		color          : #000;
+		margin-top     : 20px;
+		font-size      : 16px;
+
+		span {
+			padding-left: 70px;
+		}
+	}
+
+	.email {
+		background     : url("../images/email.png") no-repeat 5px center;
+		background-size: 20px;
+		line-height    : 30px;
+		color          : #000;
+		margin-top     : 0;
+		font-size      : 16px;
+
+		span {
+			padding-left: 70px;
+		}
+	}
+
+	.map {
+		height    : 300px;
+		margin-top: 40px;
 	}
 }

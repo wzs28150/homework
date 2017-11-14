@@ -9,21 +9,18 @@
 @import "base/opacity";
 @import "base/swiper";
 @import "base/sub";
-
 @import "lib/header";
 @import "lib/footer";
-@import "lib/index";
-@import "lib/about";
-@import "lib/search";
-@import "lib/products";
-@import "lib/news";
+@import "lib/index"; // @import "lib/about";
+// @import "lib/search";
 // @import "lib/products";
-@import "lib/technology";
-@import "lib/responsibility";
-// @import "lib/services";
-@import "lib/hr";
+// @import "lib/news";
+// // @import "lib/products";
+// @import "lib/technology";
+// @import "lib/responsibility";
+// // @import "lib/services";
+// @import "lib/hr";
 // @import "lib/contact";
-
 @import "sub/header";
 @import "sub/footer";
 @import "sub/index";
