@@ -1,338 +1,53 @@
 header {
-  border-bottom: 2px solid #2d8800;
-  position     : relative;
-  z-index      : 99;
-
-  &.on {
-    z-index: 1;
-  }
-
-  .header-bar {
-    background-color: #f5f5f5;
-    font-size       : 12px;
-    height          : 38px;
-    line-height     : 38px;
-
-    .dz-car1 {
-      font-size     : 16px;
-      vertical-align: middle;
-      position      : relative;
-      top           : -2px;
-      margin        : 0 10px;
-    }
-
-    .fl {
-      .red {
-        color: #c30000;
-      }
-
-      a {}
-    }
-
-    .fr {
-      i {
-        color: #c30000;
-      }
-    }
-  }
+  height          : 115px;
+  background-color: #ffffff;
 
   .logo {
-    float      : left;
-    padding-top: 42px;
+    padding: 30px 0;
 
     img {
       display: block;
-      width  : 262px;
-      height : 86px;
+      height : 55px;
     }
   }
 
-  .car-jindu {
-    ul {
-      li {
-        width      : 150px;
-        text-align : center;
-        font-size  : 16px;
-        margin-left: 1px;
+  .fr {
+    padding: 30px 0;
 
-        span {
-          display         : block;
-          width           : 150px;
-          height          : 6px;
-          border-radius   : 6px;
-          background-color: #bfbfbf;
-          margin-bottom   : 15px;
-        }
-
-        &.on {
-          color: #3ea600;
-
-          span {
-            background-color: #3ea600;
-          }
-        }
-      }
-    }
-  }
-
-  .header-middle {
-    height: 146px;
-
-    .h-search {
-      float       : left;
-      padding-left: 140px;
-      padding-top : 53px;
-      width       : 600px;
-      overflow    : hidden;
-
-      .h-search-top {
-        overflow: hidden;
-
-        .fl {
-          width : 548px;
-          height: 40px;
-          border: 2px solid #c30000;
-
-          input {
-            float      : left;
-            width      : 382px;
-            padding    : 0 0 0 50px;
-            border     : none;
-            height     : 40px;
-            line-height: 40px;
-            outline    : none;
-            background : url("../images/search_btn.png") no-repeat 15px center;
-
-            &::-webkit-input-placeholder {
-              color: #999;
-            }
-
-            &:-moz-placeholder {
-              color: #999;
-            }
-
-            &::-moz-placeholder {
-              color: #999;
-            }
-
-            &::-ms-input-placeholder {
-              color: #999;
-            }
-          }
-
-          a {
-            float           : right;
-            display         : block;
-            width           : 116px;
-            text-align      : center;
-            background-color: #c30000;
-            color           : #fff;
-            height          : 40px;
-            line-height     : 40px;
-            @include tr(0.4s,all);
-
-            &:hover {
-              text-shadow: 0 0 5px #ddd;
-              @include tr(0.4s,all);
-            }
-          }
-        }
-
-        .fr {
-          width : 48px;
-          height: 44px;
-
-          a {
-            display  : block;
-            width    : 2em;
-            margin   : 3px auto;
-            font-size: 14px;
-            @include tr(0.4s,all);
-
-            &:hover {
-              color: #000;
-              @include tr(0.4s,all);
-            }
-          }
-        }
-      }
-
-      .h-search-bot {
-        padding-top: 10px;
-        font-size  : 0;
-        line-height: 0;
-
-        a {
-          margin-right: 10px;
-          display     : inline-block;
-          font-size   : 12px;
-          line-height : 1em;
-          @include tr(0.4s,all);
-
-          &:hover {
-            color: #000;
-            @include tr(0.4s,all);
-          }
-        }
-      }
+    .time {
+      font-size : 12px;
+      text-align: right;
     }
 
-    .car {
-      &.head {
-        float      : right;
-        color      : #fff;
-        line-height: 44px;
-        height     : 44px;
-        margin-top : 53px;
-        background : url("../images/cart.png") #c30000 no-repeat 16px center;
-
-        a {
-          display: block;
-          color  : #fff;
-          padding: 0 16px 0 57px;
-        }
-      }
-    }
-  }
-
-  .header-nav {
-    .fenlei {
-      width   : 240px;
-      position: relative;
-
-      .tit {
-        background-color: #2d8800;
-        line-height     : 43px;
-        text-align      : center;
-        color           : #fff;
-        font-size       : 20px;
-        font-weight     : bold;
-        cursor          : pointer;
-      }
-
-      & > ul {
-        background-color: #3ea600;
-        position        : absolute;
-        top             : 43px;
-        left            : 0;
-        display         : none;
-
-        & > li {
-          border-bottom: 1px solid #359700;
-          position     : relative;
-
-          & > a {
-            line-height: 38px;
-            color      : #fff;
-            font-size  : 18px;
-            display    : block;
-            padding    : 7px 27px;
-
-            span {
-              padding-right: 10px;
-            }
-
-            i {
-              float      : right;
-              line-height: 38px;
-            }
-          }
-
-          .list {
-            padding : 0 17px 10px;
-            overflow: hidden;
-
-            a {
-              color      : #fff;
-              line-height: 26px;
-              display    : block;
-              float      : left;
-              padding    : 0 10px;
-            }
-          }
-
-          .tab {
-            position        : absolute;
-            left            : 240px;
-            top             : 0;
-            width           : 454px;
-            height          : 460px;
-            padding         : 16px 34px;
-            z-index         : 1;
-            background-color: #fff;
-            visibility      : hidden;
-            opacity         : 0;
-            @include tr(0.4s,all);
-
-            .tab-tit {
-              font-size   : 18px;
-              font-weight : bold;
-              line-height : 62px;
-              padding-left: 12px;
-            }
-
-            ul {
-              overflow: hidden;
-
-              a {
-                padding    : 0 12px;
-                line-height: 27px;
-                display    : block;
-                float      : left;
-              }
-            }
-          }
-
-          &:hover {
-            background-color: #fff;
-
-            & > a {
-              color: #3ea600;
-            }
-
-            .list {
-              a {
-                color: #3ea600;
-              }
-            }
-
-            .tab {
-              visibility: visible;
-              opacity   : 1;
-              @include tr(0.4s,all);
-            }
-          }
-        }
-      }
-
-      &:hover {
-        & > ul {
-          display: block;
-        }
-      }
-    }
-
-    nav {
+    .quick_link {
       font-size  : 0;
       line-height: 0;
+      padding-top: 18px;
 
       a {
-        display    : inline-block;
-        font-size  : 18px;
-        line-height: 34px;
-        color      : #333;
-        padding    : 0 10px;
+        display            : inline-block;
+        font-size          : 18px;
+        line-height        : 20px;
+        font-weight        : bold;
+        background-position: left center;
+        background-repeat  : no-repeat;
+        padding-left       : 24px;
+        margin-left        : 30px;
+        @include tr(0.4s,color);
 
-        &.on,
+        i {
+          display      : inline-block;
+          line-height  : 20px;
+          border-bottom: 1px solid #868686;
+        }
+
         &:hover {
-          background-color: #3ea600;
-          color           : #fff;
+          color: #000;
+          @include tr(0.4s,color);
         }
       }
     }
   }
-
-  &.car-header {}
 }
 
 article {

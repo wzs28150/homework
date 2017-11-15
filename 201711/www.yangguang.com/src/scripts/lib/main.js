@@ -82,16 +82,12 @@ numselect = function() {
   });
 }
 minheight = function() {
-  var hh = $('header').height();
-  var fh = $('footer').height();
-  var fqh = $('.footer-quick').height();
+  var hh = $('header').outerHeight();
+  var fh = $('footer').outerHeight();
   var wh = $(window).height();
-  var nh = $('nav').height();
   var mh;
-  mh = $(window).height() - fh - hh - fqh;
-  if (mh < 458) {
-    mh = 458;
-  }
+  mh = $(window).height() - fh - hh;
+  console.log(mh);
   $('article').css('min-height', mh + 'px');
 }
 
