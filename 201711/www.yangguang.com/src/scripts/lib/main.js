@@ -151,6 +151,16 @@ initModule = function() {
   scrollto();
   numselect();
   animated_contents();
+  $('.search-type i').click(function(event) {
+    /* Act on the event */
+    $(this).next('ul').show();
+  });
+  $('.search span.search-type ul li').click(function(event) {
+    /* Act on the event */
+    var text = $(this).html();
+    $(this).parent('ul').hide();
+    $('.search-type i').html(text);
+  });
   $('.scroller-inner').scroll(function(event) {
     animated_contents();
   });

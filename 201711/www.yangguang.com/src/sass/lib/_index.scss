@@ -41,11 +41,17 @@
       }
 
       ul {
-        position: absolute;
-        display : none;
+        position        : absolute;
+        display         : none;
+        width           : 100%;
+        background-color: #fff;
+        border          : 1px solid #dcdcdc;
+        left            : -1px;
 
         li {
-          cursor: pointer;
+          cursor     : pointer;
+          text-align : left;
+          text-indent: 1em;
         }
       }
     }
