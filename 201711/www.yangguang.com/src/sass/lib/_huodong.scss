@@ -1,0 +1,151 @@
+.huodong {
+  .banner {
+    height: 458px;
+    background-color: #ecded3;
+    .pic {
+      background-position: center;
+      background-size: cover;
+      width: 960px;
+      margin-left: 240px;
+      height: 458px;
+    }
+  }
+  .hdtm {
+    .tit {
+      font-size: 26px;
+      color: #333333;
+      line-height: 1em;
+      padding-bottom: 30px;
+      a {
+        font-size: 18px;
+      }
+    }
+    .list {
+      .item {
+        width: 299px;
+        height: 267px;
+        margin-right: -1px;
+        border: 1px solid #e6e6e6;
+        position: relative;
+        @include tr(0.4s, border);
+        &:last-child {
+          width: 298px;
+          margin-right: 0px;
+        }
+        &:hover {
+          border: 1px solid #2d8800;
+          z-index: 1;
+          @include tr(0.4s, border);
+        }
+        a {
+          display: block;
+          position: relative;
+          overflow: hidden;
+          .pic {
+            width: 174px;
+            height: 174px;
+            background-size: cover;
+            background-position: center;
+            margin: 0 auto;
+          }
+          .inner {
+            padding: 20px 15px;
+            .title {
+              font-size: 18px;
+              line-height: 1em;
+              padding-right: 126px;
+            }
+            .price {
+              font-size: 14px;
+              color: #c30000;
+              margin-left: -5px;
+              line-height: 24px;
+              margin-top: 8px;
+              span {
+                display: inline-block;
+                font-size: 24px;
+                line-height: 1em;
+                font-weight: bold;
+              }
+            }
+          }
+          .liji {
+            width: 116px;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            position: absolute;
+            right: 15px;
+            bottom: 20px;
+            background-color: #fcdcdd;
+            color: #c30000;
+            border-radius: 5px;
+          }
+        }
+        &.big {
+          width: 599px;
+          margin-right: -1px;
+          a {
+            .pic {
+              width: 267px;
+              height: 267px;
+              background-size: cover;
+              background-position: center;
+              border-right: 1px solid #e6e6e6;
+              float: left;
+            }
+            .inner {
+              float: left;
+              width: 271px;
+              padding: 30px 30px;
+              .title {
+                font-size: 24px;
+                line-height: 1em;
+                margin-bottom: 20px;
+                padding-right: 0;
+              }
+              .des {
+                font-size: 14px;
+                line-height: 18px;
+                color: #999;
+              }
+              .oldprice {
+                font-size: 17px;
+                color: #999;
+                margin-top: 60px;
+              }
+              .price {
+                font-size: 29px;
+                color: #c30000;
+                margin-left: -5px;
+                margin-top: 4px;
+                line-height: 38px;
+                span {
+                  font-size: 38px;
+                  font-weight: bold;
+                }
+              }
+              .liji {
+                right: 30px;
+                bottom: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .hd-type {
+    a {
+      display: inline-block;
+      line-height: 56px;
+      color: #333;
+      font-size: 18px;
+      padding: 0 20px;
+      &.on {
+        background-color: #f7f7f7;
+        color: #2d8800;
+      }
+    }
+  }
+}
