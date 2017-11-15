@@ -733,6 +733,11 @@ body[onselectstart] {
 }
 
 .page {
+  background-color: #fff;
+  width           : 100%;
+  position        : relative;
+  z-index         : 1;
+
   ul {
     text-align: right;
 
@@ -740,10 +745,10 @@ body[onselectstart] {
       display: inline-block;
 
       a {
-        display    : inline-block;
-        line-height: 40px;
-        padding    : 0 15px;
-        border     : 1px solid #d9d6d6;
+        display         : inline-block;
+        line-height     : 40px;
+        padding         : 0 15px;
+        background-color: #eeeeee;
 
         span {
           display    : inline-block;
@@ -752,7 +757,7 @@ body[onselectstart] {
 
         &.on,
         &:hover {
-          background-color: #2d8800;
+          background-color: #0072c6;
           color           : #fff;
         }
       }
