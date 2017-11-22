@@ -1,5 +1,4 @@
 /* CSS Document */
-
 .search {
   padding         : 20px 0;
   background-color: #eeeeee;
@@ -114,8 +113,10 @@
       width         : 25%;
       float         : left;
       color         : #fff;
+      height        : 160px;
       padding-top   : 38px;
       padding-bottom: 38px;
+      overflow      : hidden;
 
       a {
         color: #fff;
