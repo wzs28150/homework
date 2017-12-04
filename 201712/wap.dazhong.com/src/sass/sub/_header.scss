@@ -1,0 +1,8 @@
+@charset "utf-8";
+@include max-screen(1440px) {}
+@include max-screen(1024px) {}
+@include max-screen(980px) {}
+@include max-screen(960px) {}
+@include max-screen(360px) {}
+@include max-screen(320px) {}
+@media screen and (max-height: 768px) {}
