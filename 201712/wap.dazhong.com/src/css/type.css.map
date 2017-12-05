@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGE,gBAAW;EACT,gBAAgB,EAAE,IAAI",
+"sources": ["../sass/lib/_type.scss"],
+"names": [],
+"file": "type.css"
+}

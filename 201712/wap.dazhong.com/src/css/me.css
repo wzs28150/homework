@@ -652,6 +652,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Microsoft YaHei", "Open Sans";
   min-height: 100%;
+  background-color: #eee;
   -webkit-tap-highlight-color: transparent; }
 
 a {
@@ -2621,217 +2622,30 @@ button.swiper-pagination-bullet {
         line-height: 1em;
         margin-top: 10px; } }
 header {
-  border-bottom: 2px solid #2d8800;
-  position: relative;
-  z-index: 99; }
-  header.on {
-    z-index: 1; }
-  header .header-bar {
-    background-color: #f5f5f5;
-    font-size: 12px;
-    height: 38px;
-    line-height: 38px; }
-    header .header-bar .dz-car1 {
-      font-size: 16px;
-      vertical-align: middle;
-      position: relative;
-      top: -2px;
-      margin: 0 10px; }
-    header .header-bar .fl .red {
-      color: #c30000; }
-    header .header-bar .fr i {
-      color: #c30000; }
-  header .logo {
-    float: left;
-    padding-top: 42px; }
-    header .logo img {
-      display: block;
-      width: 262px;
-      height: 86px; }
-  header .car-jindu ul li {
-    width: 150px;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  top: 0;
+  left: 0;
+  background-color: #f5f5f5;
+  z-index: 99;
+  border-bottom: 1px solid #d0d0d0; }
+  header h1 {
+    line-height: 40px;
     text-align: center;
-    font-size: 16px;
-    margin-left: 1px; }
-    header .car-jindu ul li span {
-      display: block;
-      width: 150px;
-      height: 6px;
-      border-radius: 6px;
-      background-color: #bfbfbf;
-      margin-bottom: 15px; }
-    header .car-jindu ul li.on {
-      color: #3ea600; }
-      header .car-jindu ul li.on span {
-        background-color: #3ea600; }
-  header .header-middle {
-    height: 146px; }
-    header .header-middle .h-search {
-      float: left;
-      padding-left: 140px;
-      padding-top: 53px;
-      width: 600px;
-      overflow: hidden; }
-      header .header-middle .h-search .h-search-top {
-        overflow: hidden; }
-        header .header-middle .h-search .h-search-top .fl {
-          width: 548px;
-          height: 40px;
-          border: 2px solid #c30000; }
-          header .header-middle .h-search .h-search-top .fl input {
-            float: left;
-            width: 382px;
-            padding: 0 0 0 50px;
-            border: none;
-            height: 40px;
-            line-height: 40px;
-            outline: none;
-            background: url("../images/search_btn.png") no-repeat 15px center; }
-            header .header-middle .h-search .h-search-top .fl input::-webkit-input-placeholder {
-              color: #999; }
-            header .header-middle .h-search .h-search-top .fl input:-moz-placeholder {
-              color: #999; }
-            header .header-middle .h-search .h-search-top .fl input::-moz-placeholder {
-              color: #999; }
-            header .header-middle .h-search .h-search-top .fl input::-ms-input-placeholder {
-              color: #999; }
-          header .header-middle .h-search .h-search-top .fl a {
-            float: right;
-            display: block;
-            width: 116px;
-            text-align: center;
-            background-color: #c30000;
-            color: #fff;
-            height: 40px;
-            line-height: 40px;
-            transition: all 0.4s; }
-            header .header-middle .h-search .h-search-top .fl a:hover {
-              text-shadow: 0 0 5px #ddd;
-              transition: all 0.4s; }
-        header .header-middle .h-search .h-search-top .fr {
-          width: 48px;
-          height: 44px; }
-          header .header-middle .h-search .h-search-top .fr a {
-            display: block;
-            width: 2em;
-            margin: 3px auto;
-            font-size: 14px;
-            transition: all 0.4s; }
-            header .header-middle .h-search .h-search-top .fr a:hover {
-              color: #000;
-              transition: all 0.4s; }
-      header .header-middle .h-search .h-search-bot {
-        padding-top: 10px;
-        font-size: 0;
-        line-height: 0; }
-        header .header-middle .h-search .h-search-bot a {
-          margin-right: 10px;
-          display: inline-block;
-          font-size: 12px;
-          line-height: 1em;
-          transition: all 0.4s; }
-          header .header-middle .h-search .h-search-bot a:hover {
-            color: #000;
-            transition: all 0.4s; }
-    header .header-middle .car.head {
-      float: right;
-      color: #fff;
-      line-height: 44px;
-      height: 44px;
-      margin-top: 53px;
-      background: url("../images/cart.png") #c30000 no-repeat 16px center; }
-      header .header-middle .car.head a {
-        display: block;
-        color: #fff;
-        padding: 0 16px 0 57px; }
-  header .header-nav .fenlei {
-    width: 240px;
-    position: relative; }
-    header .header-nav .fenlei .tit {
-      background-color: #2d8800;
-      line-height: 43px;
-      text-align: center;
-      color: #fff;
-      font-size: 20px;
-      font-weight: bold;
-      cursor: pointer; }
-    header .header-nav .fenlei > ul {
-      background-color: #3ea600;
+    font-size: 18px;
+    color: #333; }
+  header a {
+    display: inline-block; }
+    header a.jt-chevron-left {
       position: absolute;
-      top: 43px;
       left: 0;
-      display: none; }
-      header .header-nav .fenlei > ul > li {
-        border-bottom: 1px solid #359700;
-        position: relative; }
-        header .header-nav .fenlei > ul > li > a {
-          line-height: 38px;
-          color: #fff;
-          font-size: 18px;
-          display: block;
-          padding: 7px 27px; }
-          header .header-nav .fenlei > ul > li > a span {
-            padding-right: 10px; }
-          header .header-nav .fenlei > ul > li > a i {
-            float: right;
-            line-height: 38px; }
-        header .header-nav .fenlei > ul > li .list {
-          padding: 0 17px 10px;
-          overflow: hidden; }
-          header .header-nav .fenlei > ul > li .list a {
-            color: #fff;
-            line-height: 26px;
-            display: block;
-            float: left;
-            padding: 0 10px; }
-        header .header-nav .fenlei > ul > li .tab {
-          position: absolute;
-          left: 240px;
-          top: 0;
-          width: 454px;
-          height: 460px;
-          padding: 16px 34px;
-          z-index: 1;
-          background-color: #fff;
-          visibility: hidden;
-          opacity: 0;
-          transition: all 0.4s; }
-          header .header-nav .fenlei > ul > li .tab .tab-tit {
-            font-size: 18px;
-            font-weight: bold;
-            line-height: 62px;
-            padding-left: 12px; }
-          header .header-nav .fenlei > ul > li .tab ul {
-            overflow: hidden; }
-            header .header-nav .fenlei > ul > li .tab ul a {
-              padding: 0 12px;
-              line-height: 27px;
-              display: block;
-              float: left; }
-        header .header-nav .fenlei > ul > li:hover {
-          background-color: #fff; }
-          header .header-nav .fenlei > ul > li:hover > a {
-            color: #3ea600; }
-          header .header-nav .fenlei > ul > li:hover .list a {
-            color: #3ea600; }
-          header .header-nav .fenlei > ul > li:hover .tab {
-            visibility: visible;
-            opacity: 1;
-            transition: all 0.4s; }
-    header .header-nav .fenlei:hover > ul {
-      display: block; }
-  header .header-nav nav {
-    font-size: 0;
-    line-height: 0; }
-    header .header-nav nav a {
-      display: inline-block;
-      font-size: 18px;
-      line-height: 34px;
-      color: #333;
-      padding: 0 10px; }
-      header .header-nav nav a.on, header .header-nav nav a:hover {
-        background-color: #3ea600;
-        color: #fff; }
+      top: 0;
+      line-height: 40px;
+      font-size: 18px; }
+
+.hasheader {
+  padding-top: 41px; }
 
 footer {
   position: fixed;

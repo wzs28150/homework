@@ -38,12 +38,15 @@ floorqiehuan = function() {
 }
 
 indexModule = function() {
+  //设置底部导航选中
+  navactive(0);
   //banner切换
   banner();
   //季节滚动
   jijieqiehuan();
   //楼层滚动
   floorqiehuan();
+
 };
 
 indexModule();
