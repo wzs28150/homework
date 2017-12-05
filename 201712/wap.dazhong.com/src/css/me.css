@@ -930,7 +930,7 @@ body[onselectstart] {
 
 .search {
   padding: 1em 0; }
-  .search input {
+  .search input[type='text'] {
     width: calc(90% - 2px - 16px);
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -938,9 +938,25 @@ body[onselectstart] {
     line-height: 2.5em;
     outline: none;
     -webkit-appearance: none; }
-    .search input::-webkit-input-placeholder {
+    .search input[type='text']::-webkit-input-placeholder {
       text-align: center;
       color: #999; }
+  .search input[type='submit'] {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    line-height: 2.5em;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #fff;
+    padding: 0 1em;
+    margin-top: 1px;
+    margin-right: 1px;
+    outline: none;
+    color: #fff;
+    background-color: #2d8800; }
   .search span {
     position: absolute;
     top: 50%;
@@ -951,6 +967,15 @@ body[onselectstart] {
   .search.on span {
     left: 0;
     margin-left: 2.5%; }
+  .search.on input[type='text'] {
+    width: calc(90% - 2px - 48px);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 calc(5% + 32px) 0 calc(5% + 16px); }
+    .search.on input[type='text']::-webkit-input-placeholder {
+      text-align: left; }
+  .search.on input[type='submit'] {
+    display: block; }
 
 .fg-line {
   padding-bottom: 4%; }

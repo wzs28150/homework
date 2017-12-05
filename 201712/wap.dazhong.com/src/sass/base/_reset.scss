@@ -2,6 +2,7 @@
  *    v2.0 | 20110126
  *       License: none (public domain)
  *       */
+
 a,
 abbr,
 acronym,
@@ -91,6 +92,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -272,6 +274,7 @@ article {
   text-overflow: ellipsis;
 }
 /*水平垂直居中*/
+
 .wh-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -286,6 +289,7 @@ article {
   align-items        : center;
 }
 /*垂直居中*/
+
 .h-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -297,6 +301,7 @@ article {
   align-items        : center;
 }
 /*分组父级*/
+
 .felx-box {
   display              : -webkit-box;
   -webkit-box-orient   : horizontal;
@@ -308,6 +313,7 @@ article {
   align-items          : left;
 }
 /*分组子级*/
+
 .felx-item {
   -webkit-box-flex: 1;
   flex-basis      : 1;
@@ -316,6 +322,7 @@ article {
   flex            : 1 1 1;
 }
 /* alert_player */
+
 .alert_player {
   position: fixed;
   top     : 0;
@@ -487,7 +494,7 @@ body[onselectstart] {
 .search {
   padding: 1em 0;
 
-  input {
+  input[type='text'] {
     width             : calc(90% - 2px - 16px);
     border            : 1px solid #ccc;
     border-radius     : 5px;
@@ -500,6 +507,24 @@ body[onselectstart] {
       text-align: center;
       color     : #999;
     }
+  }
+
+  input[type='submit'] {
+    position          : absolute;
+    display           : none;
+    top               : 0;
+    right             : 0;
+    line-height       : 2.5em;
+    -webkit-appearance: none;
+    border            : none;
+    border-radius     : 0 5px 5px 0;
+    background-color  : #fff;
+    padding           : 0 1em;
+    margin-top        : 1px;
+    margin-right      : 1px;
+    outline           : none;
+    color             : #fff;
+    background-color  : #2d8800;
   }
 
   span {
@@ -515,6 +540,21 @@ body[onselectstart] {
     span {
       left       : 0;
       margin-left: 2.5%;
+    }
+
+    input[type='text'] {
+      width        : calc(90% - 2px - 48px);
+      border       : 1px solid #ccc;
+      border-radius: 5px;
+      padding      : 0 calc(5% + 32px) 0 calc(5% + 16px);
+
+      &::-webkit-input-placeholder {
+        text-align: left;
+      }
+    }
+
+    input[type='submit'] {
+      display: block;
     }
   }
 }
