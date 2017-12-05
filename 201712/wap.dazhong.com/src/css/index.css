@@ -127,7 +127,12 @@ body {
       display: block;
       float: right;
       font-size: 14px;
+      color: #999;
       line-height: 18px; }
+      .index .pro-pannel .tit a span {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 18px; }
   .index .pro-pannel .list {
     padding: 5% 0; }
     .index .pro-pannel .list .item {
@@ -163,6 +168,11 @@ body {
           right: 0.5em;
           padding: 0.2em 0.5em;
           border-radius: 5px; }
+    .index .pro-pannel .list.bgn .item a .content {
+      background-color: #fff;
+      position: relative;
+      padding: 0.5em;
+      border-top: 1px solid #fff; }
   .index .pro-pannel .tj-list {
     margin-top: 5%;
     margin-bottom: 5%; }
@@ -198,5 +208,109 @@ body {
             color: #c30000; }
             .index .pro-pannel .tj-list .inner .item a .content .price span {
               font-size: 18px; }
+  .index .pro-pannel.jijie-pro .jijie-list {
+    padding: 5% 0; }
+  .index .pro-pannel.jijie-pro .swiper-slide {
+    width: auto;
+    height: 140px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+    .index .pro-pannel.jijie-pro .swiper-slide .item {
+      float: left;
+      background-position: center;
+      background-size: cover;
+      transition: opacity 0.4s; }
+      .index .pro-pannel.jijie-pro .swiper-slide .item:hover {
+        opacity: 0.8;
+        transition: opacity 0.4s; }
+      .index .pro-pannel.jijie-pro .swiper-slide .item a {
+        color: #fff;
+        text-align: center; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item a span {
+          display: block; }
+      .index .pro-pannel.jijie-pro .swiper-slide .item.item_215 {
+        width: 130px;
+        height: 140px; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item.item_215 .title {
+          font-size: 42px;
+          font-weight: bold;
+          line-height: 42px;
+          padding-top: 30px; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item.item_215 .des {
+          padding-top: 20px;
+          font-size: 10px; }
+      .index .pro-pannel.jijie-pro .swiper-slide .item.item_240 {
+        width: 140px;
+        height: 100%; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item.item_240 a {
+          color: #df9d02; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item.item_240 .title {
+          font-size: 42px;
+          font-weight: bold;
+          line-height: 42px;
+          padding-top: 40px; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item.item_240 .des {
+          padding-top: 10px;
+          font-size: 12px; }
+    .index .pro-pannel.jijie-pro .swiper-slide .item-group {
+      float: left;
+      width: 314px; }
+      .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t {
+        height: 70px; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_240 a {
+          color: #fff; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_240 .title {
+          font-size: 32px;
+          font-weight: normal;
+          line-height: 32px;
+          padding-top: 12px; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_240 .des {
+          padding-top: 4px;
+          font-size: 12px;
+          line-height: 12px; }
+        .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_145 {
+          width: 87px;
+          height: 100%; }
+          .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_145 a {
+            color: #fff; }
+          .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_145 .title {
+            font-size: 26px;
+            font-weight: normal;
+            line-height: 26px;
+            padding-top: 12px; }
+          .index .pro-pannel.jijie-pro .swiper-slide .item-group .item-group-t .item.item_145 .des {
+            padding-top: 4px;
+            font-size: 11px; }
+  .index .pro-pannel.jijie-pro .swiper-container {
+    padding-bottom: 10px; }
+  .index .pro-pannel.jijie-pro .swiper-container-horizontal > .swiper-scrollbar {
+    bottom: 0; }
+    .index .pro-pannel.jijie-pro .swiper-container-horizontal > .swiper-scrollbar .swiper-scrollbar-drag {
+      background-color: #2d8800; }
+  .index .pro-pannel.floor .swiper-container {
+    margin-top: 5%; }
+    .index .pro-pannel.floor .swiper-container .swiper-slide img {
+      width: 100%;
+      display: block; }
+  .index .pro-pannel.floor .swiper-pagination-bullet {
+    background-color: #fff; }
+  .index .pro-pannel.floor .list {
+    padding-top: 0; }
+  .index .pro-pannel.floor_1 .tit {
+    color: #9fe7d7; }
+    .index .pro-pannel.floor_1 .tit::before {
+      background-color: #9fe7d7; }
+  .index .pro-pannel.floor_2 .tit {
+    color: #99ddf6; }
+    .index .pro-pannel.floor_2 .tit::before {
+      background-color: #99ddf6; }
+  .index .pro-pannel.floor_3 .tit {
+    color: #86a8e2; }
+    .index .pro-pannel.floor_3 .tit::before {
+      background-color: #86a8e2; }
+  .index .pro-pannel.floor_4 .tit {
+    color: #f6d7a1; }
+    .index .pro-pannel.floor_4 .tit::before {
+      background-color: #f6d7a1; }
 
 /*# sourceMappingURL=index.css.map */

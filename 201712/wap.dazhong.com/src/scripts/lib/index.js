@@ -1,4 +1,4 @@
-var indexModule, banner, new_pro, hot_pro, floorqiehuan;
+var indexModule, banner, jijieqiehuan, floorqiehuan;
 //首页banner
 banner = function() {
   var bigswiper = new Swiper('.index .banner .swiper-container', {
@@ -12,20 +12,16 @@ banner = function() {
   });
 };
 //最新产品滚动
-new_pro = function() {
-  var new_proswiper = new Swiper('.new_pro .swiper-container', {
-    slidesPerView: 4,
-    nextButton: '.new_pro .button-next',
-    prevButton: '.new_pro .button-prev',
-  });
-}
-
-hot_pro = function() {
-  var new_proswiper = new Swiper('.hot_pro .swiper-container', {
+jijieqiehuan = function() {
+  var swiper = new Swiper('.jijie-pro .swiper-container', {
+    direction: 'horizontal',
     slidesPerView: 'auto',
-    nextButton: '.hot_pro .button-next',
-    prevButton: '.hot_pro .button-prev',
+    freeMode: true,
+    scrollbarHide: false,
+    scrollbar: '.jijie-pro .swiper-scrollbar',
+    mousewheel: true,
   });
+
 }
 
 floorqiehuan = function() {
@@ -42,15 +38,11 @@ floorqiehuan = function() {
 }
 
 indexModule = function() {
-  //设置分类默认打开
-  fenleishow();
   //banner切换
   banner();
-  // 新品切换
-  new_pro();
-  // 热销切换
-  hot_pro();
-  //楼层内切换
+  //季节滚动
+  jijieqiehuan();
+  //楼层滚动
   floorqiehuan();
 };
 
