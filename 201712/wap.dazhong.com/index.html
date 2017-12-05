@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>首页 - 大众商城</title>
   <link rel="stylesheet" href="./src/css/me.css">
-  <link rel="stylesheet" href="./src/css/indedx.css">
+  <link rel="stylesheet" href="./src/css/index.css">
   <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
   <!--[if IE 8]>
   <script src="./src/scripts/package/compat/html5shiv.js"></script>
@@ -18,7 +18,7 @@
 <![endif]-->
 </head>
 
-<body class="scroller">
+<body>
 
   <div id="progress">
     <span></span>
@@ -33,15 +33,85 @@
   </div>
   <!-- 弹窗 -->
   <!-- 此处调用公共头部header 做程序时可换对应代码 -->
-  <div id="header" class="jiazai" data-callback="fenleishow" style="position: relative;z-index: 99;"></div>
+  <div id="header" class="jiazai" data-callback="" style="position: relative;z-index: 99;"></div>
+  <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+
+  <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+  <div id="search" class="jiazai" data-callback=""></div>
   <!-- 此处调用公共头部header 做程序时可换对应代码 -->
   <main>
     <article class="index">
-
+      <section class="banner">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href=""><img src="./src/images/i_banner.jpg" alt=""></a></div>
+            <div class="swiper-slide"><a href=""><img src="./src/images/i_banner.jpg" alt=""></a></div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <section class="quick-link">
+        <ul class="felx-box">
+          <li class="felx-item"><a href=""><img src="./src/images/ql_ico1.png" alt="">绿色食品</a></li>
+          <li class="felx-item"><a href=""><img src="./src/images/ql_ico2.png" alt="">健康器械</a></li>
+          <li class="felx-item"><a href=""><img src="./src/images/ql_ico3.png" alt="">保健品</a></li>
+          <li class="felx-item"><a href=""><img src="./src/images/ql_ico4.png" alt="">俄罗斯产品</a></li>
+        </ul>
+      </section>
+      <section class="fg-line"></section>
+      <section class="temai">
+        <div class="inner">
+        <a class="first" style="background-image:url(./src/images/temai_pic1.jpg)" href="">
+          <span class="text">
+            <h2>活动特卖</h2>
+            <p>天天有特价</p>
+          </span>
+        </a>
+        <a class="sec" style="background-image:url(./src/images/temai_pic2.jpg)" href="">
+          <span class="text">
+            <h2>非常名牌</h2>
+            <p>好货值得信赖</p>
+          </span>
+        </a>
+        <a class="thr" style="background-image:url(./src/images/temai_pic3.jpg)" href="">
+          <span class="text">
+            <h2>名品精选</h2>
+            <p>更多惊喜折扣</p>
+          </span>
+          </a>
+        </div>
+      </section>
+      <section class="fg-line"></section>
+      <section class="new-pro pro-pannel">
+        <div class="tit">最新产品<a href="">更多></a></div>
+        <div class="list">
+          <div class="item">
+            <a href="">
+              <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)"></div>
+              <div class="content">
+                <div class="title">地道龙江饺子粉</div>
+                <div class="price">￥<span>13.50</span></div>
+                <div class="more">查看详情</div>
+              </div>
+            </a>
+          </div>
+          <div class="item">
+            <a href="">
+              <div class="pic" style="background-image:url(./src/images/pro_pic.jpg)"></div>
+              <div class="content">
+                <div class="title">地道龙江饺子粉</div>
+                <div class="price">￥<span>13.50</span></div>
+                <div class="more">查看详情</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
     </article>
   </main>
   <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
-  <div id="footer" class="jiazai" data-callback="minheight"></div>
+  <div id="footer" class="jiazai" data-callback="navactive:0"></div>
   <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
   </div>
   <!-- 动画插件 -->

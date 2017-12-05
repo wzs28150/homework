@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect,search;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -35,8 +35,14 @@ animated_contents = function() {
  * @return {[type]}   [description]
  */
 navactive = function(i) {
-  $('header .header-nav nav a').removeClass('on');
-  $('header .header-nav nav a').eq(i).addClass('on');
+  $('footer > ul > li').removeClass('on');
+  $('footer > ul > li').eq(i).addClass('on');
+  $('body').off('click','footer > ul > li').on('click','footer > ul > li',function(){
+      if($(this).find('ul').length>0){
+        $(this).find('ul').fadeToggle();
+        $(this).toggleClass('on');
+      }
+  })
 };
 
 
@@ -94,7 +100,13 @@ minheight = function() {
   }
   $('article').css('min-height', mh + 'px');
 }
-
+search = function(){
+  $('body').off('focus','.search input').on('focus','.search input',function(){
+    $('.search').addClass('on');
+  }).on('blur','.search input',function(){
+    $('.search').removeClass('on');
+  })
+}
 fenleishow = function() {
   $('.fenlei>ul').css({
     "display": "block"
@@ -150,6 +162,7 @@ initModule = function() {
   scrollto();
   numselect();
   animated_contents();
+  search();
   $(window).scroll(function(event) {
     animated_contents();
   });
