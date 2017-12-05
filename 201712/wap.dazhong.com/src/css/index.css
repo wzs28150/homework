@@ -105,8 +105,98 @@ body {
         .index .temai .inner a.thr .text p {
           font-size: 12px; }
 .index .pro-pannel {
-  background-color: #fff; }
+  background-color: #fff;
+  overflow: hidden; }
   .index .pro-pannel .tit {
-    color: #000; }
+    color: #000;
+    font-size: 18px;
+    line-height: 20px;
+    position: relative;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #f1f1f1; }
+    .index .pro-pannel .tit::before {
+      content: "";
+      width: 4px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -9px;
+      background-color: #2d8800; }
+    .index .pro-pannel .tit a {
+      display: block;
+      float: right;
+      font-size: 14px;
+      line-height: 18px; }
+  .index .pro-pannel .list {
+    padding: 5% 0; }
+    .index .pro-pannel .list .item {
+      width: 50%;
+      border: 1px solid #f1f1f1; }
+      .index .pro-pannel .list .item:nth-child(2n) {
+        margin-left: -1px; }
+      .index .pro-pannel .list .item a .pic {
+        background-position: center;
+        background-size: cover;
+        width: 0;
+        height: 0;
+        padding-right: 100%;
+        padding-bottom: 100%; }
+      .index .pro-pannel .list .item a .content {
+        background-color: #f7fdf2;
+        position: relative;
+        padding: 0.5em;
+        border-top: 1px solid #f1f1f1; }
+        .index .pro-pannel .list .item a .content .title {
+          font-size: 14px; }
+        .index .pro-pannel .list .item a .content .price {
+          font-size: 12px;
+          color: #c30000; }
+          .index .pro-pannel .list .item a .content .price span {
+            font-size: 18px; }
+        .index .pro-pannel .list .item a .content .more {
+          position: absolute;
+          background-color: #ff870f;
+          font-size: 12px;
+          color: #fff;
+          bottom: 0.7em;
+          right: 0.5em;
+          padding: 0.2em 0.5em;
+          border-radius: 5px; }
+  .index .pro-pannel .tj-list {
+    margin-top: 5%;
+    margin-bottom: 5%; }
+    .index .pro-pannel .tj-list .ad {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50%;
+      height: 100%;
+      background-position: center;
+      background-size: cover; }
+    .index .pro-pannel .tj-list .inner {
+      position: relative;
+      width: 50%;
+      padding-left: 50%; }
+      .index .pro-pannel .tj-list .inner .item {
+        width: calc(100% - 2px);
+        border: 1px solid #f1f1f1; }
+        .index .pro-pannel .tj-list .inner .item a .pic {
+          background-position: center;
+          background-size: cover;
+          width: 0;
+          height: 0;
+          padding-right: 100%;
+          padding-bottom: 50%; }
+        .index .pro-pannel .tj-list .inner .item a .content {
+          position: relative;
+          padding: 0.2em 0.5em; }
+          .index .pro-pannel .tj-list .inner .item a .content .title {
+            font-size: 14px; }
+          .index .pro-pannel .tj-list .inner .item a .content .price {
+            font-size: 12px;
+            color: #c30000; }
+            .index .pro-pannel .tj-list .inner .item a .content .price span {
+              font-size: 18px; }
 
 /*# sourceMappingURL=index.css.map */
