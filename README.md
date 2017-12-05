@@ -57,7 +57,7 @@
 
 #### 健康商城
 
->预览地址：<a href="https://wzs28150.github.io/homework/201711/www.dazhong.com/">PC</a>
+>预览地址：<a href="https://wzs28150.github.io/homework/201711/www.dazhong.com/">PC</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://wzs28150.github.io/homework/201712/wap.dazhong.com/">WAP</a>
 
 >下载地址：<a href="https://wzs28150.github.io/homework/201711/www.dazhong.com/www.dazhong.com.rar">PC</a>
 
