@@ -2,6 +2,7 @@
  *    v2.0 | 20110126
  *       License: none (public domain)
  *       */
+
 a,
 abbr,
 acronym,
@@ -91,6 +92,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -273,6 +275,7 @@ article {
   text-overflow: ellipsis;
 }
 /*水平垂直居中*/
+
 .wh-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -287,6 +290,7 @@ article {
   align-items        : center;
 }
 /*垂直居中*/
+
 .h-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -298,6 +302,7 @@ article {
   align-items        : center;
 }
 /*分组父级*/
+
 .felx-box {
   display              : -webkit-box;
   -webkit-box-orient   : horizontal;
@@ -309,6 +314,7 @@ article {
   align-items          : left;
 }
 /*分组子级*/
+
 .felx-item {
   -webkit-box-flex: 1;
   flex-basis      : 1;
@@ -317,6 +323,7 @@ article {
   flex            : 1 1 1;
 }
 /* alert_player */
+
 .alert_player {
   position: fixed;
   top     : 0;
@@ -486,7 +493,7 @@ body[onselectstart] {
 }
 
 .search {
-  padding: 1em 0;
+  padding: 0.5em 0;
 
   input[type='text'] {
     width             : calc(90% - 2px - 16px);
@@ -555,4 +562,68 @@ body[onselectstart] {
 
 .fg-line {
   padding-bottom: 4%;
+}
+
+.dropload-down,
+.dropload-up {
+  position         : relative;
+  height           : 0;
+  overflow         : hidden;
+  font-size        : 12px;
+  /* 开启硬件加速 */
+  -webkit-transform: translateZ(0);
+  transform        : translateZ(0);
+}
+
+.dropload-down {
+  height: 50px;
+  width : 100%;
+}
+
+.dropload-load,
+.dropload-noData,
+.dropload-refresh,
+.dropload-update {
+  height     : 50px;
+  line-height: 50px;
+  text-align : center;
+}
+
+.dropload-load .loading {
+  display            : inline-block;
+  height             : 15px;
+  width              : 15px;
+  border-radius      : 100%;
+  margin             : 6px;
+  border             : 2px solid #666;
+  border-bottom-color: transparent;
+  vertical-align     : middle;
+  -webkit-animation  : rotate 0.75s linear infinite;
+  animation          : rotate 0.75s linear infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
