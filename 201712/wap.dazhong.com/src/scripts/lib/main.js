@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect, search;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect, search, setheadername;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -90,11 +90,10 @@ numselect = function() {
 minheight = function() {
   var hh = $('header').height();
   var fh = $('footer').height();
-  var fqh = $('.footer-quick').height();
   var wh = $(window).height();
   var nh = $('nav').height();
   var mh;
-  mh = $(window).height() - fh - hh - fqh;
+  mh = $(window).height() - fh - hh;
   if (mh < 458) {
     mh = 458;
   }
@@ -117,6 +116,9 @@ fenleishow = function() {
     "display": "block"
   })
 }
+setheadername = function(name) {
+  $('header h1').html(name)
+}
 loadtemp = function() {
   if (exists('.jiazai')) {
     $('.jiazai').each(function(index, el) {
@@ -135,7 +137,7 @@ loadtemp = function() {
             for (var i = 0; i < result.length; i++) {
               var r = result[i].split(":");
               if (r[1]) {
-                myeval(r[0] + '(' + r[1] + ');');
+                myeval(r[0] + '("' + r[1] + '");');
               } else {
                 myeval(r[0] + '();');
               }

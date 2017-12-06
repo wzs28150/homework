@@ -1,4 +1,96 @@
 .type .type-list {
   background-color: #fff; }
+  .type .type-list ul li {
+    border-bottom: 1px solid #eee; }
+    .type .type-list ul li a {
+      display: block;
+      line-height: 45px;
+      font-weight: lighter; }
+      .type .type-list ul li a span {
+        display: block; }
+        .type .type-list ul li a span.ico {
+          width: 1em;
+          height: 45px;
+          background-size: 100% auto;
+          background-position: center;
+          background-repeat: no-repeat;
+          margin-right: 1em; }
+        .type .type-list ul li a span.jt-chevron-right {
+          line-height: 45px;
+          color: #b9b9b9; }
+
+.type1 .fg-line-fix {
+  position: fixed;
+  top: 40px;
+  width: 100%;
+  background-color: #eee;
+  padding-bottom: 4%;
+  z-index: 99; }
+.type1 .type-list {
+  background-color: #fff;
+  position: relative; }
+  .type1 .type-list .ico-list {
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 50px;
+    background-color: #fff;
+    height: 100%;
+    margin-top: 4%;
+    z-index: 1; }
+    .type1 .type-list .ico-list a {
+      display: block;
+      height: 45px;
+      border-bottom: 1px solid #fff; }
+      .type1 .type-list .ico-list a span {
+        display: block;
+        margin: 0 auto; }
+        .type1 .type-list .ico-list a span.ico {
+          width: 1em;
+          height: 45px;
+          background-size: 100% auto;
+          background-position: center;
+          background-repeat: no-repeat; }
+          .type1 .type-list .ico-list a span.ico.type_ico1 {
+            background-image: url("../images/type_ico1.png"); }
+          .type1 .type-list .ico-list a span.ico.type_ico2 {
+            background-image: url("../images/type_ico2.png"); }
+          .type1 .type-list .ico-list a span.ico.type_ico3 {
+            background-image: url("../images/type_ico3.png"); }
+          .type1 .type-list .ico-list a span.ico.type_ico4 {
+            background-image: url("../images/type_ico4.png"); }
+      .type1 .type-list .ico-list a.on {
+        background-color: #3ea600; }
+        .type1 .type-list .ico-list a.on span.type_ico1 {
+          background-image: url("../images/type_ico1_on.png"); }
+        .type1 .type-list .ico-list a.on span.type_ico2 {
+          background-image: url("../images/type_ico2.png"); }
+        .type1 .type-list .ico-list a.on span.type_ico3 {
+          background-image: url("../images/type_ico3.png"); }
+        .type1 .type-list .ico-list a.on span.type_ico4 {
+          background-image: url("../images/type_ico4.png"); }
+  .type1 .type-list > ul {
+    padding-left: 50px;
+    background-color: #f5f5f5; }
+    .type1 .type-list > ul > li {
+      position: relative;
+      border-bottom: 1px solid #eee; }
+      .type1 .type-list > ul > li > a {
+        display: block;
+        line-height: 45px;
+        font-weight: lighter;
+        color: #000; }
+        .type1 .type-list > ul > li > a > span {
+          display: block; }
+          .type1 .type-list > ul > li > a > span.ico {
+            width: 1em;
+            height: 45px;
+            background-size: 100% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-right: 1em; }
+          .type1 .type-list > ul > li > a > span.jt-chevron-right {
+            line-height: 45px;
+            color: #b9b9b9; }
 
 /*# sourceMappingURL=type.css.map */
