@@ -144,4 +144,22 @@ footer {
       }
     }
   }
+
+  &.pro-footer {
+    padding: 0.5em 0;
+
+    a {
+      text-align : center;
+      font-size  : 14px;
+      border     : 1px solid #c30000;
+      width      : 50%;
+      line-height: 2.5em;
+
+      &.jiaru {
+        background-color: #c30000;
+        color           : #fff;
+        margin-right    : 1em;
+      }
+    }
+  }
 }

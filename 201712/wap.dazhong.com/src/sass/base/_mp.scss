@@ -1,5 +1,10 @@
 @charset "utf-8";
 @for $i from 1 through 10 {
+  .fg-line-#{$i} {
+    padding-bottom: calc(#{$i}0% / 10);
+  }
+}
+@for $i from 1 through 10 {
   .m_#{$i}0 {
     margin: #{$i}0px !important;
   }

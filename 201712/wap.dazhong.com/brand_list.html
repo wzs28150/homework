@@ -31,8 +31,8 @@
   <header>
     <div class="container_1200">
       <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
-      <h1>产品中心</h1>
-      <span class="top-filter right-ico" ></span>
+      <h1>非常品牌</h1>
+      <span class="top-filter right-ico"></span>
     </div>
   </header>
 
@@ -47,6 +47,21 @@
       <!-- 分割线 -->
       <section class="fg-line"></section>
       <!-- 分割线 -->
+      <section class="brand-list">
+        <div class="tit">
+          <img src="./src/images/brand_pic.jpg" alt="">
+        </div>
+        <div class="container_1200">
+          <div class="content">
+            <p>鱼跃医疗，中国A股上市公司。自1998年创立以来，鱼跃矢志于投身生命健康事业，将专业的健康管理理念与先进的产品方案带入万千家庭，打造了由家庭医疗、临床医疗、互联网医疗组成的大健康生态圈，组建一个全面覆盖医疗器械的专业化服务平台。</p>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+      </section>
+      <!-- 分割线 -->
+      <section class="fg-line"></section>
+      <!-- 分割线 -->
+      <!-- 排序 -->
       <section class="sort">
         <div class="container_1200 felx-box">
           <a class="felx-item on" href="">综合</a>
@@ -55,6 +70,7 @@
           <a class="felx-item" href="">时间</a>
         </div>
       </section>
+      <!-- 排序 -->
       <section class="pro-list">
         <div class="lists">
           <div class="item animate-element  bottom-to-top fl in-viewport">
@@ -240,13 +256,13 @@
               if (arrLen > 0) {
                 for (var i = 0; i < arrLen; i++) {
                   result += '<div class="item animate-element  bottom-to-top fl in-viewport">' +
-                            '<div class="pic" style="background-image:url(./src/images/pro_pic.jpg)"><a href="products_content.html"></a></div>' +
-                            '<div class="price">￥<span>238.00</span></div>' +
-                            '<div class="title"><a href="products_content.html">理想境界普洱茶萃（产品规 格: 0.5克X30）</a></div>' +
-                            '<div class="btn felx-box">' +
-                            '<a class="brand-sc felx-item" href="">收藏</a><a class="brand-car felx-item" href="">加入购物车</a>' +
-                            '</div>' +
-                            '</div>';
+                    '<div class="pic" style="background-image:url(' + data[i].pic + ')"><a href="' + data[i].link + '"></a></div>' +
+                    '<div class="price">￥<span>238.00</span></div>' +
+                    '<div class="title"><a href="' + data[i].link + '">' + data[i].title + '</a></div>' +
+                    '<div class="btn felx-box">' +
+                    '<a class="brand-sc felx-item" href="">收藏</a><a class="brand-car felx-item" href="">加入购物车</a>' +
+                    '</div>' +
+                    '</div>';
                 }
                 // 如果没有数据
               } else {

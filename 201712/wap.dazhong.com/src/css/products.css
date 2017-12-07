@@ -88,6 +88,375 @@
           background-position: 8% center;
           background-repeat: no-repeat;
           background-size: 1em; }
+.products .p-m-pic .swiper-slide {
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
+  background-position: center;
+  background-size: cover; }
+.products .p-m-pic .swiper-pagination-bullet {
+  background-color: #fff;
+  opacity: 1; }
+.products .p-m-pic .swiper-pagination-bullet-active {
+  background-color: #c30000; }
+.products .p-m-pannel {
+  background-color: #fff;
+  padding: 5% 0; }
+  .products .p-m-pannel .title {
+    font-size: 15px; }
+  .products .p-m-pannel .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e60b16;
+    margin-left: -.2em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em; }
+  .products .p-m-pannel .kuaidi,
+  .products .p-m-pannel .xiaoliang {
+    color: #999;
+    font-size: 12px; }
+.products .p-m-jifen {
+  background-color: #f5f5f5;
+  font-size: 13px;
+  line-height: 3em; }
+  .products .p-m-jifen span {
+    line-height: 39px;
+    font-size: 16px;
+    display: block;
+    color: #c60e0e;
+    margin-right: 0.5em; }
+.products .p-m-select {
+  background-color: #fff; }
+  .products .p-m-select .city-picker {
+    border-bottom: 1px solid #d8d9d9;
+    overflow: hidden;
+    display: block;
+    font-size: 15px;
+    line-height: 2.5em;
+    color: #000; }
+    .products .p-m-select .city-picker span {
+      font-size: 15px;
+      line-height: 2.5em;
+      display: block;
+      color: #c3c3c3; }
+  .products .p-m-select a {
+    font-size: 15px;
+    display: block;
+    font-size: 15px;
+    line-height: 2.5em;
+    color: #000; }
+    .products .p-m-select a span {
+      font-size: 15px;
+      line-height: 2.5em;
+      display: block;
+      color: #c3c3c3; }
+.products .fg-pingjia {
+  font-size: 14px;
+  height: 3em;
+  position: relative;
+  text-align: center; }
+  .products .fg-pingjia::before {
+    content: "";
+    display: block;
+    width: 90%;
+    height: 0;
+    border-bottom: 1px solid #d8d9d9;
+    position: absolute;
+    top: 50%;
+    left: 5%; }
+  .products .fg-pingjia span {
+    position: relative;
+    z-index: 1;
+    background-color: #eeeeee;
+    display: inline-block;
+    font-size: 14px;
+    height: 3em;
+    line-height: 3em;
+    padding: 0 1em; }
+.products .pj-pannel {
+  background-color: #fff;
+  padding-bottom: 5%; }
+  .products .pj-pannel .tit {
+    display: block;
+    font-size: 15px;
+    color: #000;
+    line-height: 2.5em;
+    border-bottom: 1px solid #d8d9d9;
+    overflow: hidden; }
+    .products .pj-pannel .tit span {
+      font-size: 15px;
+      line-height: 2.5em;
+      display: block;
+      color: #c3c3c3; }
+  .products .pj-pannel .item a {
+    display: block;
+    padding: 1em 0;
+    overflow: hidden; }
+    .products .pj-pannel .item a span {
+      display: block;
+      font-weight: lighter;
+      font-size: 14px; }
+      .products .pj-pannel .item a span.name {
+        position: relative;
+        padding-left: 2em;
+        line-height: 1.6em;
+        margin-bottom: 0.5em; }
+        .products .pj-pannel .item a span.name .photo {
+          width: 1.6em;
+          height: 1.6em;
+          background-position: center;
+          background-size: cover;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          margin-top: -.8em;
+          overflow: hidden;
+          border-radius: 100%; }
+  .products .pj-pannel .more {
+    display: block;
+    width: 6em;
+    margin: 0 auto;
+    border: 1px solid #c30000;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 2.2em;
+    padding: 0 2em; }
+.products .products_content_info img {
+  display: block;
+  width: 100% !important;
+  height: auto !important; }
+.products .pingjia-list .item {
+  background-color: #fff;
+  position: relative;
+  padding: 5% 0;
+  margin-bottom: 0.5em; }
+  .products .pingjia-list .item .photo {
+    width: 1.6em;
+    height: 1.6em;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 100%; }
+  .products .pingjia-list .item .inner {
+    padding-left: 2em;
+    font-weight: lighter; }
+    .products .pingjia-list .item .inner .name {
+      font-size: 14px;
+      margin-bottom: 0.2em; }
+    .products .pingjia-list .item .inner .pingfen {
+      font-size: 14px;
+      margin-bottom: 0.2em;
+      position: relative; }
+      .products .pingjia-list .item .inner .pingfen .star {
+        position: absolute;
+        display: inline-block;
+        height: 16px;
+        top: 50%;
+        margin-top: -8px; }
+    .products .pingjia-list .item .inner .title {
+      font-size: 14px;
+      margin-bottom: 0.2em; }
+    .products .pingjia-list .item .inner .renwei {
+      font-size: 14px;
+      margin-bottom: 0.2em; }
+    .products .pingjia-list .item .inner .content {
+      font-size: 14px;
+      line-height: 1.5em; }
+.products .brand-list {
+  background-color: #fff; }
+  .products .brand-list .tit {
+    height: 70px;
+    border-bottom: 1px solid #cccccc; }
+    .products .brand-list .tit img {
+      display: block;
+      height: 70px;
+      margin: 0 auto; }
+  .products .brand-list .content {
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding: 6% 0; }
+.products .huodong-list {
+  overflow: hidden; }
+  .products .huodong-list .item {
+    width: calc(50% - 1px);
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    margin-bottom: 1px;
+    transition: border 0.4s; }
+    .products .huodong-list .item:nth-child(odd) {
+      border-right: 1px solid #eee; }
+    .products .huodong-list .item:nth-child(even) {
+      border-left: 1px solid #eee; }
+    .products .huodong-list .item a {
+      display: block; }
+    .products .huodong-list .item .pic {
+      width: 100%;
+      height: 0;
+      padding-bottom: 100%;
+      background-size: cover;
+      background-position: center;
+      position: relative; }
+      .products .huodong-list .item .pic a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
+    .products .huodong-list .item .title {
+      padding: 0 10px 0.2em;
+      font-size: 16px; }
+      .products .huodong-list .item .title a {
+        line-height: 1.2em;
+        height: 1.2em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+    .products .huodong-list .item .des {
+      font-size: 12px;
+      padding: 0 10px 0.8em; }
+      .products .huodong-list .item .des a {
+        line-height: 1.2em;
+        height: 2.2em;
+        color: #999;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-all;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; }
+    .products .huodong-list .item .qianggou {
+      border: 1px solid #c30000;
+      overflow: hidden; }
+      .products .huodong-list .item .qianggou .inner {
+        width: 50%;
+        padding-left: 5%;
+        height: 35px; }
+        .products .huodong-list .item .qianggou .inner .price {
+          font-size: 9px;
+          color: #c30000; }
+          .products .huodong-list .item .qianggou .inner .price i {
+            font-weight: bold;
+            font-size: 16px; }
+        .products .huodong-list .item .qianggou .inner .old-price {
+          font-size: 8px;
+          text-decoration: line-through; }
+      .products .huodong-list .item .qianggou a {
+        width: calc(45% - 1px);
+        font-size: 14px;
+        line-height: 35px;
+        height: 35px;
+        background-color: #ff5757;
+        color: #fff;
+        text-align: center;
+        border-left: 1px solid #c30000; }
+
+.canshu-bg,
+.filter-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none; }
+
+.canshu-pannel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5% 0;
+  z-index: 1000;
+  background-color: #fff;
+  display: none; }
+  .canshu-pannel .tit {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 5%;
+    position: relative; }
+    .canshu-pannel .tit .close {
+      width: 1em;
+      height: 1em;
+      background-image: url("../images/close.png");
+      background-size: cover;
+      background-position: center;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -.5em; }
+  .canshu-pannel ul li {
+    border-bottom: 1px solid #d8d9d9;
+    font-size: 14px;
+    padding: 0.75em 0.5em; }
+  .canshu-pannel .complete {
+    margin-top: 0.8em;
+    display: block;
+    text-align: center;
+    background-color: #c30000;
+    color: #fff;
+    line-height: 2.5em;
+    border-radius: 3px; }
+
+.filter-pannel {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 75%;
+  height: 100%;
+  z-index: 1000;
+  display: none; }
+  .filter-pannel .tit {
+    background-color: #eee;
+    color: #000;
+    line-height: 2.5em; }
+  .filter-pannel .filter-list {
+    position: absolute;
+    height: calc(100% - 40px - 50px);
+    overflow-y: scroll; }
+    .filter-pannel .filter-list .item {
+      border-bottom: 1px solid #f5f5f5;
+      padding: 5% 0; }
+      .filter-pannel .filter-list .item .title {
+        font-size: 15px;
+        color: #999999; }
+      .filter-pannel .filter-list .item .list {
+        overflow: hidden;
+        margin-top: 5%; }
+        .filter-pannel .filter-list .item .list input {
+          display: none; }
+        .filter-pannel .filter-list .item .list label {
+          font-size: 12px;
+          background-color: #f5f5f5;
+          width: 32%;
+          margin-right: 1%;
+          margin-bottom: 1%;
+          display: block;
+          text-align: center;
+          line-height: 2.5em;
+          border-radius: 5px;
+          float: left; }
+        .filter-pannel .filter-list .item .list input:checked + label {
+          background-color: #c30000;
+          color: #fff; }
+  .filter-pannel .filter-btn {
+    position: fixed;
+    width: 75%;
+    bottom: 0;
+    background-color: #fff; }
+    .filter-pannel .filter-btn a {
+      text-align: center;
+      line-height: 50px;
+      border-top: 1px solid #f5f5f5; }
+      .filter-pannel .filter-btn a.on {
+        background-color: #c30000;
+        color: #fff; }
 
 @media (max-width: 320px) {
   .products .pro-list .item .btn a {

@@ -72,3 +72,45 @@
 .scwap-search:before {
 	content: "\e908";
 }
+@font-face {
+	font-family: 'topico';
+	src        : url("fonts/topico.eot?4mykhk");
+	src        : url("fonts/topico.eot?4mykhk#iefix") format('embedded-opentype'), url("fonts/topico.ttf?4mykhk") format('truetype'), url("fonts/topico.woff?4mykhk") format('woff'), url("fonts/topico.svg?4mykhk#topico") format('svg');
+	font-weight: normal;
+	font-style : normal;
+}
+
+[class^="top-"],
+[class*=" top-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family            : 'topico' !important;
+	speak                  : none;
+	font-style             : normal;
+	font-weight            : normal;
+	font-variant           : normal;
+	text-transform         : none;
+	line-height            : 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.top-jf:before {
+	content: "\e901";
+}
+
+.top-filter:before {
+	content: "\e900";
+}
+
+.top-share:before {
+	content: "\e903";
+}
+
+.top-home-outline:before {
+	content: "\e904";
+}
+
+.top-dots-three-vertical:before {
+	content: "\e902";
+}

@@ -29,20 +29,101 @@
   </div>
   <!-- 弹窗 -->
   <header>
-    <div class="container_1200">
-      <a class="jt-chevron-left" href="javascript:history.back();"></a>
-      <h1>产品中心</h1>
+    <div class="containern_1200">
+      <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
+      <div class="tab">
+        <a class="on" href="products_content.html">商品</a>
+        <a href="products_content_info.html">详情</a>
+      </div>
+      <span class="top-dots-three-vertical right-ico">
+        <ul>
+          <li><a href=""><span class="top-home-outline"></span>首页</a></li>
+          <li><a href=""><span class="top-share"></span>分享</a></li>
+        </ul>
+      </span>
     </div>
   </header>
   <main>
     <article class="products">
+      <section class="p-m-pic">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./src/images/pro_pic2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./src/images/pro_pic2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./src/images/pro_pic2.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./src/images/pro_pic2.jpg)"></div>
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
 
+      <section class="p-m-pannel">
+        <div class="container_1200">
+          <div class="title">Fan果芬橙汁250ml（塞浦路斯进口盒）*9</div>
+          <div class="price">￥29.90</div>
+          <div class="clearfix">
+            <div class="kuaidi fl">快递：免运费</div>
+            <div class="xiaoliang fr">月销4556笔</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-m-jifen">
+        <div class="container_1200">
+          <span class="top-jf fl"></span>购买可获10积分
+        </div>
+      </section>
+      <section class="fg-line-2"></section>
+      <section class="p-m-select">
+        <input type="text" name="dizhi" style="display:none" id="city-picker">
+        <label class="city-picker" for="city-picker"><div class="container_1200">配送至：<i>哈尔滨南岗</i> <span class="jt-chevron-right fr"></span></div></label>
+        <a href="javascript:void(0);" id="canshu">
+          <div class="container_1200">产品参数<span class="jt-chevron-right fr"></span></div>
+        </a>
+      </section>
+      <section class="fg-pingjia">
+        <span>产品评价</span>
+      </section>
+      <section class="pj-pannel">
+        <div class="container_1200">
+          <a class="tit" href="./pingjia.html">评价（55）<span class="jt-chevron-right fr"></span></a>
+          <div class="item">
+            <a href="./pingjia.html">
+              <span class="name"><span class="photo fl" style="background-image:url(./src/images/photo.jpg)"></span>青**凉卟...</span>
+              <span class="content">每天喜欢早上把饮料放冰箱，晚上回来一喝是很爽肚了呢</span>
+            </a>
+          </div>
+          <a class="more" href="./pingjia.html">查看全部评价</a>
+        </div>
+      </section>
     </article>
   </main>
-  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
-  <div id="footer" class="jiazai" data-callback="navactive:1,minheight"></div>
-  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+  <footer class="pro-footer ">
+    <div class="container_1200 felx-box">
+      <a class="felx-item jiaru" href="">加入购物车</a>
+      <a class="felx-item" href="">立即购买</a>
+    </div>
+  </footer>
+  <!-- 参数弹出 -->
+  <div class="canshu-bg"></div>
+  <div class="canshu-pannel">
+    <div class="container_1200">
+      <div class="tit">产品参数
+        <div class="close"></div>
+      </div>
+      <ul>
+        <li>品牌：纯果芬</li>
+        <li>规格：1*250ml</li>
+        <li>产地：塞浦路斯</li>
+        <li>保质期(天)：450</li>
+        <li>商品毛重：250.0克</li>
+      </ul>
+      <a class="complete" href="javascript:void(0);">完成</a>
+    </div>
   </div>
+  <!-- 参数弹出 -->
+  
   <!-- 动画插件 -->
   <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
   <!-- 动画插件 -->
@@ -50,68 +131,18 @@
   <script src="./src/scripts/lib/main.js"></script>
   <!-- 一些主要的公共方法  -->
   <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
   <!-- banner滚动插件 -->
-  <!-- 滚动加载-->
-  <script src="./src/scripts/package/dropload/dropload.min.js"></script>
-  <!-- 滚动加载-->
-  <script type="text/javascript">
-    //ajax 滚动加载 数据是网上找的测试数据 没有价格 自己替换
-    //接口格式http://ons.me/tools/dropload/json.php?page=0&size=4
-    $(function() {
-      // 页数
-      var page = 0;
-      // 每页展示5个
-      var size = 4;
+  <!-- 地址插件 -->
 
-      // dropload
-      $('.pro-list').dropload({
-        scrollArea: window,
-        loadDownFn: function(me) {
-          page++;
-          // 拼接HTML
-          var result = '';
-          $.ajax({
-            type: 'GET',
-            url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
-            dataType: 'json',
-            success: function(data) {
-              var arrLen = data.length;
-              if (arrLen > 0) {
-                for (var i = 0; i < arrLen; i++) {
-                  result += '<div class="item animate-element  bottom-to-top fl in-viewport">' +
-                            '<div class="pic" style="background-image:url(' + data[i].pic + ')"><a href="' + data[i].link + '"></a></div>' +
-                            '<div class="price">￥<span>238.00</span></div>' +
-                            '<div class="title"><a href="' + data[i].link + '">' + data[i].title + '</a></div>' +
-                            '<div class="btn felx-box">' +
-                            '<a class="brand-sc felx-item" href="">收藏</a><a class="brand-car felx-item" href="">加入购物车</a>' +
-                            '</div>' +
-                            '</div>';
-                }
-                // 如果没有数据
-              } else {
-                // 锁定
-                me.lock();
-                // 无数据
-                me.noData();
-              }
-              // 为了测试，延迟1秒加载
-              setTimeout(function() {
-                // 插入数据到页面，放到最后面
-                $('.lists').append(result);
-                // 每次数据插入，必须重置
-                me.resetload();
-              }, 1000);
-            },
-            error: function(xhr, type) {
-              alert('Ajax error!');
-              // 即使加载出错，也得重置
-              me.resetload();
-            }
-          });
-        }
-      });
-    });
-  </script>
+  <link rel="stylesheet" href="./src/scripts/package/citypicker/jquery-weui.min.css">
+  <script src="./src/scripts/package/citypicker/jquery-weui.min.js"></script>
+  <script src="./src/scripts/package/citypicker/city-picker.min.js"></script>
+  <!-- 地址插件 -->
+  <script src="./src/scripts/lib/products.js"></script>
+
+
+
 
 
 </body>

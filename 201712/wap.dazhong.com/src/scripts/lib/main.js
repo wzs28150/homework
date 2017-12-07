@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect, search, setheadername;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect, search, setheadername, html_overflow;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -8,6 +8,14 @@ exists = function(selector) {
   "use strict";
   return (jQuery(selector).length > 0);
 };
+
+html_overflow = function(boolen) {
+  if (boolen) {
+    $('html').css('overflow-y', 'scroll');
+  } else {
+    $('html').css('overflow', 'hidden');
+  }
+}
 
 /**
  * 动画设置
@@ -42,6 +50,23 @@ navactive = function(i) {
       $(this).find('ul').fadeToggle();
       $(this).toggleClass('on');
     }
+  })
+  $('body').off('click', '.top-dots-three-vertical').on('click', '.top-dots-three-vertical', function() {
+    $(this).find('ul').fadeToggle();
+    $(this).toggleClass('on');
+  })
+  $('body').off('click', '.top-filter').on('click', '.top-filter', function() {
+    $('.filter-bg').fadeIn();
+    $('.filter-pannel').fadeIn();
+    html_overflow(false);
+    $(this).toggleClass('on');
+  })
+
+  $('body').off('click', '.filter-bg').on('click', '.filter-bg', function() {
+    $('.filter-bg').fadeOut();
+    $('.filter-pannel').fadeOut();
+    html_overflow(true);
+    $(this).toggleClass('on');
   })
 };
 
