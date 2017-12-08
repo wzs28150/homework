@@ -49,6 +49,46 @@
   }
 
   .user-order {
-    background-color: #fff;
+    .tit {
+      font-size       : 14px;
+      color           : #444;
+      line-height     : 14px;
+      background-color: #fff;
+
+      a {
+        display    : block;
+        line-height: 14px;
+        padding    : 1em 0;
+      }
+
+      i {
+        font-size  : 10px;
+        line-height: 14px;
+        color      : #b9b9b9;
+      }
+    }
+
+    .list {
+      .felx-item {
+        text-align: center;
+        font-size : 12px;
+
+        span {
+          width              : 1.5em;
+          display            : block;
+          height             : 0;
+          padding-bottom     : 1.5em;
+          margin             : 0 auto;
+          background-position: center;
+          background-repeat  : no-repeat;
+          background-size    : auto 100%;
+          @for $i from 1 through 5 {
+            &.u_o_icon#{$i} {
+              background-image: url("../images/u_o_icon#{$i}.png");
+            }
+          }
+        }
+      }
+    }
   }
 }
