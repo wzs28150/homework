@@ -1,0 +1,54 @@
+.user {
+  .user-info {
+    filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#da2c2e,endcolorstr=#fd4250,gradientType=0);
+    -ms-filter:alpha(opacity=100 finishopacity=50 style=1 startx=0,starty=0,finishx=0,finishy=150) progid:DXImageTransform.Microsoft.gradient(startcolorstr=#da2c2e,endcolorstr=#fd4250,gradientType=0);
+    background: #da2c2e;
+    /* 一些不支持背景渐变的浏览器 */
+    background: -moz-linear-gradient(top, #da2c2e, #fd4250);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#da2c2e), to(#fd4250));
+    padding   : 10% 0;
+
+    .photo {
+      width              : 50px;
+      height             : 50px;
+      border-radius      : 100%;
+      border             : 1px solid #fff;
+      background-position: center;
+      background-size    : cover;
+      margin             : 0 auto;
+    }
+
+    .name {
+      text-align : center;
+      color      : #fff;
+      margin-top : 1em;
+      font-size  : 15px;
+      line-height: 1em;
+    }
+  }
+
+  .user-jifen {
+    text-align      : center;
+    background-color: #fff;
+    font-size       : 14px;
+    padding         : 0.5em 0;
+
+    .felx-item {
+      width: 50%;
+
+      &:first-child {
+        border-right: 1px solid #e8e8e8;
+      }
+
+      i {
+        display  : block;
+        font-size: 12px;
+        color    : #999;
+      }
+    }
+  }
+
+  .user-order {
+    background-color: #fff;
+  }
+}

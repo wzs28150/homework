@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link rel="stylesheet" href="./src/css/ask.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="hasheader">
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+  <div id="header" class="jiazai" data-callback="setheadername:健康资讯" style="position: relative;z-index: 99;"></div>
+  <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+  <main>
+    <article class="ask">
+      <section class="top-ask">
+        <div class="container_1200">
+          <div class="pic">
+            <a href="ask_content.html">
+            <img src="./src/images/ask_pic.jpg" alt="">
+            <div class="title">网传“医生永远不吃的5种食物”</div>
+            </a>
+          </div>
+          <div class="content">
+            <a href="ask_content.html">
+              <div class="title">贫血怎么办？ 随手可取的补血食材</div>
+              <div class="des">贫血是很多人都遇到的健康问题，无论男女老幼都有可能缺血，尤其是女性和婴幼儿。其实，日常在我们身边都能平日… </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 分割线 -->
+      <section class="fg-line"></section>
+      <!-- 分割线 -->
+      <section class="news-list">
+        <div class="tit">健康资讯</div>
+        <div class="list">
+          <div class="item">
+            <a href="news_content.html">
+                <span class="pic" style="background-image:url(./src/images/news_pic.jpg)"></span>
+                <span class="inner">
+                  <span class="title text-hidden">吃冬枣有助防治心血</span>
+                  <span class="des">冬枣具有很好的保健养生作用中医认为冬枣“养神，平胃…</span>
+                  <span class="time">2017-5-21</span>
+                </span>
+              </a>
+          </div>
+          <div class="item">
+            <a href="news_content.html">
+                <span class="pic" style="background-image:url(./src/images/news_pic.jpg)"></span>
+                <span class="inner">
+                  <span class="title text-hidden">吃冬枣有助防治心血</span>
+                  <span class="des">冬枣具有很好的保健养生作用中医认为冬枣“养神，平胃…</span>
+                  <span class="time">2017-5-21</span>
+                </span>
+              </a>
+          </div>
+          <div class="item">
+            <a href="news_content.html">
+                <span class="pic" style="background-image:url(./src/images/news_pic.jpg)"></span>
+                <span class="inner">
+                  <span class="title text-hidden">吃冬枣有助防治心血</span>
+                  <span class="des">冬枣具有很好的保健养生作用中医认为冬枣“养神，平胃…</span>
+                  <span class="time">2017-5-21</span>
+                </span>
+              </a>
+          </div>
+          <div class="item">
+            <a href="news_content.html">
+                <span class="pic" style="background-image:url(./src/images/news_pic.jpg)"></span>
+                <span class="inner">
+                  <span class="title text-hidden">吃冬枣有助防治心血</span>
+                  <span class="des">冬枣具有很好的保健养生作用中医认为冬枣“养神，平胃…</span>
+                  <span class="time">2017-5-21</span>
+                </span>
+              </a>
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+  <div id="footer" class="jiazai" data-callback="minheight"></div>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- 滚动加载-->
+  <script src="./src/scripts/package/dropload/dropload.min.js"></script>
+  <!-- 滚动加载-->
+  <script type="text/javascript">
+    //ajax 滚动加载 数据是网上找的测试数据 没有价格 自己替换
+    //接口格式http://ons.me/tools/dropload/json.php?page=0&size=4
+    $(function() {
+      // 页数
+      var page = 0;
+      // 每页展示5个
+      var size = 4;
+
+      // dropload
+      $('.news-list').dropload({
+        scrollArea: window,
+        loadDownFn: function(me) {
+          page++;
+          // 拼接HTML
+          var result = '';
+          $.ajax({
+            type: 'GET',
+            url: 'http://ons.me/tools/dropload/json.php?page=' + page + '&size=' + size,
+            dataType: 'json',
+            success: function(data) {
+              var arrLen = data.length;
+              if (arrLen > 0) {
+                for (var i = 0; i < arrLen; i++) {
+                  result += '<div class="item">' +
+                    '<a href="news_content.html">' +
+                    '<span class="pic" style="background-image:url(./src/images/news_pic.jpg)"></span>' +
+                    '<span class="inner">' +
+                    '<span class="title text-hidden">吃冬枣有助防治心血</span>' +
+                    '<span class="des">冬枣具有很好的保健养生作用中医认为冬枣“养神，平胃…</span>' +
+                    '<span class="time">2017-5-21</span>' +
+                    '</span>' +
+                    '</a>' +
+                    '</div>';
+
+                }
+                // 如果没有数据
+              } else {
+                // 锁定
+                me.lock();
+                // 无数据
+                me.noData();
+              }
+              // 为了测试，延迟1秒加载
+              setTimeout(function() {
+                // 插入数据到页面，放到最后面
+                $('.list').append(result);
+                // 每次数据插入，必须重置
+                me.resetload();
+              }, 1000);
+            },
+            error: function(xhr, type) {
+              alert('Ajax error!');
+              // 即使加载出错，也得重置
+              me.resetload();
+            }
+          });
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -364,7 +364,8 @@
   height: 100%;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.7);
-  display: none; }
+  display: none;
+  cursor: pointer; }
 
 .canshu-pannel {
   position: fixed;

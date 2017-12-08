@@ -1,0 +1,187 @@
+.ask {
+  .top-ask {
+    background-color: #fff;
+    padding         : 5% 0;
+
+    .pic {
+      position: relative;
+
+      img {
+        display: block;
+        width  : 100%;
+      }
+
+      .title {
+        position        : absolute;
+        bottom          : 0;
+        left            : 0;
+        background-color: rgba(0,0,0,0.5);
+        color           : #fff;
+        text-align      : center;
+        width           : 100%;
+        font-size       : 15px;
+        line-height     : 2.5em;
+      }
+    }
+
+    .content {
+      .title {
+        color      : #333333;
+        font-size  : 18px;
+        line-height: 1.2em;
+        margin     : 0.5em 0;
+      }
+
+      .des {
+        font-size  : 15px;
+        color      : #999;
+        line-height: 1.2em;
+      }
+    }
+  }
+
+  .ask-list {
+    background-color: #fff;
+    padding-bottom  : 5%;
+
+    .tit {
+      font-size  : 18px;
+      font-weight: bold;
+      line-height: 3em;
+      padding    : 0 5%;
+    }
+
+    .list {
+      padding-left: calc(5%);
+      position    : relative;
+
+      &::before {
+        width       : 0;
+        height      : 100%;
+        content     : "";
+        display     : block;
+        border-right: 1px dashed #40c28d;
+        position    : absolute;
+        left        : calc(5%);
+        top         : 0;
+      }
+
+      ul {
+        li {
+          padding-left: 1em;
+          position    : relative;
+
+          &::before {
+            width           : 5px;
+            height          : 5px;
+            content         : "";
+            display         : block;
+            background-color: #40c28d;
+            position        : absolute;
+            left            : -2px;
+            top             : 50%;
+            margin-top      : -2px;
+            border-radius   : 100%;
+          }
+
+          a {
+            color        : #333;
+            font-size    : 15px;
+            line-height  : 2.5em;
+            padding-right: 5%;
+            border-bottom: 1px solid #d2d2d2;
+          }
+        }
+      }
+    }
+  }
+
+  .ask-main {
+    background-color: #fff;
+
+    .title {
+      font-size: 18px;
+      color    : #333;
+      padding  : 0.8em 0;
+    }
+
+    .des {
+      font-size     : 13px;
+      font-weight   : lighter;
+      padding-bottom: 0.5em;
+      border-bottom : 1px solid #d2d2d2;
+    }
+
+    .content {
+      padding    : 5% 0;
+      font-size  : 15px;
+      line-height: 1.5em;
+      font-weight: lighter;
+    }
+  }
+
+  .news-list {
+    background-color: #fff;
+    padding-bottom  : 5%;
+
+    .tit {
+      font-size  : 18px;
+      font-weight: bold;
+      line-height: 3em;
+      padding    : 0 5%;
+    }
+
+    .list {
+      .item {
+        padding      : 5%;
+        border-bottom: 1px dashed #e4e4e4;
+
+        &:hover {
+          background-color: #fffae6;
+        }
+
+        a {
+          display : block;
+          position: relative;
+
+          span {
+            display: block;
+
+            &.pic {
+              height             : 80px;
+              width              : 115px;
+              background-position: center;
+              background-size    : cover;
+              position           : absolute;
+              left               : 0;
+              top                : 0;
+            }
+
+            &.inner {
+              height      : 80px;
+              padding-left: calc(115px + 5%);
+              position    : relative;
+
+              .title {
+                color: #333;
+              }
+
+              .des {
+                font-size : 12px;
+                margin-top: 0.2em;
+              }
+
+              .time {
+                position : absolute;
+                left     : calc(115px + 5%);
+                bottom   : 0;
+                font-size: 12px;
+                color    : #999;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
