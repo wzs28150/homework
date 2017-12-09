@@ -34,40 +34,71 @@
       display: block;
       font-size: 12px;
       color: #999; }
-.user .user-order .tit {
-  font-size: 14px;
-  color: #444;
-  line-height: 14px;
+.user .user-order {
   background-color: #fff; }
-  .user .user-order .tit a {
-    display: block;
-    line-height: 14px;
-    padding: 1em 0; }
-  .user .user-order .tit i {
-    font-size: 10px;
-    line-height: 14px;
-    color: #b9b9b9; }
-.user .user-order .list .felx-item {
-  text-align: center;
-  font-size: 12px; }
-  .user .user-order .list .felx-item span {
-    width: 1.5em;
-    display: block;
-    height: 0;
-    padding-bottom: 1.5em;
-    margin: 0 auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto 100%; }
-    .user .user-order .list .felx-item span.u_o_icon1 {
-      background-image: url("../images/u_o_icon1.png"); }
-    .user .user-order .list .felx-item span.u_o_icon2 {
-      background-image: url("../images/u_o_icon2.png"); }
-    .user .user-order .list .felx-item span.u_o_icon3 {
-      background-image: url("../images/u_o_icon3.png"); }
-    .user .user-order .list .felx-item span.u_o_icon4 {
-      background-image: url("../images/u_o_icon4.png"); }
-    .user .user-order .list .felx-item span.u_o_icon5 {
-      background-image: url("../images/u_o_icon5.png"); }
+  .user .user-order .tit {
+    font-size: 14px;
+    color: #444;
+    line-height: 14px; }
+    .user .user-order .tit a {
+      display: block;
+      line-height: 14px;
+      padding: 1em 0; }
+    .user .user-order .tit i {
+      font-size: 10px;
+      line-height: 14px;
+      color: #b9b9b9; }
+  .user .user-order .list {
+    border-top: 1px solid #e8e8e8;
+    padding: 5% 0; }
+    .user .user-order .list .felx-item {
+      text-align: center;
+      font-size: 12px; }
+      .user .user-order .list .felx-item span {
+        width: 1.5em;
+        display: block;
+        height: 0;
+        padding-bottom: 1.5em;
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        position: relative; }
+        .user .user-order .list .felx-item span i {
+          display: block;
+          position: absolute;
+          width: 1.3em;
+          height: 1.3em;
+          line-height: 1.3em;
+          font-size: 1em;
+          top: -.5em;
+          right: -.5em;
+          border-radius: 100%;
+          background-color: #ff0000;
+          color: #fff; }
+        .user .user-order .list .felx-item span.u_o_icon1 {
+          background-image: url("../images/u_o_icon1.png"); }
+        .user .user-order .list .felx-item span.u_o_icon2 {
+          background-image: url("../images/u_o_icon2.png"); }
+        .user .user-order .list .felx-item span.u_o_icon3 {
+          background-image: url("../images/u_o_icon3.png"); }
+        .user .user-order .list .felx-item span.u_o_icon4 {
+          background-image: url("../images/u_o_icon4.png"); }
+        .user .user-order .list .felx-item span.u_o_icon5 {
+          background-image: url("../images/u_o_icon5.png"); }
+.user .user-list {
+  background-color: #fff; }
+  .user .user-list ul li {
+    border-bottom: 1px solid #eee; }
+    .user .user-list ul li:last-child {
+      border: 0; }
+    .user .user-list ul li a {
+      padding: 0 5%;
+      font-size: 14px;
+      line-height: 2.5em;
+      display: block; }
+      .user .user-list ul li a span {
+        line-height: 2.5em;
+        color: #b9b9b9; }
 
 /*# sourceMappingURL=user.css.map */
