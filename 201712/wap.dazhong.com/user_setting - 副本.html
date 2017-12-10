@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link href="./src/scripts/package/touxiang/assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./src/scripts/package/touxiang/dist/cropper.min.css" rel="stylesheet">
+  <link href="./src/scripts/package/touxiang/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link rel="stylesheet" href="./src/css/user.css">
+
+
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="hasheader">
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <header>
+    <div class="container_1200">
+      <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
+      <h1>个人资料</h1>
+    </div>
+  </header>
+  <main>
+    <article class="user">
+      <section class="fg-line-3"></section>
+      <section class="user-list">
+        <ul>
+          <li id="crop-avatar">
+            <div class="avatar-view" title="Change the avatar">
+              头像
+              <span class="jt-chevron-right fr"></span><img src="./src/images/my_photo.png" class="fr photo" alt="Avatar">
+            </div>
+            <!-- Cropping modal -->
+            <div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <form class="avatar-form" action="crop.php" enctype="multipart/form-data" method="post">
+                    <div class="modal-header">
+                      <button class="close" data-dismiss="modal" type="button">&times;</button>
+                      <h4 class="modal-title" id="avatar-modal-label">修改头像</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="avatar-body">
+
+                        <!-- Upload image and data -->
+                        <div class="avatar-upload">
+                          <input class="avatar-src" name="avatar_src" type="hidden">
+                          <input class="avatar-data" name="avatar_data" type="hidden">
+                          <label for="avatarInput">选择图片</label>
+                          <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                        </div>
+
+                        <!-- Crop and preview -->
+                        <div class="row">
+                          <div class="col-md-9">
+                            <div class="avatar-wrapper"></div>
+                          </div>
+                          <div class="col-md-3">
+                            <div class="avatar-preview preview-sm"></div>
+                          </div>
+
+                        </div>
+                        <div class="row avatar-btns">
+                          <div class="col-md-3">
+                            <button class="btn btn-primary btn-block avatar-save" type="submit">上传</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="modal-footer">
+                      <button class="btn btn-default" data-dismiss="modal" type="button">Close</button>
+                    </div> -->
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- /.modal -->
+
+            <!-- Loading state -->
+            <div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+          </li>
+          <li><a href="">会员资料<span class="jt-chevron-right fr"></span></a></li>
+          <li><a href="">登录邮箱<span class="jt-chevron-right fr"></span></a></li>
+          <li><a href="">绑定手机<span class="jt-chevron-right fr"></span></a></li>
+        </ul>
+      </section>
+      <section class="fg-line-3"></section>
+      <section class="user-list">
+        <ul>
+          <li><a href="">昵称<span class="jt-chevron-right fr"></span></a></li>
+          <li><a href="">真实姓名<span class="jt-chevron-right fr"></span></a></li>
+          <li><a href="">性别<span class="jt-chevron-right fr"></span></a></li>
+          <li><a href="">出生日期<span class="jt-chevron-right fr"></span></a></li>
+        </ul>
+      </section>
+
+    </article>
+  </main>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+  <div id="footer" class="jiazai" data-callback="navactive:3,minheight"></div>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+
+
+  <!-- 头像上传 -->
+  <script src="./src/scripts/package/touxiang/assets/js/jquery.min.js"></script>
+  <script src="./src/scripts/package/touxiang/assets/js/bootstrap.min.js"></script>
+  <script src="./src/scripts/package/touxiang/dist/cropper.min.js"></script>
+  <script src="./src/scripts/package/touxiang/js/main.js"></script>
+  <!-- 头像上传 -->
+</body>
+
+</html>

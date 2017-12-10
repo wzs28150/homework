@@ -100,5 +100,14 @@
       .user .user-list ul li a span {
         line-height: 2.5em;
         color: #b9b9b9; }
+        .user .user-list ul li a span.photo {
+          width: 2em;
+          height: 2em;
+          border-radius: 100%;
+          border: 1px solid #fff;
+          background-position: center;
+          background-size: cover;
+          margin: 0.25em 0.5em 0 0;
+          box-shadow: 0 0 2px #ddd; }
 
 /*# sourceMappingURL=user.css.map */

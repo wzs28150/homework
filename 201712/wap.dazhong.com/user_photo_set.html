@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>html5拍照上传头像裁剪代码 - DD博客</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link href="./src/scripts/package/photo/css/style.css" rel="stylesheet" type="text/css">
+  <!--[if IE]>
+<script src="js/html5shiv.min.js"></script>
+<![endif]-->
+</head>
+
+<body style="background:#eee">
+  <!--头部-->
+  <header id="user_head">
+    <div class="container_1200">
+      <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
+      <h1>个人资料</h1>
+    </div>
+  </header>
+  <a href="javascript:void(0);" class="logoBox" id="logoBox">
+    <img id="bgl" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAABnCAYAAADygzfHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjFERjU2OUZFREJFMDExRTdBQzgzRDA4N0U2OTY0MDAxIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjFERjU2OUZGREJFMDExRTdBQzgzRDA4N0U2OTY0MDAxIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MURGNTY5RkNEQkUwMTFFN0FDODNEMDg3RTY5NjQwMDEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MURGNTY5RkREQkUwMTFFN0FDODNEMDg3RTY5NjQwMDEiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz71g4+mAAAIo0lEQVR42uxd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" width="100%">
+
+</a>
+
+
+  <div class="htmleaf-container" style="display: block;">
+    <div id="clipArea"></div>
+    <div id="view"></div>
+  </div>
+
+
+  <div class="btn-1">
+    <button>确认更换</button>
+  </div>
+
+  <div id="dpage" class="show">
+    <a href="javascript:void(0);"><input type="button" name="file" class="button" value="选取照片">
+	  <input id="file" type="file" onchange="javascript:setImagePreview();" accept="image/*" multiple  /></a>
+    <a href="javascript:void(0);" class="qx"><button id="clipBtn">截取图片</button></a>
+  </div>
+
+  <script src="./src/scripts/package/photo/js/jquery.min.js" type="text/javascript"></script>
+  <script>
+    window.jQuery || document.write('<script src="./src/scripts/package/photo/js/jquery-2.1.1.min.js"><\/script>')
+  </script>
+  <script src="./src/scripts/package/photo/js/iscroll-zoom.js"></script>
+  <script src="./src/scripts/package/photo/js/hammer.js"></script>
+  <script src="./src/scripts/package/photo/js/jquery.photoClip.js"></script>
+  <script>
+    var obUrl = ''
+    //document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    $("#clipArea").photoClip({
+      width: 280,
+      height: 280,
+      file: "#file",
+      view: "#view",
+      ok: "#clipBtn",
+      loadStart: function() {
+        console.log("照片读取中");
+      },
+      loadComplete: function() {
+        console.log("照片读取完成");
+      },
+      clipFinish: function(dataURL) {
+
+
+        $('body').off('click', '.btn-1 button').on('click', '.btn-1 button', function(event) {
+          event.preventDefault();
+          //dataURL 就是图片路径直接用ajax  post方法发送给php就行 图片采用 base64格式 无实体图片全由代码表示 字段长度要长
+          //切图测试我使用get 做的时候用下面post
+          $.get("./src/scripts/package/photo/1.json", {},function(data) {
+              history.back();
+            },"text");
+
+          //正式使用post提交php
+          // $.post("php路径", {'photo',dataURL},function(data) {
+          //     //我这里简单写了一个返回 你需要判断 php存成功了之后 返回
+          //     history.back();
+          //   },"text");
+        });
+      }
+    });
+  </script>
+  <script src="./src/scripts/package/photo/js/touxiang.js"></script>
+
+</body>
+
+</html>
