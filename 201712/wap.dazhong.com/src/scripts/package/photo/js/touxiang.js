@@ -12,65 +12,65 @@ $(function() {
 });
 
 
-$(function() {
-  jQuery.divselect = function(divselectid, inputselectid) {
-    var inputselect = $(inputselectid);
-    $(divselectid + " small").click(function() {
-      $("#divselect ul").toggle();
-      $(".mask").show();
-    });
-    $(divselectid + " ul li a").click(function() {
-      var txt = $(this).text();
-      $(divselectid + " small").html(txt);
-      var value = $(this).attr("selectid");
-      inputselect.val(value);
-      $(divselectid + " ul").hide();
-      $(".mask").hide();
-      $("#divselect small").css("color", "#333")
-    });
-  };
-  $.divselect("#divselect", "#inputselect");
-});
+// $(function() {
+//   jQuery.divselect = function(divselectid, inputselectid) {
+//     var inputselect = $(inputselectid);
+//     $(divselectid + " small").click(function() {
+//       $("#divselect ul").toggle();
+//       $(".mask").show();
+//     });
+//     $(divselectid + " ul li a").click(function() {
+//       var txt = $(this).text();
+//       $(divselectid + " small").html(txt);
+//       var value = $(this).attr("selectid");
+//       inputselect.val(value);
+//       $(divselectid + " ul").hide();
+//       $(".mask").hide();
+//       $("#divselect small").css("color", "#333")
+//     });
+//   };
+//   $.divselect("#divselect", "#inputselect");
+// });
 
-$(function() {
-  jQuery.divselectx = function(divselectxid, inputselectxid) {
-    var inputselectx = $(inputselectxid);
-    $(divselectxid + " small").click(function() {
-      $("#divselectx ul").toggle();
-      $(".mask").show();
-    });
-    $(divselectxid + " ul li a").click(function() {
-      var txt = $(this).text();
-      $(divselectxid + " small").html(txt);
-      var value = $(this).attr("selectidx");
-      inputselectx.val(value);
-      $(divselectxid + " ul").hide();
-      $(".mask").hide();
-      $("#divselectx small").css("color", "#333")
-    });
-  };
-  $.divselectx("#divselectx", "#inputselectx");
-});
-
-$(function() {
-  jQuery.divselecty = function(divselectyid, inputselectyid) {
-    var inputselecty = $(inputselectyid);
-    $(divselectyid + " small").click(function() {
-      $("#divselecty ul").toggle();
-      $(".mask").show();
-    });
-    $(divselectyid + " ul li a").click(function() {
-      var txt = $(this).text();
-      $(divselectyid + " small").html(txt);
-      var value = $(this).attr("selectyid");
-      inputselecty.val(value);
-      $(divselectyid + " ul").hide();
-      $(".mask").hide();
-      $("#divselecty small").css("color", "#333")
-    });
-  };
-  $.divselecty("#divselecty", "#inputselecty");
-});
+// $(function() {
+//   jQuery.divselectx = function(divselectxid, inputselectxid) {
+//     var inputselectx = $(inputselectxid);
+//     $(divselectxid + " small").click(function() {
+//       $("#divselectx ul").toggle();
+//       $(".mask").show();
+//     });
+//     $(divselectxid + " ul li a").click(function() {
+//       var txt = $(this).text();
+//       $(divselectxid + " small").html(txt);
+//       var value = $(this).attr("selectidx");
+//       inputselectx.val(value);
+//       $(divselectxid + " ul").hide();
+//       $(".mask").hide();
+//       $("#divselectx small").css("color", "#333")
+//     });
+//   };
+//   $.divselectx("#divselectx", "#inputselectx");
+// });
+//
+// $(function() {
+//   jQuery.divselecty = function(divselectyid, inputselectyid) {
+//     var inputselecty = $(inputselectyid);
+//     $(divselectyid + " small").click(function() {
+//       $("#divselecty ul").toggle();
+//       $(".mask").show();
+//     });
+//     $(divselectyid + " ul li a").click(function() {
+//       var txt = $(this).text();
+//       $(divselectyid + " small").html(txt);
+//       var value = $(this).attr("selectyid");
+//       inputselecty.val(value);
+//       $(divselectyid + " ul").hide();
+//       $(".mask").hide();
+//       $("#divselecty small").css("color", "#333")
+//     });
+//   };
+//   $.divselecty("#divselecty", "#inputselecty");
+// });
 
 $(function() {
   $(".mask").click(function() {

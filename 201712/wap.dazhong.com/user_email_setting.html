@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="./src/css/me.css">
   <link rel="stylesheet" href="./src/css/user.css">
 
-
+  <style media="screen">
+    .user{background-color: #fff;}
+  </style>
   <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
   <!--[if IE 8]>
   <script src="./src/scripts/package/compat/html5shiv.js"></script>
@@ -33,28 +35,20 @@
   <header>
     <div class="container_1200">
       <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
-      <h1>个人资料</h1>
+      <h1>登陆邮箱</h1>
     </div>
   </header>
   <main>
     <article class="user">
-      <section class="fg-line-3"></section>
-      <section class="user-list">
-        <ul>
-          <li><a href="user_photo_set.html">头像<span class="jt-chevron-right fr"></span><span class="photo fr" style="background-image:url(./src/images/my_photo.png)"></span></a></li>
-          <li><a href="user_email_setting.html">会员资料<span class="jt-chevron-right fr"></span><span class="fr">ffflgh</span></a></li>
-          <li><a href="user_email_setting.html">登录邮箱<span class="jt-chevron-right fr"></span><span class="fr">455545@qq.com</span></a></li>
-          <li><a href="user_email_setting.html">绑定手机<span class="jt-chevron-right fr"></span><span class="fr">15246477878</span></a></li>
-        </ul>
-      </section>
-      <section class="fg-line-3"></section>
-      <section class="user-list">
-        <ul>
-          <li><a href="user_email_setting.html">昵称<span class="jt-chevron-right fr"></span><span class="fr">受伤的程序员</span></a></li>
-          <li><a href="user_email_setting.html">真实姓名<span class="jt-chevron-right fr"></span><span class="fr">你猜</span></a></li>
-          <li><a href="user_email_setting.html">性别<span class="jt-chevron-right fr"></span><span class="fr">男</span></a></li>
-          <li><a href="user_email_setting.html">出生日期<span class="jt-chevron-right fr"></span><span class="fr">20121212</span></a></li>
-        </ul>
+      <section class="setting_list">
+        <form class="" action="" method="post">
+          <ul>
+            <li>原邮箱<span class="fr">455545@qq.com</span></li>
+            <li><label for="email">新邮箱</label><div class="inner"><input type="text" class="fr" id="email" placeholder="输入新邮箱"></div></li>
+          </ul>
+          <section class="fg-line-10"></section>
+          <input type="submit" name="" value="确认">
+        </form>
       </section>
 
     </article>
