@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link rel="stylesheet" href="./src/css/user.css">
+  <link rel="stylesheet" href="./src/css/car.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="hasheader">
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <header>
+    <div class="container_1200">
+      <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
+      <h1>订单状态</h1>
+    </div>
+  </header>
+  <main>
+    <article class="car user">
+      <section class="state-pannel">
+        <div class="container_1200">
+          <div class="item">
+          恭喜您完成订单
+          </div>
+          您的订单号：WMBJ17101075801579
+        </div>
+      </section>
+      <section class="state-btn">
+        <div class="container_1200 felx-box">
+          <a class="felx-item on" href="">继续购物</a>
+          <a class="felx-item" href="">查看订单</a>
+        </div>
+      </section>
+    </article>
+  </main>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+  <div id="footer" class="jiazai" data-callback="navactive:2,minheight"></div>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <!-- index  -->
+  <script src="./src/scripts/lib/type.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //代码写这里
+      navactive(2);
+      $('body').off('click','#tijiao').on('click','#tijiao',function(){
+        $('.qrkf-bg').fadeIn();
+        $('.qrkf-pannel').fadeIn();
+      })
+      $('body').off('click','.qrkf-pannel .close').on('click','.qrkf-pannel .close',function(){
+        $('.qrkf-bg').fadeOut();
+        $('.qrkf-pannel').fadeOut();
+      })
+
+    });
+  </script>
+
+
+</body>
+
+</html>

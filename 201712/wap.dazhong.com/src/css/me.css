@@ -2774,6 +2774,8 @@ header {
     cursor: pointer; }
     header .right-ico.on {
       color: #c30000; }
+    header .right-ico.guanli {
+      font-size: 12px; }
     header .right-ico.top-dots-three-vertical ul {
       position: absolute;
       top: 50px;

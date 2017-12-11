@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <link rel="stylesheet" href="./src/css/user.css">
+  <link rel="stylesheet" href="./src/css/car.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="hasheader">
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+  <header>
+    <div class="container_1200">
+      <a class="jt-chevron-left left-ico" href="javascript:history.back();"></a>
+      <h1>确认订单</h1>
+    </div>
+  </header>
+  <main>
+    <article class="car user">
+      <section class="fg-line-3"></section>
+      <section class="address-pannel">
+        <div class="container_1200">
+          <div class="name">王佳欣
+            <div class="tel fr">15245555555</div>
+          </div>
+          <div class="content bBn">黑龙江省 哈尔滨市 南岗区 先锋路街道先锋路街道 湘江路14号星河国际巴黎座401</div>
+        </div>
+      </section>
+      <section class="fg-line-3"></section>
+      <section class="car-pannel withselect">
+        <div class="list">
+          <div class="item">
+            <div class="container_1200">
+              <input type="checkbox" name="select" id="select1" value="">
+              <label class="check" for="select1"></label>
+              <div class="thumb" style="background-image:url(./src/images/pro_pic.jpg)"></div>
+              <div class="inner">
+                <div class="title">【东北自营】 进口柠檬(6枚家庭装) <i>（预售商品）</i></div>
+                <div class="price">¥116.30 <i>¥116.30</i><span class="fr">x1</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="fg-line-2"></div>
+          <div class="item">
+            <div class="container_1200">
+              <input type="checkbox" name="select" id="select2" value="">
+              <label class="check" for="select2"></label>
+              <div class="thumb" style="background-image:url(./src/images/pro_pic.jpg)"></div>
+              <div class="inner">
+                <div class="title">【东北自营】 进口柠檬(6枚家庭装) <i>（预售商品）</i></div>
+                <div class="price">¥116.30 <i>¥116.30</i><span class="fr">x1</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="fg-line-2"></div>
+        </div>
+      </section>
+
+      <section class="price-pannel">
+        <div class="container_1200">
+          <div class="inner">
+            <table>
+              <tbody>
+                <tr>
+                  <td width="120"><label class="vis" for=""> </label>预估运费：</td>
+                  <td class="text-right"><i id="ygyf">¥0.00</i></td>
+                </tr>
+                <tr>
+                  <td><label class="vis" for=""> </label>商品金额：</td>
+                  <td class="text-right"><i id="cpje">¥0.00</i></td>
+                </tr>
+                <tr>
+                  <td><label class="vis" for=""> </label>促销优惠：</td>
+                  <td class="text-right">-<i id="cxyh">¥0.00</i></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" id="jifen">
+                    <label for="jifen" class="dojifen"> </label>使用积分：</td>
+                  <td class="text-right">-<i id="syjf">¥0.00</i></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="totaljf">(现有积分<i id="totaljf">150</i>，满100可抵0.50元)</div>
+          </div>
+          <div class="price">已选 <span><i>5 件</i>：<i>¥116.30</i></span></div>
+        </div>
+      </section>
+      <section class="fg-line-3"></section>
+      <section class="fg-line-60"></section>
+    </article>
+  </main>
+  <div class="qrkf-bg"></div>
+  <div class="qrkf-pannel">
+    <div class="tit"><a href="javascript:void(0);" class="close"></a>确认付款</div>
+    <div class="container_1200">
+      <div class="price">¥116.30 </div>
+      <div class="fkfs-tit">付款方式</div>
+      <form action="car2.html">
+        <input type="radio" name="zffs" checked id="wxzf">
+        <label for="wxzf">微信付款</label>
+        <input type="radio" name="zffs" id="zfb">
+        <label for="zfb">支付宝付款</label>
+        <input type="submit" name="" value="立即支付">
+      </form>
+    </div>
+  </div>
+  <div class="jiesuan-bar">
+    <input type="checkbox" name="" id="selectall" value="">
+    <span class="heji fr">合计：<i>¥111.30</i></span>
+    <a class="fr" id="tijiao" href="javascript:void(0);">提交订单</a>
+  </div>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+  <div id="footer" class="jiazai" data-callback="navactive:2,minheight"></div>
+  <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <!-- index  -->
+  <script src="./src/scripts/lib/type.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      //代码写这里
+      navactive(2);
+      $('body').off('click','#tijiao').on('click','#tijiao',function(){
+        $('.qrkf-bg').fadeIn();
+        $('.qrkf-pannel').fadeIn();
+      })
+      $('body').off('click','.qrkf-pannel .close').on('click','.qrkf-pannel .close',function(){
+        $('.qrkf-bg').fadeOut();
+        $('.qrkf-pannel').fadeOut();
+      })
+
+    });
+  </script>
+
+
+</body>
+
+</html>
