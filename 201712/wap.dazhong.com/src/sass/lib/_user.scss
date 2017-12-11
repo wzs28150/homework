@@ -455,4 +455,58 @@
       }
     }
   }
+
+  .address-pannel {
+    background-color: #fff;
+    padding         : 1em 0 0;
+
+    .name {
+      font-size  : 15px;
+      font-weight: lighter;
+    }
+
+    .content {
+      padding      : 1em 0;
+      font-size    : 12px;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    .btn {
+      font-size: 13px;
+      padding  : 1em 0;
+
+      input {
+        display: none;
+      }
+
+      label {
+        background-position: left center;
+        background-repeat  : no-repeat;
+        background-size    : auto 1em;
+        padding-left       : 1.5em;
+        background-image   : url("../images/check.png");
+      }
+
+      input:checked + label {
+        background-image: url("../images/check_on.png");
+      }
+
+      .edit {
+        background-position: left center;
+        background-repeat  : no-repeat;
+        background-size    : auto 1em;
+        padding-left       : 1.5em;
+        background-image   : url("../images/edit.png");
+      }
+
+      .del {
+        background-position: left center;
+        background-repeat  : no-repeat;
+        background-size    : auto 1em;
+        padding-left       : 1.5em;
+        background-image   : url("../images/shanchu.png");
+        margin-left        : 1em;
+      }
+    }
+  }
 }

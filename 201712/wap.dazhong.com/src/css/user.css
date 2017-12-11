@@ -319,5 +319,41 @@
           color: #999;
           font-size: 10px;
           text-decoration: line-through; }
+.user .address-pannel {
+  background-color: #fff;
+  padding: 1em 0 0; }
+  .user .address-pannel .name {
+    font-size: 15px;
+    font-weight: lighter; }
+  .user .address-pannel .content {
+    padding: 1em 0;
+    font-size: 12px;
+    border-bottom: 1px solid #d0d0d0; }
+  .user .address-pannel .btn {
+    font-size: 13px;
+    padding: 1em 0; }
+    .user .address-pannel .btn input {
+      display: none; }
+    .user .address-pannel .btn label {
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto 1em;
+      padding-left: 1.5em;
+      background-image: url("../images/check.png"); }
+    .user .address-pannel .btn input:checked + label {
+      background-image: url("../images/check_on.png"); }
+    .user .address-pannel .btn .edit {
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto 1em;
+      padding-left: 1.5em;
+      background-image: url("../images/edit.png"); }
+    .user .address-pannel .btn .del {
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: auto 1em;
+      padding-left: 1.5em;
+      background-image: url("../images/shanchu.png");
+      margin-left: 1em; }
 
 /*# sourceMappingURL=user.css.map */
