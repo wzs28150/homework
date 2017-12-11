@@ -43,31 +43,9 @@ animated_contents = function() {
  * @return {[type]}   [description]
  */
 navactive = function(i) {
-  $('footer > ul > li').removeClass('on');
-  $('footer > ul > li').eq(i).addClass('on');
-  $('body').off('click', 'footer > ul > li').on('click', 'footer > ul > li', function() {
-    if ($(this).find('ul').length > 0) {
-      $(this).find('ul').fadeToggle();
-      $(this).toggleClass('on');
-    }
-  })
-  $('body').off('click', '.top-dots-three-vertical').on('click', '.top-dots-three-vertical', function() {
-    $(this).find('ul').fadeToggle();
-    $(this).toggleClass('on');
-  })
-  $('body').off('click', '.top-filter').on('click', '.top-filter', function() {
-    $('.filter-bg').fadeIn();
-    $('.filter-pannel').fadeIn();
-    html_overflow(false);
-    $(this).toggleClass('on');
-  })
-
-  $('body').off('click', '.filter-bg').on('click', '.filter-bg', function() {
-    $('.filter-bg').fadeOut();
-    $('.filter-pannel').fadeOut();
-    html_overflow(true);
-    $(this).toggleClass('on');
-  })
+  console.log(i);
+  $('header nav a').removeClass('on');
+  $('header nav a').eq(i).addClass('on');
 };
 
 

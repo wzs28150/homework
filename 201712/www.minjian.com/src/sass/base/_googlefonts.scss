@@ -47,17 +47,17 @@
 	src        : local('417-CAI978'), local('417-CAI978'), url("fonts/417-CAI978.woff") format('woff');
 }
 @font-face {
-	font-family: "scwap";
-	src        : url("fonts/scwap.eot?nawo9z");
-	src        : url("fonts/scwap.eot?nawo9z#iefix") format('embedded-opentype'), url("fonts/scwap.ttf?nawo9z") format('truetype'), url("fonts/scwap.woff?nawo9z") format('woff'), url("fonts/scwap.svg?nawo9z#scwap") format('svg');
+	font-family: 'mj';
+	src        : url("fonts/mj.eot?mc78r3");
+	src        : url("fonts/mj.eot?mc78r3#iefix") format('embedded-opentype'), url("fonts/mj.ttf?mc78r3") format('truetype'), url("fonts/mj.woff?mc78r3") format('woff'), url("fonts/mj.svg?mc78r3#mj") format('svg');
 	font-weight: normal;
 	font-style : normal;
 }
 
-[class^="scwap-"],
-[class*=" scwap-"] {
+[class^="mj-"],
+[class*=" mj-"] {
 	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family            : "scwap" !important;
+	font-family            : 'mj' !important;
 	speak                  : none;
 	font-style             : normal;
 	font-weight            : normal;
@@ -69,48 +69,10 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.scwap-search:before {
-	content: "\e908";
-}
-@font-face {
-	font-family: 'topico';
-	src        : url("fonts/topico.eot?4mykhk");
-	src        : url("fonts/topico.eot?4mykhk#iefix") format('embedded-opentype'), url("fonts/topico.ttf?4mykhk") format('truetype'), url("fonts/topico.woff?4mykhk") format('woff'), url("fonts/topico.svg?4mykhk#topico") format('svg');
-	font-weight: normal;
-	font-style : normal;
-}
-
-[class^="top-"],
-[class*=" top-"] {
-	/* use !important to prevent issues with browser extensions that change fonts */
-	font-family            : 'topico' !important;
-	speak                  : none;
-	font-style             : normal;
-	font-weight            : normal;
-	font-variant           : normal;
-	text-transform         : none;
-	line-height            : 1;
-	/* Better Font Rendering =========== */
-	-webkit-font-smoothing : antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.top-jf:before {
+.mj-volume:before {
 	content: "\e901";
 }
 
-.top-filter:before {
-	content: "\e900";
-}
-
-.top-share:before {
-	content: "\e903";
-}
-
-.top-home-outline:before {
-	content: "\e904";
-}
-
-.top-dots-three-vertical:before {
-	content: "\e902";
+.mj-search:before {
+	content: "\e905";
 }
