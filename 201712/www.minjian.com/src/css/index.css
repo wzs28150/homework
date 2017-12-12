@@ -24,18 +24,51 @@
         margin-right: 8px; }
 .index .news {
   background-color: #f0f0f0;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
+  .index .news .pic {
+    width: 596px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: 0; }
+    .index .news .pic .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      position: relative; }
+      .index .news .pic .swiper-slide .title {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        font-size: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 54px;
+        line-height: 54px;
+        text-align: center; }
+    .index .news .pic .swiper-pagination {
+      bottom: 0;
+      text-align: right;
+      line-height: 0;
+      font-size: 0;
+      padding: 23px 0; }
+      .index .news .pic .swiper-pagination .swiper-pagination-bullet {
+        background-color: #fff;
+        opacity: 1; }
+        .index .news .pic .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+          background-color: #cf0000; }
   .index .news .news-huadong {
-    width: 484px;
-    padding-left: 22px;
-    padding-right: 30px; }
+    width: 454px;
+    padding: 17px 30px 17px 22px; }
     .index .news .news-huadong .news-huadong-nav {
       font-size: 0;
       line-height: 0;
       border-bottom: 2px solid #d80c18;
       height: 58px; }
       .index .news .news-huadong .news-huadong-nav a {
-        font-size: 24px;
+        font-size: 25px;
         line-height: 58px;
         display: inline-block;
         color: #333;
@@ -43,12 +76,83 @@
         .index .news .news-huadong .news-huadong-nav a.on {
           background-color: #d80c18;
           color: #fff; }
-    .index .news .news-huadong .inner ul li a {
-      line-height: 28px;
+    .index .news .news-huadong .inner ul {
+      margin-top: 15px; }
+      .index .news .news-huadong .inner ul li a {
+        line-height: 37px;
+        font-size: 16px;
+        display: block;
+        font-weight: lighter; }
+        .index .news .news-huadong .inner ul li a span {
+          margin-left: 3px;
+          margin-right: 12px;
+          font-size: 12px;
+          display: block;
+          float: left;
+          line-height: 37px; }
+.index .m_T26 {
+  margin-top: 26px; }
+.index .i-tit {
+  color: #333;
+  height: 30px;
+  overflow: hidden; }
+  .index .i-tit span {
+    border-left: 5px solid #d80c18;
+    padding-left: 17px;
+    display: block;
+    float: left;
+    font-size: 25px;
+    height: 30px;
+    line-height: 30px; }
+  .index .i-tit.hasmore {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ececec; }
+    .index .i-tit.hasmore > a {
+      display: block;
       font-size: 16px;
-      display: block; }
-      .index .news .news-huadong .inner ul li a span {
-        margin-left: 3px;
-        margin-right: 12px; }
+      color: #999;
+      line-height: 30px; }
+.index .sec-1 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden; }
+  .index .sec-1 .quick-link {
+    width: 346px; }
+    .index .sec-1 .quick-link ul {
+      overflow: hidden;
+      margin-top: 17px; }
+      .index .sec-1 .quick-link ul li {
+        float: left;
+        margin-right: 12px;
+        width: 164px;
+        border: 1px solid #ccc;
+        text-align: center;
+        margin-bottom: 12px; }
+        .index .sec-1 .quick-link ul li a {
+          display: block;
+          color: #333;
+          background-color: #f0f0f0;
+          line-height: 46px; }
+          .index .sec-1 .quick-link ul li a:hover {
+            background-color: #dcdcdc; }
+.index .news-list ul {
+  overflow: hidden;
+  margin-top: 17px; }
+  .index .news-list ul li {
+    float: left;
+    margin-right: 12px; }
+    .index .news-list ul li a {
+      display: block;
+      line-height: 36px; }
+      .index .news-list ul li a span {
+        padding: 0 5px;
+        font-size: 12px;
+        display: block;
+        float: left;
+        line-height: 36px; }
+      .index .news-list ul li a:hover {
+        color: #333; }
+.index .news-list.yzdy {
+  width: 346px; }
 
 /*# sourceMappingURL=index.css.map */
