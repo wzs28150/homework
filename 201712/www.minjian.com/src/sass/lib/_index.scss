@@ -154,6 +154,10 @@ body {}
       font-size   : 25px;
       height      : 30px;
       line-height : 30px;
+
+      a {
+        color: #333;
+      }
     }
 
     &.hasmore {
@@ -169,35 +173,29 @@ body {}
     }
   }
 
-  .sec-1 {
-    margin-top   : 50px;
-    margin-bottom: 50px;
-    overflow     : hidden;
+  .quick-link {
+    width: 346px;
 
-    .quick-link {
-      width: 346px;
+    ul {
+      overflow  : hidden;
+      margin-top: 17px;
 
-      ul {
-        overflow  : hidden;
-        margin-top: 17px;
+      li {
+        float        : left;
+        margin-right : 12px;
+        width        : 164px;
+        border       : 1px solid #ccc;
+        text-align   : center;
+        margin-bottom: 12px;
 
-        li {
-          float        : left;
-          margin-right : 12px;
-          width        : 164px;
-          border       : 1px solid #ccc;
-          text-align   : center;
-          margin-bottom: 12px;
+        a {
+          display         : block;
+          color           : #333;
+          background-color: #f0f0f0;
+          line-height     : 46px;
 
-          a {
-            display         : block;
-            color           : #333;
-            background-color: #f0f0f0;
-            line-height     : 46px;
-
-            &:hover {
-              background-color: #dcdcdc;
-            }
+          &:hover {
+            background-color: #dcdcdc;
           }
         }
       }
@@ -234,6 +232,32 @@ body {}
 
     &.yzdy {
       width: 346px;
+    }
+  }
+
+  .sheying {
+    .inner {
+      ul {
+        overflow: hidden;
+
+        li {
+          float       : left;
+          width       : 264px;
+          margin-right: 14px;
+
+          a {
+            img {
+              display: block;
+              width  : 100%;
+            }
+
+            p {
+              text-align : center;
+              line-height: 50px;
+            }
+          }
+        }
+      }
     }
   }
 }
