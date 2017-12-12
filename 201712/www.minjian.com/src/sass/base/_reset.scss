@@ -140,6 +140,7 @@ html {
   -webkit-text-size-adjust   : 100%;
   -ms-text-size-adjust       : 100%;
   min-height                 : 100%;
+  height                     : 100%;
   -webkit-tap-highlight-color: transparent;
   font-family                : "Microsoft YaHei", "Open Sans";
 }
@@ -151,9 +152,12 @@ body {
   -webkit-font-smoothing     : antialiased;
   font-family                : "Microsoft YaHei", "Open Sans";
   min-height                 : 100%;
+  overflow                   : hidden;
+  height                     : 100%;
   -webkit-tap-highlight-color: transparent;
   background-image           : url("../images/body_bg.jpg");
   background-position        : top center;
+  width                      : 100%;
 }
 
 a {
@@ -405,12 +409,18 @@ article {
 }
 
 .text-area {
-  font-size  : 18px;
-  line-height: 36px;
+  font-size  : 16px;
+  line-height: 30px;
 
   b,
   strong {
     font-weight: bold;
+  }
+
+  img {
+    max-width: 100%;
+    display  : block;
+    margin   : 0 auto;
   }
 }
 
@@ -483,10 +493,13 @@ body[onselectstart] {
 }
 
 .position {
-  font-size: 18px;
+  font-size  : 14px;
+  line-height: 48px;
 
   a {
-    color: #333;
+    &:hover {
+      color: #333;
+    }
   }
 }
 
@@ -623,5 +636,291 @@ body[onselectstart] {
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+body[onselectstart] {
+  cursor             : pointer;
+  -moz-user-select   : none;
+  -webkit-user-select: none;
+  user-select        : none;
+}
+
+.scroller {
+  height  : 100%;
+  overflow: hidden;
+
+  .scroller-inner {
+    box-sizing                : content-box;
+    width                     : 100%;
+    height                    : 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling        : touch;
+
+    &.on {
+      overflow-y: scroll;
+    }
+  }
+
+  .scrollbar {
+    position           : absolute;
+    opacity            : 0;
+    transition-duration: 0.5s;
+    -moz-user-select   : none;
+    -webkit-user-select: none;
+    user-select        : none;
+    cursor             : pointer;
+    z-index            : 99;
+
+    &.active {
+      opacity: 1;
+    }
+
+    &.off {
+      opacity: 0;
+    }
+
+    div {
+      position           : relative;
+      transition-duration: 0.1s;
+    }
+
+    i {
+      position           : absolute;
+      background         : rgba(#b81b22,1);
+      border-radius      : 2px;
+      transition-duration: 0.1s;
+    }
+
+    &:active {
+      padding: 0;
+
+      div {
+        background: rgba(#b81b22,.07);
+      }
+
+      i {
+        border-radius: 0;
+      }
+    }
+
+    &.scrollbar-y {
+      top             : 0;
+      right           : 0;
+      width           : 5px;
+      height          : 100%;
+      background-color: #ccc;
+
+      div {
+        height: 100%;
+      }
+
+      i {
+        top   : 0;
+        left  : 0;
+        width : 5px;
+        height: 100%;
+      }
+
+      &:active i {
+        left : 0;
+        width: 10px;
+      }
+    }
+
+    &.scrollbar-x {
+      bottom       : 0;
+      left         : 0;
+      width        : 100%;
+      height       : 10px;
+      padding-right: 10px;
+
+      div {
+        width : 100%;
+        height: 100%;
+      }
+
+      i {
+        bottom: 0;
+        top   : 4px;
+        height: 3px;
+        width : 100%;
+      }
+
+      &:active i {
+        top   : 0;
+        height: 10px;
+      }
+    }
+  }
+
+  &:hover .scrollbar {
+    opacity            : 1;
+    transition-duration: 0.3s;
+  }
+
+  &[data-x-rolling="true"] {
+    .scroller-inner {
+      &.on {
+        overflow-x: scroll;
+      }
+    }
+
+    .scroller-content {
+      display       : inline-block;
+      position      : relative;
+      padding-bottom: 10px;
+      white-space   : nowrap;
+      min-width     : 250px;
+    }
+  }
+}
+
+.quick-link {
+  width: 346px;
+
+  ul {
+    overflow  : hidden;
+    margin-top: 17px;
+
+    li {
+      float        : left;
+      margin-right : 12px;
+      width        : 164px;
+      border       : 1px solid #ccc;
+      text-align   : center;
+      margin-bottom: 12px;
+
+      a {
+        display         : block;
+        color           : #333;
+        background-color: #f0f0f0;
+        line-height     : 46px;
+
+        &:hover {
+          background-color: #dcdcdc;
+        }
+      }
+    }
+  }
+}
+
+.left {
+  width: 724px;
+
+  .er-nav {
+    background-color: #f2f2f2;
+    font-size       : 0;
+    line-height     : 0;
+
+    a {
+      font-size  : 18px;
+      display    : inline-block;
+      line-height: 55px;
+      padding    : 0 26px;
+      transition : $tr4;
+
+      &:hover {
+        background-color: #dcdcdc;
+        transition      : $tr4;
+      }
+
+      &.on {
+        background-color: #00558e;
+        color           : #fff;
+      }
+    }
+  }
+}
+
+.page {
+  ul {
+    text-align : center;
+    font-size  : 0;
+    line-height: 0;
+
+    li {
+      display: inline-block;
+
+      a {
+        display         : inline-block;
+        line-height     : 40px;
+        padding         : 0 15px;
+        background-color: #d80c18;
+        color           : #fff;
+        font-size       : 16px;
+        margin          : 0 5px;
+
+        &.on,
+        &:hover {
+          background-color: #2d8800;
+          color           : #fff;
+        }
+      }
+
+      &.active {
+        span {
+          display         : inline-block;
+          line-height     : 40px;
+          padding         : 0 15px;
+          background-color: #d80c18;
+          color           : #fff;
+          opacity         : 0.5;
+          font-size       : 16px;
+          margin          : 0 5px;
+        }
+      }
+    }
+  }
+}
+
+#share {
+  display       : inline-block;
+  vertical-align: middle;
+
+  .bdshare-button-style1-16 {
+    position: relative;
+    top     : -2px;
+
+    a {
+      font-size          : 0!important;
+      margin             : 0 4px !important;
+      padding-left       : 19px;
+      height             : 19px;
+      background-position: center;
+      background-size    : cover;
+
+      &.bds_tsina {
+        background-image: url("../images/wb.png");
+      }
+
+      &.bds_weixin {
+        background-image: url("../images/wx.png");
+      }
+
+      &.bds_pyq {
+        background-image: url("../images/pyq.png");
+      }
+
+      &.bds_tqq {
+        background-image: url("../images/kj.png");
+      }
+    }
+  }
+}
+
+.shangxia {
+  overflow: hidden;
+
+  a {
+    background-color: #f2f2f2;
+    font-size       : 16px;
+    line-height     : 30px;
+    padding         : 0 20px;
+    width           : 360px;
+
+    &:hover {
+      color: #333;
+    }
   }
 }

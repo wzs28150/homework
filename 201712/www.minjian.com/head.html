@@ -2,13 +2,13 @@
   <div class="container_1200">
     <div class="logo" style="background-image:url(./src/images/logo.jpg);">
       <div class="inner m_L50 m_R50">
-      <a href="">搜索</a>   |   <a href="">设为首页</a>   |   <a href="">加入收藏</a>
+      <a href="">搜索</a>   |   <a onclick="SetHome(this,'{:config('url_domain_root')}');" href="">设为首页</a>   |   <a onclick="AddFavorite('{:config('sys_name')}','{:config('url_domain_root')}')" href="">加入收藏</a>
       </div>
     </div>
     <nav>
-      <a href="">首页</a>
-      <a href="">公务动态</a>
-      <a href="">民建省委简介</a>
+      <a href="index.html">首页</a>
+      <a href="gwdt.html">会务动态</a>
+      <a href="mjswjj.html">民建省委简介</a>
       <a href="">专题栏目</a>
       <a href="">议政调研</a>
       <a href="">自身建设</a>

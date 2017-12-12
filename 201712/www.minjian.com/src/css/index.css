@@ -114,25 +114,6 @@
       font-size: 16px;
       color: #999;
       line-height: 30px; }
-.index .quick-link {
-  width: 346px; }
-  .index .quick-link ul {
-    overflow: hidden;
-    margin-top: 17px; }
-    .index .quick-link ul li {
-      float: left;
-      margin-right: 12px;
-      width: 164px;
-      border: 1px solid #ccc;
-      text-align: center;
-      margin-bottom: 12px; }
-      .index .quick-link ul li a {
-        display: block;
-        color: #333;
-        background-color: #f0f0f0;
-        line-height: 46px; }
-        .index .quick-link ul li a:hover {
-          background-color: #dcdcdc; }
 .index .news-list ul {
   overflow: hidden;
   margin-top: 17px; }
@@ -141,7 +122,8 @@
     margin-right: 12px; }
     .index .news-list ul li a {
       display: block;
-      line-height: 36px; }
+      line-height: 36px;
+      overflow: hidden; }
       .index .news-list ul li a span {
         padding: 0 5px;
         font-size: 12px;

@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, numselect, search, setheadername, html_overflow;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, html_overflow, scroll, AddFavorite, SetHome;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -17,6 +17,36 @@ html_overflow = function(boolen) {
   }
 }
 
+//设为首页
+SetHome = function(obj, url) {
+  try {
+    obj.style.behavior = 'url(#default#homepage)';
+    obj.setHomePage(url);
+  } catch (e) {
+    if (window.netscape) {
+      try {
+        netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+      } catch (e) {
+        alert("抱歉，此操作被浏览器拒绝！\n\n请在浏览器地址栏输入“about:config”并回车然后将[signed.applets.codebase_principal_support]设置为'true'");
+      }
+    } else {
+      alert("抱歉，您所使用的浏览器无法完成此操作。\n\n您需要手动将【" + url + "】设置为首页。");
+    }
+  }
+}
+
+//收藏本站
+AddFavorite = function(title, url) {
+  try {
+    window.external.addFavorite(url, title);
+  } catch (e) {
+    try {
+      window.sidebar.addPanel(title, url, "");
+    } catch (e) {
+      alert("抱歉，您所使用的浏览器无法完成此操作。\n\n加入收藏失败，请进入新网站后使用Ctrl+D进行添加");
+    }
+  }
+}
 /**
  * 动画设置
  * @return {[type]} [description]
@@ -43,7 +73,6 @@ animated_contents = function() {
  * @return {[type]}   [description]
  */
 navactive = function(i) {
-  console.log(i);
   $('header nav a').removeClass('on');
   $('header nav a').eq(i).addClass('on');
 };
@@ -75,21 +104,7 @@ backtotop = function() {
   });
 }
 
-numselect = function() {
 
-  $('.num-select .jia').click(function(event) {
-    /* Act on the event */
-    var val = Number($(this).prev('.number').val());
-    $(this).prev('.number').val(val + 1);
-  });
-  $('.num-select .jian').click(function(event) {
-    /* Act on the event */
-    var val = Number($(this).next('.number').val());
-    if (val > 1) {
-      $(this).next('.number').val(val - 1);
-    }
-  });
-}
 minheight = function() {
   var hh = $('header').height();
   var fh = $('footer').height();
@@ -102,26 +117,9 @@ minheight = function() {
   }
   $('article').css('min-height', mh + 'px');
 }
-search = function() {
-  $('body').off('focus', '.search input').on('focus', '.search input', function() {
-    $('.search').addClass('on');
-  }).on('blur', '.search input', function() {
-    if ($(this).val()) {
 
-    } else {
-      $('.search').removeClass('on');
-    }
 
-  })
-}
-fenleishow = function() {
-  $('.fenlei>ul').css({
-    "display": "block"
-  })
-}
-setheadername = function(name) {
-  $('header h1').html(name)
-}
+
 loadtemp = function() {
   if (exists('.jiazai')) {
     $('.jiazai').each(function(index, el) {
@@ -164,15 +162,17 @@ scrollto = function() {
   });
 
 }
+scroll = function() {
+  $('.scroller').scrollbar();
+}
 initModule = function() {
   var $ww = $(window).width();
   minheight();
   backtotop();
   loadtemp();
   scrollto();
-  numselect();
   animated_contents();
-  search();
+  scroll();
   $(window).scroll(function(event) {
     animated_contents();
   });

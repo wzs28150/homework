@@ -645,6 +645,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   min-height: 100%;
+  height: 100%;
   -webkit-tap-highlight-color: transparent;
   font-family: "Microsoft YaHei", "Open Sans"; }
 
@@ -655,9 +656,12 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: "Microsoft YaHei", "Open Sans";
   min-height: 100%;
+  overflow: hidden;
+  height: 100%;
   -webkit-tap-highlight-color: transparent;
   background-image: url("../images/body_bg.jpg");
-  background-position: top center; }
+  background-position: top center;
+  width: 100%; }
 
 a {
   text-decoration: none;
@@ -873,11 +877,15 @@ article {
   100% {
     opacity: 0.6; } }
 .text-area {
-  font-size: 18px;
-  line-height: 36px; }
+  font-size: 16px;
+  line-height: 30px; }
   .text-area b,
   .text-area strong {
     font-weight: bold; }
+  .text-area img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; }
 
 .loadmore {
   height: 55px;
@@ -932,8 +940,9 @@ body[onselectstart] {
   user-select: none; }
 
 .position {
-  font-size: 18px; }
-  .position a {
+  font-size: 14px;
+  line-height: 48px; }
+  .position a:hover {
     color: #333; }
 
 .search {
@@ -1036,6 +1045,194 @@ body[onselectstart] {
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
+body[onselectstart] {
+  cursor: pointer;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
+
+.scroller {
+  height: 100%;
+  overflow: hidden; }
+  .scroller .scroller-inner {
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch; }
+    .scroller .scroller-inner.on {
+      overflow-y: scroll; }
+  .scroller .scrollbar {
+    position: absolute;
+    opacity: 0;
+    transition-duration: 0.5s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    z-index: 99; }
+    .scroller .scrollbar.active {
+      opacity: 1; }
+    .scroller .scrollbar.off {
+      opacity: 0; }
+    .scroller .scrollbar div {
+      position: relative;
+      transition-duration: 0.1s; }
+    .scroller .scrollbar i {
+      position: absolute;
+      background: #b81b22;
+      border-radius: 2px;
+      transition-duration: 0.1s; }
+    .scroller .scrollbar:active {
+      padding: 0; }
+      .scroller .scrollbar:active div {
+        background: rgba(184, 27, 34, 0.07); }
+      .scroller .scrollbar:active i {
+        border-radius: 0; }
+    .scroller .scrollbar.scrollbar-y {
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background-color: #ccc; }
+      .scroller .scrollbar.scrollbar-y div {
+        height: 100%; }
+      .scroller .scrollbar.scrollbar-y i {
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%; }
+      .scroller .scrollbar.scrollbar-y:active i {
+        left: 0;
+        width: 10px; }
+    .scroller .scrollbar.scrollbar-x {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      padding-right: 10px; }
+      .scroller .scrollbar.scrollbar-x div {
+        width: 100%;
+        height: 100%; }
+      .scroller .scrollbar.scrollbar-x i {
+        bottom: 0;
+        top: 4px;
+        height: 3px;
+        width: 100%; }
+      .scroller .scrollbar.scrollbar-x:active i {
+        top: 0;
+        height: 10px; }
+  .scroller:hover .scrollbar {
+    opacity: 1;
+    transition-duration: 0.3s; }
+  .scroller[data-x-rolling="true"] .scroller-inner.on {
+    overflow-x: scroll; }
+  .scroller[data-x-rolling="true"] .scroller-content {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+    white-space: nowrap;
+    min-width: 250px; }
+
+.quick-link {
+  width: 346px; }
+  .quick-link ul {
+    overflow: hidden;
+    margin-top: 17px; }
+    .quick-link ul li {
+      float: left;
+      margin-right: 12px;
+      width: 164px;
+      border: 1px solid #ccc;
+      text-align: center;
+      margin-bottom: 12px; }
+      .quick-link ul li a {
+        display: block;
+        color: #333;
+        background-color: #f0f0f0;
+        line-height: 46px; }
+        .quick-link ul li a:hover {
+          background-color: #dcdcdc; }
+
+.left {
+  width: 724px; }
+  .left .er-nav {
+    background-color: #f2f2f2;
+    font-size: 0;
+    line-height: 0; }
+    .left .er-nav a {
+      font-size: 18px;
+      display: inline-block;
+      line-height: 55px;
+      padding: 0 26px;
+      transition: all 0.4s, transform 0.4s; }
+      .left .er-nav a:hover {
+        background-color: #dcdcdc;
+        transition: all 0.4s, transform 0.4s; }
+      .left .er-nav a.on {
+        background-color: #00558e;
+        color: #fff; }
+
+.page ul {
+  text-align: center;
+  font-size: 0;
+  line-height: 0; }
+  .page ul li {
+    display: inline-block; }
+    .page ul li a {
+      display: inline-block;
+      line-height: 40px;
+      padding: 0 15px;
+      background-color: #d80c18;
+      color: #fff;
+      font-size: 16px;
+      margin: 0 5px; }
+      .page ul li a.on, .page ul li a:hover {
+        background-color: #2d8800;
+        color: #fff; }
+    .page ul li.active span {
+      display: inline-block;
+      line-height: 40px;
+      padding: 0 15px;
+      background-color: #d80c18;
+      color: #fff;
+      opacity: 0.5;
+      font-size: 16px;
+      margin: 0 5px; }
+
+#share {
+  display: inline-block;
+  vertical-align: middle; }
+  #share .bdshare-button-style1-16 {
+    position: relative;
+    top: -2px; }
+    #share .bdshare-button-style1-16 a {
+      font-size: 0 !important;
+      margin: 0 4px !important;
+      padding-left: 19px;
+      height: 19px;
+      background-position: center;
+      background-size: cover; }
+      #share .bdshare-button-style1-16 a.bds_tsina {
+        background-image: url("../images/wb.png"); }
+      #share .bdshare-button-style1-16 a.bds_weixin {
+        background-image: url("../images/wx.png"); }
+      #share .bdshare-button-style1-16 a.bds_pyq {
+        background-image: url("../images/pyq.png"); }
+      #share .bdshare-button-style1-16 a.bds_tqq {
+        background-image: url("../images/kj.png"); }
+
+.shangxia {
+  overflow: hidden; }
+  .shangxia a {
+    background-color: #f2f2f2;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 0 20px;
+    width: 360px; }
+    .shangxia a:hover {
+      color: #333; }
+
 .animate-element {
   opacity: 0;
   -webkit-perspective: 1000;
