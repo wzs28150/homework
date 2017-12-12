@@ -1,165 +1,19 @@
 @charset "utf-8";
 
 footer {
-  position        : fixed;
-  z-index         : 999;
-  left            : 0;
-  width           : 100%;
-  bottom          : 0;
   background-color: #fff;
-  border-top      : 1px solid #d9d9d9;
 
-  & > ul {
-    & > li {
-      text-align: center;
-      width     : 20%;
-      padding   : 0.5em 0;
-      position  : relative;
+  .inner {
+    border-top : 1px solid #ececec;
+    text-align : center;
+    font-size  : 14px;
+    line-height: 24px;
+    padding-top: 50px;
+    color      : #333;
 
-      & > a {
-        display    : inline-block;
-        width      : 100%;
-        color      : #000;
-        font-weight: lighter;
-        font-size  : 0;
-        line-height: 0;
-
-        span {
-          font-size          : 14px;
-          width              : 1.8em;
-          height             : 1.8em;
-          display            : inline-block;
-          line-height        : 1.8em;
-          margin-bottom      : 0.145em;
-          background-position: center;
-          background-size    : 100% auto;
-          background-repeat  : no-repeat;
-
-          &.f_ico1_k {
-            background-image: url("../images/f_ico1_k.png");
-          }
-
-          &.f_ico2_k {
-            background-image: url("../images/f_ico2_k.png");
-          }
-
-          &.f_ico3_k {
-            background-image: url("../images/f_ico3_k.png");
-          }
-
-          &.f_ico4_k {
-            background-image: url("../images/f_ico4_k.png");
-          }
-
-          &.f_ico5_k {
-            background-image: url("../images/f_ico5_k.png");
-          }
-        }
-
-        p {
-          font-size  : 14px;
-          line-height: 1.2em;
-        }
-      }
-
-      & > ul {
-        position        : absolute;
-        bottom          : 3.5em;
-        right           : 0.5em;
-        background-color: #fff;
-        border          : 1px solid #d9d9d9;
-        width           : 4em;
-        padding         : 0.5em 0.8em;
-        border-radius   : 5px;
-        display         : none;
-
-        &::after {
-          content     : "";
-          width       : 0;
-          height      : 0;
-          z-index     : 1;
-          border-left : 0.5em solid transparent;
-          border-right: 0.5em solid transparent;
-          border-top  : 0.8em solid #d9d9d9;
-          position    : absolute;
-          bottom      : calc(-0.8em + 1px);
-          right       : 0.8em;
-        }
-
-        &::before {
-          content     : "";
-          width       : 0;
-          height      : 0;
-          z-index     : 2;
-          border-left : calc(0.5em - 1px) solid transparent;
-          border-right: calc(0.5em - 1px) solid transparent;
-          border-top  : calc(0.8em - 1px) solid #fff;
-          position    : absolute;
-          bottom      : calc(-0.8em + 2px);
-          right       : calc(0.8em + 0.1em);
-        }
-
-        & > li {
-          & > a {
-            font-size  : 14px;
-            display    : block;
-            border-top : 1px solid #d9d9d9;
-            line-height: 2em;
-          }
-
-          &:first-child {
-            & > a {
-              border: 0;
-            }
-          }
-        }
-      }
-
-      &.on {
-        & > a {
-          color: #c30000;
-
-          span {
-            &.f_ico1_k {
-              background-image: url("../images/f_ico1_s.png");
-            }
-
-            &.f_ico2_k {
-              background-image: url("../images/f_ico2_s.png");
-            }
-
-            &.f_ico3_k {
-              background-image: url("../images/f_ico3_s.png");
-            }
-
-            &.f_ico4_k {
-              background-image: url("../images/f_ico4_s.png");
-            }
-
-            &.f_ico5_k {
-              background-image: url("../images/f_ico5_s.png");
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &.pro-footer {
-    padding: 0.5em 0;
-
-    a {
-      text-align : center;
-      font-size  : 14px;
-      border     : 1px solid #c30000;
-      width      : 50%;
-      line-height: 2.5em;
-
-      &.jiaru {
-        background-color: #c30000;
-        color           : #fff;
-        margin-right    : 1em;
-      }
+    img {
+      display: block;
+      margin : 30px auto 60px;
     }
   }
 }
