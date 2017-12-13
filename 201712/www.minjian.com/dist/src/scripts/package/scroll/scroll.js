@@ -1,0 +1,1 @@
+define(["scrollbar"],function(n){var r;return r=function(n){$(n).scrollbar()},{initModule:r}});
