@@ -1,1 +1,0 @@
-var typeModule;(typeModule=function(){navactive(1)})();
