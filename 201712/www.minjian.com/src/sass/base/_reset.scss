@@ -2,6 +2,7 @@
  *    v2.0 | 20110126
  *       License: none (public domain)
  *       */
+
 a,
 abbr,
 acronym,
@@ -91,6 +92,7 @@ video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -278,6 +280,7 @@ article {
   text-overflow: ellipsis;
 }
 /*水平垂直居中*/
+
 .wh-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -292,6 +295,7 @@ article {
   align-items        : center;
 }
 /*垂直居中*/
+
 .h-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -303,6 +307,7 @@ article {
   align-items        : center;
 }
 /*分组父级*/
+
 .felx-box {
   display              : -webkit-box;
   -webkit-box-orient   : horizontal;
@@ -318,6 +323,7 @@ article {
   flex-flow: row wrap!important;
 }
 /*分组子级*/
+
 .felx-item {
   -webkit-box-flex: 1;
   flex-basis      : 1;
@@ -326,6 +332,7 @@ article {
   flex            : 1 1 1;
 }
 /* alert_player */
+
 .alert_player {
   position: fixed;
   top     : 0;
@@ -807,28 +814,28 @@ body[onselectstart] {
 
 .left {
   width: 724px;
+}
 
-  .er-nav {
-    background-color: #f2f2f2;
-    font-size       : 0;
-    line-height     : 0;
+.er-nav {
+  background-color: #f2f2f2;
+  font-size       : 0;
+  line-height     : 0;
 
-    a {
-      font-size  : 18px;
-      display    : inline-block;
-      line-height: 55px;
-      padding    : 0 26px;
-      transition : $tr4;
+  a {
+    font-size  : 18px;
+    display    : inline-block;
+    line-height: 55px;
+    padding    : 0 26px;
+    transition : $tr4;
 
-      &:hover {
-        background-color: #dcdcdc;
-        transition      : $tr4;
-      }
+    &:hover {
+      background-color: #dcdcdc;
+      transition      : $tr4;
+    }
 
-      &.on {
-        background-color: #00558e;
-        color           : #fff;
-      }
+    &.on {
+      background-color: #00558e;
+      color           : #fff;
     }
   }
 }
@@ -922,5 +929,41 @@ body[onselectstart] {
     &:hover {
       color: #333;
     }
+  }
+}
+
+.single {
+  .title {
+    font-size     : 36px;
+    font-weight   : lighter;
+    text-align    : center;
+    color         : #333;
+    padding-bottom: 27px;
+    border-bottom : 1px solid #dcdcdd;
+    line-height   : 1em;
+  }
+
+  .left-nav {
+    width: 347px;
+
+    a {
+      display         : block;
+      font-size       : 16px;
+      height          : 48px;
+      line-height     : 48px;
+      background-color: #f0f0f0;
+      margin-bottom   : 10px;
+      padding         : 0 36px;
+
+      &.on {
+        background-color: #015293;
+        color           : #fff;
+      }
+    }
+  }
+
+  .right-content {
+    border: 1px solid #f0f0f0;
+    width : 728px;
   }
 }

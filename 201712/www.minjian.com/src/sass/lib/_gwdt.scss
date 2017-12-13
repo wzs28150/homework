@@ -1,50 +1,4 @@
 .hwdt {
-  .hwdt-list {
-    ul {
-      border-top: 1px solid #dcdcdd;
-      padding   : 20px 0;
-
-      li {
-        a {
-          display      : block;
-          font-size    : 16px;
-          line-height  : 40px;
-          overflow     : hidden;
-          position     : relative;
-          padding-right: 90px;
-
-          span {
-            padding    : 0 10px 0 2px;
-            font-size  : 12px;
-            display    : block;
-            float      : left;
-            line-height: 40px;
-          }
-
-          i {
-            font-size  : 14px;
-            display    : block;
-            float      : right;
-            line-height: 40px;
-            width      : 80px;
-            position   : absolute;
-            top        : 0;
-            right      : 0;
-            color      : #999;
-          }
-
-          &:hover {
-            color: #333;
-
-            i {
-              color: #333;
-            }
-          }
-        }
-      }
-    }
-  }
-
   .gwdt-content {
     .title {
       font-size  : 36px;
@@ -58,6 +12,52 @@
       line-height  : 19px;
       margin-top   : 25px;
       border-bottom: 1px solid #dcdcdd;
+    }
+  }
+}
+
+.hwdt-list {
+  ul {
+    border-top: 1px solid #dcdcdd;
+    padding   : 20px 0;
+
+    li {
+      a {
+        display      : block;
+        font-size    : 16px;
+        line-height  : 40px;
+        overflow     : hidden;
+        position     : relative;
+        padding-right: 90px;
+
+        span {
+          padding    : 0 10px 0 2px;
+          font-size  : 12px;
+          display    : block;
+          float      : left;
+          line-height: 40px;
+        }
+
+        i {
+          font-size  : 14px;
+          display    : block;
+          float      : right;
+          line-height: 40px;
+          width      : 80px;
+          position   : absolute;
+          top        : 0;
+          right      : 0;
+          color      : #999;
+        }
+
+        &:hover {
+          color: #333;
+
+          i {
+            color: #333;
+          }
+        }
+      }
     }
   }
 }
