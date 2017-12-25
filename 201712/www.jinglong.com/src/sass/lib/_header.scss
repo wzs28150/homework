@@ -1,0 +1,46 @@
+#ctrlmenu {
+  display: none;
+}
+
+header {
+  .logo {
+    height             : 156px;
+    background-position: center;
+    background-size    : cover;
+    text-align         : right;
+    font-size          : 14px;
+    line-height        : 24px;
+    font-weight        : lighter;
+  }
+
+  nav {
+    height          : 60px;
+    background-color: #d80c18;
+    line-height     : 0;
+    font-size       : 0;
+    text-align      : center;
+
+    a {
+      display    : inline-block;
+      font-size  : 18px;
+      line-height: 60px;
+      color      : #fff;
+      padding    : 0 10px;
+      transition : $tr4;
+
+      &.on {
+        background-color: #b81b22;
+        font-weight     : bold;
+      }
+
+      &:hover {
+        background-color: rgba(#b81b22,0.3);
+        transition      : $tr4;
+      }
+    }
+  }
+}
+
+article {
+  // padding-top: 110px;
+}
