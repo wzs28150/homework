@@ -16,7 +16,8 @@ $tr4: all 0.4s, transform 0.4s; //处理动画
   }
 }
 $breakpoints: (
-  small : 480px,
+  xsmall: 320px,
+  small : 360px,
   medium: 700px,
   large : 1024px,
   mlarge: 1200px
@@ -29,6 +30,25 @@ $p-font-sizes: (
   large : (19px, 1.45),
   1200px: 20px,
   1440px: 20px,
+);
+$container-sizes: (
+  null  : (auto, 0px 10px),
+  medium: (auto, 0px 5%),
+  large : (980px, 0px auto),
+  1200px: (1200px, 0px auto),
+  1440px: (1200px, 0px auto)
+);
+$header-sizes: (
+  null  : 50px,
+  small : 60px,
+  large : 100px,
+  mlarge: 120px
+);
+$logo-sizes: (
+  null  : (40px, 5px 0),
+  small : (40px, 10px 0),
+  large : (60px, 20px 0),
+  1200px: (70px, 25px 0),
 );
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
@@ -59,12 +79,7 @@ $p-font-sizes: (
     font-size: $fs-font-size;
   }
 }
-$container-sizes: (
-  null  : (auto, 0px 5%),
-  large : (980px, 0px auto),
-  1200px: (1200px, 0px auto),
-  1440px: (1200px, 0px auto)
-);
+//container-width
 @mixin container-width($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
@@ -87,5 +102,58 @@ $container-sizes: (
     }
   } @else {
     width: $fs-font-size;
+  }
+}
+//header-height
+@mixin header-height($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      height: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        height: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin article-top($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      padding-top: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        padding-top: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin logo-height($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-logo-height($fs-font-size);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-logo-height($fs-font-size);
+      }
+    }
+  }
+}
+@mixin make-logo-height($fs-font-size) {
+  @if type-of($fs-font-size) == "list" {
+    height: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      padding: nth($fs-font-size, 2);
+    }
+  } @else {
+    height: $fs-font-size;
   }
 }
