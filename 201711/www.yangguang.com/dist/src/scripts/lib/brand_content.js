@@ -1,0 +1,1 @@
+var brandModule,banner,new_pro,hot_pro;indexModule=function(){navactive(0)},indexModule();

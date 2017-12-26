@@ -1,0 +1,34 @@
+#ctrlmenu {
+  display: none;
+}
+
+header {
+  @include header-height($header-sizes);
+  position        : fixed;
+  top             : 0;
+  left            : 0;
+  width           : 100%;
+  z-index         : 5;
+  background-color: #fff;
+
+  .logo {
+    width  : auto;
+    display: inline-block;
+
+    a {
+      display: inline-block;
+      @include logo-height($logo-sizes);
+
+      img {
+        display: inline-block;
+        width  : auto;
+        height : 100%;
+      }
+    }
+  }
+}
+
+article {
+  // padding-top: 110px;
+  @include article-top($header-sizes);
+}

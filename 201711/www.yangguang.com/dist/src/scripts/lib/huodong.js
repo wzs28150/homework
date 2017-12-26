@@ -1,0 +1,1 @@
+var huodongModule,banner,new_pro,hot_pro;(huodongModule=function(){navactive(2)})();
