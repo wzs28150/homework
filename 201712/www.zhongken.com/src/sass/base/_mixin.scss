@@ -1,0 +1,224 @@
+$font: 12px, 14px, 16px, 18px, 20px, 22px, 24px, 26px, 28px, 32px, 36px;
+$tr4: all 0.4s, transform 0.4s; //处理动画
+@mixin tr($time,$type) {
+  transition: $type $time;
+}
+//响应式宽度判断
+@mixin max-screen($res) {
+  @media (max-width: $res) {
+    @content;
+  }
+}
+//响应式高度判断
+@mixin maxh-screen($res) {
+  @media (max-height: $res) {
+    @content;
+  }
+}
+$breakpoints: (
+  small : 1200px,
+  medium: 1440px,
+  large : 1600px,
+  mlarge: 1920px
+);
+$p-font-sizes: (
+  null  : (15px, 1.3),
+  small : 16px,
+  medium: (17px, 1.4),
+  900px : 18px,
+  large : (19px, 1.45),
+  1200px: 20px,
+  1440px: 20px,
+);
+$p1-font-sizes: (
+  null  : (75px, 0.91),
+  medium: (85px, 0.91),
+  large : (95px, 0.91),
+);
+$container-sizes: (
+  null  : (auto, 0px 3%),
+  medium: (auto, 0px 5%),
+  // large : (980px, 0px auto),
+  // 1200px: (1200px, 0px auto),
+  // 1440px: (1200px, 0px auto)
+);
+$header-sizes: (
+  null  : (16px, 0 20px),
+  large : (16px, 0 25px),
+  mlarge: (16px, 0 25px)
+);
+$logo-sizes: (
+  null  : (40px, 5px 0),
+  small : (40px, 10px 0),
+  large : (60px, 20px 0),
+  1200px: (70px, 25px 0),
+);
+$menu-btn: (
+  null  : 3%,
+  medium: 5%
+);
+$area-list-item-margin: (
+  null  : 50px,
+  large : 50px,
+  mlarge: 100px
+);
+$area-list-item-pic: (
+  null  : 280px,
+  medium: 320px,
+  mlarge: 409px
+);
+$area-list-en-size: (
+  null  : 50px,
+  medium: 60px,
+  large : 72px,
+);
+$area-list-ch-size: (
+  null  : 28px,
+  medium: 32px,
+  large : 36px,
+);
+@mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-font-size($fs-font-size);
+    } @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-font-size($fs-font-size);
+      }
+    }
+  }
+}
+// Utility function for mixin font-size
+@mixin make-font-size($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      line-height: nth($fs-font-size, 2);
+    }
+  } @else {
+    font-size: $fs-font-size;
+  }
+}
+//container-width
+@mixin container-width($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-container-width($fs-font-size);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-container-width($fs-font-size);
+      }
+    }
+  }
+}
+@mixin make-container-width($fs-font-size) {
+  @if type-of($fs-font-size) == "list" {
+    width: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      margin: nth($fs-font-size, 2);
+    }
+  } @else {
+    width: $fs-font-size;
+  }
+}
+//header-height
+@mixin header-size($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-header-size($fs-font-size);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-header-size($fs-font-size);
+      }
+    }
+  }
+}
+@mixin make-header-size($fs-font-size) {
+  @if type-of($fs-font-size) == "list" {
+    font-size: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      padding: nth($fs-font-size, 2);
+    }
+  } @else {
+    font-size: $fs-font-size;
+  }
+}
+@mixin menu-btn($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      right: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        right: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin logo-height($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-logo-height($fs-font-size);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-logo-height($fs-font-size);
+      }
+    }
+  }
+}
+@mixin make-logo-height($fs-font-size) {
+  @if type-of($fs-font-size) == "list" {
+    height: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      padding: nth($fs-font-size, 2);
+    }
+  } @else {
+    height: $fs-font-size;
+  }
+}
+@mixin area-list-item-margin($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      margin: 0 nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        margin: 0 nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin area-list-item-pic($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      width: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        width: nth($fs-font-size, 1);
+      }
+    }
+  }
+}

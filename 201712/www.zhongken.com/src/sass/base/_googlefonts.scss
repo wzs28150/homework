@@ -1,0 +1,93 @@
+@font-face {
+	font-family: "Open Sans";
+	font-style : normal;
+	font-weight: 400;
+	src        : local('Open Sans'), local('OpenSans'), url("fonts/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style : normal;
+	font-weight: 600;
+	src        : local('Open Sans Semibold'), local('OpenSans-Semibold'), url("fonts/MTP_ySUJH_bn48VBG8sNSnhCUOGz7vYGh680lGh-uXM.woff") format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style : normal;
+	font-weight: 700;
+	src        : local('Open Sans Bold'), local('OpenSans-Bold'), url("fonts/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff") format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style : normal;
+	font-weight: 800;
+	src        : local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url("fonts/EInbV5DfGHOiMmvb1Xr-hnhCUOGz7vYGh680lGh-uXM.woff") format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style : italic;
+	font-weight: 400;
+	src        : local('Open Sans Italic'), local('OpenSans-Italic'), url("fonts/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff") format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style : italic;
+	font-weight: 600;
+	src        : local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url("fonts/PRmiXeptR36kaC0GEAetxn5HxGBcBvicCpTp6spHfNo.woff") format('woff');
+}
+@font-face {
+	font-family: "Open Sans";
+	font-style : italic;
+	font-weight: 700;
+	src        : local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url("fonts/PRmiXeptR36kaC0GEAetxjqR_3kx9_hJXbbyU8S6IN0.woff") format('woff');
+}
+@font-face {
+	font-family: "417-CAI978";
+	font-style : normal;
+	font-weight: 400;
+	src        : local('417-CAI978'), local('417-CAI978'), url("fonts/417-CAI978.woff") format('woff');
+}
+@font-face {
+	font-family: "HelveticaBold";
+	src        : url("fonts/HelveticaBold.eot");
+	src        : url("fonts/HelveticaBold.eot") format('embedded-opentype'), url("fonts/HelveticaBold.woff2") format('woff2'), url("fonts/HelveticaBold.woff") format('woff'), url("fonts/HelveticaBold.ttf") format('truetype'), url("fonts/HelveticaBold.svg#HelveticaBold") format('svg');
+}
+@font-face {
+	font-family: "helveticalight";
+	src        : url("fonts/helveticalight.eot");
+	src        : url("fonts/helveticalight.eot") format('embedded-opentype'), url("fonts/helveticalight.woff2") format('woff2'), url("fonts/helveticalight.woff") format('woff'), url("fonts/helveticalight.ttf") format('truetype'), url("fonts/helveticalight.svg#helveticalight") format('svg');
+}
+@font-face {
+	font-family: "FlamaCondensedBold_1";
+	src        : url("fonts/FlamaCondensedBold_1.eot");
+	src        : url("fonts/FlamaCondensedBold_1.eot") format('embedded-opentype'), url("fonts/FlamaCondensedBold_1.woff2") format('woff2'), url("fonts/FlamaCondensedBold_1.woff") format('woff'), url("fonts/FlamaCondensedBold_1.ttf") format('truetype'), url("fonts/FlamaCondensedBold_1.svg#FlamaCondensedBold_1") format('svg');
+}
+@font-face {
+	font-family: "mj";
+	src        : url("fonts/mj.eot?mc78r3");
+	src        : url("fonts/mj.eot?mc78r3#iefix") format('embedded-opentype'), url("fonts/mj.ttf?mc78r3") format('truetype'), url("fonts/mj.woff?mc78r3") format('woff'), url("fonts/mj.svg?mc78r3#mj") format('svg');
+	font-weight: normal;
+	font-style : normal;
+}
+
+[class^="mj-"],
+[class*=" mj-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family            : "mj" !important;
+	speak                  : none;
+	font-style             : normal;
+	font-weight            : normal;
+	font-variant           : normal;
+	text-transform         : none;
+	line-height            : 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.mj-volume:before {
+	content: "\e901";
+}
+
+.mj-search:before {
+	content: "\e905";
+}

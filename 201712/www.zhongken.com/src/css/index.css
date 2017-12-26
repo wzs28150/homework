@@ -1,0 +1,123 @@
+/* CSS Document */
+article.swiper-container {
+  width: 100% !important;
+  height: 100% !important; }
+  article.swiper-container .swiper-slide {
+    background-position: center;
+    background-size: cover; }
+    article.swiper-container .swiper-slide .p1 {
+      width: 100% !important;
+      height: 100% !important; }
+      article.swiper-container .swiper-slide .p1 .swiper-pagination {
+        font-size: 0;
+        line-height: 0;
+        bottom: 5%;
+        text-align: left;
+        padding-left: 25%; }
+        article.swiper-container .swiper-slide .p1 .swiper-pagination .swiper-pagination-bullet {
+          width: 14px;
+          height: 14px;
+          border: 1px solid transparent;
+          border-radius: 0;
+          position: relative;
+          background: none;
+          opacity: 1;
+          transition: all 0.4s, transform 0.4s; }
+          article.swiper-container .swiper-slide .p1 .swiper-pagination .swiper-pagination-bullet::after {
+            background-color: #fff;
+            width: 8px;
+            height: 8px;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            left: 50%;
+            margin-left: -4px;
+            transition: all 0.4s, transform 0.4s; }
+          article.swiper-container .swiper-slide .p1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+            border: 1px solid #fff;
+            transition: all 0.4s, transform 0.4s; }
+            article.swiper-container .swiper-slide .p1 .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+              width: 6px;
+              height: 6px;
+              margin-top: -3px;
+              margin-left: -3px;
+              transition: all 0.4s, transform 0.4s; }
+      article.swiper-container .swiper-slide .p1 .swiper-slide .text {
+        color: #fff;
+        padding-left: 25%; }
+        article.swiper-container .swiper-slide .p1 .swiper-slide .text .en {
+          font-family: "FlamaCondensedBold_1";
+          font-size: 75px;
+          line-height: 0.91; }
+          @media screen and (min-width: 1440px) {
+            article.swiper-container .swiper-slide .p1 .swiper-slide .text .en {
+              font-size: 85px;
+              line-height: 0.91; } }
+          @media screen and (min-width: 1600px) {
+            article.swiper-container .swiper-slide .p1 .swiper-slide .text .en {
+              font-size: 95px;
+              line-height: 0.91; } }
+        article.swiper-container .swiper-slide .p1 .swiper-slide .text .ch {
+          font-size: 40px;
+          line-height: 40px;
+          margin-top: 20px;
+          font-weight: bold; }
+    article.swiper-container .swiper-slide .area-list {
+      overflow: hidden; }
+      article.swiper-container .swiper-slide .area-list .item {
+        float: left;
+        position: relative;
+        margin: 0 50px; }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .area-list .item {
+            margin: 0 50px; } }
+        @media screen and (min-width: 1920px) {
+          article.swiper-container .swiper-slide .area-list .item {
+            margin: 0 100px; } }
+        article.swiper-container .swiper-slide .area-list .item a {
+          display: block;
+          color: #fff;
+          margin-left: 108px; }
+          article.swiper-container .swiper-slide .area-list .item a .tit {
+            position: absolute;
+            left: 0;
+            top: 0; }
+            article.swiper-container .swiper-slide .area-list .item a .tit .en {
+              font-family: "FlamaCondensedBold_1";
+              font-size: 50px; }
+              @media screen and (min-width: 1440px) {
+                article.swiper-container .swiper-slide .area-list .item a .tit .en {
+                  font-size: 60px; } }
+              @media screen and (min-width: 1600px) {
+                article.swiper-container .swiper-slide .area-list .item a .tit .en {
+                  font-size: 72px; } }
+            article.swiper-container .swiper-slide .area-list .item a .tit .ch {
+              font-size: 28px; }
+              @media screen and (min-width: 1440px) {
+                article.swiper-container .swiper-slide .area-list .item a .tit .ch {
+                  font-size: 32px; } }
+              @media screen and (min-width: 1600px) {
+                article.swiper-container .swiper-slide .area-list .item a .tit .ch {
+                  font-size: 36px; } }
+          article.swiper-container .swiper-slide .area-list .item a .pic {
+            width: 280px;
+            padding-bottom: 128%;
+            background-position: center;
+            background-size: cover; }
+            @media screen and (min-width: 1440px) {
+              article.swiper-container .swiper-slide .area-list .item a .pic {
+                width: 320px; } }
+            @media screen and (min-width: 1920px) {
+              article.swiper-container .swiper-slide .area-list .item a .pic {
+                width: 409px; } }
+
+.mouse {
+  position: fixed;
+  z-index: 5;
+  right: 4%;
+  top: 50%;
+  margin-top: -203px; }
+
+/*# sourceMappingURL=index.css.map */

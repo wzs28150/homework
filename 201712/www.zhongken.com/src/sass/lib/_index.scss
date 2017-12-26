@@ -1,0 +1,129 @@
+/* CSS Document */
+
+body {}
+
+article.swiper-container {
+  width : 100%!important;
+  height: 100%!important;
+
+  .swiper-slide {
+    background-position: center;
+    background-size    : cover;
+
+    .p1 {
+      width : 100%!important;
+      height: 100%!important;
+
+      .swiper-pagination {
+        font-size   : 0;
+        line-height : 0;
+        bottom      : 5%;
+        text-align  : left;
+        padding-left: 25%;
+
+        .swiper-pagination-bullet {
+          width        : 14px;
+          height       : 14px;
+          border       : 1px solid transparent;
+          border-radius: 0;
+          position     : relative;
+          background   : none;
+          opacity      : 1;
+          transition   : $tr4;
+
+          &::after {
+            background-color: #fff;
+            width           : 8px;
+            height          : 8px;
+            content         : "";
+            display         : block;
+            position        : absolute;
+            top             : 50%;
+            margin-top      : -4px;
+            left            : 50%;
+            margin-left     : -4px;
+            transition      : $tr4;
+          }
+
+          &.swiper-pagination-bullet-active {
+            border    : 1px solid #fff;
+            transition: $tr4;
+
+            &::after {
+              width      : 6px;
+              height     : 6px;
+              margin-top : -3px;
+              margin-left: -3px;
+              transition : $tr4;
+            }
+          }
+        }
+      }
+
+      .swiper-slide {
+        .text {
+          color       : #fff;
+          padding-left: 25%;
+
+          .en {
+            font-family: "FlamaCondensedBold_1";
+            @include font-size($p1-font-sizes);
+          }
+
+          .ch {
+            font-size  : 40px;
+            line-height: 40px;
+            margin-top : 20px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .area-list {
+      overflow: hidden;
+
+      .item {
+        float   : left;
+        position: relative;
+        @include area-list-item-margin($area-list-item-margin);
+
+        a {
+          display    : block;
+          color      : #fff;
+          margin-left: 36 * 3px;
+
+          .tit {
+            position: absolute;
+            left    : 0;
+            top     : 0;
+
+            .en {
+              font-family: "FlamaCondensedBold_1";
+              @include font-size($area-list-en-size);
+            }
+
+            .ch {
+              @include font-size($area-list-ch-size);
+            }
+          }
+
+          .pic {
+            @include area-list-item-pic($area-list-item-pic);
+            padding-bottom     : 128%;
+            background-position: center;
+            background-size    : cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mouse {
+  position  : fixed;
+  z-index   : 5;
+  right     : 4%;
+  top       : 50%;
+  margin-top: -203px;
+}
