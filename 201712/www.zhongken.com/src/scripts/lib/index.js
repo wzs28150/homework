@@ -41,10 +41,23 @@ p3 = function() {
     pagination: '.p1 .swiper-pagination',
     paginationClickable: true,
     parallax: true,
+    onInit: function(swiper) {
+      var i = 0;
+      $('article.swiper-container .swiper-slide .about-nav .item.click').removeClass('on');
+      $('article.swiper-container .swiper-slide .about-nav .item.click span').css('background-image', 'none');
+      $('article.swiper-container .swiper-slide .about-nav .item.click').eq(i).addClass('on');
+      var img = $('article.swiper-container .swiper-slide .about-nav .item.click').eq(i).find('span').data('img');
+      $('article.swiper-container .swiper-slide .about-nav .item.click').eq(i).find('span').css('background-image', 'url(' + img + ')');
+    }
   });
   $('body').off('click', 'article.swiper-container .swiper-slide .about-nav .item.click').on('click', 'article.swiper-container .swiper-slide .about-nav .item.click', function() {
     var i = ($(this).index() + 1) / 2;
-    console.log(i);
+    var ina = $(this).index();
+    $('article.swiper-container .swiper-slide .about-nav .item.click').removeClass('on');
+    $('article.swiper-container .swiper-slide .about-nav .item.click span').css('background-image', 'none');
+    $(this).addClass('on');
+    var img = $(this).find('span').data('img');
+    $(this).find('span').css('background-image', 'url(' + img + ')');
     firstswiper.slideTo(i, 1000, false);
   })
 };
