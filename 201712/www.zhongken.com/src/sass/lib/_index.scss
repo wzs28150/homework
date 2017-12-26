@@ -97,6 +97,7 @@ article.swiper-container {
             position: absolute;
             left    : 0;
             top     : 0;
+            z-index : 1;
 
             .en {
               font-family: "FlamaCondensedBold_1";
@@ -117,13 +118,252 @@ article.swiper-container {
         }
       }
     }
+
+    .about {
+      padding-left: 25%;
+      width       : 75%;
+      color       : #fff;
+
+      .inner {
+        width: 80%;
+      }
+
+      .tit {
+        .en {
+          font-family: "FlamaCondensedBold_1";
+          @include font-size($about-tit-en-size);
+        }
+
+        .ch {
+          @include font-size($about-tit-ch-size);
+        }
+      }
+
+      .content {
+        @include font-size($about-con-size);
+        padding: 2% 0 5%;
+      }
+
+      .more {
+        a {
+          color        : #fff;
+          display      : inline-block;
+          border       : 1px solid #fff;
+          line-height  : 40px;
+          padding      : 0 50px;
+          border-radius: 50px;
+        }
+      }
+    }
+
+    .p3 {
+      width : 100%!important;
+      height: 100%!important;
+
+      .text {
+        color       : #fff;
+        padding-left: 25%;
+        width       : 75%;
+
+        .ch {
+          font-size  : 40px;
+          font-weight: bold;
+        }
+
+        .en {
+          font-family: "FlamaCondensedBold_1";
+          font-size  : 28px;
+        }
+
+        .content {
+          width: 80%;
+          @include font-size($about-con-size);
+        }
+      }
+    }
+
+    .about-nav {
+      padding-left: 25%;
+      width       : 75%;
+      position    : absolute;
+      left        : 0;
+      bottom      : 4%;
+      z-index     : 4;
+      overflow    : hidden;
+
+      .inner {
+        width   : 80%;
+        overflow: hidden;
+        position: relative;
+
+        &::after {
+          content      : "";
+          display      : block;
+          border-bottom: 1px solid #fff;
+          width        : 100%;
+          position     : absolute;
+          bottom       : 7px;
+        }
+      }
+
+      .item {
+        line-height: 0;
+        font-size  : 0;
+        width      : 12.5%;
+
+        &.click {
+          cursor: pointer;
+        }
+
+        i {
+          font-family: "FlamaCondensedBold_1";
+          font-size  : 20px;
+          line-height: 50px;
+          height     : 50px;
+          font-style : normal;
+          display    : block;
+          color      : #fff;
+        }
+
+        span {
+          width        : 14px;
+          height       : 14px;
+          display      : block;
+          border       : 1px solid #fff;
+          border-radius: 0;
+          position     : relative;
+          background   : none;
+          opacity      : 1;
+          transition   : $tr4;
+
+          &::after {
+            background-color: #fff;
+            width           : 8px;
+            height          : 8px;
+            content         : "";
+            display         : block;
+            position        : absolute;
+            top             : 50%;
+            margin-top      : -4px;
+            left            : 50%;
+            margin-left     : -4px;
+            transition      : $tr4;
+          }
+
+          &.bn {
+            border: 1px solid transparent;
+          }
+        }
+      }
+    }
+
+    .news {
+      color       : #fff;
+      padding-left: 25%;
+      width       : 75%;
+
+      .inner {
+        width: 80%;
+      }
+
+      .tit {
+        .en {
+          font-family: "FlamaCondensedBold_1";
+          @include font-size($about-tit-en-size);
+        }
+
+        .ch {
+          @include font-size($about-tit-ch-size);
+        }
+      }
+
+      .list {
+        margin-top: 5%;
+
+        .item {
+          float: left;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .market {
+      color       : #fff;
+      padding-left: 25%;
+      width       : 75%;
+
+      .inner {
+        width: 80%;
+      }
+
+      .tit {
+        .en {
+          font-family: "FlamaCondensedBold_1";
+          @include font-size($about-tit-en-size);
+        }
+
+        .ch {
+          @include font-size($about-tit-ch-size);
+        }
+      }
+
+      .list {
+        margin-top: 5%;
+
+        .item {
+          float: left;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
 
 .mouse {
   position  : fixed;
-  z-index   : 5;
+  z-index   : 4;
   right     : 4%;
   top       : 50%;
   margin-top: -203px;
+}
+
+.article-nav {
+  position  : fixed;
+  z-index   : 4;
+  left      : 0;
+  top       : 50%;
+  color     : #fff;
+  margin-top: -120px;
+
+  .item {
+    @include article-nav-item($article-nav-item);
+    padding-top   : 15px;
+    padding-bottom: 15px;
+    position      : relative;
+    @include font-size($about-con-size);
+
+    &::after {
+      content      : "";
+      display      : block;
+      position     : absolute;
+      @include article-nav($article-nav);
+      border-bottom: 1px solid #fff;
+      top          : 50%;
+      transition   : $tr4;
+    }
+
+    &.on {
+      &::after {
+        @include article-nav-on($article-nav-on);
+        left      : 0;
+        transition: $tr4;
+      }
+    }
+  }
 }

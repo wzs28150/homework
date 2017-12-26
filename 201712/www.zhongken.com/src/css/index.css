@@ -83,7 +83,8 @@ article.swiper-container {
           article.swiper-container .swiper-slide .area-list .item a .tit {
             position: absolute;
             left: 0;
-            top: 0; }
+            top: 0;
+            z-index: 1; }
             article.swiper-container .swiper-slide .area-list .item a .tit .en {
               font-family: "FlamaCondensedBold_1";
               font-size: 50px; }
@@ -112,12 +113,250 @@ article.swiper-container {
             @media screen and (min-width: 1920px) {
               article.swiper-container .swiper-slide .area-list .item a .pic {
                 width: 409px; } }
+    article.swiper-container .swiper-slide .about {
+      padding-left: 25%;
+      width: 75%;
+      color: #fff; }
+      article.swiper-container .swiper-slide .about .inner {
+        width: 80%; }
+      article.swiper-container .swiper-slide .about .tit .en {
+        font-family: "FlamaCondensedBold_1";
+        font-size: 65px; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .about .tit .en {
+            font-size: 80px; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .about .tit .en {
+            font-size: 95px; } }
+      article.swiper-container .swiper-slide .about .tit .ch {
+        font-size: 32px; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .about .tit .ch {
+            font-size: 36px; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .about .tit .ch {
+            font-size: 40px; } }
+      article.swiper-container .swiper-slide .about .content {
+        font-size: 14px;
+        line-height: 1.875;
+        padding: 2% 0 5%; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .about .content {
+            font-size: 15px;
+            line-height: 1.875; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .about .content {
+            font-size: 16px;
+            line-height: 1.875; } }
+      article.swiper-container .swiper-slide .about .more a {
+        color: #fff;
+        display: inline-block;
+        border: 1px solid #fff;
+        line-height: 40px;
+        padding: 0 50px;
+        border-radius: 50px; }
+    article.swiper-container .swiper-slide .p3 {
+      width: 100% !important;
+      height: 100% !important; }
+      article.swiper-container .swiper-slide .p3 .text {
+        color: #fff;
+        padding-left: 25%;
+        width: 75%; }
+        article.swiper-container .swiper-slide .p3 .text .ch {
+          font-size: 40px;
+          font-weight: bold; }
+        article.swiper-container .swiper-slide .p3 .text .en {
+          font-family: "FlamaCondensedBold_1";
+          font-size: 28px; }
+        article.swiper-container .swiper-slide .p3 .text .content {
+          width: 80%;
+          font-size: 14px;
+          line-height: 1.875; }
+          @media screen and (min-width: 1440px) {
+            article.swiper-container .swiper-slide .p3 .text .content {
+              font-size: 15px;
+              line-height: 1.875; } }
+          @media screen and (min-width: 1600px) {
+            article.swiper-container .swiper-slide .p3 .text .content {
+              font-size: 16px;
+              line-height: 1.875; } }
+    article.swiper-container .swiper-slide .about-nav {
+      padding-left: 25%;
+      width: 75%;
+      position: absolute;
+      left: 0;
+      bottom: 4%;
+      z-index: 4;
+      overflow: hidden; }
+      article.swiper-container .swiper-slide .about-nav .inner {
+        width: 80%;
+        overflow: hidden;
+        position: relative; }
+        article.swiper-container .swiper-slide .about-nav .inner::after {
+          content: "";
+          display: block;
+          border-bottom: 1px solid #fff;
+          width: 100%;
+          position: absolute;
+          bottom: 7px; }
+      article.swiper-container .swiper-slide .about-nav .item {
+        line-height: 0;
+        font-size: 0;
+        width: 12.5%; }
+        article.swiper-container .swiper-slide .about-nav .item.click {
+          cursor: pointer; }
+        article.swiper-container .swiper-slide .about-nav .item i {
+          font-family: "FlamaCondensedBold_1";
+          font-size: 20px;
+          line-height: 50px;
+          height: 50px;
+          font-style: normal;
+          display: block;
+          color: #fff; }
+        article.swiper-container .swiper-slide .about-nav .item span {
+          width: 14px;
+          height: 14px;
+          display: block;
+          border: 1px solid #fff;
+          border-radius: 0;
+          position: relative;
+          background: none;
+          opacity: 1;
+          transition: all 0.4s, transform 0.4s; }
+          article.swiper-container .swiper-slide .about-nav .item span::after {
+            background-color: #fff;
+            width: 8px;
+            height: 8px;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            left: 50%;
+            margin-left: -4px;
+            transition: all 0.4s, transform 0.4s; }
+          article.swiper-container .swiper-slide .about-nav .item span.bn {
+            border: 1px solid transparent; }
+    article.swiper-container .swiper-slide .news {
+      color: #fff;
+      padding-left: 25%;
+      width: 75%; }
+      article.swiper-container .swiper-slide .news .inner {
+        width: 80%; }
+      article.swiper-container .swiper-slide .news .tit .en {
+        font-family: "FlamaCondensedBold_1";
+        font-size: 65px; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .news .tit .en {
+            font-size: 80px; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .news .tit .en {
+            font-size: 95px; } }
+      article.swiper-container .swiper-slide .news .tit .ch {
+        font-size: 32px; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .news .tit .ch {
+            font-size: 36px; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .news .tit .ch {
+            font-size: 40px; } }
+      article.swiper-container .swiper-slide .news .list {
+        margin-top: 5%; }
+        article.swiper-container .swiper-slide .news .list .item {
+          float: left; }
+          article.swiper-container .swiper-slide .news .list .item a {
+            color: #fff; }
+    article.swiper-container .swiper-slide .market {
+      color: #fff;
+      padding-left: 25%;
+      width: 75%; }
+      article.swiper-container .swiper-slide .market .inner {
+        width: 80%; }
+      article.swiper-container .swiper-slide .market .tit .en {
+        font-family: "FlamaCondensedBold_1";
+        font-size: 65px; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .market .tit .en {
+            font-size: 80px; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .market .tit .en {
+            font-size: 95px; } }
+      article.swiper-container .swiper-slide .market .tit .ch {
+        font-size: 32px; }
+        @media screen and (min-width: 1440px) {
+          article.swiper-container .swiper-slide .market .tit .ch {
+            font-size: 36px; } }
+        @media screen and (min-width: 1600px) {
+          article.swiper-container .swiper-slide .market .tit .ch {
+            font-size: 40px; } }
+      article.swiper-container .swiper-slide .market .list {
+        margin-top: 5%; }
+        article.swiper-container .swiper-slide .market .list .item {
+          float: left; }
+          article.swiper-container .swiper-slide .market .list .item a {
+            color: #fff; }
 
 .mouse {
   position: fixed;
-  z-index: 5;
+  z-index: 4;
   right: 4%;
   top: 50%;
   margin-top: -203px; }
+
+.article-nav {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  top: 50%;
+  color: #fff;
+  margin-top: -120px; }
+  .article-nav .item {
+    padding-left: 56px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.875; }
+    @media screen and (min-width: 1440px) {
+      .article-nav .item {
+        padding-left: 60px; } }
+    @media screen and (min-width: 1600px) {
+      .article-nav .item {
+        padding-left: 80px; } }
+    @media screen and (min-width: 1440px) {
+      .article-nav .item {
+        font-size: 15px;
+        line-height: 1.875; } }
+    @media screen and (min-width: 1600px) {
+      .article-nav .item {
+        font-size: 16px;
+        line-height: 1.875; } }
+    .article-nav .item::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 18px;
+      left: 28px;
+      border-bottom: 1px solid #fff;
+      top: 50%;
+      transition: all 0.4s, transform 0.4s; }
+      @media screen and (min-width: 1440px) {
+        .article-nav .item::after {
+          width: 20px;
+          left: 30px; } }
+      @media screen and (min-width: 1600px) {
+        .article-nav .item::after {
+          width: 26px;
+          left: 36px; } }
+    .article-nav .item.on::after {
+      width: 46px;
+      left: 0;
+      transition: all 0.4s, transform 0.4s; }
+      @media screen and (min-width: 1440px) {
+        .article-nav .item.on::after {
+          width: 50px; } }
+      @media screen and (min-width: 1600px) {
+        .article-nav .item.on::after {
+          width: 62px; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -77,6 +77,36 @@ $area-list-ch-size: (
   medium: 32px,
   large : 36px,
 );
+$about-tit-en-size: (
+  null  : 65px,
+  medium: 80px,
+  large : 95px,
+);
+$about-tit-ch-size: (
+  null  : 32px,
+  medium: 36px,
+  large : 40px,
+);
+$about-con-size: (
+  null  : (14px, 1.875),
+  medium: (15px, 1.875),
+  large : (16px, 1.875),
+);
+$article-nav: (
+  null  : (18px, 28px),
+  medium: (20px, 30px),
+  large : (26px, 36px),
+);
+$article-nav-on: (
+  null  : 46px,
+  medium: 50px,
+  large : 62px,
+);
+$article-nav-item: (
+  null  : 56px,
+  medium: 60px,
+  large : 80px,
+);
 @mixin font-size($fs-map, $fs-breakpoints: $breakpoints) {
   @each $fs-breakpoint, $fs-font-size in $fs-map {
     @if $fs-breakpoint == null {
@@ -218,6 +248,63 @@ $area-list-ch-size: (
       }
       @media screen and (min-width: $fs-breakpoint) {
         width: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin article-nav($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      @include make-article-nav($fs-font-size);
+    } @else {
+      // If $fs-font-size is a key that exists in
+      // $fs-breakpoints, use the value
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        @include make-article-nav($fs-font-size);
+      }
+    }
+  }
+}
+// Utility function for mixin font-size
+@mixin make-article-nav($fs-font-size) {
+  // If $fs-font-size is a list, include
+  // both font-size and line-height
+  @if type-of($fs-font-size) == "list" {
+    width: nth($fs-font-size, 1);
+    @if (length($fs-font-size) > 1) {
+      left: nth($fs-font-size, 2);
+    }
+  } @else {
+    width: $fs-font-size;
+  }
+}
+@mixin article-nav-on($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      width: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        width: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin article-nav-item($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      padding-left: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        padding-left: nth($fs-font-size, 1);
       }
     }
   }

@@ -1,12 +1,26 @@
-var indexModule, first_swiper, p1;
+var indexModule, first_swiper, p1, p3;
 //首页banner
 first_swiper = function() {
   var firstswiper = new Swiper('article.swiper-container', {
     direction: 'vertical',
     mousewheelControl: true,
     speed: 1000,
-    hashnav:true,
-    hashnavWatchState:true,
+    hashnav: true,
+    hashnavWatchState: true,
+    simulateTouch: false,
+    onInit: function(swiper) { //Swiper2.x的初始化是onFirstInit
+      swiperAnimateCache(swiper); //隐藏动画元素
+      swiperAnimate(swiper); //初始化完成开始动画
+      $('.article-nav .item').removeClass('on');
+      console.log(swiper.realIndex);
+      $('.article-nav .item').eq(swiper.realIndex).addClass('on');
+    },
+    onSlideChangeEnd: function(swiper) {
+      swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+      $('.article-nav .item').removeClass('on');
+      console.log(swiper.realIndex);
+      $('.article-nav .item').eq(swiper.realIndex).addClass('on');
+    }
   });
 };
 
@@ -14,12 +28,25 @@ p1 = function() {
   var firstswiper = new Swiper('.p1.swiper-container', {
     autoplay: 2500,
     speed: 1500,
-    loop:true,
+    loop: true,
     pagination: '.p1 .swiper-pagination',
     paginationClickable: true,
     parallax: true,
 
   });
+};
+p3 = function() {
+  var firstswiper = new Swiper('.p3.swiper-container', {
+    speed: 1500,
+    pagination: '.p1 .swiper-pagination',
+    paginationClickable: true,
+    parallax: true,
+  });
+  $('body').off('click', 'article.swiper-container .swiper-slide .about-nav .item.click').on('click', 'article.swiper-container .swiper-slide .about-nav .item.click', function() {
+    var i = ($(this).index() + 1) / 2;
+    console.log(i);
+    firstswiper.slideTo(i, 1000, false);
+  })
 };
 newshuadong = function() {
   var newshuadongswiper = new Swiper('.index .news .news-huadong .swiper-container', {
@@ -47,6 +74,7 @@ indexModule = function() {
   //banner切换
   first_swiper();
   p1();
+  p3();
 };
 
 indexModule();

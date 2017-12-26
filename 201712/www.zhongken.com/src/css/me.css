@@ -2766,6 +2766,26 @@ label.myInput {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s, transform 0.4s; }
+  .nav-tan .list {
+    overflow: hidden; }
+    .nav-tan .list ul {
+      float: left;
+      padding: 0;
+      margin: 0; }
+      .nav-tan .list ul li {
+        color: #fff;
+        width: 100%;
+        display: block; }
+        .nav-tan .list ul li.tit {
+          font-size: 24px;
+          font-weight: bold;
+          border-bottom: 1px solid #8995a6;
+          padding: 0 100px 50px 0;
+          margin-bottom: 50px; }
+        .nav-tan .list ul li a {
+          color: #fff;
+          font-size: 18px;
+          line-height: 48px; }
 
 #ctrlmenu:checked ~ label.myInput .bar {
   background-color: #fff; }
