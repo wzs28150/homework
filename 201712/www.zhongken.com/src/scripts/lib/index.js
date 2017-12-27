@@ -32,14 +32,11 @@ p1 = function() {
     pagination: '.p1 .swiper-pagination',
     paginationClickable: true,
     parallax: true,
-
   });
 };
 p3 = function() {
   var firstswiper = new Swiper('.p3.swiper-container', {
     speed: 1500,
-    pagination: '.p1 .swiper-pagination',
-    paginationClickable: true,
     parallax: true,
     onInit: function(swiper) {
       var i = 0;
