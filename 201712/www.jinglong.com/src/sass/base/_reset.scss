@@ -19,7 +19,6 @@ body {
   overflow                   : hidden;
   height                     : 100%;
   -webkit-tap-highlight-color: transparent;
-  width                      : 100%;
 }
 
 body[onselectstart] {
@@ -112,11 +111,11 @@ button {
 }
 
 .pc {
-  display: block!important;
+  @include pc-wap-show($pc-show);
 }
 
 .wap {
-  display: none!important;
+  @include pc-wap-show($wap-show);
 }
 
 .pageinner {
