@@ -48,6 +48,29 @@ header {
     }
   }
 
+  .tel {
+    float              : right;
+    font-family        : "Hero";
+    @include header-height($header-sizes);
+    background-image   : url("../images/tel.png");
+    padding-left       : 1.5em;
+    padding-right      : 40px;
+    background-position: left center;
+    position           : relative;
+    background-repeat  : no-repeat;
+    @include font-size($nav-size);
+
+    a {
+      display : block;
+      width   : 100%;
+      position: absolute;
+      z-index : 1;
+      top     : 0;
+      left    : 0;
+      @include header-height($header-sizes);
+    }
+  }
+
   label.myInput {
     display   : inline-block;
     width     : 65px;

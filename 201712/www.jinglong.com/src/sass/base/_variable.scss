@@ -64,4 +64,31 @@ $logo-sizes: (
   small : (40px, 10px 0),
   large : (50px, 10px 0),
   1200px: (70px, 25px 0),
-); //
+);
+$index-banner: (
+  null  : 110%,
+  small : 110%,
+  medium: 50%,
+  1000px: 35%,
+);
+$index-tit-en: (
+  null  : (30px,.8),
+  small : (36px,.9),
+  medium: 60px,
+  mlarge: 60px,
+);
+$index-tit-ch: (
+  null  : (20px,1),
+  small : (26px,1),
+  medium: 40px,
+  mlarge: 40px,
+);
+$index-tit-bor: (
+  null  : 3px,
+  mlarge: 7px
+);
+$index-tit-padding: (
+  null  : 10px,
+  medium: 20px,
+  mlarge: 40px
+);

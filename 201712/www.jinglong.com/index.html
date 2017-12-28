@@ -18,8 +18,8 @@
 <![endif]-->
 </head>
 
-<body class="scroller" >
-  <input id="ctrlmenu" type="checkbox"  >
+<body class="scroller">
+  <input id="ctrlmenu" type="checkbox">
   <!-- 弹窗 -->
   <div class="alert_player" style="display:none;">
     <div class="bg"></div>
@@ -44,6 +44,7 @@
             <a href="">人才战略</a>
             <a href="">联系我们</a>
           </nav>
+          <div class="tel"><a href="tel:0451-5716 6893"></a><span class="pc">0451-5716 6893</span></div>
           <label for="ctrlmenu" class="myInput wap">
             <div class="menu">
               <div class="bar"></div>
@@ -51,12 +52,45 @@
               <div class="bar"> </div>
             </div>
           </label>
+          <div class="clearfix"></div>
         </div>
       </header>
-      <!-- 此处调用公共搜索 做程序时可换对应代码 -->
       <main>
-        <article class="index " style="background-color:#ccc;">
-
+        <article class="index ">
+          <!-- banner -->
+          <section class="swiper-container banner">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-center" data-pc-img="./src/images/i_banner.jpg" data-wap-img="./src/images/i_wap_banner.jpg" style="background-image:url(./src/images/i_banner.jpg)">
+                <div class="text container"><img src="./src/images/i_banner_text.png" alt=""></div>
+              </div>
+              <div class="swiper-slide h-center" data-pc-img="./src/images/i_banner.jpg" data-wap-img="./src/images/i_banner.jpg" style="background-image:url(./src/images/i_banner.jpg)">
+                <div class="text container"><img src="./src/images/i_banner_text.png" alt=""></div>
+              </div>
+              <div class="swiper-slide h-center" data-pc-img="./src/images/i_banner.jpg" data-wap-img="./src/images/i_banner.jpg" style="background-image:url(./src/images/i_banner.jpg)">
+                <div class="text container"><img src="./src/images/i_banner_text.png" alt=""></div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-white"></div>
+          </section>
+          <!-- banner -->
+          <!-- about -->
+          <section class="about">
+            <div class="container">
+              <div class="inner">
+                <div class="tit">
+                  <div class="en">ABOUT US</div>
+                  <div class="ch">关于我们</div>
+                </div>
+                <div class="content text-area">
+                  <p>京隆兴双是北京市首都有限公司进入双河农场后设立的第一个国有独资的农场二级企业，注册资金500万元，于2013年2月1日注册成立并开始运营。许可经营项目：大豆、水稻常规种子、蔬菜种子加工、包装、批发、零售。一般经营项目：豆类、油料、薯类、玉米、水稻种植；化肥、农膜、竹条、育秧大棚、农机具及农机配件零售…</p>
+                  <a href="" class="more"></a>
+                </div>
+              </div>
+              <div class="pic" style="background-image:url(./src/images/i_a_pic.jpg)"></div>
+            </div>
+          </section>
+          <!-- about -->
         </article>
       </main>
       <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
@@ -66,6 +100,8 @@
   </div>
   <!-- 动画插件 -->
   <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+
+  <script src="./src/scripts/package/compat/jquery.debouncedresize.js"></script>
   <!-- 动画插件 -->
   <script src="./src/scripts/package/scroll/scrollbar.js"></script>
   <!-- 一些主要的公共方法  -->

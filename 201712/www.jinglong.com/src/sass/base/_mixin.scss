@@ -163,3 +163,45 @@
     height: $fs-font-size;
   }
 }
+@mixin index-banner-height($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      padding-bottom: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        padding-bottom: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
+@mixin index-tit-bor($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      border-left: nth($fs-font-size, 1) solid #b88451;
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        border-left: nth($fs-font-size, 1) solid #b88451;
+      }
+    }
+  }
+}
+@mixin index-tit-padding($fs-map, $fs-breakpoints: $breakpoints) {
+  @each $fs-breakpoint, $fs-font-size in $fs-map {
+    @if $fs-breakpoint == null {
+      padding-left: nth($fs-font-size, 1);
+    } @else {
+      @if map-has-key($fs-breakpoints, $fs-breakpoint) {
+        $fs-breakpoint: map-get($fs-breakpoints, $fs-breakpoint);
+      }
+      @media screen and (min-width: $fs-breakpoint) {
+        padding-left: nth($fs-font-size, 1);
+      }
+    }
+  }
+}
