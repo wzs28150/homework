@@ -142,6 +142,10 @@
 
     &.on {
       overflow-y: scroll;
+
+      .scroller-content {
+        width: 100%;
+      }
     }
   }
 

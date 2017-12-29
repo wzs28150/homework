@@ -5,10 +5,10 @@
 
 var $win = $(window),
   $body = $('body'),
-  $container = $('body'),
+  $container = $('.scroller'),
   isMobi = window.isMobi = (function() {
     var winW = $win.width();
-    var threshold = 720;
+    var threshold = 1200;
     var onResize = function() {
       winW = $win.width();
       if (winW <= threshold) {
@@ -172,8 +172,9 @@ var $win = $(window),
       this.$e.inner.addClass('on');
     } else {
       this.$e.inner.css({
-        width: this.$e.container.width() + 30,
-        paddingRight: 13,
+        width: this.$e.container.width() + 17,
+        paddingRight: 0,
+        paddingBottom: 16
       }).addClass('on');
     }
   };

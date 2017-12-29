@@ -1,9 +1,72 @@
 @charset "utf-8";
+@media screen and (min-width: 1024px) {
+  .index .products .pro-tit {
+    left       : 50%;
+    margin-left: -490px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .index {
     .about {
       .inner {
+        position: absolute;
+        left    : 0;
+        top     : 80px;
+
         .tit {}
+
+        .content {
+          width     : 520px;
+          padding   : 40px 50px;
+          margin-top: 30px;
+
+          .more {
+            margin-top: 50px;
+          }
+        }
+      }
+
+      .pic {
+        float         : right;
+        width         : 684px;
+        padding-bottom: 684px;
+      }
+    }
+
+    .products {
+      .pro-tit {
+        left       : 50%;
+        margin-left: -600px;
+      }
+
+      .pro-content {
+        .swiper-slide {
+          .title {
+            text-align : center;
+            padding-top: 5%;
+          }
+
+          .text-area {
+            text-align : center;
+            margin     : 30px auto;
+            width      : 610px;
+            font-weight: lighter;
+          }
+
+          .more {
+            @include more-height($i-more-height);
+            background-position: center;
+            background-size    : cover;
+            margin             : 5% auto;
+            background-image   : url("../images/jt_pro.png");
+          }
+        }
+      }
+
+      .pro-nav {
+        width      : 1200px;
+        left       : 50%;
+        margin-left: -600px;
       }
     }
   }

@@ -1,4 +1,5 @@
 /* CSS Document */
+
 body {}
 
 .index {
@@ -34,29 +35,115 @@ body {}
     }
   }
 
+  .i-tit {
+    @include index-tit-bor($index-tit-bor);
+    @include index-tit-padding($index-tit-padding);
+
+    .en {
+      font-family: "HeroLight";
+      @include font-size($index-tit-en);
+    }
+
+    .ch {
+      @include font-size($index-tit-ch);
+    }
+  }
+
   .about {
-    padding: 5% 0;
+    padding: 6% 0;
 
     .inner {
-      .tit {
-        @include index-tit-bor($index-tit-bor);
-        @include index-tit-padding($index-tit-padding);
-
-        .en {
-          font-family: "HeroLight";
-          @include font-size($index-tit-en);
-        }
-
-        .ch {
-          @include font-size($index-tit-ch);
-        }
-      }
-
       .content {
         margin-top      : 5%;
         padding         : 6% 5%;
         background-color: #b88451;
         color           : #fff;
+        font-weight     : lighter;
+      }
+
+      .more {
+        @include more-height($i-more-height);
+        display            : block;
+        background-position: center;
+        background-size    : cover;
+        background-image   : url("../images/jt.png");
+        margin-top         : 5%;
+      }
+    }
+
+    .pic {
+      width              : 100%;
+      background-position: center;
+      background-size    : cover;
+      padding-bottom     : 50%;
+    }
+  }
+
+  .products {
+    background-position: center;
+    background-size    : cover;
+    color              : #fff;
+    position           : relative;
+
+    .pro-tit {
+      position   : absolute;
+      z-index    : 2;
+      padding-top: 6%;
+    }
+
+    .i-tit {
+      color       : #fff;
+      border-color: #fff;
+    }
+
+    .pro-content {
+      .swiper-slide {
+        padding            : 6% 0;
+        @include pro-content-padding($pro-content-padding);
+        background-position: top;
+        background-size    : cover;
+
+        .title {
+          @include font-size($i-p-title);
+          @include i-p-margin($i-p-margin);
+          padding-top: 5%;
+        }
+
+        .text-area {
+          margin-top: 5%;
+        }
+
+        .more {
+          @include more-height($i-more-height);
+          background-position: center;
+          background-size    : cover;
+          margin             : 5% 0;
+          background-image   : url("../images/jt_pro.png");
+        }
+      }
+    }
+
+    .pro-nav {
+      background-color: #fff;
+      position        : absolute;
+      bottom          : 0;
+      left            : 0;
+      width           : 100%;
+      color           : #666666;
+
+      .swiper-slide {
+        text-align : center;
+        padding    : 0.5em 0;
+        line-height: 1.2em;
+
+        span {
+          font-size: 1.2em;
+          display  : block;
+        }
+
+        &.active-nav {
+          color: #b88451;
+        }
       }
     }
   }

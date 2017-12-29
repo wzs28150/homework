@@ -180,8 +180,7 @@ button {
 }
 
 .text-area {
-  font-size  : 16px;
-  line-height: 30px;
+  @include font-size($p-font-sizes);
 
   b,
   strong {

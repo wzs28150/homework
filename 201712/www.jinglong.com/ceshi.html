@@ -1,4 +1,24 @@
-<div></div>
-<style media="screen">
-  div{ width: 80%; padding-bottom: 80%; background-color: #ccc;}
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+</script>
+<script>
+$(document).ready(function(){
+
+var scrollbarWidth = $('#main')[0].offsetWidth - $('#main')[0].scrollWidth;
+  alert('滚动条的宽度是：' + scrollbarWidth + 'px');
+});
+</script>
+</head>
+<body>
+
+<div id="main" style="height:300px;width:300px;overflow-y:auto;">
+<div id=""  style="height:400px;width:100%;">
+1212121<br>
+1212121<br>
+1212121<br>
+1212121<br>
+</div>
+</div>
+</body>

@@ -1,4 +1,4 @@
-var indexModule, bannerpicchange, banner;
+var indexModule, bannerpicchange, banner, pro;
 //首页banner
 banner = function() {
   var bigswiper = new Swiper('.banner', {
@@ -28,7 +28,43 @@ bannerpicchange = function(type) {
     }
   });
 }
+pro = function() {
+  var procontentswiper = new Swiper('.pro-content', {
+    //autoplay: 3000,
+    speed: 1000,
+    effect: 'fade',
+    onSlideChangeStart: function() {
 
+      updateNavPosition()
+    }
+
+  });
+  var pronavswiper = new Swiper('.pro-nav', {
+    //autoplay: 3000,
+    speed: 1000,
+    slidesPerView: 6,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    onTap: function() {
+      procontentswiper.slideTo(pronavswiper.clickedIndex)
+    }
+
+  });
+
+  function updateNavPosition() {
+    $('.pro-nav .active-nav').removeClass('active-nav')
+    var activeNav = $('.pro-nav .swiper-slide').eq(procontentswiper.activeIndex).addClass('active-nav');
+    if (!activeNav.hasClass('swiper-slide-visible')) {
+      if (activeNav.index() > procontentswiper.activeIndex) {
+        var thumbsPerNav = Math.floor(procontentswiper.width / activeNav.width()) - 1
+        procontentswiper.slideTo(activeNav.index() - thumbsPerNav)
+      } else {
+        procontentswiper.slideTo(activeNav.index())
+      }
+    }
+  }
+
+}
 indexModule = function() {
   //设置导航选中
   navactive(0);
@@ -48,6 +84,7 @@ indexModule = function() {
   } else {
     bannerpicchange('pc');
   }
+  pro();
 
 };
 

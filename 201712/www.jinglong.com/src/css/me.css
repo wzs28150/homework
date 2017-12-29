@@ -48,15 +48,15 @@
   font-weight: 400;
   src: local("417-CAI978"), local("417-CAI978"), url("fonts/417-CAI978.woff") format("woff"); }
 @font-face {
-  font-family: "mj";
-  src: url("fonts/mj.eot?mc78r3");
-  src: url("fonts/mj.eot?mc78r3#iefix") format("embedded-opentype"), url("fonts/mj.ttf?mc78r3") format("truetype"), url("fonts/mj.woff?mc78r3") format("woff"), url("fonts/mj.svg?mc78r3#mj") format("svg");
+  font-family: 'mj';
+  src: url("fonts/mj.eot?kccyxl");
+  src: url("fonts/mj.eot?kccyxl#iefix") format("embedded-opentype"), url("fonts/mj.ttf?kccyxl") format("truetype"), url("fonts/mj.woff?kccyxl") format("woff"), url("fonts/mj.svg?kccyxl#mj") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="mj-"],
 [class*=" mj-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "mj" !important;
+  font-family: 'mj' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -67,11 +67,23 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.mj-volume:before {
+.mj-beans:before {
+  content: "\e900"; }
+
+.mj-corn:before {
   content: "\e901"; }
 
-.mj-search:before {
-  content: "\e905"; }
+.mj-essential-oil:before {
+  content: "\e902"; }
+
+.mj-fertilizer:before {
+  content: "\e903"; }
+
+.mj-potatoes:before {
+  content: "\e904"; }
+
+.mj-wheat:before {
+  content: "\e906"; }
 
 @font-face {
   font-family: 'jiantou';
@@ -765,8 +777,12 @@ button {
   flex: 1 1 1; }
 
 .text-area {
-  font-size: 16px;
-  line-height: 30px; }
+  font-size: 15px;
+  line-height: 1.5; }
+  @media screen and (min-width: 1200px) {
+    .text-area {
+      font-size: 16px;
+      line-height: 2; } }
   .text-area b,
   .text-area strong {
     font-weight: bold; }
@@ -2621,6 +2637,8 @@ button.swiper-pagination-bullet {
     overflow-scrolling: touch; }
     .scroller .scroller-inner.on {
       overflow-y: scroll; }
+      .scroller .scroller-inner.on .scroller-content {
+        width: 100%; }
   .scroller .scrollbar {
     position: absolute;
     opacity: 0;
