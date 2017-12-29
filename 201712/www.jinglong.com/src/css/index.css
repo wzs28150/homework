@@ -1,5 +1,6 @@
 /* CSS Document */
 .index .banner {
+  width: 100%;
   padding-bottom: 110%; }
   @media screen and (min-width: 360px) {
     .index .banner {
@@ -14,7 +15,8 @@
     position: absolute; }
   .index .banner .swiper-slide {
     background-position: center;
-    background-size: cover; }
+    background-size: cover;
+    width: 100%; }
     .index .banner .swiper-slide .text img {
       max-width: 80%;
       display: block; }

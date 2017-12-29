@@ -1,9 +1,9 @@
 /* CSS Document */
-
 body {}
 
 .index {
   .banner {
+    width: 100%;
     @include index-banner-height($index-banner);
 
     .swiper-wrapper {
@@ -13,6 +13,7 @@ body {}
     .swiper-slide {
       background-position: center;
       background-size    : cover;
+      width              : 100%;
 
       .text {
         img {
