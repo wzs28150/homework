@@ -57,16 +57,32 @@
             @include more-height($i-more-height);
             background-position: center;
             background-size    : cover;
-            margin             : 5% auto;
+            margin             : 0 auto 213px;
             background-image   : url("../images/jt_pro.png");
           }
         }
       }
 
       .pro-nav {
-        width      : 1200px;
+        width      : 1080px;
+        padding    : 0 60px;
         left       : 50%;
         margin-left: -600px;
+        bottom     : -50px;
+        box-shadow : 0 0 20px rgba(#000,0.15);
+
+        .swiper-slide {
+          text-align : center;
+          padding    : 36px 0;
+          line-height: 1em;
+          font-size  : 22px;
+
+          span {
+            font-size    : 1.5em;
+            display      : block;
+            margin-bottom: 16px;
+          }
+        }
       }
     }
   }

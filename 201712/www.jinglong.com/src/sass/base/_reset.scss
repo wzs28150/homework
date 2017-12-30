@@ -131,6 +131,7 @@ button {
   text-overflow: ellipsis;
 }
 /*水平垂直居中*/
+
 .wh-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -145,6 +146,7 @@ button {
   align-items        : center;
 }
 /*垂直居中*/
+
 .h-center {
   display            : -webkit-box;
   display            : -ms-flexbox;
@@ -156,6 +158,7 @@ button {
   align-items        : center;
 }
 /*分组父级*/
+
 .felx-box {
   display              : -webkit-box;
   -webkit-box-orient   : horizontal;
@@ -171,6 +174,7 @@ button {
   flex-flow: row wrap!important;
 }
 /*分组子级*/
+
 .felx-item {
   -webkit-box-flex: 1;
   flex-basis      : 1;

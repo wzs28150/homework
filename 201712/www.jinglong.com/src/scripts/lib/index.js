@@ -33,13 +33,15 @@ pro = function() {
     //autoplay: 3000,
     speed: 1000,
     effect: 'fade',
+    prevButton: '.pro-nav .swiper-button-prev',
+    nextButton: '.pro-nav .swiper-button-next',
     onSlideChangeStart: function() {
 
       updateNavPosition()
     }
 
   });
-  var pronavswiper = new Swiper('.pro-nav', {
+  var pronavswiper = new Swiper('.pro-nav .swiper-container', {
     //autoplay: 3000,
     speed: 1000,
     slidesPerView: 6,

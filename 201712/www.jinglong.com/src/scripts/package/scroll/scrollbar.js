@@ -88,6 +88,7 @@ var $win = $(window),
       this.$e.sliderX = this.$e.barX.find('i');
     }
     this.$e.inner = this.$e.container.children('.scroller-inner');
+    this.$e.con = this.$e.container.children('.scroller-content');
     //绑定事件
     this._onWinResize();
     $(win).on('resize', function() {
@@ -171,8 +172,11 @@ var $win = $(window),
       //this.$e.inner.removeAttr('style').removeClass('on');
       this.$e.inner.addClass('on');
     } else {
+      this.$e.inner.find('.scroller-content').css({
+        width: this.$e.container.width()
+      });
       this.$e.inner.css({
-        width: this.$e.container.width() + 17,
+        width: this.$e.container.width() + 1000,
         paddingRight: 0,
         paddingBottom: 16
       }).addClass('on');
