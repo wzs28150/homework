@@ -1,4 +1,4 @@
-var indexModule, bannerpicchange, banner, pro;
+var indexModule, bannerpicchange, banner, pro, news;
 //首页banner
 banner = function() {
   var bigswiper = new Swiper('.banner', {
@@ -67,6 +67,19 @@ pro = function() {
   }
 
 }
+
+news = function() {
+  var newsswiper = new Swiper('.news .swiper-container', {
+    //autoplay: 3000,
+    speed: 1000,
+    onlyExternal: true,
+  });
+  $('.news').off('click', '.news-nav a').on('click', '.news-nav a', function() {
+    $('.news-nav a').removeClass('on');
+    $(this).addClass('on');
+    newsswiper.slideTo($(this).index())
+  });
+}
 indexModule = function() {
   //设置导航选中
   navactive(0);
@@ -87,6 +100,7 @@ indexModule = function() {
     bannerpicchange('pc');
   }
   pro();
+  news();
 
 };
 

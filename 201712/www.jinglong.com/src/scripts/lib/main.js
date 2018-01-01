@@ -1,4 +1,4 @@
-var initModule, animated_contents, minheight, alertinfo, exists, backtotop, fenleishow, loadtemp, navactive, scrollto, html_overflow, scroll, AddFavorite, SetHome;
+var initModule, animated_contents, minheight, alertinfo, exists, backtotop, loadtemp, navactive, scrollto, html_overflow, scroll, AddFavorite, SetHome, respond_img;
 /**
  * 判断dom是否存在
  * @param  {[type]} selector [description]
@@ -118,6 +118,19 @@ minheight = function() {
   $('article').css('min-height', mh + 'px');
 }
 
+respond_img = function(type) {
+  $('.respond-img').each(function(index, el) {
+
+    if (type == 'wap') {
+
+      $(this).css('background-image', 'url(' + $(this).attr('data-wap-img') + ')');
+    } else {
+      console.log(type);
+      $(this).css('background-image', 'url(' + $(this).attr('data-pc-img') + ')');
+    }
+  })
+
+}
 
 
 loadtemp = function() {
@@ -173,11 +186,22 @@ initModule = function() {
   scrollto();
   animated_contents();
   scroll();
+  if ($(window).width() < 980) {
+    respond_img('wap');
+  } else {
+    respond_img('pc');
+  }
   $(window).scroll(function(event) {
     animated_contents();
   });
   $(window).on('debouncedresize', function() {
     minheight();
+    scroll();
+    if ($(window).width() < 980) {
+      respond_img('wap');
+    } else {
+      respond_img('pc');
+    }
   });
 
   $('.alert_player .bg,.alert_player .queren_btn').click(function() {

@@ -38,6 +38,10 @@
   font-weight: 600;
   src: local("Open Sans Semibold Italic"), local("OpenSans-SemiboldItalic"), url("fonts/PRmiXeptR36kaC0GEAetxn5HxGBcBvicCpTp6spHfNo.woff") format("woff"); }
 @font-face {
+  font-family: 'HelveticaNeueLTStdUltLtEx';
+  src: url("fonts/HelveticaNeueLTStdUltLtEx.eot");
+  src: url("fonts/HelveticaNeueLTStdUltLtEx.eot") format("embedded-opentype"), url("fonts/HelveticaNeueLTStdUltLtEx.woff2") format("woff2"), url("fonts/HelveticaNeueLTStdUltLtEx.woff") format("woff"), url("fonts/HelveticaNeueLTStdUltLtEx.ttf") format("truetype"), url("fonts/HelveticaNeueLTStdUltLtEx.svg#HelveticaNeueLTStdUltLtEx") format("svg"); }
+@font-face {
   font-family: "Open Sans";
   font-style: italic;
   font-weight: 700;
@@ -49,8 +53,8 @@
   src: local("417-CAI978"), local("417-CAI978"), url("fonts/417-CAI978.woff") format("woff"); }
 @font-face {
   font-family: 'mj';
-  src: url("fonts/mj.eot?kccyxl");
-  src: url("fonts/mj.eot?kccyxl#iefix") format("embedded-opentype"), url("fonts/mj.ttf?kccyxl") format("truetype"), url("fonts/mj.woff?kccyxl") format("woff"), url("fonts/mj.svg?kccyxl#mj") format("svg");
+  src: url("fonts/mj.eot?q0xqmt");
+  src: url("fonts/mj.eot?q0xqmt#iefix") format("embedded-opentype"), url("fonts/mj.ttf?q0xqmt") format("truetype"), url("fonts/mj.woff?q0xqmt") format("woff"), url("fonts/mj.svg?q0xqmt#mj") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="mj-"],
@@ -66,6 +70,24 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.mj-four:before {
+  content: "\e905"; }
+
+.mj-services:before {
+  content: "\e907"; }
+
+.mj-six:before {
+  content: "\e908"; }
+
+.mj-linian:before {
+  content: "\e909"; }
+
+.mj-zhongdian:before {
+  content: "\e90a"; }
+
+.mj-licheng:before {
+  content: "\e90b"; }
 
 .mj-beans:before {
   content: "\e900"; }
@@ -577,6 +599,132 @@ template {
 [hidden] {
   display: none; }
 
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
 html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
@@ -1041,6 +1189,55 @@ button {
     width: 360px; }
     .shangxia a:hover {
       color: #333; }
+
+.er-banner {
+  padding-bottom: 65%;
+  width: 100%;
+  background-position: center;
+  background-size: cover; }
+  @media screen and (min-width: 1200px) {
+    .er-banner {
+      padding-bottom: 15%; } }
+
+.er-nav {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #f2f2f2; }
+  .er-nav .container {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: justify;
+    -webkit-box-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: left; }
+  .er-nav a {
+    -webkit-box-flex: 1;
+    flex-basis: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex: 1 1 1;
+    text-align: center;
+    line-height: 3em;
+    color: #333; }
+    .er-nav a.on {
+      background-color: #fff;
+      color: #b88451; }
+
+.er-title {
+  color: #333;
+  text-align: center; }
+  .er-title .en {
+    font-family: "HeroLight";
+    font-size: 30px; }
+    @media screen and (min-width: 1200px) {
+      .er-title .en {
+        font-size: 60px; } }
+  .er-title .ch {
+    font-size: 20px; }
+    @media screen and (min-width: 1200px) {
+      .er-title .ch {
+        font-size: 40px; } }
 
 .animate-element {
   opacity: 0;
@@ -2891,18 +3088,47 @@ article {
       padding-top: 120px; } }
 
 footer {
-  background-color: #fff; }
-  footer .inner {
-    border-top: 1px solid #ececec;
+  background-color: #f2f2f2; }
+  footer .footer-main {
+    padding: 50px 0; }
+    footer .footer-main .footer-nav ul {
+      float: left;
+      margin: 0 70px 0 0;
+      padding: 0; }
+      footer .footer-main .footer-nav ul li {
+        font-size: 12px;
+        line-height: 30px;
+        font-weight: lighter; }
+        footer .footer-main .footer-nav ul li.tit {
+          font-size: 16px;
+          color: #333;
+          margin-bottom: 10px; }
+    footer .footer-main .footer-tel {
+      text-align: right; }
+      footer .footer-main .footer-tel .tel {
+        font-family: "HeroLight";
+        font-size: 36px;
+        margin: 30px 0; }
+  footer .footer-bar {
+    font-size: 12px;
     text-align: center;
-    font-size: 14px;
-    line-height: 24px;
-    padding-top: 50px;
-    color: #333; }
-    footer .inner img {
-      display: block;
-      margin: 30px auto 60px; }
+    padding: 5% 0; }
+    footer .footer-bar .fl {
+      width: 100%; }
+      footer .footer-bar .fl span {
+        display: block; }
 
+@media screen and (min-width: 1200px) {
+  footer .footer-bar {
+    font-size: 14px;
+    text-align: left;
+    padding: 0;
+    line-height: 100px;
+    border-top: 1px solid #dcdcdc; }
+    footer .footer-bar .fl {
+      width: auto; }
+      footer .footer-bar .fl span {
+        display: inline; } }
 @media screen and (min-width: 1200px) {
   header .logo {
     float: left; }
@@ -2916,6 +3142,23 @@ footer {
       width: auto;
       float: left;
       border-bottom: 0;
-      padding: 0 25px; } }
+      padding: 0 25px; }
+
+  .er-nav .container {
+    display: block; }
+  .er-nav a {
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    float: left;
+    font-size: 20px; }
+    .er-nav a.w25 {
+      width: 25%; }
+    .er-nav a.on {
+      color: #b88451;
+      background-color: #fff;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: url("../images/er_nav.png"); } }
 
 /*# sourceMappingURL=me.css.map */

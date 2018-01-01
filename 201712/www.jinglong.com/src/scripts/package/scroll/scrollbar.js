@@ -168,9 +168,16 @@ var $win = $(window),
    */
   Scroller.prototype._onWinResize = function() {
     if (isMobi()) {
-      //console.log(this.$e.inner)
+      // console.log(this.$e.container.width())
       //this.$e.inner.removeAttr('style').removeClass('on');
-      this.$e.inner.addClass('on');
+      this.$e.inner.css({
+        width: this.$e.container.width(),
+        paddingRight: 0,
+        paddingBottom: 0
+      }).addClass('on');
+      this.$e.inner.find('.scroller-content').css({
+        width: this.$e.container.width()
+      });
     } else {
       this.$e.inner.find('.scroller-content').css({
         width: this.$e.container.width()
@@ -178,7 +185,7 @@ var $win = $(window),
       this.$e.inner.css({
         width: this.$e.container.width() + 1000,
         paddingRight: 0,
-        paddingBottom: 16
+        paddingBottom: 0
       }).addClass('on');
     }
   };

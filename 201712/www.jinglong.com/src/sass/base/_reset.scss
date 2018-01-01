@@ -554,3 +554,56 @@ button {
     }
   }
 }
+
+.er-banner {
+  @include pro-content-padding($er-banner-padding);
+  width              : 100%;
+  background-position: center;
+  background-size    : cover;
+}
+
+.er-nav {
+  background-color: #f2f2f2;
+  border-bottom   : 1px solid #f2f2f2;
+
+  .container {
+    display              : -webkit-box;
+    -webkit-box-orient   : horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack     : justify;
+    -webkit-box-align    : center;
+    display              : flex;
+    flex-flow            : row nowrap;
+    align-items          : left;
+  }
+
+  a {
+    -webkit-box-flex: 1;
+    flex-basis      : 1;
+    flex-grow       : 1;
+    flex-shrink     : 1;
+    flex            : 1 1 1;
+    text-align      : center;
+    line-height     : 3em;
+    color           : #333;
+
+    &.on {
+      background-color: #fff;
+      color           : #b88451;
+    }
+  }
+}
+
+.er-title {
+  color     : #333;
+  text-align: center;
+
+  .en {
+    font-family: "HeroLight";
+    @include font-size($er-title-en);
+  }
+
+  .ch {
+    @include font-size($er-title-ch);
+  }
+}

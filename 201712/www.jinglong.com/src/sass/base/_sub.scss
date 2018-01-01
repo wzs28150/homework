@@ -20,4 +20,30 @@
       }
     }
   }
+
+  .er-nav {
+    .container {
+      display: block;
+    }
+
+    a {
+      display    : block;
+      text-align : center;
+      line-height: 100px;
+      float      : left;
+      font-size  : 20px;
+
+      &.w25 {
+        width: 25%;
+      }
+
+      &.on {
+        color              : #b88451;
+        background-color   : #fff;
+        background-position: center;
+        background-repeat  : no-repeat;
+        background-image   : url("../images/er_nav.png");
+      }
+    }
+  }
 }
