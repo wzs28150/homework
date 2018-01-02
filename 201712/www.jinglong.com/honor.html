@@ -11,10 +11,7 @@
   <title>首页 - 中国民主建国会黑龙江省委员会</title>
   <link rel="stylesheet" href="./src/css/me.css">
   <link rel="stylesheet" href="./src/css/about.css">
-  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
-
   <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
-
   <!--[if IE 8]>
   <script src="./src/scripts/package/compat/html5shiv.js"></script>
   <script src="./src/scripts/package/compat/respond.js"></script>
@@ -64,22 +61,34 @@
           <article class="about">
             <section class="er-banner respond-img" data-pc-img="./src/images/a_pc_banner.jpg" data-wap-img="./src/images/a_wap_banner.jpg" style="background-image:url(./src/images/a_wap_banner.jpg);">
             </section>
+            <section class="er-nav">
+              <div class="container">
+                <a class="w25" href="about.html">公司介绍</a>
+                <a class="w25" href="content.html">集团介绍</a>
+                <a class="w25" href="content.html">组织架构</a>
+                <a class="w25 on" href="honor.html">资质荣誉</a>
+              </div>
+            </section>
             <section class="er-title">
               <div class="container">
-                <div class="en">CONTACT US</div>
-                <div class="ch">联系我们</div>
+                <div class="en">COMPANY PROFILE</div>
+                <div class="ch">公司介绍</div>
               </div>
             </section>
-            <section class="contact-content text-area">
+            <section class="honor">
               <div class="container">
-                <p>电话：0451-51178093；0451-51178087</p>
-                <p>传真：0451-51178092</p>
-                <p>邮编：150000</p>
-                <p>地址：黑龙江省哈尔滨市道里区群力第五大道金中环商业街E座3115室</p>
+                <div id="certify">
+                  <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./src/images/honor.jpg" /></div>
+                      <div class="swiper-slide"><img src="./src/images/honor.jpg" /></div>
+                      <div class="swiper-slide"><img src="./src/images/honor.jpg" /></div>
+                      <div class="swiper-slide"><img src="./src/images/honor.jpg" /></div>
+                      <div class="swiper-slide"><img src="./src/images/honor.jpg" /></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </section>
-            <section class="contact-map">
-              <div class="container" id="dituContent"></div>
             </section>
           </article>
         </main>
@@ -90,7 +99,6 @@
     </div>
   </div>
   <!-- 动画插件 -->
-
   <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
 
   <script src="./src/scripts/package/compat/jquery.debouncedresize.js"></script>
@@ -99,13 +107,18 @@
   <!-- 一些主要的公共方法  -->
   <script src="./src/scripts/lib/main.js"></script>
   <!-- 一些主要的公共方法  -->
-  <script src="./src/scripts/lib/contact.js"></script>
-
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <!-- index  -->
+  <script src="./src/scripts/lib/about.js"></script>
+  <!-- index  -->
   <!-- banner滚动插件 -->
   <script type="text/javascript">
     $(document).ready(function() {
       //设置分类展开
-      contactModule();
+
+
     });
   </script>
 
