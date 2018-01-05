@@ -102,6 +102,11 @@ article.swiper-container {
               @media screen and (min-width: 1600px) {
                 article.swiper-container .swiper-slide .area-list .item a .tit .ch {
                   font-size: 36px; } }
+            article.swiper-container .swiper-slide .area-list .item a .tit .line {
+              width: 40px;
+              background-color: #fff;
+              height: 8px;
+              margin-top: 20px; }
           article.swiper-container .swiper-slide .area-list .item a .pic {
             width: 280px;
             padding-bottom: 128%;

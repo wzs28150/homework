@@ -106,6 +106,13 @@ article.swiper-container {
             .ch {
               @include font-size($area-list-ch-size);
             }
+
+            .line {
+              width           : 40px;
+              background-color: #fff;
+              height          : 8px;
+              margin-top      : 20px;
+            }
           }
 
           .pic {
