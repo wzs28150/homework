@@ -14,7 +14,6 @@ jingxuanModule = function() {
   fenleishow();
 
   jingxuan();
-
 };
 
 jingxuanModule();

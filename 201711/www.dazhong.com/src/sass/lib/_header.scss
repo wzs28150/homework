@@ -248,6 +248,10 @@ header {
               display    : block;
               float      : left;
               padding    : 0 10px;
+
+              &:hover {
+                text-decoration: underline;
+              }
             }
           }
 
@@ -279,6 +283,10 @@ header {
                 line-height: 27px;
                 display    : block;
                 float      : left;
+
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }

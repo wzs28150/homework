@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js lte-ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>非常品牌 - 大众商城</title>
+  <link rel="stylesheet" href="./src/css/me.css">
+  <script src="./src/scripts/package/jquery/jquery-1.9.1.min.js"></script>
+  <!--[if IE 8]>
+  <script src="./src/scripts/package/compat/html5shiv.js"></script>
+  <script src="./src/scripts/package/compat/respond.js"></script>
+<![endif]-->
+</head>
+
+<body class="scroller">
+
+  <div id="progress">
+    <span></span>
+  </div>
+  <!-- 弹窗 -->
+  <div class="alert_player" style="display:none;">
+    <div class="bg"></div>
+    <div class="layer">
+      <div class="info"></div>
+      <a class="queren_btn" data-ajax="no">确认</a>
+    </div>
+  </div>
+  <!-- 弹窗 -->
+
+
+  <div class="scroller-inner">
+    <div class="scroller-content">
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <div id="header" class="jiazai" data-callback="navactive:0"></div>
+      <!-- 此处调用公共头部header 做程序时可换对应代码 -->
+      <main>
+        <article class="jingxuan p_B60">
+          <!-- 面包屑 -->
+          <section class="position p_T20 p_B20">
+            <div class="container_1200"><a href="">服务保障</a> &gt; <a href="">酒水</a> &gt; <a href="">常见问题</a></div>
+          </section>
+          <!-- 面包屑 -->
+          <section class="zjpj container_1200 ">
+            <div class="tit">追加评价</div>
+            <div class="inner">
+              <div class="pic fl">
+                <a href="">
+                  <img src="./src/images/pro_pic1.jpg" alt="">
+                  <p>理想境界普洱茶萃</p>
+                </a>
+              </div>
+              <div class="right fr">
+                <table>
+                  <tr>
+                    <td>评价等级：</td>
+                    <td>
+                      <div class="star" id="score-callback-demo" data-score="0"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>评价内容：</td>
+                    <td><textarea name="" id="content" ></textarea></td>
+                  </tr>
+                  <tr>
+                    <td style="vertical-align: middle;">验证码：</td>
+                    <td><span id="mpanel2"></span><button type="button" id="check-btn" class="verify-btn">确定</button></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </section>
+        </article>
+      </main>
+
+
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+      <div id="footer" class="jiazai" data-callback="minheight"></div>
+      <!-- 此处调用公共底部footer 做程序时可换对应代码 -->
+    </div>
+  </div>
+  <!-- 滚动条插件 -->
+  <script src="./src/scripts/package/scroll/scrollbar.js"></script>
+  <!-- 滚动条插件 -->
+  <!-- 动画插件 -->
+  <script src="./src/scripts/package/viewport/jquery.viewport.js"></script>
+  <!-- 动画插件 -->
+  <!-- 无刷新插件 -->
+  <script src="./src/scripts/package/core/pajax/jquery.pjax.js"></script>
+  <!-- 无刷新插件 -->
+  <!-- 一些主要的公共方法  -->
+  <script src="./src/scripts/lib/main.js"></script>
+  <!-- 一些主要的公共方法  -->
+  <!-- banner滚动插件 -->
+  <script src="./src/scripts/package/swiper/v3/swiper.min.js"></script>
+  <!-- banner滚动插件 -->
+  <!-- 评分插件 -->
+  <script src="./src/scripts/package/raty/jquery.raty.js"></script>
+  <!-- 评分插件 -->
+  <!-- index  -->
+  <script src="./src/scripts/lib/products.js"></script>
+  <!-- index  -->
+  <!-- index  -->
+  <script src="./src/scripts/package/location/location.js"></script>
+  <script src="./src/scripts/package/verify/verify.js"></script>
+  <!-- index  -->
+  <!-- banner滚动插件 -->
+  <script type="text/javascript">
+    $(function() {
+      $.fn.raty.defaults.path = './src/scripts/package/raty/img';
+      $('.star').raty({
+        score: function() {
+          return $(this).attr('data-score');
+        }
+      });
+      $('#mpanel2').codeVerify({
+        type: 1,
+        width: '104px',
+        height: '44px',
+        fontSize: '26px',
+        codeLength: 4,
+        btnId: 'check-btn',
+        ready: function() {},
+        success: function() {
+          //评价星星
+          var star = $('input[name="score"]').val();
+          //评价内容
+          var content = $("#content").val();
+          //ajax吧
+
+        },
+        error: function() {
+          alert('验证码不匹配！');
+        }
+      });
+
+    });
+  </script>
+
+
+</body>
+
+</html>
